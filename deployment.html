@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Xero Deployment — From Cloud Git to Metal</title>
+<style>
+  :root{
+    --bg:#f7f5f0; --bg2:#efece4; --card:#ffffff; --card2:#fdfcf9;
+    --ink:#1c1f1d; --ink2:#4b5450; --ink3:#7a837f;
+    --line:#ddd8cc; --line2:#cbc4b2;
+    --accent:#c2410c; --accent-bg:#fff1e6; --accent-ink:#9a3412;
+    --teal:#0f766e; --teal-bg:#e6f4f1; --teal-ink:#115e59;
+    --amber:#b45309; --amber-bg:#fef3c7;
+    --green:#15803d; --red:#b91c1c;
+    --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+    --radius:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#121412; --bg2:#1a1d1a; --card:#1e211e; --card2:#232623;
+      --ink:#eceae4; --ink2:#b8bcb6; --ink3:#8a918a;
+      --line:#2e332e; --line2:#3d423d;
+      --accent:#fb923c; --accent-bg:#2d1a0e; --accent-ink:#fdba74;
+      --teal:#2dd4bf; --teal-bg:#0f2a27; --teal-ink:#5eead4;
+      --amber-bg:#2a2108;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6}
+  a{color:var(--teal)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px 64px}
+  /* hero */
+  .hero{padding:36px 0 8px}
+  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{font-family:var(--serif);font-size:clamp(34px,6vw,56px);line-height:0.95;letter-spacing:-0.02em;margin:12px 0 14px;font-weight:700}
+  h1 em{font-style:normal;color:var(--accent)}
+  .lede{font-size:18px;line-height:1.6;color:var(--ink2);max-width:720px}
+  .lede strong{color:var(--ink)}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .pill{font-family:var(--mono);font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink2)}
+  .pill b{color:var(--ink)}
+  /* nav */
+  .toc{display:flex;flex-wrap:wrap;gap:6px;margin:22px 0 6px;padding:12px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+  .toc a{font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);padding:6px 10px;border-radius:999px;background:var(--bg2)}
+  .toc a:hover{background:var(--accent-bg);color:var(--accent-ink)}
+  /* sections */
+  section{margin-top:36px}
+  .sec-head{display:flex;gap:14px;align-items:flex-start}
+  .num{font-family:var(--mono);font-size:12px;font-weight:700;width:32px;height:32px;flex:0 0 32px;display:grid;place-items:center;border-radius:50%;background:var(--ink);color:var(--bg);margin-top:4px}
+  h2{font-size:26px;line-height:1.15;margin:0;letter-spacing:-0.01em}
+  .sub{color:var(--ink2);margin:6px 0 0;font-size:15px;max-width:700px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .card + .card{margin-top:12px}
+  /* anatomy */
+  .anatomy{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px}
+  @media(max-width:720px){.anatomy{grid-template-columns:1fr}}
+  .part{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--card2);cursor:pointer;text-align:left;width:100%}
+  .part.active{outline:2px solid var(--accent);background:var(--accent-bg)}
+  .part h3{margin:0;font-size:16px}
+  .part p{margin:6px 0 0;font-size:14px;color:var(--ink2);line-height:1.5}
+  .part .tag{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+  .detail{margin-top:12px;background:var(--ink);color:#f3f1ea;border-radius:12px;padding:18px}
+  .detail h3{margin:0 0 6px;font-size:16px;color:#fff}
+  .detail p{margin:0;color:#d6d3cb;font-size:14px;line-height:1.6}
+  .detail code{font-family:var(--mono);font-size:12px;background:rgba(255,255,255,.12);padding:2px 6px;border-radius:6px}
+  /* loop */
+  .loop-track{display:flex;gap:0;margin-top:16px;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+  @media(max-width:720px){.loop-track{flex-direction:column}}
+  .step{flex:1;padding:16px;border-right:1px solid var(--line);position:relative;transition:.2s}
+  .step:last-child{border-right:none}
+  @media(max-width:720px){.step{border-right:none;border-bottom:1px solid var(--line)} .step:last-child{border-bottom:none}}
+  .step.on{background:var(--teal-bg)}
+  .step .n{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+  .step h4{margin:6px 0 4px;font-size:15px}
+  .step p{margin:0;font-size:13px;color:var(--ink2);line-height:1.5}
+  .controls{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  button{font-family:var(--sans);font-weight:600;font-size:14px;border-radius:999px;padding:9px 16px;border:1px solid var(--line2);background:var(--card);color:var(--ink);cursor:pointer}
+  button.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  button.accent{background:var(--accent);color:white;border-color:var(--accent)}
+  button:active{transform:scale(.98)}
+  input, select, textarea{font-family:var(--sans);font-size:14px;padding:10px 12px;border-radius:10px;border:1px solid var(--line2);background:var(--card);color:var(--ink);width:100%}
+  label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:6px}
+  /* filing sim */
+  .sim-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:16px}
+  @media(max-width:820px){.sim-grid{grid-template-columns:1fr}}
+  .filebox{background:#111412;color:#e8e6df;border-radius:12px;padding:16px;font-family:var(--mono);font-size:12.5px;line-height:1.7;min-height:280px;white-space:pre-wrap;word-break:break-word}
+  @media(prefers-color-scheme: light){.filebox{background:#1c1f1d;color:#eceae4}}
+  .filebox .dim{color:#9aa39c}.filebox .hl{color:#fbbf24}.filebox .ok{color:#34d399}
+  .log{font-family:var(--mono);font-size:12px;line-height:1.7;max-height:260px;overflow:auto;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:12px}
+  .stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px}
+  .stat{background:var(--bg2);border-radius:10px;padding:12px;text-align:center}
+  .stat b{font-size:20px;display:block;line-height:1}.stat span{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);font-weight:700}
+  /* pipeline */
+  .pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:16px}
+  @media(max-width:820px){.pipe{grid-template-columns:1fr}}
+  .pipe-step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .pipe-step .idx{width:28px;height:28px;border-radius:50%;background:var(--accent);color:white;display:grid;place-items:center;font-weight:800;font-size:13px}
+  .pipe-step h4{margin:10px 0 4px;font-size:14px}.pipe-step p{margin:0;font-size:13px;color:var(--ink2);line-height:1.5}
+  /* hardware sim */
+  .hw-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:720px){.hw-grid{grid-template-columns:1fr}}
+  .hw-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .hw-btn{padding:12px;text-align:left}
+  .hw-btn.active{outline:2px solid var(--teal);background:var(--teal-bg)}
+  .hw-btn b{display:block;font-size:14px}.hw-btn span{font-size:12px;color:var(--ink2)}
+  .bars{margin-top:14px}
+  .bar-row{display:grid;grid-template-columns:92px 1fr 44px;gap:10px;align-items:center;margin:8px 0;font-size:13px}
+  .bar{height:10px;background:var(--bg2);border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+  .bar i{display:block;height:100%;border-radius:999px;transition:width .4s}
+  .bar-metal i{background:#c2410c}.bar-vm i{background:#0f766e}.bar-cloud i{background:#1c1f1d}
+  @media(prefers-color-scheme:dark){.bar-cloud i{background:#e8e6df}}
+  input[type=range]{padding:0}
+  /* chat sim */
+  .chat{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+  .chat-head{padding:12px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:var(--card2)}
+  .chat-body{padding:14px;display:flex;flex-direction:column;gap:10px;min-height:220px;max-height:340px;overflow:auto;background:var(--bg)}
+  .msg{max-width:82%;padding:10px 12px;border-radius:14px;font-size:14px;line-height:1.5}
+  .msg.user{align-self:flex-end;background:var(--ink);color:var(--bg);border-bottom-right-radius:4px}
+  .msg.bot{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-bottom-left-radius:4px}
+  .msg.sys{align-self:center;background:var(--amber-bg);border:1px solid var(--line);font-family:var(--mono);font-size:12px;max-width:95%;text-align:center}
+  .chat-foot{padding:12px;border-top:1px solid var(--line);display:flex;gap:8px}
+  .chat-foot input{flex:1}
+  .inject{font-family:var(--mono);font-size:12px;background:#111412;color:#a7f3d0;border-radius:10px;padding:12px;line-height:1.6;white-space:pre-wrap;word-break:break-word}
+  @media(prefers-color-scheme: light){.inject{background:#1c1f1d}}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:720px){.grid2{grid-template-columns:1fr}}
+  .note{font-size:13px;color:var(--ink2);background:var(--bg2);border-radius:10px;padding:12px;line-height:1.6}
+  .note b{color:var(--ink)}
+  ul.tight{margin:8px 0 0 18px;padding:0} ul.tight li{margin:4px 0;font-size:14px;color:var(--ink2)} ul.tight li b{color:var(--ink)}
+  .footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:13px;color:var(--ink3)}
+  .footer a{font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker">SuperInstance · Xero · Deployment</div>
+    <h1>Build in the cloud.<br><em>Beam down</em> to the metal.</h1>
+    <p class="lede">Xero is not an app you install. It's <strong>files + a loop</strong> — an agent you talk to while you build it, in git, through any channel. When it's ready, you copy a minimal harness — the <strong>redshirt</strong> — onto real hardware, and the cloud agent syncs its winning self down. This page explains the model, demonstrates the filing loop, and lets you simulate a deployment.</p>
+    <div class="hero-meta">
+      <span class="pill">Agent = <b>files</b></span>
+      <span class="pill">Harness = <b>universal crank</b></span>
+      <span class="pill">Room = <b>git</b></span>
+      <span class="pill">Wire = <b>Telegram / CLI / TUI / web</b></span>
+      <span class="pill">Target = <b>LED → ESP32 → Uno Q → Pi → Jetson</b></span>
+    </div>
+    <nav class="toc" aria-label="On this page">
+      <a href="#anatomy">1 · Anatomy</a><a href="#loop">2 · The Loop</a><a href="#filing">3 · Filing Loop Sim</a><a href="#pipeline">4 · Pipeline</a><a href="#hardware">5 · Hardware Negotiation</a><a href="#chat">6 · End-to-End Sim</a>
+    </nav>
+  </header>
+
+  <!-- 1 ANATOMY -->
+  <section id="anatomy">
+    <div class="sec-head"><div class="num">1</div><div><h2>Anatomy: interface, data, logic — and who the agent is</h2><p class="sub">Telegram isn't the agent. It's a tool between you and it. Tap each part to see what it owns and what happens if you swap it.</p></div></div>
+    <div class="anatomy">
+      <button class="part active" data-part="pathos"><span class="tag" style="color:var(--accent)">Pathos · Interface</span><h3>How you meet it</h3><p>Telegram today. Could be a TUI, CLI, voice pin, or its own webpage. The UX the pathos layer uses with its user.</p></button>
+      <button class="part" data-part="data"><span class="tag" style="color:var(--teal)">Data · Truth</span><h3>Files are the agent</h3><p>State, log, ledger, memory files in git. If the files survive, the agent survives — even if the ground unit dies.</p></button>
+      <button class="part" data-part="logos"><span class="tag" style="color:var(--amber)">Logos + Ethos · Logic</span><h3>How it thinks & who it is</h3><p>The model call is the logos. Whatever you inject into the prompt on the way to the API is the ethos — its character and memory.</p></button>
+    </div>
+    <div class="detail" id="partDetail">
+      <h3 id="detailTitle">Pathos — Telegram is a tool, not the agent</h3>
+      <p id="detailBody">A bot on Telegram only sees what Telegram pushes it — no history readback, no bot-to-bot chatter. That constraint is a feature here: the agent can't cheat by reaching back into chat history. All memory has to come through your files, via the injection. Swap Telegram for a CLI and <code>the agent doesn't change</code> — only how you meet it does.</p>
+    </div>
+    <div class="grid2" style="margin-top:12px">
+      <div class="note"><b>The minimum agent:</b> a perception check in a loop with I/O. Perceive → judge → record, forever, with the world able to write in. A thermostat is almost there — one bit, pure reaction. The agent adds the loop that runs with <i>no</i> input: watching, refining, churning.</div>
+      <div class="note"><b>The harness is universal:</b> any crank turns any agent. The harness reads an agent's files off the tape (git) and runs its gates. The ledger <i>is</i> the transition function δ — given what the head reads, what to write and where to move next.</div>
+    </div>
+  </section>
+
+  <!-- 2 LOOP -->
+  <section id="loop">
+    <div class="sec-head"><div class="num">2</div><div><h2>The loop, step by step</h2><p class="sub">Every Xero turn is the same five moves. Press play and watch one message travel through — including the memory sandwich between the wire and the model.</p></div></div>
+    <div class="loop-track" id="loopTrack">
+      <div class="step" data-step="0"><div class="n">01 · Hook</div><h4>Perception check</h4><p>Your message lands. The hook captures it — timestamped, ordered — and pushes it toward the iteration box. Nothing is answered yet.</p></div>
+      <div class="step" data-step="1"><div class="n">02 · Deposit</div><h4>Write to files</h4><p>The utterance is appended to <span style="font-family:var(--mono)">inbox/&lt;chat&gt;/current.md</span> and committed. The conversation now exists outside any chat app.</p></div>
+      <div class="step" data-step="2"><div class="n">03 · Inject</div><h4>Ethos is added</h4><p>The memory system sits between wire and model: system prompt → filing → RAG → intelligent injector. Better selection, same bytes.</p></div>
+      <div class="step" data-step="3"><div class="n">04 · Iterate</div><h4>Iteration box (a slot)</h4><p>A cartridge, not a fixed brain: calculator, algorithm, game-state move, or a model call (MiniMax today). Swap it without rewiring the loop.</p></div>
+      <div class="step" data-step="4"><div class="n">05 · Reply + Record</div><h4>Back to source</h4><p>The answer returns on the same wire it arrived on — and is itself deposited. The reply becomes part of the tape for the next turn.</p></div>
+    </div>
+    <div class="controls">
+      <button class="primary" id="playLoop">▶ Play one turn</button>
+      <button id="resetLoop">Reset</button>
+      <span id="loopStatus" style="font-family:var(--mono);font-size:12px;align-self:center;color:var(--ink2)">Idle — no turn in flight</span>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <label>What the model actually receives on this turn</label>
+      <div class="inject" id="injectView">[system prompt] You are Xero — files are truth, git is the room.
+[injected memory] (nothing yet — first turn)
+[user] Set the autopilot deadband to 2 degrees and hold.
+→ The injection is the whole game: as the filing system gets smarter, this block gets better — not bigger.</div>
+    </div>
+  </section>
+
+  <!-- 3 FILING SIM -->
+  <section id="filing">
+    <div class="sec-head"><div class="num">3</div><div><h2>Demonstration: the chat-to-git filing loop</h2><p class="sub">Toss → refine → check in. Deposit utterances below. At the gate (6 entries in this demo scale; ~20 pages in production) the inbox cascade-splits — first by day, then by topic. Refine rebuilds the index. Nothing is lost: count the entries.</p></div></div>
+    <div class="sim-grid">
+      <div>
+        <div class="card">
+          <label for="depositText">New utterance</label>
+          <textarea id="depositText" rows="2" placeholder="e.g. Compass heading drifts north in chop — check the deadband gate">Compass heading drifts north in chop — check the deadband gate</textarea>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+            <div><label>Topic hint</label><select id="depositTopic"><option value="compass">compass</option><option value="autopilot">autopilot</option><option value="deadband">deadband</option><option value="telegram">telegram</option><option value="xero">xero</option></select></div>
+            <div><label>Chat</label><select id="depositChat"><option value="bridge">bridge</option><option value="lab">lab</option></select></div>
+          </div>
+          <div class="controls">
+            <button class="accent" id="btnDeposit">↓ Deposit + commit</button>
+            <button id="btnBurst">Deposit 5 at once</button>
+            <button id="btnRefine">↻ Run refine (idle churn)</button>
+          </div>
+          <div class="stats">
+            <div class="stat"><b id="statEntries">0</b><span>Entries kept</span></div>
+            <div class="stat"><b id="statCommits">0</b><span>Git commits</span></div>
+            <div class="stat"><b id="statFiles">1</b><span>Files</span></div>
+          </div>
+          <p style="font-size:12px;color:var(--ink3);margin:10px 0 0">Live prototype verified Oct 2026: 35 deposits · both split levels fired · refine idempotent (2nd run = no commit). Repo: <a href="https://github.com/SuperInstance/xero-lab" target="_blank" rel="noopener">SuperInstance/xero-lab</a> · Release line: <a href="https://github.com/SuperInstance/xero" target="_blank" rel="noopener">SuperInstance/xero</a></p>
+        </div>
+        <div class="card">
+          <label>Git log — the ledger</label>
+          <div class="log" id="gitLog">— repository initialised —<br>commit 000 · init: inbox/ + filing policy (gate = 6)</div>
+        </div>
+      </div>
+      <div>
+        <label style="margin-bottom:6px">File tree — watch it split</label>
+        <div class="filebox" id="fileTree">inbox/
+└─ bridge/
+   └─ current.md  (0 entries)
+
+<span class="dim"># Gates: size (~20 pages prod / 6 here) + time (timestamps)
+# Split 1: current.md → archive/YYYY-MM-DD.md
+# Split 2: a day still over gate → archive/day/&lt;topic&gt;.md
+# Refine: rebuild index.md + topic views, wholesale</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 PIPELINE -->
+  <section id="pipeline">
+    <div class="sec-head"><div class="num">4</div><div><h2>How deployment works: cloud → redshirt → metal</h2><p class="sub">You don't ship a finished product down. You ship a survivor down, then keep building it from the cloud while it lives on the device.</p></div></div>
+    <div class="pipe">
+      <div class="pipe-step"><div class="idx">1</div><h4>Build in git (cloud)</h4><p>The full agent lives in the cloud repo. You talk to it on Telegram; other agents push via CLI or any channel. Conversations, harnesses used, and code are all in the same history — someone could walk your commands and rebuild it.</p></div>
+      <div class="pipe-step"><div class="idx">2</div><h4>Redshirt beams down</h4><p>Copy the minimal file-set to the hardware: just enough harness to boot, perceive, and sync. Light, expendable, replaceable. If it dies, beam down another — the cloud lost nothing.</p></div>
+      <div class="pipe-step"><div class="idx">3</div><h4>Onboarding negotiation</h4><p>You and the agent decide, per device: what runs on bare metal (fast C), what runs in the VM/OS layer, what stays cloud. It depends on the job — a talker needs more brain than a switch.</p></div>
+      <div class="pipe-step"><div class="idx">4</div><h4>Winning commits sync</h4><p>Work continues in the cloud. Only what proves itself syncs down. The ground unit builds itself up with everyone's help — your chats, other agents' pushes, its own local commits.</p></div>
+      <div class="pipe-step"><div class="idx">5</div><h4>Last-mile projection</h4><p>Simulated behaviour (compass, rams, display) is projected into the language the motor controllers speak. Same ledger, rendered onto the metal. The display you approved in simulation becomes the LED / screen / buttons.</p></div>
+    </div>
+    <div class="grid2" style="margin-top:12px">
+      <div class="card"><h3 style="margin:0 0 6px;font-size:15px">The desert-island rule</h3><p style="margin:0;font-size:14px;color:var(--ink2);line-height:1.6">Z-zero is a guy stranded on an island. You drop him tools and send bottles; you watch what he does. If it's right, he keeps going. If it's not, you don't argue — <b style="color:var(--ink)">you pull tools away</b> and let him try again. Subtraction is the correction. The island enforces minimum moving parts: he can only keep what he can actually use.</p></div>
+      <div class="card"><h3 style="margin:0 0 6px;font-size:15px">You are the harness — for now</h3><p style="margin:0;font-size:14px;color:var(--ink2);line-height:1.6">Today you curate context by reply-selecting, craft prompts across chats, and write memory files by hand. Every manual job is a spec for the next automation. The memory ladder — <b style="color:var(--ink)">system prompt → filing → RAG → intelligent injector</b> — is you, building yourself out of the job, one rung at a time. The check-in stays yours.</p></div>
+    </div>
+  </section>
+
+  <!-- 5 HARDWARE -->
+  <section id="hardware">
+    <div class="sec-head"><div class="num">5</div><div><h2>Simulation: negotiate a deployment</h2><p class="sub">Pick a target and drag the local↔cloud balance. See what lands on metal, in the VM, and in the cloud — and what it costs you in latency, capability, and reach.</p></div></div>
+    <div class="card" style="margin-top:16px">
+      <div class="hw-grid">
+        <div>
+          <label>Target hardware</label>
+          <div class="hw-btns" id="hwBtns">
+            <button class="hw-btn" data-hw="led"><b>LED + Buttons</b><span>Display + inputs only · no local brain</span></button>
+            <button class="hw-btn" data-hw="esp32"><b>ESP32</b><span>Fast C loops · tiny state · no model</span></button>
+            <button class="hw-btn active" data-hw="unoq"><b>Arduino Uno Q</b><span>Fast section (C) + small AI brain · the combadge target</span></button>
+            <button class="hw-btn" data-hw="pi"><b>Raspberry Pi</b><span>Full Linux · local filing + small models</span></button>
+            <button class="hw-btn" data-hw="jetson"><b>Jetson</b><span>Serious local inference · voice + vision</span></button>
+          </div>
+          <label style="margin-top:16px">How local should it be? <span id="localLabel" style="color:var(--ink);text-transform:none;letter-spacing:0">55% local</span></label>
+          <input type="range" id="localRange" min="0" max="100" value="55" />
+          <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--ink3)"><span>← All cloud (thin pin)</span><span>All local (offline island) →</span></div>
+          <label style="margin-top:14px">Primary job</label>
+          <select id="jobSel"><option value="talker">Talker — combadge: tap, talk to your Xero</option><option value="autopilot">Autopilot — compass + rams, deadbands, display</option><option value="switch">Switch — sense + actuate, minimal talk</option></select>
+        </div>
+        <div>
+          <label>Placement — where each layer lives</label>
+          <div class="bars">
+            <div class="bar-row"><span>On metal (C)</span><div class="bar bar-metal"><i id="barMetal" style="width:30%"></i></div><b id="pctMetal">30%</b></div>
+            <div class="bar-row"><span>VM / OS</span><div class="bar bar-vm"><i id="barVm" style="width:25%"></i></div><b id="pctVm">25%</b></div>
+            <div class="bar-row"><span>Cloud / LAN brain</span><div class="bar bar-cloud"><i id="barCloud" style="width:45%"></i></div><b id="pctCloud">45%</b></div>
+          </div>
+          <div class="stats" style="grid-template-columns:1fr 1fr 1fr">
+            <div class="stat"><b id="statLatency">~40 ms</b><span>Reflex latency</span></div>
+            <div class="stat"><b id="statOffline">Partial</b><span>Works offline</span></div>
+            <div class="stat"><b id="statReach">LAN + cloud</b><span>Reach-out</span></div>
+          </div>
+          <div class="note" id="hwVerdict" style="margin-top:12px"><b>Uno Q combadge:</b> tap-to-talk and wake-word stay on metal; the small local brain handles simple replies at its own capacity; anything bigger reaches out — LAN brain first, cloud second. Slower and costlier the further it reaches, but the pin never stops talking.</div>
+          <ul class="tight" id="hwList">
+            <li><b>Metal:</b> button, mic gate, LED, fast control loops</li>
+            <li><b>VM:</b> sync harness, filing, wake-word, simple intent</li>
+            <li><b>Cloud:</b> full model, memory injector, heavy building</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 CHAT SIM -->
+  <section id="chat">
+    <div class="sec-head"><div class="num">6</div><div><h2>Simulation: talk to a Xero being built</h2><p class="sub">The inversion: you're not talking to a tool that builds the product — you're talking to the product, mid-assembly. Its replies here are canned logic, but the plumbing is real: every message is deposited, injected, iterated, and recorded. Watch the panels.</p></div></div>
+    <div class="sim-grid">
+      <div class="chat">
+        <div class="chat-head"><b style="font-size:14px">Xero — via “Telegram” (simulated wire)</b><span style="font-family:var(--mono);font-size:11px;color:var(--teal);font-weight:700">● SYNCED TO GIT</span></div>
+        <div class="chat-body" id="chatBody">
+          <div class="msg bot">I'm Xero, running from files in git. Tell me how you want me to be — try “add a deadband”, “show the display”, or “deploy to Uno Q”.</div>
+        </div>
+        <div class="chat-foot">
+          <input id="chatInput" placeholder="Message Xero…" value="Add a 2-degree deadband to the compass" />
+          <button class="primary" id="chatSend">Send</button>
+        </div>
+        <div style="padding:0 12px 12px;display:flex;gap:6px;flex-wrap:wrap">
+          <button data-say="Add a 2-degree deadband to the compass">+ deadband</button>
+          <button data-say="Show the display">show display</button>
+          <button data-say="Deploy to Uno Q">deploy to Uno Q</button>
+          <button data-say="What do you remember?">what do you remember?</button>
+        </div>
+      </div>
+      <div>
+        <label>Injection for the next turn (ethos)</label>
+        <div class="inject" id="chatInject">[system] You are Xero. Files are truth.
+[memory · filing] 0 prior entries
+[ledger] gates: none yet
+[user turn] — waiting —</div>
+        <div class="card" style="margin-top:12px">
+          <label>Iteration box in use</label>
+          <div style="display:flex;gap:6px;flex-wrap:wrap" id="boxBtns">
+            <button data-box="model" class="box-btn" style="outline:2px solid var(--teal)">Model (MiniMax)</button>
+            <button data-box="calc" class="box-btn">Calculator</button>
+            <button data-box="algo" class="box-btn">Algorithm</button>
+            <button data-box="game" class="box-btn">Game move</button>
+          </div>
+          <p style="font-size:13px;color:var(--ink2);margin:10px 0 0" id="boxNote">Model box: general reasoning + talk. The endgame for any repeated job is to build a calculator/algorithm box that does it exactly — then pull the model out. It works itself out of a job.</p>
+        </div>
+      </div>
+    </div>
+    <div class="note" style="margin-top:12px"><b>Protection through distribution:</b> you <i>can</i> run a Jetson straight to the compass and the rams. But simpler units below the brain — metal loops that hold a safe state on their own — mean the system degrades gracefully instead of dying all at once. Layers are not overhead; they're lifeboats.</div>
+  </section>
+
+  <footer class="footer">
+    <span>Xero · SuperInstance — captain stays aboard; the crew scales.</span>
+    <span><a href="https://github.com/SuperInstance/xero-lab" target="_blank" rel="noopener">xero-lab (prototype + notes)</a> · <a href="https://github.com/SuperInstance/xero" target="_blank" rel="noopener">xero (release line)</a></span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  // --- Anatomy ---
+  var parts = {
+    pathos:{t:"Pathos — Telegram is a tool, not the agent", b:"A bot on Telegram only sees what Telegram pushes it — no history readback, no bot-to-bot chatter. That constraint is a feature here: the agent can't cheat by reaching back into chat history. All memory has to come through your files, via the injection. Swap Telegram for a CLI and <code>the agent doesn't change</code> — only how you meet it does."},
+    data:{t:"Data — the files are the truth", b:"Two logs run the show: the <code>active log</code> (what happened) and the <code>active ledger</code> (the agreed algorithm — gates, deadbands: how far × how long before acting). Watch means note, not act. Because the agent is its files, deployment is copying files, backup is git, and resurrection is a fresh clone."},
+    logos:{t:"Logos + Ethos — the call thinks, the injection is who it is", b:"Today the logos is a <code>MiniMax call</code>; the harness could route coding through Codex, Aider, or Claude Code loops instead — the agent calls for the harness it needs. The ethos is whatever rides into the prompt: raw chat I/O at the dumb end, decision trees / RAG / filtering APIs at the smart end. Memory is logos with better material."}
+  };
+  var detailTitle=document.getElementById('detailTitle'), detailBody=document.getElementById('detailBody');
+  document.querySelectorAll('.part').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.part').forEach(function(b){b.classList.remove('active')});
+      btn.classList.add('active');
+      var p=parts[btn.getAttribute('data-part')];
+      detailTitle.textContent=p.t; detailBody.innerHTML=p.b;
+    });
+  });
+
+  // --- Loop player ---
+  var steps=document.querySelectorAll('#loopTrack .step'), loopStatus=document.getElementById('loopStatus'), injectView=document.getElementById('injectView'), timer=null, idx=-1;
+  var injectLines=[
+    "Hook fired · 14:02:11 AKDT · source: telegram · msg #1",
+    "Deposited → inbox/bridge/current.md · commit a1b2c3 · “Set the autopilot deadband to 2 degrees and hold.”",
+    "[system prompt] You are Xero — files are truth, git is the room.\n[injected memory] ledger: no gates yet · log: 1 entry\n[user] Set the autopilot deadband to 2 degrees and hold.",
+    "Iteration box: MODEL → proposes gate { compass, deadband: 2°, dwell: 8s } · ledger updated · commit d4e5f6",
+    "Reply sent on telegram · reply itself deposited · turn complete in 1.9s · next perception check armed."
+  ];
+  function clearSteps(){steps.forEach(function(s){s.classList.remove('on')});}
+  document.getElementById('playLoop').addEventListener('click',function(){
+    if(timer) clearInterval(timer); idx=-1; clearSteps();
+    timer=setInterval(function(){
+      idx++;
+      if(idx>=steps.length){clearInterval(timer); timer=null; loopStatus.textContent="Turn complete — reply recorded, loop armed for the next bottle."; return;}
+      clearSteps(); steps[idx].classList.add('on');
+      loopStatus.textContent="Step "+(idx+1)+" of 5 — "+steps[idx].querySelector('h4').textContent;
+      injectView.textContent=injectLines[idx];
+    },1100);
+  });
+  document.getElementById('resetLoop').addEventListener('click',function(){if(timer)clearInterval(timer); timer=null; idx=-1; clearSteps(); loopStatus.textContent="Idle — no turn in flight"; injectView.textContent="[system prompt] You are Xero — files are truth, git is the room.\n[injected memory] (nothing yet — first turn)\n[user] Set the autopilot deadband to 2 degrees and hold.\n→ The injection is the whole game: as the filing system gets smarter, this block gets better — not bigger.";});
+
+  // --- Filing sim ---
+  var entries=[], commits=1, files=1, splitDone=false, refined=false;
+  var tree=document.getElementById('fileTree'), log=document.getElementById('gitLog');
+  var samples=[
+    ["Autopilot holds heading in a following sea","autopilot"],["Telegram bot can't read its own history — files must carry memory","telegram"],["Xero redshirt file list: harness, ledger, sync only","xero"],["Deadband gate: act only if error > 2° for > 8s","deadband"],["Compass swing test at the dock, Mouse supervising","compass"],["Refine pass rebuilt the topic index at idle","xero"],["Uno Q split: C for the fast loop, VM for sync","xero"]
+  ]; var sampleIdx=0;
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function renderTree(){
+    if(!splitDone){
+      var lines=entries.map(function(e,i){return "  "+(i+1)+". ["+e.topic+"] "+e.text;}).join("\n");
+      tree.innerHTML="inbox/\n└─ bridge/\n   └─ current.md  ("+entries.length+" entries)\n"+esc(lines)+"\n\n<span class=\"dim\"># Gate: 6 entries (demo scale) — deposit more to fire the cascade</span>";
+    } else {
+      var byTopic={}; entries.forEach(function(e){(byTopic[e.topic]=byTopic[e.topic]||[]).push(e);});
+      var out="inbox/\n└─ bridge/\n   ├─ current.md  (0 — rolled)\n   └─ archive/\n      └─ 2026-10-12/\n";
+      Object.keys(byTopic).sort().forEach(function(t,i,arr){ out+="         "+(i===arr.length-1?"└─ ":"├─ ")+t+".md  ("+byTopic[t].length+")\n"; });
+      if(refined) out+="\nindex.md  ← rebuilt by refine ("+entries.length+" entries, "+Object.keys(byTopic).length+" topics) <span class=\"ok\">✓</span>";
+      tree.innerHTML=esc(out)+(refined?"":"\n\n<span class=\"dim\"># Cascade fired: day split, then topic split. Run refine to rebuild the index.</span>");
+    }
+    document.getElementById('statEntries').textContent=entries.length;
+    document.getElementById('statCommits').textContent=commits;
+    document.getElementById('statFiles').textContent= splitDone ? (2 + new Set(entries.map(function(e){return e.topic})).size + (refined?1:0)) : 1;
+  }
+  function addLog(msg){ log.innerHTML += "<br>"+esc(msg); log.scrollTop=log.scrollHeight; }
+  function deposit(text, topic, chat){
+    entries.push({text:text,topic:topic,chat:chat}); commits++;
+    addLog("commit "+String(commits).padStart(3,'0')+" · deposit ["+topic+"] → inbox/"+chat+"/current.md");
+    if(entries.length>=6 && !splitDone){
+      splitDone=true; commits++;
+      var topics=new Set(entries.map(function(e){return e.topic})).size;
+      addLog("commit "+String(commits).padStart(3,'0')+" · ⚑ GATE FIRED (size) → split: archive/2026-10-12/ + "+topics+" topic files");
+    }
+    renderTree();
+  }
+  document.getElementById('btnDeposit').addEventListener('click',function(){
+    var t=document.getElementById('depositText').value.trim()||"Untitled utterance";
+    deposit(t, document.getElementById('depositTopic').value, document.getElementById('depositChat').value);
+  });
+  document.getElementById('btnBurst').addEventListener('click',function(){
+    for(var i=0;i<5;i++){ var s=samples[sampleIdx%samples.length]; sampleIdx++; deposit(s[0],s[1],"bridge"); }
+  });
+  document.getElementById('btnRefine').addEventListener('click',function(){
+    if(!entries.length){ addLog("refine · nothing to index yet"); return; }
+    if(refined && splitDone){ addLog("refine · index already current — no commit (idempotent)"); return; }
+    refined=true; commits++;
+    addLog("commit "+String(commits).padStart(3,'0')+" · refine: rebuilt index.md + topic views ("+entries.length+" entries)");
+    renderTree();
+  });
+  renderTree();
+
+  // --- Hardware sim ---
+  var hwData={
+    led:{name:"LED + Buttons", cap:.08, v:"<b>Thin projection:</b> the device is only a face — display + buttons rendered from the cloud agent. Cheapest rung, totally dependent on the link. Perfect when the job is “show and nudge.”", list:["<b>Metal:</b> LED driver, button scan — nothing else fits","<b>VM:</b> none — no local OS layer","<b>Cloud:</b> everything: model, memory, logic, ledger"], lat:"~300 ms", off:"No", reach:"Cloud only"},
+    esp32:{name:"ESP32", cap:.3, v:"<b>Fast hands, borrowed brain:</b> tight C loops and local safety states on metal; all understanding reaches out. Holds its last safe state if the link drops — distribution as protection.", list:["<b>Metal:</b> control loops, watchdogs, sensor gates","<b>VM:</b> minimal runtime — sync + filing-lite","<b>Cloud:</b> model, injector, building, history"], lat:"~5 ms loop", off:"Safe-state only", reach:"LAN + cloud"},
+    unoq:{name:"Arduino Uno Q", cap:.55, v:"<b>Uno Q combadge:</b> tap-to-talk and wake-word stay on metal; the small local brain handles simple replies at its own capacity; anything bigger reaches out — LAN brain first, cloud second. Slower and costlier the further it reaches, but the pin never stops talking.", list:["<b>Metal:</b> button, mic gate, LED, fast control loops","<b>VM:</b> sync harness, filing, wake-word, simple intent","<b>Cloud:</b> full model, memory injector, heavy building"], lat:"~40 ms", off:"Partial", reach:"LAN + cloud"},
+    pi:{name:"Raspberry Pi", cap:.75, v:"<b>A real island:</b> full Linux, local git, filing loop and small models aboard. Syncs with the cloud when available, keeps working when not. A good captain's-boat brain.", list:["<b>Metal:</b> GPIO loops via hats / co-processors","<b>VM:</b> OS, git, filing loop, small local model","<b>Cloud:</b> big model, fleet building, backups"], lat:"~20 ms", off:"Mostly", reach:"Local-first"},
+    jetson:{name:"Jetson", cap:.92, v:"<b>Brain on the boat:</b> voice, vision, and real inference locally — the cloud becomes a shipyard, not a lifeline. Still keep simpler units below it holding safe states, so a brain fault isn't a system fault.", list:["<b>Metal:</b> co-processor loops for hard real-time","<b>VM:</b> local LLM, vision, voice, full filing","<b>Cloud:</b> training, building, fleet sync"], lat:"~10 ms", off:"Full", reach:"Local-first"}
+  };
+  var curHw="unoq";
+  function renderHw(){
+    var d=hwData[curHw], local=+document.getElementById('localRange').value;
+    document.getElementById('localLabel').textContent=local+"% local";
+    var wantLocal=Math.round(d.cap*100);
+    var eff=Math.round((wantLocal*0.6)+(local*0.4));
+    var metal=Math.min(60, Math.round(eff*0.55)), vm=Math.round(eff*0.45), cloud=100-metal-vm;
+    document.getElementById('barMetal').style.width=metal+"%"; document.getElementById('pctMetal').textContent=metal+"%";
+    document.getElementById('barVm').style.width=vm+"%"; document.getElementById('pctVm').textContent=vm+"%";
+    document.getElementById('barCloud').style.width=cloud+"%"; document.getElementById('pctCloud').textContent=cloud+"%";
+    document.getElementById('statLatency').textContent=d.lat;
+    document.getElementById('statOffline').textContent= local>75? "Strong" : d.off;
+    document.getElementById('statReach').textContent=d.reach;
+    document.getElementById('hwVerdict').innerHTML=d.v + (Math.abs(local-wantLocal)>30 ? " <b>Note:</b> you've pushed "+(local>wantLocal?"more local than this hardware comfortably holds — expect a bigger brain or slower turns.":"more cloud than this hardware needs — you're paying latency for capacity you already own.") : "");
+    document.getElementById('hwList').innerHTML=d.list.map(function(x){return "<li>"+x+"</li>"}).join("");
+  }
+  document.querySelectorAll('#hwBtns .hw-btn').forEach(function(b){
+    b.addEventListener('click',function(){ document.querySelectorAll('#hwBtns .hw-btn').forEach(function(x){x.classList.remove('active')}); b.classList.add('active'); curHw=b.getAttribute('data-hw'); renderHw(); });
+  });
+  document.getElementById('localRange').addEventListener('input',renderHw);
+  document.getElementById('jobSel').addEventListener('change',renderHw);
+  renderHw();
+
+  // --- Chat sim ---
+  var chatBody=document.getElementById('chatBody'), chatInject=document.getElementById('chatInject'), memory=[], box="model";
+  var boxNotes={
+    model:"Model box: general reasoning + talk. The endgame for any repeated job is to build a calculator/algorithm box that does it exactly — then pull the model out. It works itself out of a job.",
+    calc:"Calculator box: exact, instant, free. No judgement calls — if the input doesn't fit the formula, it says so instead of improvising.",
+    algo:"Algorithm box: the ledger itself, executed — gates, deadbands, dwell times. Deterministic and walkable in git.",
+    game:"Game-move box: given a board state, returns a legal move. The loop doesn't care that the “world” is a game — perception, iterate, reply."
+  };
+  document.querySelectorAll('#boxBtns .box-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('#boxBtns .box-btn').forEach(function(x){x.style.outline="none"});
+      b.style.outline="2px solid var(--teal)"; box=b.getAttribute('data-box');
+      document.getElementById('boxNote').textContent=boxNotes[box];
+    });
+  });
+  function replyFor(text){
+    var t=text.toLowerCase();
+    if(t.indexOf("deadband")>-1) return "Done — and deposited. Ledger now carries gate { compass error > 2° for > 8s → act }. In simulation the rams stay centred inside the band; outside it, I correct once and re-check. Want the dwell longer in chop?";
+    if(t.indexOf("display")>-1) return "Projecting the display: heading big in the centre, deadband arc around it, ram position as a bar underneath. On the Uno Q this renders to the LED panel; here it's the same ledger, drawn as a webpage. The projection changes — the data doesn't.";
+    if(t.indexOf("deploy")>-1 || t.indexOf("uno")>-1) return "Redshirt ready: harness + ledger + sync — 3 files, nothing else. Copy to the Uno Q, it boots, perceives, and phones home to git. We keep building me here in the cloud; only winning commits sync down. If the board dies, beam down another — I lose nothing.";
+    if(t.indexOf("remember")>-1) return memory.length ? "From my files — not from chat history (Telegram gives me none): "+memory.map(function(m,i){return "("+(i+1)+") "+m}).join(" · ") : "Nothing deposited yet in this sim. Say something worth filing and watch the injection panel — next turn, I'll have read it from my files, not from memory of this chat.";
+    if(t.indexOf("compass")>-1) return "Compass noted and filed under [compass]. Simulated check: heading reads true, drift appears when the deadband gate is disabled — which is exactly why the gate exists. Deposited as entry #"+(memory.length+1)+".";
+    return "Heard, deposited, and iterated via the "+box+" box. That's entry #"+(memory.length+1)+" in my files — it'll be in my injection next turn, which is the only way I “remember” anything. Try asking what I remember.";
+  }
+  function sendChat(text){
+    if(!text) return;
+    var u=document.createElement('div'); u.className="msg user"; u.textContent=text; chatBody.appendChild(u);
+    memory.push(text);
+    var sys=document.createElement('div'); sys.className="msg sys"; sys.textContent="↓ deposited → inbox/bridge/current.md · injected ("+memory.length+" prior) · box: "+box; chatBody.appendChild(sys);
+    chatBody.scrollTop=chatBody.scrollHeight;
+    setTimeout(function(){
+      var b=document.createElement('div'); b.className="msg bot"; b.textContent=replyFor(text); chatBody.appendChild(b);
+      chatBody.scrollTop=chatBody.scrollHeight;
+      chatInject.textContent="[system] You are Xero. Files are truth.\n[memory · filing] "+memory.length+" prior entr"+(memory.length===1?"y":"ies")+" · latest: “"+text.slice(0,60)+"”\n[ledger] gates: "+(memory.join(" ").toLowerCase().indexOf("deadband")>-1?"compass deadband 2° / 8s":"none yet")+"\n[box] "+box+"\n[user turn] — waiting —";
+    },450);
+  }
+  document.getElementById('chatSend').addEventListener('click',function(){ var inp=document.getElementById('chatInput'); sendChat(inp.value.trim()); inp.value=""; });
+  document.getElementById('chatInput').addEventListener('keydown',function(e){ if(e.key==="Enter"){ var v=e.target.value.trim(); sendChat(v); e.target.value=""; }});
+  document.querySelectorAll('[data-say]').forEach(function(b){ b.addEventListener('click',function(){ sendChat(b.getAttribute('data-say')); }); });
+})();
+</script>
+</body>
+</html>

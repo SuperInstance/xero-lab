@@ -2458,3 +2458,6 @@ Casey gave the word ("Prototype the chat-to-git filing loop"). Built at
   iteration-box pass replaces it. Not yet wired to live Telegram.
 Next rungs (open): bridge hook (message → deposit), LLM topic-parse,
 push to a lab repo.
+→ 2026-10-12: lab-repo rung DONE — SuperInstance/xero-lab (public,
+commit `27b9e56`) holds the prototype + these notes + the synthesis.
+Still open: bridge hook, LLM topic-parse.
