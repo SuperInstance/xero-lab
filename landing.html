@@ -243,7 +243,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
       <!-- 3 SPREADSHEET -->
       <article class="card">
-        <span class="tag lab">● In the lab</span>
+        <span class="tag lab">● Measured — partial run</span>
         <h3>3 · The spreadsheet that fires its teacher</h3>
         <p class="what">Put the work in cells. The big model's job is the cut — breaking work into decisions small enough for little models to make. Judgment sets the gate on each one: go, hold, or stop.</p>
         <div class="demo">
@@ -252,12 +252,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div style="margin-top:12px"><div class="demo-label"><span>Cost per pass</span><span id="cost-label">100%</span></div><div class="meter"><i id="cost-meter"></i></div></div>
           <div class="controls" style="margin-top:12px"><button class="btn primary small" id="grid-run" type="button">Run the gates →</button><button class="btn small" id="grid-reset" type="button">Reset</button></div>
         </div>
-        <p class="note">Cells flip one by one wherever a small model passes the gate. The stubborn few stay big — escalated, because their confidence sits inside the deadband. <strong>The teacher works itself out of a job, cell by cell</strong> — and every verdict is logged. Nobody grades their own work: the decider doesn't set its own gate.</p>
+        <div class="stat-row" aria-label="Measured results from the real run">
+          <div><b>8.3%</b><span>Of all-big cost — staffed grid</span></div>
+          <div><b>0 / 395</b><span>Family cells kept by the big model</span></div>
+          <div><b>11/11 · 0/18</b><span>Jev gates: correct accepted · wrong accepted</span></div>
+        </div>
+        <p class="note"><strong>Measured on the real run</strong> — 395 repos × 4 decision cells. A naming rule staffs <strong>85.8%</strong> of cells; the big model keeps just <strong>8%</strong>. And the gates belong on <em>instances</em>, not blanket rules: gating individual decisions, Jev accepted <strong>11 of 11</strong> correct small-model calls and <strong>0 of 18</strong> wrong ones — the deadband caught the rest. <strong>The teacher works itself out of a job, cell by cell</strong> — and every verdict is logged. Nobody grades their own work: the decider doesn't set its own gate.<br><span style="font-size:12px">Honest caveat: the small-model tier ran partial — a rate-limit excursion stopped it mid-run, recorded in the sheet itself. A paced re-run is queued.</span></p>
       </article>
 
       <!-- 4 WAVE -->
       <article class="card wide">
-        <span class="tag lab">● In the lab · Simulation</span>
+        <span class="tag lab">● Measured — reader tuning is next</span>
         <h3>4 · The 20° turn, read in letters</h3>
         <p class="what">Point the same widget at the sea. A camera watches the waves; the sea is rendered as letters — character by height, resolution by motion. A model tuned to read waveforms as a first-class language pulls the gist — rhythm, height, throw — straight from the lettering. Now turn 20° into the wind: the general rules price the wind, but the letter-sea supplies the subtlety, because the camera sees the swell <em>before</em> the hull feels it.</p>
         <div class="demo">
@@ -271,7 +276,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
             </div>
           </div>
         </div>
-        <p class="note"><strong>Waveforms as a first-class language:</strong> algorithms only for the rendering — letters are the one algorithm — and the reading is bought from literacy. A day of letter-log is compact enough for small metal: a Jetson steers from it, and the local GPU learns from the whole day at night. Then you prune away everything the reader doesn't need.</p>
+        <div class="stat-row" aria-label="Measured results from the reading test">
+          <div><b>0.99 MB</b><span>A day at sea as a letter logbook</span></div>
+          <div><b>46 MB</b><span>The same day as raw numeric text</span></div>
+          <div><b>6.5×</b><span>Fewer tokens per reading — letters vs numeric grids</span></div>
+        </div>
+        <p class="note"><strong>Measured — 36 synthetic seas read under four encodings.</strong> Compactness <strong>confirmed</strong>: letters cost 6.5× fewer tokens per reading than numeric grids and lost nothing to them on any question. One surprise: per-cell delta encoding <em>loses</em> on wave fields — everything moves a little, all the time — so plain frames plus the deadband idea win. The honest caveat is the reader, not the rendering: zero-shot, an untuned model reads the sea poorly in <em>every</em> encoding — it even insists every sea is “building.” The information doesn't die in the letters; it dies in an untrained reader. <strong>Next step:</strong> tune a small reader on the generator's labeled seas — Jev's verdict on that plan: <strong>0.73, yes</strong>. Then you prune away everything the reader doesn't need.</p>
       </article>
 
       <!-- 5 COMBADGE -->
