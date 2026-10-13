@@ -1,0 +1,17 @@
+name = "xero-voiceblock"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+workers_dev = true
+
+# Deliberately NO account_id and no real bindings: this PoC keeps session
+# state in an in-memory Map (see src/index.ts). Deploy with your own
+# account via `wrangler login` or CLOUDFLARE_ACCOUNT_ID at deploy time.
+
+# --- Production: Durable Object per session (see src/session-do.ts) -----
+# [[durable_objects.bindings]]
+# name = "SESSIONS"
+# class_name = "SessionDurableObject"
+#
+# [[migrations]]
+# tag = "v1"
+# new_sqlite_classes = ["SessionDurableObject"]
