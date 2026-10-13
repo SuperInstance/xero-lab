@@ -1,19 +1,19 @@
-{"name": "ternary-cell-python", "v": "MISSING"}
-{"name": "plato-adapters", "v": "MISSING"}
-{"name": "lau-collab", "v": "MISSING"}
-{"name": "agent-riff-v3", "v": "MISSING"}
-{"name": "plato-engine-block-c", "v": "MISSING"}
-{"name": "eisenstein-tools", "v": "MISSING"}
-{"name": "mavis-skill-miner", "v": "MISSING"}
-{"name": "ternary-intent-cache", "v": "MISSING"}
-{"name": "substrate-forge", "v": "MISSING"}
-{"name": "quilt-conversation", "v": "MISSING"}
-{"name": "ternary-projection", "v": "MISSING"}
-{"name": "flux-signatures", "v": "MISSING"}
-{"name": "ternary-spiral", "v": "MISSING"}
-{"name": "ternary-ensign", "v": "MISSING"}
-{"name": "plato-core", "v": "MISSING"}
-{"name": "ternary-walk", "v": "MISSING"}
+{"name": "ternary-cell-python", "v": []}
+{"name": "plato-adapters", "v": ["interface-data-logic", "memory-grid"]}
+{"name": "lau-collab", "v": ["pyramid-orchestration", "walkthroughs-skills"]}
+{"name": "agent-riff-v3", "v": ["two-logs", "pyramid-orchestration"]}
+{"name": "plato-engine-block-c", "v": ["gates-deadbands", "deployment"]}
+{"name": "eisenstein-tools", "v": ["deployment", "calculator-maker"]}
+{"name": "mavis-skill-miner", "v": ["walkthroughs-skills", "memory-grid"]}
+{"name": "ternary-intent-cache", "v": ["two-logs", "memory-grid"]}
+{"name": "substrate-forge", "v": ["deployment", "calculator-maker"]}
+{"name": "quilt-conversation", "v": ["interface-data-logic", "walkthroughs-skills"]}
+{"name": "ternary-projection", "v": ["memory-grid", "calculator-maker"]}
+{"name": "flux-signatures", "v": ["interface-data-logic", "two-logs"]}
+{"name": "ternary-spiral", "v": ["memory-grid", "pyramid-orchestration"]}
+{"name": "ternary-ensign", "v": ["pyramid-orchestration", "walkthroughs-skills"]}
+{"name": "plato-core", "v": ["memory-grid", "interface-data-logic"]}
+{"name": "ternary-walk", "v": ["memory-grid", "deployment"]}
 {"name": "oxide-workflow", "v": ["pyramid-orchestration", "deployment"]}
 {"name": "cocapn-colora", "v": ["memory-grid", "interface-data-logic"]}
 {"name": "spectral-explorer", "v": ["interface-data-logic", "memory-grid"]}
@@ -30,99 +30,366 @@
 {"name": "conservation-verify-c", "v": ["memory-grid", "two-logs"]}
 {"name": "ternary-manifesto", "v": []}
 {"name": "conservation-spectral-ada", "v": ["memory-grid", "two-logs"]}
-{"name": "ternary-spreadsheet-python", "v": "MISSING"}
-{"name": "fleet-midi-cycle", "v": "MISSING"}
-{"name": "ternary-fuse", "v": "MISSING"}
-{"name": "lau-hodge-decomposition-agents", "v": "MISSING"}
-{"name": "fleet-triage", "v": "MISSING"}
-{"name": "plato-runtime-kernel", "v": "MISSING"}
-{"name": "cuda-constraint-checker", "v": "MISSING"}
-{"name": "ternary-kalman", "v": "MISSING"}
-{"name": "ternary-regression", "v": "MISSING"}
-{"name": "quilt-fleet-snapshot", "v": "MISSING"}
-{"name": "graph-walker-go", "v": "MISSING"}
-{"name": "substrate-canary-pin", "v": "MISSING"}
-{"name": "oxide-canary", "v": "MISSING"}
-{"name": "plato-client-ruby", "v": "MISSING"}
-{"name": "plato-dashboard", "v": "MISSING"}
-{"name": "ternary-transformer", "v": "MISSING"}
-{"name": "plato-room-nav", "v": "MISSING"}
-{"name": "jev-harness", "v": "MISSING"}
-{"name": "conservation-spectral-zig", "v": "MISSING"}
-{"name": "jev-fusion", "v": "MISSING"}
-{"name": "constraint-tminus-bridge", "v": "MISSING"}
-{"name": "ternary-tnn", "v": "MISSING"}
-{"name": "fleet-rave-connector", "v": "MISSING"}
-{"name": "openconstruct-cs", "v": "MISSING"}
-{"name": "ternary-markov", "v": "MISSING"}
-{"name": "quilt-jev-toolkit-push", "v": "MISSING"}
-{"name": "oxide-constructs", "v": "MISSING"}
-{"name": "substrate-witness-log", "v": "MISSING"}
-{"name": "lau-modular-agents", "v": "MISSING"}
-{"name": "quilt-quantumaudio-demo-push", "v": "MISSING"}
-{"name": "ternary-reservoir", "v": "MISSING"}
-{"name": "lau-network-science", "v": "MISSING"}
-{"name": "si-wasserstein-fleet", "v": "MISSING"}
-{"name": "ai-character-integrations", "v": "MISSING"}
-{"name": "ternary-compiler-python", "v": "MISSING"}
-{"name": "ternary-sandbox", "v": "MISSING"}
-{"name": "plato-provenance", "v": "MISSING"}
-{"name": "flux-lang", "v": "MISSING"}
-{"name": "fleet-integration", "v": "MISSING"}
-{"name": "ternary-paxos", "v": "MISSING"}
-{"name": "quilt-substrate", "v": "MISSING"}
-{"name": "plato-tile-split", "v": "MISSING"}
-{"name": "flux-papers", "v": "MISSING"}
-{"name": "fleet-seeds", "v": "MISSING"}
-{"name": "fleet-deepinfra-test", "v": "MISSING"}
-{"name": "plato-backtest", "v": "MISSING"}
-{"name": "ternary-dissertation-c", "v": "MISSING"}
-{"name": "SuperInstance-archive", "v": "MISSING"}
-{"name": "plato-tile-metrics", "v": "MISSING"}
-{"name": "fleet-midi-gateway", "v": "MISSING"}
-{"name": "Equipment-Consensus-Engine", "v": "MISSING"}
-{"name": "lucineer-com", "v": "MISSING"}
-{"name": "lau-collections", "v": "MISSING"}
-{"name": "superinstance-ffi", "v": "MISSING"}
-{"name": "plato-room-phi", "v": "MISSING"}
-{"name": "SuperInstance-SDK1", "v": "MISSING"}
-{"name": "grand-pattern-java", "v": "MISSING"}
-{"name": "agent-polyrhythm", "v": "MISSING"}
-{"name": "gpu-persistent-homology", "v": "MISSING"}
-{"name": "fleet-midi-scale", "v": "MISSING"}
-{"name": "lau-teleomorphic", "v": "MISSING"}
-{"name": "ternary-renormalize", "v": "MISSING"}
-{"name": "ternary-proof", "v": "MISSING"}
-{"name": "flux-isa-edge", "v": "MISSING"}
-{"name": "lau-scheduling-theory", "v": "MISSING"}
-{"name": "ternary-attention", "v": "MISSING"}
-{"name": "Equipment-Consensus-Engine-Ruby", "v": "MISSING"}
-{"name": "ternary-compiler-optimizer", "v": "MISSING"}
-{"name": "plato-uidl", "v": "MISSING"}
-{"name": "flux-benchmarks", "v": "MISSING"}
-{"name": "flux-reasoner-engine", "v": "MISSING"}
-{"name": "Equipment-Teacher-Student", "v": "MISSING"}
-{"name": "ternary-cargo", "v": "MISSING"}
-{"name": "openconstruct-java", "v": "MISSING"}
-{"name": "ternary-mesh", "v": "MISSING"}
-{"name": "the-rotation", "v": "MISSING"}
-{"name": "ternary-stream-queue", "v": "MISSING"}
-{"name": "ternary-motion", "v": "MISSING"}
-{"name": "quilt-tui", "v": "MISSING"}
-{"name": "si-feedback", "v": "MISSING"}
-{"name": "flux-runtime-lat", "v": "MISSING"}
-{"name": "quilt-wiki-2126", "v": "MISSING"}
-{"name": "lau-spectral-agent", "v": "MISSING"}
-{"name": "fleet-auth", "v": "MISSING"}
-{"name": "fleet-midi-inversion", "v": "MISSING"}
-{"name": "fleet-survey", "v": "MISSING"}
-{"name": "plato-mud-server", "v": "MISSING"}
-{"name": "grand-pattern-mono", "v": "MISSING"}
-{"name": "plato-vision", "v": "MISSING"}
-{"name": "forge-pi", "v": "MISSING"}
-{"name": "forge-a2a", "v": "MISSING"}
-{"name": "ternary-benchmark", "v": "MISSING"}
-{"name": "lau-dg-algebra", "v": "MISSING"}
-{"name": "lau-bridge-tutor", "v": "MISSING"}
-{"name": "fleet-a2a-bridge", "v": "MISSING"}
-{"name": "cocapn", "v": "MISSING"}
+{"name": "ternary-spreadsheet-python", "v": ["calculator-maker"]}
+{"name": "fleet-midi-cycle", "v": ["pyramid-orchestration"]}
+{"name": "ternary-fuse", "v": ["calculator-maker"]}
+{"name": "lau-hodge-decomposition-agents", "v": []}
+{"name": "fleet-triage", "v": ["pyramid-orchestration"]}
+{"name": "plato-runtime-kernel", "v": ["deployment"]}
+{"name": "cuda-constraint-checker", "v": ["gates-deadbands"]}
+{"name": "ternary-kalman", "v": ["memory-grid"]}
+{"name": "ternary-regression", "v": []}
+{"name": "quilt-fleet-snapshot", "v": ["deployment"]}
+{"name": "graph-walker-go", "v": []}
+{"name": "substrate-canary-pin", "v": ["gates-deadbands"]}
+{"name": "oxide-canary", "v": ["gates-deadbands", "deployment"]}
+{"name": "plato-client-ruby", "v": ["memory-grid"]}
+{"name": "plato-dashboard", "v": ["interface-data-logic"]}
+{"name": "ternary-transformer", "v": []}
+{"name": "plato-room-nav", "v": ["interface-data-logic", "walkthroughs-skills"]}
+{"name": "jev-harness", "v": ["two-logs", "gates-deadbands"]}
+{"name": "conservation-spectral-zig", "v": ["calculator-maker", "memory-grid"]}
+{"name": "jev-fusion", "v": ["interface-data-logic", "two-logs"]}
+{"name": "constraint-tminus-bridge", "v": ["pyramid-orchestration", "interface-data-logic"]}
+{"name": "ternary-tnn", "v": ["memory-grid", "calculator-maker"]}
+{"name": "fleet-rave-connector", "v": ["deployment", "interface-data-logic"]}
+{"name": "openconstruct-cs", "v": ["agent-as-files", "deployment"]}
+{"name": "ternary-markov", "v": ["memory-grid", "calculator-maker"]}
+{"name": "quilt-jev-toolkit-push", "v": ["pyramid-orchestration", "interface-data-logic"]}
+{"name": "oxide-constructs", "v": ["deployment", "agent-as-files"]}
+{"name": "substrate-witness-log", "v": ["two-logs", "gates-deadbands"]}
+{"name": "lau-modular-agents", "v": ["memory-grid", "pyramid-orchestration"]}
+{"name": "quilt-quantumaudio-demo-push", "v": ["pyramid-orchestration", "interface-data-logic"]}
+{"name": "ternary-reservoir", "v": ["memory-grid", "calculator-maker"]}
+{"name": "lau-network-science", "v": ["memory-grid", "pyramid-orchestration"]}
+{"name": "si-wasserstein-fleet", "v": ["pyramid-orchestration"]}
+{"name": "ai-character-integrations", "v": ["interface-data-logic"]}
+{"name": "ternary-compiler-python", "v": ["calculator-maker"]}
+{"name": "ternary-sandbox", "v": ["agent-as-files", "gates-deadbands"]}
+{"name": "plato-provenance", "v": ["two-logs"]}
+{"name": "flux-lang", "v": []}
+{"name": "fleet-integration", "v": ["pyramid-orchestration"]}
+{"name": "ternary-paxos", "v": ["pyramid-orchestration"]}
+{"name": "quilt-substrate", "v": ["two-logs"]}
+{"name": "plato-tile-split", "v": ["memory-grid"]}
+{"name": "flux-papers", "v": []}
+{"name": "fleet-seeds", "v": ["agent-as-files"]}
+{"name": "fleet-deepinfra-test", "v": []}
+{"name": "plato-backtest", "v": []}
+{"name": "ternary-dissertation-c", "v": []}
+{"name": "SuperInstance-archive", "v": ["deployment", "pyramid-orchestration"]}
+{"name": "plato-tile-metrics", "v": ["pyramid-orchestration", "interface-data-logic"]}
+{"name": "fleet-midi-gateway", "v": ["deployment", "interface-data-logic"]}
+{"name": "Equipment-Consensus-Engine", "v": ["pyramid-orchestration", "interface-data-logic"]}
+{"name": "lucineer-com", "v": ["walkthroughs-skills", "interface-data-logic"]}
+{"name": "lau-collections", "v": ["memory-grid", "deployment"]}
+{"name": "superinstance-ffi", "v": ["deployment", "interface-data-logic"]}
+{"name": "plato-room-phi", "v": ["memory-grid", "interface-data-logic"]}
+{"name": "SuperInstance-SDK1", "v": ["deployment", "interface-data-logic"]}
+{"name": "grand-pattern-java", "v": ["memory-grid", "interface-data-logic"]}
+{"name": "agent-polyrhythm", "v": ["pyramid-orchestration", "interface-data-logic"]}
+{"name": "gpu-persistent-homology", "v": ["deployment", "interface-data-logic"]}
+{"name": "fleet-midi-scale", "v": ["pyramid-orchestration"]}
+{"name": "lau-teleomorphic", "v": []}
+{"name": "ternary-renormalize", "v": []}
+{"name": "ternary-proof", "v": []}
+{"name": "flux-isa-edge", "v": []}
+{"name": "lau-scheduling-theory", "v": ["pyramid-orchestration", "walkthroughs-skills"]}
+{"name": "ternary-attention", "v": []}
+{"name": "Equipment-Consensus-Engine-Ruby", "v": ["pyramid-orchestration"]}
+{"name": "ternary-compiler-optimizer", "v": ["calculator-maker"]}
+{"name": "plato-uidl", "v": ["interface-data-logic"]}
+{"name": "flux-benchmarks", "v": []}
+{"name": "flux-reasoner-engine", "v": []}
+{"name": "Equipment-Teacher-Student", "v": ["gates-deadbands", "walkthroughs-skills"]}
+{"name": "ternary-cargo", "v": []}
+{"name": "openconstruct-java", "v": ["interface-data-logic"]}
+{"name": "ternary-mesh", "v": ["pyramid-orchestration"]}
+{"name": "the-rotation", "v": ["pyramid-orchestration", "walkthroughs-skills"]}
+{"name": "ternary-stream-queue", "v": []}
+{"name": "ternary-motion", "v": []}
+{"name": "quilt-tui", "v": ["interface-data-logic"]}
+{"name": "si-feedback", "v": ["interface-data-logic"]}
+{"name": "flux-runtime-lat", "v": ["memory-grid", "calculator-maker"]}
+{"name": "quilt-wiki-2126", "v": []}
+{"name": "lau-spectral-agent", "v": ["memory-grid", "pyramid-orchestration"]}
+{"name": "fleet-auth", "v": []}
+{"name": "fleet-midi-inversion", "v": []}
+{"name": "fleet-survey", "v": []}
+{"name": "plato-mud-server", "v": ["walkthroughs-skills", "memory-grid"]}
+{"name": "grand-pattern-mono", "v": ["memory-grid", "pyramid-orchestration"]}
+{"name": "plato-vision", "v": ["interface-data-logic", "memory-grid"]}
+{"name": "forge-pi", "v": ["deployment", "pyramid-orchestration"]}
+{"name": "forge-a2a", "v": ["interface-data-logic", "two-logs"]}
+{"name": "ternary-benchmark", "v": ["gates-deadbands", "pyramid-orchestration"]}
+{"name": "lau-dg-algebra", "v": ["pyramid-orchestration", "walkthroughs-skills"]}
+{"name": "lau-bridge-tutor", "v": ["walkthroughs-skills", "interface-data-logic"]}
+{"name": "fleet-a2a-bridge", "v": ["interface-data-logic", "two-logs"]}
+{"name": "cocapn", "v": ["agent-as-files", "memory-grid"]}
+{"name": "lau-audio", "v": ["calculator-maker"]}
+{"name": "ternary-weather", "v": ["interface-data-logic"]}
+{"name": "conservation-law-demo", "v": ["gates-deadbands"]}
+{"name": "fleet-midi-studio", "v": ["interface-data-logic"]}
+{"name": "plato-prompt-builder", "v": ["interface-data-logic"]}
+{"name": "flux-compiler-agentic", "v": ["calculator-maker"]}
+{"name": "quilt-llvm", "v": ["calculator-maker"]}
+{"name": "fleet-config", "v": ["deployment"]}
+{"name": "exocortex-ast-cpp", "v": ["calculator-maker"]}
+{"name": "flux-cooperative-intelligence", "v": ["pyramid-orchestration"]}
+{"name": "flux-fuzzer", "v": ["gates-deadbands"]}
+{"name": "ternary-thermodynamics", "v": ["memory-grid"]}
+{"name": "grand-pattern-swift", "v": ["memory-grid"]}
+{"name": "spectral-deadband", "v": ["gates-deadbands"]}
+{"name": "fleet-json-a2a", "v": []}
+{"name": "quilt-port", "v": ["deployment"]}
+{"name": "fleet-midi-tide", "v": ["pyramid-orchestration", "walkthroughs-skills"]}
+{"name": "quilt-director", "v": ["pyramid-orchestration", "interface-data-logic"]}
+{"name": "grand-synthesis", "v": ["pyramid-orchestration", "walkthroughs-skills"]}
+{"name": "slackwater-rust", "v": ["calculator-maker", "memory-grid"]}
+{"name": "plato-tile-fountain", "v": ["memory-grid", "interface-data-logic"]}
+{"name": "plato-kernel", "v": ["gates-deadbands", "memory-grid"]}
+{"name": "ternary-envelope", "v": ["interface-data-logic", "memory-grid"]}
+{"name": "ternary-percolation", "v": ["memory-grid", "calculator-maker"]}
+{"name": "plato-manus", "v": ["interface-data-logic", "memory-grid"]}
+{"name": "conservation-spectral-python", "v": ["walkthroughs-skills", "interface-data-logic"]}
+{"name": "ternary-scoring", "v": ["gates-deadbands", "walkthroughs-skills"]}
+{"name": "ternary-loss", "v": ["gates-deadbands", "memory-grid"]}
+{"name": "flux-linker", "v": ["calculator-maker", "interface-data-logic"]}
+{"name": "fleet-automation-early-version", "v": []}
+{"name": "fleet-map", "v": ["interface-data-logic", "pyramid-orchestration"]}
+{"name": "lau-bridge-pattern-math", "v": ["interface-data-logic", "calculator-maker"]}
+{"name": "vm-estate", "v": ["pyramid-orchestration", "deployment"]}
+{"name": "crab", "v": ["agent-as-files", "pyramid-orchestration"]}
+{"name": "multiagent-project-archive", "v": ["pyramid-orchestration", "walkthroughs-skills"]}
+{"name": "turbovec-integration-ccc", "v": ["gates-deadbands", "calculator-maker"]}
+{"name": "whistle", "v": ["interface-data-logic", "deployment"]}
+{"name": "circuitbreaker-rs", "v": ["gates-deadbands", "deployment"]}
+{"name": "hodge-belief-rs", "v": ["two-logs", "memory-grid"]}
+{"name": "sonar-vision", "v": ["memory-grid", "interface-data-logic"]}
+{"name": "kintsugi-math-npm", "v": ["gates-deadbands", "deployment"]}
+{"name": "federation-protocol", "v": ["pyramid-orchestration", "deployment"]}
+{"name": "canonical-form", "v": []}
+{"name": "error-forest", "v": ["two-logs", "deployment"]}
+{"name": "holonomy-harmony", "v": ["interface-data-logic", "walkthroughs-skills"]}
+{"name": "ctl-model", "v": ["gates-deadbands", "interface-data-logic"]}
+{"name": "snapkit-zig", "v": ["deployment", "pyramid-orchestration"]}
+{"name": "makerlog-ai-pages", "v": ["interface-data-logic", "deployment"]}
+{"name": "servo-mind-theory", "v": []}
+{"name": "relativity", "v": []}
+{"name": "zai-worker", "v": ["deployment", "agent-as-files"]}
+{"name": "markov-blanket", "v": []}
+{"name": "tropical-geometry-rs", "v": []}
+{"name": "jeviter", "v": ["interface-data-logic"]}
+{"name": "ship-log-modules", "v": ["interface-data-logic"]}
+{"name": "smartcrdt-git-agent", "v": ["agent-as-files"]}
+{"name": "gossip-seed", "v": []}
+{"name": "conversation-toolkit", "v": ["interface-data-logic"]}
+{"name": "kernel-conservation", "v": []}
+{"name": "rg-flow", "v": []}
+{"name": "live-canon-gh", "v": []}
+{"name": "ecosystem-conservation", "v": []}
+{"name": "graphite-geometric-algebra", "v": []}
+{"name": "ws-fabric", "v": []}
+{"name": "frontends", "v": []}
+{"name": "reposphere", "v": ["agent-as-files", "pyramid-orchestration"]}
+{"name": "expr-bytecode", "v": []}
+{"name": "Polln-whitepapers", "v": []}
+{"name": "godel-number", "v": []}
+{"name": "fundamental-group", "v": []}
+{"name": "cot-quilt", "v": ["interface-data-logic", "calculator-maker"]}
+{"name": "discussions", "v": []}
+{"name": "luau-recipe", "v": []}
+{"name": "consensus-protocol", "v": ["two-logs", "pyramid-orchestration"]}
+{"name": "ant-colony", "v": ["gates-deadbands", "calculator-maker"]}
+{"name": "channel-model", "v": []}
+{"name": "codespace-worker", "v": ["deployment", "pyramid-orchestration"]}
+{"name": "research", "v": []}
+{"name": "studylog-ai-pages", "v": []}
+{"name": "incubator", "v": ["memory-grid", "deployment"]}
+{"name": "codex-budget-guard", "v": ["deployment", "gates-deadbands"]}
+{"name": "jc1-research", "v": ["pyramid-orchestration", "memory-grid"]}
+{"name": "brownian-motion", "v": ["calculator-maker", ""]}
+{"name": "robotics-foundations", "v": ["walkthroughs-skills", ""]}
+{"name": "hodge-theory", "v": ["calculator-maker", ""]}
+{"name": "hardware-capability-profiler", "v": ["deployment", ""]}
+{"name": "openshell-compatibility-audit", "v": ["interface-data-logic", ""]}
+{"name": "quipu-math-c", "v": ["memory-grid", ""]}
+{"name": "lighthouse-monitor", "v": ["pyramid-orchestration", "gates-deadbands"]}
+{"name": "tropical-synth", "v": ["calculator-maker", ""]}
+{"name": "PuddnHead", "v": ["memory-grid", ""]}
+{"name": "negative-space-core", "v": ["walkthroughs-skills", ""]}
+{"name": "openmind-conductor", "v": ["pyramid-orchestration", ""]}
+{"name": "crackle-runtime-c", "v": ["deployment", ""]}
+{"name": "particle-swarm", "v": ["calculator-maker", ""]}
+{"name": "formal-consciousness", "v": ["walkthroughs-skills", ""]}
+{"name": "wire-harmony", "v": ["interface-data-logic", "pyramid-orchestration"]}
+{"name": "style-dna", "v": ["calculator-maker", "walkthroughs-skills"]}
+{"name": "isa-convergence-tools", "v": ["two-logs", "interface-data-logic"]}
+{"name": "tminus-music", "v": ["walkthroughs-skills", "pyramid-orchestration"]}
+{"name": "canon-zoo", "v": []}
+{"name": "galois-unification-proofs", "v": ["interface-data-logic", "deployment"]}
+{"name": "casting-call-gpu", "v": ["memory-grid", "deployment"]}
+{"name": "simd-perception-loop", "v": ["gates-deadbands", "pyramid-orchestration"]}
+{"name": "elliptic-curve-ops", "v": []}
+{"name": "beta-test-elena", "v": ["gates-deadbands", "pyramid-orchestration"]}
+{"name": "bregman-divergence", "v": ["memory-grid", "two-logs"]}
+{"name": "websocket-fabric", "v": ["deployment", "interface-data-logic"]}
+{"name": "free-probability-rs", "v": ["memory-grid", "pyramid-orchestration"]}
+{"name": "tminus-ecosystem-review", "v": ["interface-data-logic", "pyramid-orchestration"]}
+{"name": "allocator-rs", "v": ["memory-grid", "deployment"]}
+{"name": "secret-sharing", "v": ["two-logs", "gates-deadbands"]}
+{"name": "canon-hash", "v": []}
+{"name": "forgemaster-shell", "v": ["pyramid-orchestration", "agent-as-files"]}
+{"name": "garden", "v": ["pyramid-orchestration"]}
+{"name": "entropy-gpu-rs", "v": ["calculator-maker"]}
+{"name": "hermit-crab-ecology", "v": ["pyramid-orchestration", "walkthroughs-skills"]}
+{"name": "step-back-topology", "v": ["calculator-maker"]}
+{"name": "interval-tree-rs", "v": ["memory-grid"]}
+{"name": "protein-conservation", "v": []}
+{"name": "forgemaster", "v": ["calculator-maker", "agent-as-files"]}
+{"name": "witness-is-prediction", "v": []}
+{"name": "dojo-builder", "v": ["agent-as-files", "walkthroughs-skills"]}
+{"name": "roblox-game-build-framework", "v": ["deployment", "interface-data-logic"]}
+{"name": "keeper-agent", "v": ["agent-as-files", "memory-grid"]}
+{"name": "linguistic-spectral", "v": []}
+{"name": "c-ternary", "v": ["gates-deadbands"]}
+{"name": "fractal-gen-rs", "v": ["calculator-maker"]}
+{"name": "orations-metal", "v": []}
+{"name": "codespace-edge-rd", "v": ["deployment", "pyramid-orchestration"]}
+{"name": "actor-rs", "v": ["pyramid-orchestration"]}
+{"name": "auto-changelog", "v": []}
+{"name": "count-min-sketch", "v": []}
+{"name": "numerics-ode", "v": []}
+{"name": "pythagorean48", "v": ["deployment"]}
+{"name": "autodata-integration", "v": ["pyramid-orchestration"]}
+{"name": "model-registry-archive", "v": ["memory-grid"]}
+{"name": "tripartite-room", "v": ["pyramid-orchestration"]}
+{"name": "reversible-logic", "v": []}
+{"name": "async-rs", "v": []}
+{"name": "bid-engine-rs", "v": []}
+{"name": "salidiere", "v": ["pyramid-orchestration"]}
+{"name": "jepa-core", "v": []}
+{"name": "hebbian-router", "v": ["interface-data-logic"]}
+{"name": "categorical-coordination", "v": ["pyramid-orchestration", "walkthroughs-skills"]}
+{"name": "mycelium-route", "v": ["deployment", "interface-data-logic"]}
+{"name": "multi-model-adversarial-testing", "v": ["gates-deadbands", "walkthroughs-skills"]}
+{"name": "musician-soul-v2", "v": ["pyramid-orchestration", "deployment"]}
+{"name": "griot-math-pypi", "v": ["memory-grid", "walkthroughs-skills"]}
+{"name": "crab-trap-web", "v": ["interface-data-logic", "memory-grid"]}
+{"name": "circuit-breaker", "v": ["gates-deadbands", "deployment"]}
+{"name": "spreader-agent", "v": ["interface-data-logic", "pyramid-orchestration"]}
+{"name": "quipu-math-wasm", "v": ["calculator-maker", "memory-grid"]}
+{"name": "Claude-prism-local-json", "v": ["two-logs", "memory-grid"]}
+{"name": "snapkit-rs", "v": ["two-logs", "memory-grid"]}
+{"name": "persistence-agent", "v": ["memory-grid", "walkthroughs-skills"]}
+{"name": "UI", "v": ["interface-data-logic", "memory-grid"]}
+{"name": "room-cell", "v": ["memory-grid", "interface-data-logic"]}
+{"name": "lie-algebra", "v": ["calculator-maker", "memory-grid"]}
+{"name": "audit-log", "v": ["two-logs", "gates-deadbands"]}
+{"name": "lau-render", "v": ["interface-data-logic"]}
+{"name": "recovered-copy-20260824-fleet-tts", "v": ["pyramid-orchestration"]}
+{"name": "roblox-testkit", "v": []}
+{"name": "quilt-doctor", "v": []}
+{"name": "lau-protocol", "v": ["interface-data-logic"]}
+{"name": "string-search-rs", "v": []}
+{"name": "symplectic-opt-rs", "v": []}
+{"name": "quilt-forge", "v": ["calculator-maker"]}
+{"name": "glyphtensor-bridge", "v": ["interface-data-logic"]}
+{"name": "fleet-embed", "v": ["pyramid-orchestration"]}
+{"name": "pong-quilt", "v": []}
+{"name": "atlas-forge", "v": ["calculator-maker"]}
+{"name": "lau-shell-kernel", "v": ["interface-data-logic"]}
+{"name": "svelte-quilt", "v": ["interface-data-logic"]}
+{"name": "agent-writings-archive", "v": ["walkthroughs-skills"]}
+{"name": "recovered-copy-20260824-base60-lattice", "v": []}
+{"name": "plato-engine-block-gleam", "v": []}
+{"name": "tda-c", "v": []}
+{"name": "lau-representation-theory", "v": []}
+{"name": "quilt-executor", "v": []}
+{"name": "plainsong-worker", "v": []}
+{"name": "jev-paint-quilt", "v": []}
+{"name": "luciddreamer-content", "v": []}
+{"name": "dual-band-guard", "v": []}
+{"name": "superinstance-ai", "v": []}
+{"name": "hermes-memory-mcp", "v": []}
+{"name": "recovered-copy-20260824-forgemaster-shell", "v": []}
+{"name": "lau-state-machine", "v": ["gates-deadbands"]}
+{"name": "Projectionist", "v": []}
+{"name": "asset-ranch", "v": []}
+{"name": "lau-provenance", "v": ["two-logs"]}
+{"name": "researchlocal-backup", "v": []}
+{"name": "lau-renormalization-agents", "v": []}
+{"name": "syzygy-lattice", "v": []}
+{"name": "ternary-rom", "v": []}
+{"name": "recovered-copy-20260824-officers-quarters", "v": []}
+{"name": "wesley", "v": []}
+{"name": "lau-supergeometry", "v": []}
+{"name": "activeledger-ai-site", "v": []}
+{"name": "lau-pde-agents", "v": []}
+{"name": "zero-msg-test", "v": []}
+{"name": "lucineer-fleet-wiki", "v": ["pyramid-orchestration"]}
+{"name": "lau-protocol-binary", "v": []}
+{"name": "recovered-copy-20260824-tap-gamenight", "v": []}
+{"name": "quiltcall", "v": []}
+{"name": "lau-shell-lifecycle", "v": []}
+{"name": "deckboss-site", "v": []}
+{"name": "lau-self-aware-agent", "v": ["agent-as-files", "walkthroughs-skills"]}
+{"name": "lumina-lang", "v": []}
+{"name": "nexus-explainability", "v": ["walkthroughs-skills", "two-logs"]}
+{"name": "JetsonClaw1-vessel", "v": ["deployment", "pyramid-orchestration"]}
+{"name": "flux-trust-c", "v": ["gates-deadbands", "interface-data-logic"]}
+{"name": "scratch-vm", "v": ["memory-grid", "interface-data-logic"]}
+{"name": "fleet-onboarding", "v": ["walkthroughs-skills", "pyramid-orchestration"]}
+{"name": "context-broker", "v": ["interface-data-logic", "pyramid-orchestration"]}
+{"name": "docs-engine", "v": ["walkthroughs-skills", "interface-data-logic"]}
+{"name": "voxblox-plusplus", "v": ["memory-grid"]}
+{"name": "MerkleMesh", "v": ["two-logs", "pyramid-orchestration"]}
+{"name": "polychora", "v": ["memory-grid", "interface-data-logic"]}
+{"name": "markdown-agent-studio", "v": ["walkthroughs-skills", "interface-data-logic"]}
+{"name": "chroma", "v": ["memory-grid", "interface-data-logic"]}
+{"name": "BMAD-METHOD", "v": ["calculator-maker", "walkthroughs-skills"]}
+{"name": "edgenative-ai", "v": ["interface-data-logic", "deployment"]}
+{"name": "Open-LLM-VTuber", "v": ["interface-data-logic", "deployment"]}
+{"name": "nexus-aab-protocol", "v": ["pyramid-orchestration", "agent-as-files"]}
+{"name": "OpenRoom", "v": ["interface-data-logic"]}
+{"name": "opensmile", "v": []}
+{"name": "plato-cuda-dreamcycle", "v": ["deployment"]}
+{"name": "ViMax", "v": ["interface-data-logic"]}
+{"name": "nexus-data-pipeline", "v": ["deployment"]}
+{"name": "resolve", "v": ["pyramid-orchestration"]}
+{"name": "zero-knowledge-fleet", "v": ["pyramid-orchestration"]}
+{"name": "increments-trust", "v": []}
+{"name": "flux-stigmergy-c", "v": []}
+{"name": "tri-quarter-toolbox", "v": []}
+{"name": "ghost-tiles-cuda", "v": ["memory-grid"]}
+{"name": "confidence-c", "v": []}
+{"name": "plato-harbor", "v": ["pyramid-orchestration"]}
+{"name": "cuda-fault-sim", "v": ["deployment"]}
+{"name": "fleet-migration", "v": ["pyramid-orchestration"]}
+{"name": "log-origin", "v": ["interface-data-logic", "pyramid-orchestration"]}
+{"name": "nexus-security", "v": ["two-logs", "gates-deadbands"]}
+{"name": "liath", "v": ["memory-grid", "calculator-maker"]}
+{"name": "cuda-stream", "v": ["interface-data-logic", "deployment"]}
+{"name": "astro", "v": ["interface-data-logic", "deployment"]}
+{"name": "craftmind-researcher", "v": ["walkthroughs-skills", "pyramid-orchestration"]}
+{"name": "deckboss-fab", "v": ["deployment", "calculator-maker"]}
+{"name": "nexus-energy", "v": ["two-logs", "deployment"]}
+{"name": "cuda-stigmergy", "v": ["pyramid-orchestration", "memory-grid"]}
+{"name": "legacy-ai", "v": ["interface-data-logic", "agent-as-files"]}
+{"name": "jetson-grand-design", "v": ["deployment", "pyramid-orchestration"]}
+{"name": "jiuwenclaw", "v": ["interface-data-logic", "agent-as-files"]}
+{"name": "cuda-backpressure", "v": ["gates-deadbands", "deployment"]}
+{"name": "agentkernel", "v": ["deployment", "agent-as-files"]}
+{"name": "fluxnavigate-go", "v": ["memory-grid", "interface-data-logic"]}
+{"name": "fleet-djinn", "v": ["pyramid-orchestration", "interface-data-logic"]}
+{"name": "zero-knowledge", "v": []}
+{"name": "zero-poc", "v": ["agent-as-files"]}
+{"name": "git.pp-ng", "v": ["two-logs", "pyramid-orchestration"]}
+{"name": "quilt-matrix", "v": ["memory-grid"]}
+{"name": "cellforge", "v": ["memory-grid"]}
+{"name": "xero", "v": ["agent-as-files"]}
+{"name": "xero-lab", "v": ["agent-as-files"]}
+{"name": "question-tree", "v": ["walkthroughs-skills"]}
+{"name": "jev-semantic", "v": ["interface-data-logic"]}
+{"name": "constraint-theory-core", "v": ["gates-deadbands"]}
+{"name": "exocortex-core", "v": ["memory-grid"]}

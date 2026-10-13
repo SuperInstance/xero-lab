@@ -219,3 +219,190 @@ but smaller; the unconfirmed part is a loan against the re-run.
 6. **Rule vs allocation**: when Jev's rule-verdict (disagreement alone:
    neg 0.20) and its budget choice (spend on disagreements: 0.51) conflict,
    which governs the gate policy?
+
+---
+
+# Re-run (paced) — 2026-10-13, second sitting
+
+*The work order was the deficit above: complete the SMALL tier under a
+hard pacing gate, close the PILLAR and DISP staircases, and take up the
+two cheapest open questions (SUBSTANCE for DISP, the TRAP re-cut).*
+
+## How it was run — the pacing gate, operationalized
+
+One call in flight at a time, sequential batches of 16, a 2 s pacing
+sleep between batches, and on any HTTP 429 an exponential backoff
+(20 s → 45 s → 90 s) with a full halt if the ladder failed. Every
+invocation is logged in `data/minimax_calls_rerun.log` (runner:
+`code/minimax_paced.py`).
+
+| | Run 1 | Re-run |
+|---|---|---|
+| MiniMax invocations | ~80 (58 batches logged) | 110 logged |
+| Concurrency | 3 batch loops at once | 1, always |
+| HTTP 429s | run killed by one | **0** |
+| Retries / failed batches | — | 1 (a parse failure) / 0 |
+| SMALL coverage at the end | FAM 239, TRAP 138, PILLAR 16, DISP 0 | **395 / 395 / 395 / 395** |
+
+Plus three new cells on the 119-repo REF subsample (SUBSTANCE,
+COLLISION, VAGUE — 119/119 each). The sheet now contains **zero**
+RATE-LIMITED / NOT-RUN cells. Finding #7's lesson holds up as doctrine:
+paced at concurrency 1, the provider never throttled once.
+
+One decider quirk, found and handled on the record: MiniMax
+persistently transcribed `activeledger-ai-site` as
+`activedledger-ai-site` (edit distance 1), so its own answers were
+discarded as name-mismatches in batch after batch. Isolated with solo
+calls; the values were accepted with the correction written into the
+call log. A name-echo failure mode — output hygiene, not rate.
+
+## Accuracy on complete data — what moved
+
+- **FAM**: SMALL vs GOLD is 73.2% overall — bigfam 97.5%, tail 46.1%,
+  no-desc 87.5%, fork 47.9%, spotlight 81.8%. Fidelity to BIG on the
+  full REF set is **78.2%**, down from the partial run's 91.2%: the
+  answered subset was bigfam-heavy, exactly the bias the deficit
+  section warned about. The staircase verdict stands (the tail
+  divergences are semantic calls GOLD cannot judge), but the tail is
+  a genuinely contested cell, and Jev's re-run verdict on its staffing
+  is **zero, 0.44** — the deadband, again (see judgment log).
+- **TRAP**: SMALL vs REF is 75.6% at n=119 (the partial n=49 read
+  65.3%; the subset was unrepresentative in both directions). Flag
+  precision fell to **3.7%** (1 of 27 flags confirmed). Unchanged
+  verdict, stronger evidence: not prunable, flags are noise.
+- **DISP**: SMALL deciding directly scores **43.7%** vs REF — the worst
+  DISP decider measured; its confusion is one-directional (REF
+  COLLAPSE → SMALL DEEP 28 times; REF TAIL → SMALL DEEP 18). The
+  formula chained on SMALL's cells scores 31.1%, poisoned by SMALL
+  PILLAR's over-firing. Formula on ALGO cells: 78.2%. Ceiling on
+  perfect inputs: **80.7%, reconfirmed**.
+
+## PILLAR staircase — CLOSED, and it closes toward the floor
+
+| Decider | vs REF (n=119) exact | overlap | vs SILVER (n=395) exact |
+|---|---|---|---|
+| ALGO (name keywords) | **65.6%** | 66.4% | 70.9% |
+| BIG | (is REF) | — | 59.7% |
+| SMALL | 33.6% | 47.1% | 32.9% |
+
+SMALL over-fires: 487 pillar tags across 395 repos (290 repos tagged),
+against a reference that tags **34 of 119** repos at all (40 tags).
+SMALL agrees with the keyword SILVER standard about as often as the
+two keyword rules agree with each other — at this task the small model
+behaves like another keyword rule, not like the reference. (Data
+quality footnote: 13 of SMALL's tag lists contain an empty-string tag,
+a formatting slip; immaterial to a 32-point gap.)
+
+**Staffing: ALGO, confirmed** — Jev concurs (pos 0.77). BIG is worked
+out of all 395 PILLAR production cells; SMALL's tags are demoted to
+candidates, where run 1 provisionally had ALGO standing. The honest
+caveat is unchanged and still binding: the yardstick is the weak
+point (BIG vs SILVER only 59.7%), so "ALGO confirmed" means *best
+measured cheap decider*, not *pillar tagging solved* — its exact-set
+agreement with the reference is 65.6%, full stop.
+
+## Open question (a): SUBSTANCE and the DISP ceiling — the ceiling does not move
+
+SMALL's SUBSTANCE calls on the REF set: 87 SUBSTANTIVE / 32 STUB.
+Feeding them to the formula over BIG's perfect FAM/PILLAR cells:
+
+| Variant | Accuracy vs REF |
+|---|---|
+| Base formula (run 1) | **80.7%** (96/119) |
+| + v2a: STUB downgrades DEEP → TAIL | 79.8% (95/119) — 3 changes, **0 fixes, 1 break** (the break: `quilt-matrix`, a genuinely DEEP repo SMALL called a stub) |
+| + v2b: SUBSTANTIVE + SILVER-pillar upgrades TAIL/COLLAPSE → DEEP | 63.0% alone — fires on 21 repos, **0 of which REF calls DEEP** |
+| Combined v2 | 62.2% (74/119) |
+
+The anatomy of the 23 base errors explains why: the dominant class
+(15) is base-DEEP → REF-COLLAPSE — substantive family members the
+reference rates *representative, not exceptional* — and 13 of those 15
+are SUBSTANTIVE. The stub/substance axis is orthogonal to the
+residual; what the formula is missing is **representativeness**, not
+substance. Jev: pos 0.74 for keeping the formula and not adopting the
+cell. **Verdict: the 80.7% ceiling stands; SUBSTANCE as cut does not
+carry the missing signal.** (Open question 3, answered: no.)
+
+## Open question (b): the TRAP re-cut — neither half is decidable by cheap tiers
+
+Fresh hand labels (REF2, written before SMALL saw these cells):
+COLLISION base rate 6.7% (8/119), VAGUE 16.8% (20/119).
+
+| Cell | SMALL accuracy | Always-NO floor | Flag precision | Recall |
+|---|---|---|---|---|
+| COLLISION | 88.2% | **93.3%** | 25% (3/12) | 37.5% (3/8) |
+| VAGUE | 63.9% | **83.2%** | 29% (16/55) | 80% (16/20) |
+
+Both halves score *below the trivial floor*. Their failure shapes
+differ — COLLISION fails on calibration of famousness in both
+directions (it missed `xero`, `quipu-math-c`, `codex-budget-guard`,
+`zero-knowledge-fleet`; it flagged plato-family names and eponym math
+terms) and VAGUE fails on the concreteness threshold (55 flags on 119
+repos) — so the split is diagnostically real. But a staffed cell needs
+a decider, and the cheap tier is not one for either half: the re-cut
+inherits TRAP's disease (a gradient concept at a low base rate).
+Jev's choice: **keep_big_watch, 0.66** (confidence 0.55) over
+hand-list (0.17), drop (0.15), staff-the-recut (0.02). **Verdict: TRAP
+stays BIG-verdict + cheap watches; the re-cut is not adopted.**
+Sensitivity note: two of my eight COLLISION labels (`xero`,
+`xero-lab`) are judgment calls SMALL disputed; relabeling them does
+not change the verdict (SMALL still misses three true collisions and
+flags nine non-collisions). (Open question 2, answered.)
+
+## The staircase, closed (final staffing)
+
+| Cell | Final staffing | Big tier worked out of |
+|---|---|---|
+| FAM | ALGO token-family; SMALL tail-OTHER; BIG fused-name watch (2 cells) + validation. *Jev zero (0.44) on the tail stands as a logged caution* | 395/395 production cells |
+| TRAP | **Not pruned** (re-cut also rejected). BIG verdicts on the labeled subsample; cheap tiers are watches | 0% |
+| PILLAR | **ALGO, confirmed**; SMALL tags are candidates | **395/395 production cells** |
+| DISP | Formula over ALGO cells by default; pillar-bearing tail/fork escalate. SUBSTANCE not adopted | ~85%, capped at the 80.7% ceiling |
+
+Sheet: 1,580 rows rebuilt (`code/finalize2.py`), tier mix ALGO 1,250 /
+SMALL 168 / BIG 126 / Jev-gated 36. Staffed correctness: PILLAR
+280/395 vs SILVER and DISP 304/395 vs SILVER — unchanged, since the
+staffing didn't change, only its confirmation status; TRAP 119/119 vs
+REF, unchanged. Staffed FAM vs GOLD reads 308/395, *down* from run 1's
+367 — and the drop is an artifact of honesty: run 1's unanswered tail
+cells silently fell back to the token rule, which is GOLD's own
+definition and scores correct by construction. Now SMALL actually
+staffs those cells, and its semantic calls diverge from GOLD exactly
+where GOLD cannot judge; against REF the staffed FAM is **87.4%**
+(104/119) faithful.
+
+**Economics**: staffed grid **3,391 units = 8.6%** of all-BIG
+(39,500), vs run 1's 3,285 (8.3%). The 0.3-point rise is the rate
+limit's discount being repaid — run 1 never paid for the 106 FAM
+cells it left RATE-LIMITED. The important change is in quality, not
+price: run 1's saving was partly a loan against unconfirmed quality
+(PILLAR candidates); that loan is now repaid — PILLAR's staffing is
+measured and Jev-confirmed. TRAP's watches remain the only
+unconfirmed-quality staffing in the grid, and there it is deliberate
+(a watch is not a verdict).
+
+## Disposition of run-1 open questions
+
+1. **Re-run SMALL, paced** — done; both open staircases closed.
+2. **Re-cut TRAP** — measured; neither half decidable; not adopted.
+3. **SUBSTANCE cell** — measured; ceiling unmoved; not adopted.
+4. **Jev's FAM dissent** — re-asked on complete data: zero (0.44).
+   The caution stands in the log; whether GOLD itself should be
+   re-based on semantic labels remains open.
+5. **NO-SIGNAL as a first-class output** — not taken up; still open.
+6. **Rule vs allocation** — not taken up; still open.
+
+## New open questions from the re-run
+
+1. **REPRESENTATIVENESS is the DISP residual's actual name** — a cell
+   asking "does this repo add anything beyond its family line?" But
+   that question is uncomfortably close to the disposition decision
+   itself; a cell that *is* the decision is not a decomposition.
+2. **SMALL's liberal bias is one behavior across three cells**
+   (over-tag, over-DEEP, over-flag). Is it a tier-calibration problem
+   — fixable with a second prune pass ("tag, then justify or drop") —
+   rather than three separate cell problems?
+3. **PILLAR's binding constraint is now the standard, not the
+   deciders.** Extending the 119 REF labels would buy more than any
+   new decider tier.
+4. **Runner hygiene**: name-echo errors silently discard decider
+   answers. A distance-1 name-acceptance rule belongs in the runner,
+   on the record — implemented ad hoc here, not yet doctrine in code.

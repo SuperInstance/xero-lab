@@ -1,395 +1,395 @@
-{"name": "ternary-cell-python", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-adapters", "FAM": "plato", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-collab", "FAM": "lau", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "agent-riff-v3", "FAM": "agent", "TRAP": "SUSPECT", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-engine-block-c", "FAM": "plato", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "eisenstein-tools", "FAM": "eisenstein", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "mavis-skill-miner", "FAM": "mavis", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-intent-cache", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "substrate-forge", "FAM": "substrate", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-conversation", "FAM": "quilt", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-projection", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-signatures", "FAM": "flux", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-spiral", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-ensign", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-core", "FAM": "plato", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-walk", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "oxide-workflow", "FAM": "oxide", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "deployment"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "cocapn-colora", "FAM": "cocapn", "TRAP": "TRUST", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "spectral-explorer", "FAM": "spectral", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "memory-grid"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-fable", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": ["walkthroughs-skills", "interface-data-logic"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-search", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "memory-grid"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-phase", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["memory-grid", "gates-deadbands"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-policy", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "pyramid-orchestration"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-connes-spectral-triple", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": [], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-midi-chord", "FAM": "fleet", "TRAP": "SUSPECT", "PILLAR": ["memory-grid", "calculator-maker"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-agent-python", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["agent-as-files", "pyramid-orchestration"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "graph-planarity", "FAM": "graph", "TRAP": "TRUST", "PILLAR": ["memory-grid", "calculator-maker"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "agent-motif", "FAM": "agent", "TRAP": "SUSPECT", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-latin", "FAM": "fleet", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration", "interface-data-logic"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "conservation-verify-c", "FAM": "conservation", "TRAP": "TRUST", "PILLAR": ["memory-grid", "two-logs"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-manifesto", "FAM": "ternary", "TRAP": "SUSPECT", "PILLAR": [], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "conservation-spectral-ada", "FAM": "conservation", "TRAP": "TRUST", "PILLAR": ["memory-grid", "two-logs"], "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-spreadsheet-python", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-midi-cycle", "FAM": "fleet", "TRAP": "SUSPECT", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-fuse", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-hodge-decomposition-agents", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-triage", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-runtime-kernel", "FAM": "plato", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "cuda-constraint-checker", "FAM": "constraint", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-kalman", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-regression", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-fleet-snapshot", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "graph-walker-go", "FAM": "graph", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "substrate-canary-pin", "FAM": "substrate", "TRAP": "SUSPECT", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "oxide-canary", "FAM": "oxide", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-client-ruby", "FAM": "plato", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-dashboard", "FAM": "plato", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-transformer", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-room-nav", "FAM": "plato", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "jev-harness", "FAM": "jev", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "conservation-spectral-zig", "FAM": "conservation", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "jev-fusion", "FAM": "jev", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "constraint-tminus-bridge", "FAM": "constraint", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-tnn", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-rave-connector", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "openconstruct-cs", "FAM": "openconstruct", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-markov", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-jev-toolkit-push", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "oxide-constructs", "FAM": "oxide", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "substrate-witness-log", "FAM": "substrate", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-modular-agents", "FAM": "lau", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-quantumaudio-demo-push", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-reservoir", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-network-science", "FAM": "lau", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "si-wasserstein-fleet", "FAM": "si", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ai-character-integrations", "FAM": "ai", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-compiler-python", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-sandbox", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-provenance", "FAM": "plato", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-lang", "FAM": "flux", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-integration", "FAM": "fleet", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-paxos", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-substrate", "FAM": "quilt", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-tile-split", "FAM": "plato", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-papers", "FAM": "flux", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-seeds", "FAM": "fleet", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-deepinfra-test", "FAM": "fleet", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-backtest", "FAM": "plato", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-dissertation-c", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "SuperInstance-archive", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-tile-metrics", "FAM": "plato", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-midi-gateway", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "Equipment-Consensus-Engine", "FAM": "agent", "TRAP": "SUSPECT", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lucineer-com", "FAM": "lucineer", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-collections", "FAM": "lau", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "superinstance-ffi", "FAM": "superinstance", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-room-phi", "FAM": "plato", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "SuperInstance-SDK1", "FAM": "superinstance", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "grand-pattern-java", "FAM": "grand", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "agent-polyrhythm", "FAM": "agent", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "gpu-persistent-homology", "FAM": "gpu", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-midi-scale", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-teleomorphic", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-renormalize", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-proof", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-isa-edge", "FAM": "flux", "TRAP": "SUSPECT", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-scheduling-theory", "FAM": "lau", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-attention", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "Equipment-Consensus-Engine-Ruby", "FAM": "equipment", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-compiler-optimizer", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-uidl", "FAM": "plato", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-benchmarks", "FAM": "flux", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-reasoner-engine", "FAM": "flux", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "Equipment-Teacher-Student", "FAM": "equipment", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-cargo", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "openconstruct-java", "FAM": "openconstruct", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-mesh", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "the-rotation", "FAM": "the", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-stream-queue", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-motion", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-tui", "FAM": "quilt", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "si-feedback", "FAM": "si", "TRAP": "MISSING", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-runtime-lat", "FAM": "flux", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-wiki-2126", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-spectral-agent", "FAM": "lau", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-auth", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-midi-inversion", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-survey", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-mud-server", "FAM": "plato", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "grand-pattern-mono", "FAM": "grand", "TRAP": "SUSPECT", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-vision", "FAM": "plato", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "forge-pi", "FAM": "forge", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "forge-a2a", "FAM": "forge", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-benchmark", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-dg-algebra", "FAM": "lau", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-bridge-tutor", "FAM": "lau", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-a2a-bridge", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "cocapn", "FAM": "cocapn", "TRAP": "TRUST", "PILLAR": "MISSING", "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-audio", "FAM": "lau", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-weather", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "conservation-law-demo", "FAM": "conservation", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-midi-studio", "FAM": "fleet", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-prompt-builder", "FAM": "plato", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-compiler-agentic", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-llvm", "FAM": "quilt", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-config", "FAM": "fleet", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "exocortex-ast-cpp", "FAM": "exocortex", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-cooperative-intelligence", "FAM": "flux", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-fuzzer", "FAM": "flux", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-thermodynamics", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "grand-pattern-swift", "FAM": "grand", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "spectral-deadband", "FAM": "spectral", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-json-a2a", "FAM": "fleet", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-port", "FAM": "quilt", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-midi-tide", "FAM": "fleet", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-director", "FAM": "quilt", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "grand-synthesis", "FAM": "grand", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "slackwater-rust", "FAM": "slackwater", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-tile-fountain", "FAM": "plato", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-kernel", "FAM": "plato", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-envelope", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-percolation", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-manus", "FAM": "plato", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "conservation-spectral-python", "FAM": "conservation", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-scoring", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-loss", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-linker", "FAM": "flux", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-automation-early-version", "FAM": "fleet", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-map", "FAM": "fleet", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-bridge-pattern-math", "FAM": "lau", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "vm-estate", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "crab", "FAM": "agent", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "multiagent-project-archive", "FAM": "agent", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "turbovec-integration-ccc", "FAM": "constraint", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "whistle", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "circuitbreaker-rs", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "hodge-belief-rs", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "sonar-vision", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "kintsugi-math-npm", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "federation-protocol", "FAM": "plato", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "canonical-form", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "error-forest", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "holonomy-harmony", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ctl-model", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "snapkit-zig", "FAM": "cocapn", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "makerlog-ai-pages", "FAM": "ai", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "servo-mind-theory", "FAM": "constraint", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "relativity", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "zai-worker", "FAM": "git", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "markov-blanket", "FAM": "superinstance", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "tropical-geometry-rs", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "jeviter", "FAM": "jev", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ship-log-modules", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "smartcrdt-git-agent", "FAM": "cocapn", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "gossip-seed", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "conversation-toolkit", "FAM": "ai", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "kernel-conservation", "FAM": "conservation", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "rg-flow", "FAM": "flux", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "live-canon-gh", "FAM": "git", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ecosystem-conservation", "FAM": "conservation", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "graphite-geometric-algebra", "FAM": "graph", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ws-fabric", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "frontends", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "reposphere", "FAM": "agent", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "expr-bytecode", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "Polln-whitepapers", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "godel-number", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fundamental-group", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "cot-quilt", "FAM": "quilt", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "discussions", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "luau-recipe", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "consensus-protocol", "FAM": "flux", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ant-colony", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "channel-model", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "codespace-worker", "FAM": "flux", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "research", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "studylog-ai-pages", "FAM": "ai", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "incubator", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "codex-budget-guard", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "jc1-research", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "brownian-motion", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "robotics-foundations", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "hodge-theory", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "hardware-capability-profiler", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "openshell-compatibility-audit", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quipu-math-c", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lighthouse-monitor", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "tropical-synth", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "PuddnHead", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "negative-space-core", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "openmind-conductor", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "crackle-runtime-c", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "particle-swarm", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "formal-consciousness", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "wire-harmony", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "style-dna", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "isa-convergence-tools", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "tminus-music", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "canon-zoo", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "galois-unification-proofs", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "casting-call-gpu", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "simd-perception-loop", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "elliptic-curve-ops", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "beta-test-elena", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "bregman-divergence", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "websocket-fabric", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "free-probability-rs", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "tminus-ecosystem-review", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "allocator-rs", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "secret-sharing", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "canon-hash", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "forgemaster-shell", "FAM": "forge", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "garden", "FAM": "cocapn", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "entropy-gpu-rs", "FAM": "gpu", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "hermit-crab-ecology", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "step-back-topology", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "interval-tree-rs", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "protein-conservation", "FAM": "conservation", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "forgemaster", "FAM": "forge", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "witness-is-prediction", "FAM": "substrate", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "dojo-builder", "FAM": "agent", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "roblox-game-build-framework", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "keeper-agent", "FAM": "flux", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "linguistic-spectral", "FAM": "conservation", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "c-ternary", "FAM": "ternary", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fractal-gen-rs", "FAM": "OTHER", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "orations-metal", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "codespace-edge-rd", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "actor-rs", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "auto-changelog", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "count-min-sketch", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "numerics-ode", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "pythagorean48", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "autodata-integration", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "model-registry-archive", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "tripartite-room", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "reversible-logic", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "async-rs", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "bid-engine-rs", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "salidiere", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "jepa-core", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "hebbian-router", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "categorical-coordination", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "mycelium-route", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "multi-model-adversarial-testing", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "musician-soul-v2", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "griot-math-pypi", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "crab-trap-web", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "circuit-breaker", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "spreader-agent", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quipu-math-wasm", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "Claude-prism-local-json", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "snapkit-rs", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "persistence-agent", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "UI", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "room-cell", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lie-algebra", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "audit-log", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-render", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "recovered-copy-20260824-fleet-tts", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "roblox-testkit", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-doctor", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-protocol", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "string-search-rs", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "symplectic-opt-rs", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-forge", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "glyphtensor-bridge", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-embed", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "pong-quilt", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "atlas-forge", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-shell-kernel", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "svelte-quilt", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "agent-writings-archive", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "recovered-copy-20260824-base60-lattice", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-engine-block-gleam", "FAM": "plato", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "tda-c", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-representation-theory", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-executor", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plainsong-worker", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "jev-paint-quilt", "FAM": "jev", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "luciddreamer-content", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "dual-band-guard", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "superinstance-ai", "FAM": "superinstance", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "hermes-memory-mcp", "FAM": "hermes", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "recovered-copy-20260824-forgemaster-shell", "FAM": "recovered", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-state-machine", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "Projectionist", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "asset-ranch", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-provenance", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "researchlocal-backup", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-renormalization-agents", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "syzygy-lattice", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ternary-rom", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "recovered-copy-20260824-officers-quarters", "FAM": "MISSING", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "wesley", "FAM": "MISSING", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-supergeometry", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "activeledger-ai-site", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-pde-agents", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "zero-msg-test", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lucineer-fleet-wiki", "FAM": "MISSING", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-protocol-binary", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "recovered-copy-20260824-tap-gamenight", "FAM": "MISSING", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quiltcall", "FAM": "MISSING", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-shell-lifecycle", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "deckboss-site", "FAM": "MISSING", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lau-self-aware-agent", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "lumina-lang", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "nexus-explainability", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "JetsonClaw1-vessel", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-trust-c", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "scratch-vm", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-onboarding", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "context-broker", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "docs-engine", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "voxblox-plusplus", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "MerkleMesh", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "polychora", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "markdown-agent-studio", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "chroma", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "BMAD-METHOD", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "edgenative-ai", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "Open-LLM-VTuber", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "nexus-aab-protocol", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "OpenRoom", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "opensmile", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-cuda-dreamcycle", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ViMax", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "nexus-data-pipeline", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "resolve", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "zero-knowledge-fleet", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "increments-trust", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "flux-stigmergy-c", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "tri-quarter-toolbox", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "ghost-tiles-cuda", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "confidence-c", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "plato-harbor", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "cuda-fault-sim", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-migration", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "log-origin", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "nexus-security", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "liath", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "cuda-stream", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "astro", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "craftmind-researcher", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "deckboss-fab", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "nexus-energy", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "cuda-stigmergy", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "legacy-ai", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "jetson-grand-design", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "jiuwenclaw", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "cuda-backpressure", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "agentkernel", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fluxnavigate-go", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "fleet-djinn", "FAM": "MISSING", "TRAP": "MISSING", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "zero-knowledge", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "zero-poc", "FAM": "MISSING", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "git.pp-ng", "FAM": "MISSING", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "quilt-matrix", "FAM": "MISSING", "TRAP": "SUSPECT", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "cellforge", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "xero", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "xero-lab", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "question-tree", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "jev-semantic", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "constraint-theory-core", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
-{"name": "exocortex-core", "FAM": "MISSING", "TRAP": "TRUST", "PILLAR": null, "DISP": null, "decider": "SMALL(minimax-text-01); null = not answered (429) / not run"}
+{"name": "ternary-cell-python", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": [], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-adapters", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-collab", "FAM": "lau", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "agent-riff-v3", "FAM": "agent", "TRAP": "SUSPECT", "PILLAR": ["two-logs", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-engine-block-c", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "deployment"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "eisenstein-tools", "FAM": "eisenstein", "TRAP": "TRUST", "PILLAR": ["deployment", "calculator-maker"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "mavis-skill-miner", "FAM": "mavis", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-intent-cache", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["two-logs", "memory-grid"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "substrate-forge", "FAM": "substrate", "TRAP": "TRUST", "PILLAR": ["deployment", "calculator-maker"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-conversation", "FAM": "quilt", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-projection", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["memory-grid", "calculator-maker"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-signatures", "FAM": "flux", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "two-logs"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-spiral", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["memory-grid", "pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-ensign", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "walkthroughs-skills"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-core", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-walk", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["memory-grid", "deployment"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "oxide-workflow", "FAM": "oxide", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "cocapn-colora", "FAM": "cocapn", "TRAP": "TRUST", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "spectral-explorer", "FAM": "spectral", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "memory-grid"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-fable", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": ["walkthroughs-skills", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-search", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "memory-grid"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-phase", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["memory-grid", "gates-deadbands"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-policy", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-connes-spectral-triple", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-midi-chord", "FAM": "fleet", "TRAP": "SUSPECT", "PILLAR": ["memory-grid", "calculator-maker"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-agent-python", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["agent-as-files", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "graph-planarity", "FAM": "graph", "TRAP": "TRUST", "PILLAR": ["memory-grid", "calculator-maker"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "agent-motif", "FAM": "agent", "TRAP": "SUSPECT", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-latin", "FAM": "fleet", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "conservation-verify-c", "FAM": "conservation", "TRAP": "TRUST", "PILLAR": ["memory-grid", "two-logs"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-manifesto", "FAM": "ternary", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "conservation-spectral-ada", "FAM": "conservation", "TRAP": "TRUST", "PILLAR": ["memory-grid", "two-logs"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-spreadsheet-python", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-midi-cycle", "FAM": "fleet", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-fuse", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-hodge-decomposition-agents", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-triage", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-runtime-kernel", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "cuda-constraint-checker", "FAM": "constraint", "TRAP": "TRUST", "PILLAR": ["gates-deadbands"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-kalman", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-regression", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-fleet-snapshot", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["deployment"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "graph-walker-go", "FAM": "graph", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "substrate-canary-pin", "FAM": "substrate", "TRAP": "SUSPECT", "PILLAR": ["gates-deadbands"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "oxide-canary", "FAM": "oxide", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-client-ruby", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-dashboard", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-transformer", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-room-nav", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "walkthroughs-skills"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "jev-harness", "FAM": "jev", "TRAP": "TRUST", "PILLAR": ["two-logs", "gates-deadbands"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "conservation-spectral-zig", "FAM": "conservation", "TRAP": "TRUST", "PILLAR": ["calculator-maker", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "jev-fusion", "FAM": "jev", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "two-logs"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "constraint-tminus-bridge", "FAM": "constraint", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-tnn", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["memory-grid", "calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-rave-connector", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["deployment", "interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "openconstruct-cs", "FAM": "openconstruct", "TRAP": "TRUST", "PILLAR": ["agent-as-files", "deployment"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-markov", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["memory-grid", "calculator-maker"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-jev-toolkit-push", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration", "interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "oxide-constructs", "FAM": "oxide", "TRAP": "TRUST", "PILLAR": ["deployment", "agent-as-files"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "substrate-witness-log", "FAM": "substrate", "TRAP": "TRUST", "PILLAR": ["two-logs", "gates-deadbands"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-modular-agents", "FAM": "lau", "TRAP": "TRUST", "PILLAR": ["memory-grid", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-quantumaudio-demo-push", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration", "interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-reservoir", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["memory-grid", "calculator-maker"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-network-science", "FAM": "lau", "TRAP": "TRUST", "PILLAR": ["memory-grid", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "si-wasserstein-fleet", "FAM": "si", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ai-character-integrations", "FAM": "ai", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-compiler-python", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["calculator-maker"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-sandbox", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["agent-as-files", "gates-deadbands"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-provenance", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["two-logs"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-lang", "FAM": "flux", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-integration", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-paxos", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-substrate", "FAM": "quilt", "TRAP": "TRUST", "PILLAR": ["two-logs"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-tile-split", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-papers", "FAM": "flux", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-seeds", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["agent-as-files"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-deepinfra-test", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": [], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-backtest", "FAM": "plato", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-dissertation-c", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "SuperInstance-archive", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["deployment", "pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-tile-metrics", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-midi-gateway", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["deployment", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "Equipment-Consensus-Engine", "FAM": "agent", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lucineer-com", "FAM": "lucineer", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-collections", "FAM": "lau", "TRAP": "TRUST", "PILLAR": ["memory-grid", "deployment"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "superinstance-ffi", "FAM": "superinstance", "TRAP": "TRUST", "PILLAR": ["deployment", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-room-phi", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "SuperInstance-SDK1", "FAM": "superinstance", "TRAP": "TRUST", "PILLAR": ["deployment", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "grand-pattern-java", "FAM": "grand", "TRAP": "TRUST", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "agent-polyrhythm", "FAM": "agent", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "gpu-persistent-homology", "FAM": "gpu", "TRAP": "TRUST", "PILLAR": ["deployment", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-midi-scale", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-teleomorphic", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-renormalize", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-proof", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-isa-edge", "FAM": "flux", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-scheduling-theory", "FAM": "lau", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-attention", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": [], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "Equipment-Consensus-Engine-Ruby", "FAM": "equipment", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-compiler-optimizer", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["calculator-maker"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-uidl", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-benchmarks", "FAM": "flux", "TRAP": "TRUST", "PILLAR": [], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-reasoner-engine", "FAM": "flux", "TRAP": "TRUST", "PILLAR": [], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "Equipment-Teacher-Student", "FAM": "equipment", "TRAP": "SUSPECT", "PILLAR": ["gates-deadbands", "walkthroughs-skills"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-cargo", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": [], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "openconstruct-java", "FAM": "openconstruct", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-mesh", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "the-rotation", "FAM": "the", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-stream-queue", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": [], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-motion", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": [], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-tui", "FAM": "quilt", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "si-feedback", "FAM": "si", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-runtime-lat", "FAM": "flux", "TRAP": "TRUST", "PILLAR": ["memory-grid", "calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-wiki-2126", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-spectral-agent", "FAM": "lau", "TRAP": "TRUST", "PILLAR": ["memory-grid", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-auth", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-midi-inversion", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-survey", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-mud-server", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "grand-pattern-mono", "FAM": "grand", "TRAP": "SUSPECT", "PILLAR": ["memory-grid", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-vision", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "forge-pi", "FAM": "forge", "TRAP": "TRUST", "PILLAR": ["deployment", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "forge-a2a", "FAM": "forge", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "two-logs"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-benchmark", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-dg-algebra", "FAM": "lau", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-bridge-tutor", "FAM": "lau", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-a2a-bridge", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "two-logs"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "cocapn", "FAM": "cocapn", "TRAP": "TRUST", "PILLAR": ["agent-as-files", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-audio", "FAM": "lau", "TRAP": "TRUST", "PILLAR": ["calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-weather", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "conservation-law-demo", "FAM": "conservation", "TRAP": "SUSPECT", "PILLAR": ["gates-deadbands"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-midi-studio", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-prompt-builder", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-compiler-agentic", "FAM": "flux", "TRAP": "SUSPECT", "PILLAR": ["calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-llvm", "FAM": "quilt", "TRAP": "TRUST", "PILLAR": ["calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-config", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "exocortex-ast-cpp", "FAM": "exocortex", "TRAP": "TRUST", "PILLAR": ["calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-cooperative-intelligence", "FAM": "flux", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-fuzzer", "FAM": "flux", "TRAP": "TRUST", "PILLAR": ["gates-deadbands"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-thermodynamics", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "grand-pattern-swift", "FAM": "grand", "TRAP": "TRUST", "PILLAR": ["memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "spectral-deadband", "FAM": "spectral", "TRAP": "SUSPECT", "PILLAR": ["gates-deadbands"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-json-a2a", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": [], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-port", "FAM": "quilt", "TRAP": "TRUST", "PILLAR": ["deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-midi-tide", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-director", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "grand-synthesis", "FAM": "grand", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "slackwater-rust", "FAM": "slackwater", "TRAP": "TRUST", "PILLAR": ["calculator-maker", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-tile-fountain", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-kernel", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-envelope", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-percolation", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["memory-grid", "calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-manus", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "conservation-spectral-python", "FAM": "conservation", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-scoring", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-loss", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-linker", "FAM": "flux", "TRAP": "TRUST", "PILLAR": ["calculator-maker", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-automation-early-version", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-map", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-bridge-pattern-math", "FAM": "lau", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "vm-estate", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "crab", "FAM": "agent", "TRAP": "TRUST", "PILLAR": ["agent-as-files", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "multiagent-project-archive", "FAM": "agent", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "walkthroughs-skills"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "turbovec-integration-ccc", "FAM": "constraint", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "calculator-maker"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "whistle", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "circuitbreaker-rs", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "deployment"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "hodge-belief-rs", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["two-logs", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "sonar-vision", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "kintsugi-math-npm", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "deployment"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "federation-protocol", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "canonical-form", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "error-forest", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["two-logs", "deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "holonomy-harmony", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "walkthroughs-skills"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ctl-model", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "snapkit-zig", "FAM": "cocapn", "TRAP": "SUSPECT", "PILLAR": ["deployment", "pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "makerlog-ai-pages", "FAM": "ai", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "deployment"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "servo-mind-theory", "FAM": "constraint", "TRAP": "TRUST", "PILLAR": [], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "relativity", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "zai-worker", "FAM": "git", "TRAP": "SUSPECT", "PILLAR": ["deployment", "agent-as-files"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "markov-blanket", "FAM": "superinstance", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "tropical-geometry-rs", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "jeviter", "FAM": "jev", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ship-log-modules", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "smartcrdt-git-agent", "FAM": "cocapn", "TRAP": "SUSPECT", "PILLAR": ["agent-as-files"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "gossip-seed", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "conversation-toolkit", "FAM": "ai", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "kernel-conservation", "FAM": "conservation", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "rg-flow", "FAM": "flux", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "live-canon-gh", "FAM": "git", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ecosystem-conservation", "FAM": "conservation", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "graphite-geometric-algebra", "FAM": "graph", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ws-fabric", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "frontends", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "reposphere", "FAM": "agent", "TRAP": "TRUST", "PILLAR": ["agent-as-files", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "expr-bytecode", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "Polln-whitepapers", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "godel-number", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fundamental-group", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "cot-quilt", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": ["interface-data-logic", "calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "discussions", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "luau-recipe", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "consensus-protocol", "FAM": "flux", "TRAP": "TRUST", "PILLAR": ["two-logs", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ant-colony", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "calculator-maker"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "channel-model", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "codespace-worker", "FAM": "flux", "TRAP": "TRUST", "PILLAR": ["deployment", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "research", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "studylog-ai-pages", "FAM": "ai", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "incubator", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": ["memory-grid", "deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "codex-budget-guard", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["deployment", "gates-deadbands"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "jc1-research", "FAM": "jev", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "brownian-motion", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["calculator-maker", ""], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "robotics-foundations", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills", ""], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "hodge-theory", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["calculator-maker", ""], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "hardware-capability-profiler", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["deployment", ""], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "openshell-compatibility-audit", "FAM": "open", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", ""], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quipu-math-c", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["memory-grid", ""], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lighthouse-monitor", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "gates-deadbands"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "tropical-synth", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["calculator-maker", ""], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "PuddnHead", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": ["memory-grid", ""], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "negative-space-core", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": ["walkthroughs-skills", ""], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "openmind-conductor", "FAM": "open", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", ""], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "crackle-runtime-c", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["deployment", ""], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "particle-swarm", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["calculator-maker", ""], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "formal-consciousness", "FAM": "flux", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills", ""], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "wire-harmony", "FAM": "superinstance", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "style-dna", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["calculator-maker", "walkthroughs-skills"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "isa-convergence-tools", "FAM": "flux", "TRAP": "TRUST", "PILLAR": ["two-logs", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "tminus-music", "FAM": "conservation", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "canon-zoo", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "galois-unification-proofs", "FAM": "constraint", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "casting-call-gpu", "FAM": "gpu", "TRAP": "TRUST", "PILLAR": ["memory-grid", "deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "simd-perception-loop", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "elliptic-curve-ops", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "beta-test-elena", "FAM": "superinstance", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "bregman-divergence", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["memory-grid", "two-logs"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "websocket-fabric", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["deployment", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "free-probability-rs", "FAM": "superinstance", "TRAP": "TRUST", "PILLAR": ["memory-grid", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "tminus-ecosystem-review", "FAM": "superinstance", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "allocator-rs", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["memory-grid", "deployment"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "secret-sharing", "FAM": "other", "TRAP": "TRUST", "PILLAR": ["two-logs", "gates-deadbands"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "canon-hash", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "forgemaster-shell", "FAM": "forge", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration", "agent-as-files"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "garden", "FAM": "cocapn", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "entropy-gpu-rs", "FAM": "gpu", "TRAP": "TRUST", "PILLAR": ["calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "hermit-crab-ecology", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "step-back-topology", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "interval-tree-rs", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["memory-grid"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "protein-conservation", "FAM": "conservation", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "forgemaster", "FAM": "forge", "TRAP": "TRUST", "PILLAR": ["calculator-maker", "agent-as-files"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "witness-is-prediction", "FAM": "substrate", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "dojo-builder", "FAM": "agent", "TRAP": "SUSPECT", "PILLAR": ["agent-as-files", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "roblox-game-build-framework", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["deployment", "interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "keeper-agent", "FAM": "flux", "TRAP": "TRUST", "PILLAR": ["agent-as-files", "memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "linguistic-spectral", "FAM": "conservation", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "c-ternary", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": ["gates-deadbands"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fractal-gen-rs", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["calculator-maker"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "orations-metal", "FAM": "other", "TRAP": "TRUST", "PILLAR": [], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "codespace-edge-rd", "FAM": "edge", "TRAP": "TRUST", "PILLAR": ["deployment", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "actor-rs", "FAM": "other", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "auto-changelog", "FAM": "other", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "count-min-sketch", "FAM": "other", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "numerics-ode", "FAM": "other", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "pythagorean48", "FAM": "edge", "TRAP": "SUSPECT", "PILLAR": ["deployment"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "autodata-integration", "FAM": "cocapn", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "model-registry-archive", "FAM": "other", "TRAP": "TRUST", "PILLAR": ["memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "tripartite-room", "FAM": "plato", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "reversible-logic", "FAM": "other", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "async-rs", "FAM": "other", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "bid-engine-rs", "FAM": "other", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "salidiere", "FAM": "ai", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "jepa-core", "FAM": "jev", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "hebbian-router", "FAM": "agent", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "categorical-coordination", "FAM": "agent", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "mycelium-route", "FAM": "superinstance", "TRAP": "TRUST", "PILLAR": ["deployment", "interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "multi-model-adversarial-testing", "FAM": "ai", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "walkthroughs-skills"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "musician-soul-v2", "FAM": "superinstance", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration", "deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "griot-math-pypi", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": ["memory-grid", "walkthroughs-skills"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "crab-trap-web", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "memory-grid"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "circuit-breaker", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "deployment"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "spreader-agent", "FAM": "agent", "TRAP": "SUSPECT", "PILLAR": ["interface-data-logic", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quipu-math-wasm", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["calculator-maker", "memory-grid"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "Claude-prism-local-json", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["two-logs", "memory-grid"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "snapkit-rs", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["two-logs", "memory-grid"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "persistence-agent", "FAM": "agent", "TRAP": "TRUST", "PILLAR": ["memory-grid", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "UI", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": ["interface-data-logic", "memory-grid"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "room-cell", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lie-algebra", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["calculator-maker", "memory-grid"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "audit-log", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["two-logs", "gates-deadbands"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-render", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "recovered-copy-20260824-fleet-tts", "FAM": "fleet", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "roblox-testkit", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-doctor", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-protocol", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "string-search-rs", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "symplectic-opt-rs", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-forge", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": ["calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "glyphtensor-bridge", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": ["interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-embed", "FAM": "fleet", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "pong-quilt", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "atlas-forge", "FAM": "forge", "TRAP": "SUSPECT", "PILLAR": ["calculator-maker"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-shell-kernel", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "svelte-quilt", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "agent-writings-archive", "FAM": "agent", "TRAP": "SUSPECT", "PILLAR": ["walkthroughs-skills"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "recovered-copy-20260824-base60-lattice", "FAM": "recovered", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-engine-block-gleam", "FAM": "plato", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "tda-c", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-representation-theory", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-executor", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plainsong-worker", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "jev-paint-quilt", "FAM": "jev", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "luciddreamer-content", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "dual-band-guard", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "superinstance-ai", "FAM": "superinstance", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "hermes-memory-mcp", "FAM": "hermes", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "recovered-copy-20260824-forgemaster-shell", "FAM": "recovered", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-state-machine", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": ["gates-deadbands"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "Projectionist", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "asset-ranch", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-provenance", "FAM": "lau", "TRAP": "SUSPECT", "PILLAR": ["two-logs"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "researchlocal-backup", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-renormalization-agents", "FAM": "lau", "TRAP": "TRUST", "PILLAR": [], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "syzygy-lattice", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ternary-rom", "FAM": "ternary", "TRAP": "TRUST", "PILLAR": [], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "recovered-copy-20260824-officers-quarters", "FAM": "recovered", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "wesley", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-supergeometry", "FAM": "lau", "TRAP": "TRUST", "PILLAR": [], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "activeledger-ai-site", "FAM": "ai", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-pde-agents", "FAM": "lau", "TRAP": "TRUST", "PILLAR": [], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "zero-msg-test", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lucineer-fleet-wiki", "FAM": "lucineer", "TRAP": "SUSPECT", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-protocol-binary", "FAM": "lau", "TRAP": "TRUST", "PILLAR": [], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "recovered-copy-20260824-tap-gamenight", "FAM": "recovered", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quiltcall", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-shell-lifecycle", "FAM": "lau", "TRAP": "TRUST", "PILLAR": [], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "deckboss-site", "FAM": "deckboss", "TRAP": "SUSPECT", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lau-self-aware-agent", "FAM": "lau", "TRAP": "TRUST", "PILLAR": ["agent-as-files", "walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "lumina-lang", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "nexus-explainability", "FAM": "nexus", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills", "two-logs"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "JetsonClaw1-vessel", "FAM": "vessel", "TRAP": "SUSPECT", "PILLAR": ["deployment", "pyramid-orchestration"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-trust-c", "FAM": "flux", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "scratch-vm", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-onboarding", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills", "pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "context-broker", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "docs-engine", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "voxblox-plusplus", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["memory-grid"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "MerkleMesh", "FAM": "quilt", "TRAP": "TRUST", "PILLAR": ["two-logs", "pyramid-orchestration"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "polychora", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "markdown-agent-studio", "FAM": "agent", "TRAP": "SUSPECT", "PILLAR": ["walkthroughs-skills", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "chroma", "FAM": "ai", "TRAP": "TRUST", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "BMAD-METHOD", "FAM": "ai", "TRAP": "SUSPECT", "PILLAR": ["calculator-maker", "walkthroughs-skills"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "edgenative-ai", "FAM": "edge", "TRAP": "SUSPECT", "PILLAR": ["interface-data-logic", "deployment"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "Open-LLM-VTuber", "FAM": "ai", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "deployment"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "nexus-aab-protocol", "FAM": "cocapn", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "agent-as-files"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "OpenRoom", "FAM": "ai", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "opensmile", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-cuda-dreamcycle", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ViMax", "FAM": "ai", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "nexus-data-pipeline", "FAM": "cocapn", "TRAP": "TRUST", "PILLAR": ["deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "resolve", "FAM": "agent", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "zero-knowledge-fleet", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "increments-trust", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "flux-stigmergy-c", "FAM": "flux", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "tri-quarter-toolbox", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "ghost-tiles-cuda", "FAM": "cuda", "TRAP": "TRUST", "PILLAR": ["memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "confidence-c", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "plato-harbor", "FAM": "plato", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "cuda-fault-sim", "FAM": "cuda", "TRAP": "TRUST", "PILLAR": ["deployment"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-migration", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "log-origin", "FAM": "vessel", "TRAP": "SUSPECT", "PILLAR": ["interface-data-logic", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "nexus-security", "FAM": "cocapn", "TRAP": "TRUST", "PILLAR": ["two-logs", "gates-deadbands"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "liath", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["memory-grid", "calculator-maker"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "cuda-stream", "FAM": "cuda", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "deployment"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "astro", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "deployment"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "craftmind-researcher", "FAM": "ai", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills", "pyramid-orchestration"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "deckboss-fab", "FAM": "deckboss", "TRAP": "SUSPECT", "PILLAR": ["deployment", "calculator-maker"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "nexus-energy", "FAM": "cocapn", "TRAP": "TRUST", "PILLAR": ["two-logs", "deployment"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "cuda-stigmergy", "FAM": "cuda", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "memory-grid"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "legacy-ai", "FAM": "ai", "TRAP": "SUSPECT", "PILLAR": ["interface-data-logic", "agent-as-files"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "jetson-grand-design", "FAM": "grand", "TRAP": "SUSPECT", "PILLAR": ["deployment", "pyramid-orchestration"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "jiuwenclaw", "FAM": "agent", "TRAP": "TRUST", "PILLAR": ["interface-data-logic", "agent-as-files"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "cuda-backpressure", "FAM": "cuda", "TRAP": "TRUST", "PILLAR": ["gates-deadbands", "deployment"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "agentkernel", "FAM": "agent", "TRAP": "TRUST", "PILLAR": ["deployment", "agent-as-files"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fluxnavigate-go", "FAM": "flux", "TRAP": "TRUST", "PILLAR": ["memory-grid", "interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "fleet-djinn", "FAM": "fleet", "TRAP": "TRUST", "PILLAR": ["pyramid-orchestration", "interface-data-logic"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "zero-knowledge", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": [], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "zero-poc", "FAM": "OTHER", "TRAP": "SUSPECT", "PILLAR": ["agent-as-files"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "git.pp-ng", "FAM": "git", "TRAP": "SUSPECT", "PILLAR": ["two-logs", "pyramid-orchestration"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "quilt-matrix", "FAM": "quilt", "TRAP": "SUSPECT", "PILLAR": ["memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "cellforge", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["memory-grid"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "xero", "FAM": "open", "TRAP": "TRUST", "PILLAR": ["agent-as-files"], "DISP": "COLLAPSE", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "xero-lab", "FAM": "open", "TRAP": "TRUST", "PILLAR": ["agent-as-files"], "DISP": "TAIL", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "question-tree", "FAM": "OTHER", "TRAP": "TRUST", "PILLAR": ["walkthroughs-skills"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "jev-semantic", "FAM": "jev", "TRAP": "TRUST", "PILLAR": ["interface-data-logic"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "constraint-theory-core", "FAM": "constraint", "TRAP": "TRUST", "PILLAR": ["gates-deadbands"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}
+{"name": "exocortex-core", "FAM": "exocortex", "TRAP": "TRUST", "PILLAR": ["memory-grid"], "DISP": "DEEP", "decider": "SMALL(minimax-text-01); paced re-run 2026-10-13 \u2014 full coverage, zero 429s"}

@@ -2,7 +2,7 @@
 
 Every Jev (TypeSafe) call made by the gate layer, 2026-10-13. Band mapping: p ≥ 0.70 → **pos** (accept), 0.40 < p < 0.70 → **zero** (deadband — escalate), p ≤ 0.40 → **neg** (reject, redo by big tier).
 
-Total calls logged: 44 (8 calibration incl. 1 choice, 36 instance gates).
+Total calls logged: 44 in run 1 (8 calibration incl. 1 choice, 36 instance gates); +4 in the paced re-run (see the end of this file) = 48.
 
 ## Calibration calls (gate policy, from measured validation evidence)
 
@@ -60,3 +60,25 @@ Choice — escalation budget allocation: **disagreements** (confidence 0.35; pro
 | TRAP | plato-room-phi | agreement-control | TRUST | TRUST | yes | 0.57 | zero | yes |
 
 On this disagreement-enriched set (n=36): SMALL alone scored 50%, the Jev-gated pipeline scored 100%. Jev accepted (pos) 11 decisions and every accepted one was correct (accept precision 11/11); no wrong SMALL decision was accepted — every error landed in the zero band (escalate) or neg band (reject). Full contexts and questions for every call: `data/jev_calls.jsonl`.
+
+---
+
+## Re-run calls (2026-10-13, paced re-run — gate policy on completed evidence)
+
+Total Jev calls in the re-run: 4 (3 noul + 1 choice). Full contexts in
+`data/jev_calls.jsonl` (kind `rerun-noul` / `rerun-choice`); plan in
+`data/jev_rerun_plan.json`, verdicts in `data/jev_rerun_results.json`.
+
+| Cell | Gate rule under judgment | Verdict | Band |
+|---|---|---|---|
+| PILLAR | staff PILLAR with the name-keyword ALGO; SMALL's tags demoted to unconfirmed candidates (evidence: ALGO fidelity to REF 65.6% exact vs SMALL 33.6%; SMALL over-fires 487 tags vs REF's 34-of-119 tagged) | p = 0.77 | **pos** |
+| DISP | keep formula-over-ALGO-cells by default; do not adopt the SUBSTANCE cell (evidence: v2a net −1, v2b 0-for-21 upgrades, combined 62.2% vs 80.7% base; SMALL direct DISP 43.7%) | p = 0.74 | **pos** |
+| TRAP | choice — the re-cut cells' fate (evidence: COLLISION SMALL 88.2% vs 93.3% always-NO floor, precision 25%; VAGUE 63.9% vs 83.2% floor, flags 55/119) | **keep_big_watch 0.66** (collision_handlist 0.17, drop_trap 0.15, recut_staff_small 0.02), confidence 0.55 | choice |
+| FAM | tail FAM stays SMALL-staffed, BIG as validation/watch only (evidence: full-sample SMALL fidelity to REF 78.2%, down from the partial run's 91.2%-on-a-subset; ALGO fidelity 98.3%) | p = 0.44 | **zero** |
+
+The FAM zero extends run 1's pattern: the gate layer will not ratify
+tail staffing outright even on complete data — the staircase follows the
+measurements (as it did over Jev's run-1 FAM dissent), and the caution
+stands in the log. The PILLAR pos reverses run 1's provisional
+arrangement ("ALGO candidates, unconfirmed") — this time the
+confirmation is the judgment layer's as well as the measurements'.

@@ -1,0 +1,31 @@
+SUBSTANCE: 0 done, 119 to go
+  batch 1/8: 16/16 parsed
+  batch 2/8: 16/16 parsed
+  batch 3/8: 16/16 parsed
+  batch 4/8: 15/16 parsed
+  batch 5/8: 16/16 parsed
+  batch 6/8: 16/16 parsed
+  batch 7/8: 16/16 parsed
+  batch 8/8: 7/7 parsed
+SUBSTANCE complete: 118/119 answered
+COLLISION: 0 done, 119 to go
+  batch 1/8: 16/16 parsed
+  batch 2/8: 16/16 parsed
+  batch 3/8: 16/16 parsed
+  batch 4/8: 16/16 parsed
+  batch 5/8: 16/16 parsed
+  batch 6/8: 16/16 parsed
+  batch 7/8: 16/16 parsed
+  batch 8/8: 7/7 parsed
+COLLISION complete: 119/119 answered
+VAGUE: 0 done, 119 to go
+  batch 1/8: 16/16 parsed
+  batch 2/8: 16/16 parsed
+  batch 3/8: 16/16 parsed
+  batch 4/8: 16/16 parsed
+  batch 5/8: 16/16 parsed
+  batch 6/8: 16/16 parsed
+  batch 7/8: 16/16 parsed
+  batch 8/8: 7/7 parsed
+VAGUE complete: 119/119 answered
+ALL CELLS DONE. SUMMARY: {"calls": 24, "http429": 0, "retries": 0, "error_batches": 0, "cells": {"SUBSTANCE": {"answered": 118, "of": 119}, "COLLISION": {"answered": 119, "of": 119}, "VAGUE": {"answered": 119, "of": 119}}}

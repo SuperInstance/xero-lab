@@ -1,0 +1,28 @@
+DISP: 0 done, 395 to go
+  batch 1/25: 16/16 parsed
+  batch 2/25: 16/16 parsed
+  batch 3/25: 16/16 parsed
+  batch 4/25: 16/16 parsed
+  batch 5/25: 16/16 parsed
+  batch 6/25: 16/16 parsed
+  batch 7/25: 16/16 parsed
+  batch 8/25: 16/16 parsed
+  batch 9/25: 16/16 parsed
+  batch 10/25: 16/16 parsed
+  batch 11/25: 16/16 parsed
+  batch 12/25: 16/16 parsed
+  batch 13/25: 16/16 parsed
+  batch 14/25: 16/16 parsed
+  batch 15/25: 16/16 parsed
+  batch 16/25: 16/16 parsed
+  batch 17/25: 16/16 parsed
+  batch 18/25: 16/16 parsed
+  batch 19/25: 16/16 parsed
+  batch 20/25: 3/16 parsed
+  batch 21/25: 15/16 parsed
+  batch 22/25: 16/16 parsed
+  batch 23/25: 16/16 parsed
+  batch 24/25: 16/16 parsed
+  batch 25/25: 11/11 parsed
+DISP complete: 381/395 answered
+ALL CELLS DONE. SUMMARY: {"calls": 25, "http429": 0, "retries": 0, "error_batches": 0, "cells": {"DISP": {"answered": 381, "of": 395}}}

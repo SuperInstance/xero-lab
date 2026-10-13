@@ -1,0 +1,41 @@
+[
+ {
+  "cell": "PILLAR",
+  "target": "rerun rule: PILLAR staffed by name-keyword ALGO; SMALL tags demoted to candidates",
+  "verdict": {
+   "p_true": 0.77,
+   "band": "pos"
+  }
+ },
+ {
+  "cell": "DISP",
+  "target": "rerun rule: keep formula-over-ALGO-cells; SUBSTANCE cell not adopted",
+  "verdict": {
+   "p_true": 0.74,
+   "band": "pos"
+  }
+ },
+ {
+  "cell": "TRAP",
+  "target": "rerun choice: TRAP's fate after the re-cut measurement",
+  "verdict": {
+   "type": "choice",
+   "choice": "keep_big_watch",
+   "confidence": 0.55,
+   "probabilities": {
+    "keep_big_watch": 0.66,
+    "collision_handlist": 0.17,
+    "recut_staff_small": 0.02,
+    "drop_trap": 0.15
+   }
+  }
+ },
+ {
+  "cell": "FAM",
+  "target": "rerun rule: tail FAM stays SMALL-staffed, BIG as watch/validation only",
+  "verdict": {
+   "p_true": 0.44,
+   "band": "zero"
+  }
+ }
+]

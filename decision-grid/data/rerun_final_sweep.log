@@ -1,0 +1,18 @@
+FAM: 395 done, 0 to go
+FAM complete: 395/395 answered
+TRAP: 395 done, 0 to go
+TRAP complete: 395/395 answered
+PILLAR: 394 done, 1 to go
+  batch 1/1: 0/1 parsed
+PILLAR complete: 394/395 answered
+DISP: 381 done, 14 to go
+  batch 1/1: 13/14 parsed
+DISP complete: 394/395 answered
+SUBSTANCE: 118 done, 1 to go
+  batch 1/1: 1/1 parsed
+SUBSTANCE complete: 119/119 answered
+COLLISION: 119 done, 0 to go
+COLLISION complete: 119/119 answered
+VAGUE: 119 done, 0 to go
+VAGUE complete: 119/119 answered
+ALL CELLS DONE. SUMMARY: {"calls": 3, "http429": 0, "retries": 0, "error_batches": 0, "cells": {"FAM": {"answered": 395, "of": 395}, "TRAP": {"answered": 395, "of": 395}, "PILLAR": {"answered": 394, "of": 395}, "DISP": {"answered": 394, "of": 395}, "SUBSTANCE": {"answered": 119, "of": 119}, "COLLISION": {"answered": 119, "of": 119}, "VAGUE": {"answered": 119, "of": 119}}}
