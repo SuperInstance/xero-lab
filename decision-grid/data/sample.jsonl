@@ -1,0 +1,395 @@
+{"name": "ternary-cell-python", "d": "Cell Python for the SuperInstance ternary {-1, 0, +1} ecosystem", "l": "Python", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "plato-adapters", "d": "PLATO adapter implementations \u2014 connect PLATO rooms to external services and protocols.", "l": "Python", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "lau-collab", "d": "Multiplayer collaboration layer \u2014 shared worlds, player matching, co-building, agent sharing, and session logging for PLATO", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "agent-riff-v3", "d": "Snowball gen 3: multi-spec riff, auto-spec, quality predictor, bootstrap verifier, snowball metrics", "l": "Rust", "fork": false, "gold_family": "agent", "stratum": "bigfam"}
+{"name": "plato-engine-block-c", "d": "Tiny embeddable sensor\u2192history\u2192alarm engine in C99. Zero dynamic allocation. Runs on bare metal.", "l": "C", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "eisenstein-tools", "d": "Bench. Fuzz. Codegen. Unified dev tooling for eisenstein.", "l": "Rust", "fork": false, "gold_family": "eisenstein", "stratum": "bigfam"}
+{"name": "mavis-skill-miner", "d": "Skill miner: extracts patterns from Mavis memory and proposes new skills to build.", "l": "Python", "fork": false, "gold_family": "mavis", "stratum": "bigfam"}
+{"name": "ternary-intent-cache", "d": "Cache for intent\u2192bytecode compilations. Same intent = cached Flux bytecode. LRU eviction with compile-time savings.", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "substrate-forge", "d": "The bellows of the future \u2014 toolchain for substrate-aware applications", "l": "TypeScript", "fork": false, "gold_family": "substrate", "stratum": "bigfam"}
+{"name": "quilt-conversation", "d": "Inter-agent conversation as a live sequencer \u2014 t-minus simulation-first, sensor-confirmed pocket, internal iteration while others talk.", "l": "Rust", "fork": false, "gold_family": "quilt", "stratum": "bigfam"}
+{"name": "ternary-projection", "d": "ternary-projection  Dimensionality reduction techniques adapted for ternary data (`-1`, `0`, `+1`)", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "flux-signatures", "d": "FLUX bytecode pattern recognition \u2014 detect loops, counters, accumulators, swaps", "l": "Python", "fork": false, "gold_family": "flux", "stratum": "bigfam"}
+{"name": "ternary-spiral", "d": "Spiral wave dynamics from Rock-Paper-Scissors cyclic dominance", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "ternary-ensign", "d": "Specialist agent pattern inspired by naval ensigns", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "plato-core", "d": "Foundation types and mesh registry for the SuperInstance ecosystem. Standalone, auto-discovers plugins.", "l": "Python", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "ternary-walk", "d": "Ternary random walks: simple, biased, correlated, and L\u00e9vy flights on Z\u2083 state space", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "oxide-workflow", "d": "GPU kernel workflow orchestration with ternary step states. DAG execution, retry on failure, rollback, progress tracking.", "l": "Rust", "fork": false, "gold_family": "oxide", "stratum": "bigfam"}
+{"name": "cocapn-colora", "d": "Value-conditioned LoRA adapters \u2014 dynamic adapter selection based on signal value, not just task type", "l": "Python", "fork": false, "gold_family": "cocapn", "stratum": "bigfam"}
+{"name": "spectral-explorer", "d": "Interactive conservation spectral analysis explorer", "l": "HTML", "fork": false, "gold_family": "spectral", "stratum": "bigfam"}
+{"name": "quilt-fable", "d": "Multi-voice narrative walker brewed by quilt-brewer", "l": "Python", "fork": false, "gold_family": "quilt", "stratum": "bigfam"}
+{"name": "ternary-search", "d": "Search algorithms over ternary strategy spaces", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "ternary-phase", "d": "ternary-phase Phase relationships between ternary oscillators", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "plato-policy", "d": "Policy engine that gates what agents can do \u2014 per-module, per-agent, per-context rules with rate limiting and audit logging", "l": "Rust", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "lau-connes-spectral-triple", "d": "lau-connes-spectral-triple", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "fleet-midi-chord", "d": "Chord spelling engine from ternary vector balance", "l": "Python", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "plato-agent-python", "d": "Python agent framework for Plato Engine Blocks \u2014 connect to rooms, observe ticks, send commands, make decisions.", "l": "Python", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "graph-planarity", "d": "Planarity testing with Kuratowski detection and planar embedding \u2014 Rust graph library", "l": "Rust", "fork": false, "gold_family": "graph", "stratum": "bigfam"}
+{"name": "agent-motif", "d": "Advanced music-cognition crate: agent-motif", "l": "Rust", "fork": false, "gold_family": "agent", "stratum": "bigfam"}
+{"name": "fleet-latin", "d": "Cocapn Fleet \u2014 Latin perspective. Reasoned natively in Latin cultural tradition.", "l": null, "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "conservation-verify-c", "d": "C implementation of conservation law verification for ternary agents", "l": "C", "fork": false, "gold_family": "conservation", "stratum": "bigfam"}
+{"name": "ternary-manifesto", "d": "Manifesto for the SuperInstance ternary {-1, 0, +1} ecosystem", "l": null, "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "conservation-spectral-ada", "d": "Conservation Spectral SDK \u2014 Ada implementation for high-integrity spectral graph analysis", "l": "Ada", "fork": false, "gold_family": "conservation", "stratum": "bigfam"}
+{"name": "ternary-spreadsheet-python", "d": "Ternary spreadsheet engine in Python. Cells hold {-1,0,+1} with formula evaluation and dependency tracking.", "l": "Python", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "fleet-midi-cycle", "d": "Cyclic patterns from agent state periodicity", "l": "Makefile", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "ternary-fuse", "d": "Operator fusion for ternary networks. Matmul+bias+ReLU in a single pass. No memory round-trips.", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "lau-hodge-decomposition-agents", "d": "lau-hodge-decomposition-agents", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "fleet-triage", "d": "Mechanical triage for the SuperInstance namespace (5,108 repos) + the experiment queue for a GPU agent.", "l": "Python", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "plato-runtime-kernel", "d": "Runtime kernel for PLATO \u2014 the AI theorem prover. Conservation-verified computation on bare metal.", "l": "Rust", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "cuda-constraint-checker", "d": "Production CUDA constraint checker using constraint-theory-core lattice math", "l": "Cuda", "fork": false, "gold_family": "cuda", "stratum": "bigfam"}
+{"name": "ternary-kalman", "d": "Kalman filter adapted for ternary state spaces with fixed-point arithmetic", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "ternary-regression", "d": "ternary-regression - SuperInstance ecosystem crate", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "quilt-fleet-snapshot", "d": "Bake the Quilt fleet state into a portable tarball. Solves the wipe problem.", "l": "Python", "fork": false, "gold_family": "quilt", "stratum": "bigfam"}
+{"name": "graph-walker-go", "d": "Graph traversal and algorithm library for Go \u2014 BFS, DFS, Dijkstra, A*, Tarjan's SCC, Kruskal's MST, and greedy graph coloring", "l": "Go", "fork": false, "gold_family": "graph", "stratum": "bigfam"}
+{"name": "substrate-canary-pin", "d": "substrate-canary-pin - substrate observation primitive", "l": "JavaScript", "fork": false, "gold_family": "substrate", "stratum": "bigfam"}
+{"name": "oxide-canary", "d": "Canary deployments for GPU kernel versions with ternary health verdict. Progressive rollout, automatic rollback, metric comparison.", "l": "Rust", "fork": false, "gold_family": "oxide", "stratum": "bigfam"}
+{"name": "plato-client-ruby", "d": "Ruby client for PLATO backend \u2014 room/tile CRUD, knowledge graph queries", "l": "Ruby", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "plato-dashboard", "d": "Fleet dashboard rendering for PLATO nervous system", "l": "Rust", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "ternary-transformer", "d": "ternary-transformer - SuperInstance ecosystem crate", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "plato-room-nav", "d": "Breadcrumb trails \u2014 push, back, forward with full history", "l": "Makefile", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "jev-harness", "d": "A client for TypeSafe.ai Jev that cannot fail quietly \u2014 preflight contract checks, structured scoring, journalled calls.", "l": "Python", "fork": false, "gold_family": "jev", "stratum": "bigfam"}
+{"name": "conservation-spectral-zig", "d": "Conservation Spectral SDK \u2014 Zig implementation with comptime spectral graph analysis", "l": "Zig", "fork": false, "gold_family": "conservation", "stratum": "bigfam"}
+{"name": "jev-fusion", "d": "Testing four claims about fusing a discrete judge into a generative loop. The judge is verified before any experiment is believed.", "l": "Python", "fork": false, "gold_family": "jev", "stratum": "bigfam"}
+{"name": "constraint-tminus-bridge", "d": "Cognitive constraint networks for t-minus agent coordination", "l": "JavaScript", "fork": false, "gold_family": "constraint", "stratum": "bigfam"}
+{"name": "ternary-tnn", "d": "Ternary Neural Network layers: {-1,0,+1} weights with LUT matmul, straight-through estimation, and BitNet-style 1.58-bit quantization", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "fleet-rave-connector", "d": "Bridge between fleet MIDI and RAVE neural audio synthesis", "l": "Python", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "openconstruct-cs", "d": "C# SDK for OpenConstruct \u2014 agent onboarding for the SuperInstance ecosystem", "l": "C#", "fork": false, "gold_family": "openconstruct", "stratum": "bigfam"}
+{"name": "ternary-markov", "d": "Markov chains on ternary state spaces", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "quilt-jev-toolkit-push", "d": "Quilt fleet member \u2014 auto-swept from local commit. Mavis \u00d7 Casey session line 2026-09-24.", "l": "Python", "fork": false, "gold_family": "quilt", "stratum": "bigfam"}
+{"name": "oxide-constructs", "d": "Git-native construct loader for the Flux\u2192PTX distributed GPU runtime. Loads, verifies, and deploys GPU capabilities (skills and equipment) from git repositories with CRDT registry sync.", "l": "Rust", "fork": false, "gold_family": "oxide", "stratum": "bigfam"}
+{"name": "substrate-witness-log", "d": "substrate-witness-log - substrate observation primitive", "l": "JavaScript", "fork": false, "gold_family": "substrate", "stratum": "bigfam"}
+{"name": "lau-modular-agents", "d": "Modular lattice theory for agents \u2014 algebraic structure of capability hierarchies", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "quilt-quantumaudio-demo-push", "d": "Quilt fleet member \u2014 auto-swept from local commit. Mavis \u00d7 Casey session line 2026-09-24.", "l": "Python", "fork": false, "gold_family": "quilt", "stratum": "bigfam"}
+{"name": "ternary-reservoir", "d": "Reservoir computing with ternary nodes: echo state networks on {-1, 0, +1}, reservoir dynamics, r...", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "lau-network-science", "d": "Network science library: models, centrality, community detection, epidemic spreading, and agent social network analysis", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "si-wasserstein-fleet", "d": "Proof of concept: Wasserstein distance measures fleet distribution shift \u2014 Sinkhorn optimal transport for agent realignment", "l": "Rust", "fork": false, "gold_family": "si", "stratum": "bigfam"}
+{"name": "ai-character-integrations", "d": "Comprehensive integration examples for AI Character SDK and related tools", "l": "Python", "fork": false, "gold_family": "ai", "stratum": "bigfam"}
+{"name": "ternary-compiler-python", "d": "Ternary expression compiler in Python. AST \u2192 bytecode \u2192 ternary VM execution.", "l": "Python", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "ternary-sandbox", "d": "ternary-sandbox  A safe sandbox for running ternary agent experiments with configurable environ...", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "plato-provenance", "d": "\ud83d\udd10 Zero-trust tile provenance \u2014 signing, chain verification, trust scoring", "l": "Python", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "flux-lang", "d": "FLUX: A constraint-native language where the constraint IS the computation", "l": "Python", "fork": false, "gold_family": "flux", "stratum": "bigfam"}
+{"name": "fleet-integration", "d": "Integration tests and working examples that compose multiple fleet repos together.", "l": "Python", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "ternary-paxos", "d": "Simplified Paxos consensus for GPU cluster decisions with ternary votes. Proposer/Acceptor/Learner roles, two-phase commit, quorum.", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "quilt-substrate", "d": "The Quilt substrate as a working Python library. 11-primitive cells, tensor encoding, Schr\u00f6dinger pattern, fog-of-war decay, convoy consensus, witness log, opener layer.", "l": "Python", "fork": false, "gold_family": "quilt", "stratum": "bigfam"}
+{"name": "plato-tile-split", "d": "Tile decomposition engine \u2014 split tiles by sentence, paragraph, or size for granular processing", "l": "Rust", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "flux-papers", "d": "FLUX research papers, specifications, and benchmarks. EMSOFT submission, Safe-TOPS/W metric, GUARD language spec. Apache 2.0.", "l": "Python", "fork": false, "gold_family": "flux", "stratum": "bigfam"}
+{"name": "fleet-seeds", "d": "Seed files + the Tap Tavern: the fleet talks to itself, on the record (stone-v1 sealed)", "l": "JavaScript", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "fleet-deepinfra-test", "d": "Connectivity, latency, and response quality test suite for DeepInfra's OpenAI-compatible API across multiple LLM models", "l": "Python", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "plato-backtest", "d": "Backtesting framework for PLATO signal chain configurations", "l": "Rust", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "ternary-dissertation-c", "d": "C implementation of the dissertation engine \u2014 generates structured output proving the 5 laws of negative-space intelligence", "l": "C", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "SuperInstance-archive", "d": "SuperInstance portfolio snapshot: 6000+ files of operational scripts, multi-bot coordination, multi-model API tooling, deploy choreography. Slice-of-life archive.", "l": "Python", "fork": false, "gold_family": "superinstance", "stratum": "bigfam"}
+{"name": "plato-tile-metrics", "d": "Fleet analytics \u2014 domain distribution, confidence histogram, growth rate", "l": "Python", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "fleet-midi-gateway", "d": "Unified API gateway for all MIDI fleet services", "l": "Python", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "Equipment-Consensus-Engine", "d": "Multi-agent deliberation with Pathos/Logos/Ethos weighting", "l": "TypeScript", "fork": false, "gold_family": "equipment", "stratum": "bigfam"}
+{"name": "lucineer-com", "d": "Structured lucid dream practice tool \u2014 evidence-based techniques, dream sign tracking, and progress analytics at lucineer.com", "l": "TypeScript", "fork": false, "gold_family": "lucineer", "stratum": "bigfam"}
+{"name": "lau-collections", "d": "Custom data structures optimized for game workloads in the PLATO/LAU ecosystem", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "superinstance-ffi", "d": "Unified C FFI and WASM bindings for SuperInstance math primitives \u2014 Eisenstein norm, Laman rigidity, holonomy check, Pythagorean-48, deadband filter", "l": "Zig", "fork": false, "gold_family": "superinstance", "stratum": "bigfam"}
+{"name": "plato-room-phi", "d": "PLATO room knowledge integration measurement - Phi computation for tile quality assessment", "l": "Python", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "SuperInstance-SDK1", "d": "Software development kit for SuperInstance v1", "l": "TypeScript", "fork": false, "gold_family": "superinstance", "stratum": "bigfam"}
+{"name": "grand-pattern-java", "d": "Java Grand Pattern toolkit \u2014 standalone cellular graph intelligence", "l": "Java", "fork": false, "gold_family": "grand", "stratum": "bigfam"}
+{"name": "agent-polyrhythm", "d": "Polyrhythmic scheduling for heterogeneous agent fleets \u2014 models conflicting rhythms as productive polyrhythms with groove point detection and syncopation analysis in Rust", "l": "Rust", "fork": false, "gold_family": "agent", "stratum": "bigfam"}
+{"name": "gpu-persistent-homology", "d": "CUDA-accelerated persistent homology for RTX 4050", "l": "Cuda", "fork": false, "gold_family": "gpu", "stratum": "bigfam"}
+{"name": "fleet-midi-scale", "d": "Scale generation engine from agent state distribution", "l": "Python", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "lau-teleomorphic", "d": "lau-teleomorphic", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "ternary-renormalize", "d": "Renormalize for the SuperInstance ternary {-1, 0, +1} ecosystem", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "ternary-proof", "d": "Ternary proof system: verification returns {-1=invalid, 0=inconclusive, +1=valid}", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "flux-isa-edge", "d": "Preserved workspace artifact", "l": "Makefile", "fork": false, "gold_family": "flux", "stratum": "bigfam"}
+{"name": "lau-scheduling-theory", "d": "Scheduling theory \u2014 optimal resource allocation over time: job scheduling, priority rules, flow shop, branch and bound, and agent fleet scheduling", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "ternary-attention", "d": "Attention mechanisms adapted for ternary inputs on {-1, 0, +1}", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "Equipment-Consensus-Engine-Ruby", "d": "Specification only \u2014 not yet implemented. Planned Ruby gem for multi-agent deliberation.", "l": "Ruby", "fork": false, "gold_family": "equipment", "stratum": "bigfam"}
+{"name": "ternary-compiler-optimizer", "d": "Optimization passes for ternary bytecode", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "plato-uidl", "d": "Universal Interface Description Language for Plato Shell \u2014 render agent output as HTML, ANSI, or voice", "l": "Rust", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "flux-benchmarks", "d": "FLUX Benchmarks \u2014 Real performance data across 7 runtimes. 4.7x faster than CPython.", "l": "Shell", "fork": false, "gold_family": "flux", "stratum": "bigfam"}
+{"name": "flux-reasoner-engine", "d": "Dual-interpreter gradient reasoning engine", "l": "Python", "fork": false, "gold_family": "flux", "stratum": "bigfam"}
+{"name": "Equipment-Teacher-Student", "d": "Distillation triggers with deadband range thresholds for calling teachers", "l": "TypeScript", "fork": false, "gold_family": "equipment", "stratum": "bigfam"}
+{"name": "ternary-cargo", "d": "Ternary Cargo \u2014 Resource transport and logistics between rooms", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "openconstruct-java", "d": "Java binding for OpenConstruct \u2014 enterprise integrations, Android, and JVM agent frameworks", "l": "Java", "fork": false, "gold_family": "openconstruct", "stratum": "bigfam"}
+{"name": "ternary-mesh", "d": "Dynamic mesh networking between agents with ternary-weighted connections", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "the-rotation", "d": "Recursive self-improvement infrastructure for agent fleets \u2014 five-layer closed loop: Bayesian confidence, PID control, multi-shell compression, tensor cycle closure, and attractor dynamics", "l": "Rust", "fork": false, "gold_family": "the", "stratum": "bigfam"}
+{"name": "ternary-stream-queue", "d": "ternary-stream-queue - SuperInstance ecosystem crate", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "ternary-motion", "d": "Ternary motion \u2014 the full kinematics of {-1,0,+1} change", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "quilt-tui", "d": "Terminal UI for browsing the Quilt cell graph. vim for cells. The corrected cut-and-project construction in your terminal.", "l": "Python", "fork": false, "gold_family": "quilt", "stratum": "bigfam"}
+{"name": "si-feedback", "d": "Feedback processing and recommendation engine", "l": "JavaScript", "fork": false, "gold_family": "si", "stratum": "bigfam"}
+{"name": "flux-runtime-lat", "d": "FLUX bytecode execution runtime with Latin language processing support", "l": "Python", "fork": false, "gold_family": "flux", "stratum": "bigfam"}
+{"name": "quilt-wiki-2126", "d": "The Quilt Wiki of 2126 \u2014 built backwards from function to calculation.", "l": null, "fork": false, "gold_family": "quilt", "stratum": "bigfam"}
+{"name": "lau-spectral-agent", "d": "Unified spectral agent \u2014 belief updates in frequency domain, conservation-aware, GPU-dispatchable", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "fleet-auth", "d": "Fleet authentication service (D1 + KV)", "l": "TypeScript", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "fleet-midi-inversion", "d": "Chord inversion engine from agent state position", "l": null, "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "fleet-survey", "d": "Fleet cross-pollination report and roadmap", "l": null, "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "plato-mud-server", "d": "PLATO MUD Server - text-based agent training ground, 16 rooms", "l": "Python", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "grand-pattern-mono", "d": "The corrected Grand Pattern \u2014 vibe is mono-dimensional, JEPA is a weighted reading. One number per room.", "l": "Rust", "fork": false, "gold_family": "grand", "stratum": "bigfam"}
+{"name": "plato-vision", "d": "PLATO Vision \u2014 visual perception pipeline for PLATO knowledge rooms", "l": "Rust", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "forge-pi", "d": "Edge agent runtime and central nervous system of the SuperInstance fleet \u2014 dispatch, discovery, composition, and compute offload", "l": "TypeScript", "fork": false, "gold_family": "forge", "stratum": "bigfam"}
+{"name": "forge-a2a", "d": "A2A messaging for ForgeFlux tile pipelines", "l": "Rust", "fork": false, "gold_family": "forge", "stratum": "bigfam"}
+{"name": "ternary-benchmark", "d": "ternary-benchmark  Standardized benchmarks for ternary agent systems \u2014 reproducible performance...", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "lau-dg-algebra", "d": "Differential graded algebras for agents \u2014 the algebraic structure underlying cohomology", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "lau-bridge-tutor", "d": "Tutoring bridge for the PLATO/LAU mathematical agent framework \u2014 educational agent support", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "fleet-a2a-bridge", "d": "Bridge between message-passing (I2I bottles) and functional composition (spreadsheet formulas) for inter-fleet communication", "l": "Python", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "cocapn", "d": "repo-first Agent for local or cloud. grow an agent in a repo using the repo itself as the muscle-memory. Run from localhost, from pages.dev, or embedded into any platform app. Move to gitlab or anywhere and optimize git as the agent infrastructure itself. wiki for knowledge, repos for skills, pipelines anywhere", "l": "Python", "fork": false, "gold_family": "cocapn", "stratum": "bigfam"}
+{"name": "lau-audio", "d": "Procedural audio generation for games \u2014 no audio files, all synthesized from math. Deterministic.", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "ternary-weather", "d": "Environmental conditions and their effects on agent operations", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "conservation-law-demo", "d": "F161 \u2014 Conservation Laws as Fences. The 3 conservation laws (AB, AP, IT) as clickable buttons. Touch a fence, get a 429.", "l": null, "fork": false, "gold_family": "conservation", "stratum": "bigfam"}
+{"name": "fleet-midi-studio", "d": "Browser-based MIDI workstation chaining all fleet tools", "l": "Python", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "plato-prompt-builder", "d": "Compose LLM prompts from tile search results \u2014 context builder for PLATO", "l": "Rust", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "flux-compiler-agentic", "d": "6-plane abstraction compiler with dual-interpreter gradient gates", "l": "Python", "fork": false, "gold_family": "flux", "stratum": "bigfam"}
+{"name": "quilt-llvm", "d": "quilt-llvm \u2014 a compiler infrastructure where the IR is a fabric of inspectable cells", "l": "Rust", "fork": false, "gold_family": "quilt", "stratum": "bigfam"}
+{"name": "fleet-config", "d": "Unified configuration management for Pelagic fleet \u2014 schema validation, templates, snapshots", "l": "Python", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "exocortex-ast-cpp", "d": "C++17 header-only AST decomposition engine", "l": "C++", "fork": false, "gold_family": "exocortex", "stratum": "bigfam"}
+{"name": "flux-cooperative-intelligence", "d": "Novel multi-agent cooperative problem-solving protocol \u2014 collective intelligence through structured collaboration", "l": "Python", "fork": false, "gold_family": "flux", "stratum": "bigfam"}
+{"name": "flux-fuzzer", "d": "FLUX bytecode fuzzer \u2014 random generation + edge case detection", "l": "Python", "fork": false, "gold_family": "flux", "stratum": "bigfam"}
+{"name": "ternary-thermodynamics", "d": "Ternary Thermodynamics  Statistical mechanics analogs for ternary agent systems", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "grand-pattern-swift", "d": "Swift Grand Pattern toolkit \u2014 standalone cellular graph intelligence", "l": "Swift", "fork": false, "gold_family": "grand", "stratum": "bigfam"}
+{"name": "spectral-deadband", "d": "Deadband as spectral gap. Spin as time abstraction. Fractal conservation. Analog dial computation. Pure Rust, zero deps.", "l": "Rust", "fork": false, "gold_family": "spectral", "stratum": "bigfam"}
+{"name": "fleet-json-a2a", "d": "Cocapn Fleet \u2014 pure JSON/A2A machine-readable specification", "l": null, "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "quilt-port", "d": "The user's port to their quilts. Open-source SDK + cost-plus hosted service. Four projections (ESP32 / Python / Web / Ideation); receipts at every step.", "l": "Python", "fork": false, "gold_family": "quilt", "stratum": "bigfam"}
+{"name": "fleet-midi-tide", "d": "Tidal harmonic generation from agent cycles", "l": "Python", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "quilt-director", "d": "Director of fleets \u2014 Python spirals of knowledge", "l": "HTML", "fork": false, "gold_family": "quilt", "stratum": "bigfam"}
+{"name": "grand-synthesis", "d": "Multi-model architectural competition for the Metronome Architecture \u2014 cross-model critiques and merged design synthesis", "l": "Python", "fork": false, "gold_family": "grand", "stratum": "bigfam"}
+{"name": "slackwater-rust", "d": "Rust performance twins for Slackwater \u2014 exact arithmetic, Tensor-MIDI, flow detection, Eisenstein lattice", "l": "Rust", "fork": false, "gold_family": "slackwater", "stratum": "bigfam"}
+{"name": "plato-tile-fountain", "d": "Auto-generate \u2014 extract tiles from docs, headings, FAQs, code comments", "l": "Python", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "plato-kernel", "d": "Central state machine \u2014 DCS flywheel, belief scoring, tile processing, deadband governance", "l": "Rust", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "ternary-envelope", "d": "Envelope/ADSR dynamics for ternary (-1, 0, +1) signals", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "ternary-percolation", "d": "Percolation for ternary systems \u2014 `fill_grid`, `percolates`, `cluster_count`, `largest_cluster`", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "plato-manus", "d": "PLATO Manus \u2014 manuscript and writing system for knowledge rooms", "l": "Rust", "fork": false, "gold_family": "plato", "stratum": "bigfam"}
+{"name": "conservation-spectral-python", "d": "Conservation Spectral SDK \u2014 Python. Spectral analysis of tension graphs for anomaly detection, fingerprinting, and structural health.", "l": "Python", "fork": false, "gold_family": "conservation", "stratum": "bigfam"}
+{"name": "ternary-scoring", "d": "Multi-criteria scoring for ternary strategies", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "ternary-loss", "d": "ternary-loss - SuperInstance ecosystem crate", "l": "Rust", "fork": false, "gold_family": "ternary", "stratum": "bigfam"}
+{"name": "flux-linker", "d": "FLUX multi-module bytecode linker \u2014 symbol resolution, relocation, library linking", "l": "Python", "fork": false, "gold_family": "flux", "stratum": "bigfam"}
+{"name": "fleet-automation-early-version", "d": "[ARCHIVED] Early One Delta library. 5KB scaffolding only.", "l": "Python", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "fleet-map", "d": "Interactive constellation map of the SuperInstance fork fleet \u2014 19 repos, 1.4M+ GitHub stars, now conservation-aware", "l": "HTML", "fork": false, "gold_family": "fleet", "stratum": "bigfam"}
+{"name": "lau-bridge-pattern-math", "d": "Bridges Grand Pattern system with deep math \u2014 spectral theory, sheaves, category theory, optimal transport, thermodynamics", "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "bigfam"}
+{"name": "vm-estate", "d": "VM-Estate \u2014 distributed intelligence architecture. Each machine is a plot of land. Intelligence grows on that land. Add more plots = more intelligence.", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "crab", "d": "Hermit crab agent shell \u2014 agents find repos, grow, move shells", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "multiagent-project-archive", "d": "Slice-of-life snapshot of a meta-circular multi-agent orchestration framework \u2014 built by 4 parallel Claude Code bots via LangGraph. Archive only.", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "turbovec-integration-ccc", "d": "TurboVec integration for CCC \u2014 vector acceleration primitives for constraint computation", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "whistle", "d": "Intent DSL for Working Animal Architecture \u2014 replaces system-prompt sprawl with structured, compiled commands.", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "circuitbreaker-rs", "d": "# Circuitbreaker-RS: Resilience Patterns for Rust", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "hodge-belief-rs", "d": "Evidence + coherence + prior = every belief decomposed. Rust port of hodge-belief-c.", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "sonar-vision", "d": "Pure-Python sonar ping/echo simulation, signal processing, multi-object tracking, and spatial mapping toolkit", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "kintsugi-math-npm", "d": "The mathematics of beautiful error recovery \u2014 TypeScript/npm", "l": "TypeScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "federation-protocol", "d": "Minimum Viable Federation \u2014 coupling summaries between PLATO fleets", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "canonical-form", "d": "A Rust library for Canonical Form", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "error-forest", "d": "Error-correcting code forest: GF(256) Reed-Solomon codes as fungal fruiting bodies, spore gossip propagation, mycorrhizal decoding", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "holonomy-harmony", "d": "\ud83c\udfbc Chord progression analysis via holonomy \u2014 detect modulations, modal interchange, and cycle violations in harmony", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "ctl-model", "d": "Computation Tree Logic model checking on Kripke structures", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "snapkit-zig", "d": "Extracted from forgemaster/snapkit-zig \u2014 Cocapn fleet component", "l": "Zig", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "makerlog-ai-pages", "d": "GitHub Pages for makerlog.ai", "l": "JavaScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "servo-mind-theory", "d": "Unified theory of self-referential constraint systems \u2014 servo-encoder metaphor, 5D scale navigation, algorithm reading", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "relativity", "d": "Relativity in Rust \u2014 Lorentz transforms, spacetime metrics, geodesics, energy-momentum, cosmological models", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "zai-worker", "d": "Git-native zai-worker: disposable machine, durable repo", "l": "Shell", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "markov-blanket", "d": "Markov blanket computation for Bayesian inference in SuperInstance", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "tropical-geometry-rs", "d": "Research-grade tropical geometry in Rust \u2014 min-plus/max-plus semirings, Newton polytopes, tropical curves, and stable intersection", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "jeviter", "d": "JEV (Joint Embedding Validator) UI \u2014 promote/REVIEW/DISCUSS/REJECT oracle for canon-vs-speculation. See jev-oracle memory topic.", "l": "JavaScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "ship-log-modules", "d": "Modular add-ons for ship-log-search \u2014 maps, analytics, AIS, weather, engine hours", "l": "HTML", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "smartcrdt-git-agent", "d": "Co-Captain of SmartCRDT monorepo", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "gossip-seed", "d": "A Rust library for Gossip Seed", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "conversation-toolkit", "d": "Toolkit for conversational AI.", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "kernel-conservation", "d": "Conservation spectral experiment: kernel-conservation", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "rg-flow", "d": "Renormalization Group Flow for Fleet Constraint Graphs \u2014 block-spin RG on graph topology", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "live-canon-gh", "d": "Live Canon GitHub Packages mirror", "l": "JavaScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "ecosystem-conservation", "d": "Ecosystem-level conservation analysis \u2014 biodiversity, food webs, and ecological network health via spectral methods", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "graphite-geometric-algebra", "d": "Geometric algebra nodes for the Graphite editor \u2014 rotors, conformal embedding, reflections, and projections", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "ws-fabric", "d": "WebSocket connection pooling and fabric library", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "frontends", "d": "Preserved workspace artifact", "l": "HTML", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "reposphere", "d": "Self-hosting repository as conscious entity \u2014 REPOSPHERE.md as executable brain, guest agent teaching protocol, immutable architecture laws", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "expr-bytecode", "d": "A Rust library for Expr Bytecode", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "Polln-whitepapers", "d": "Research documentation and whitepapers for Polln", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "godel-number", "d": "A Rust library for Godel_number", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "fundamental-group", "d": "A Rust library for Fundamental Group", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "cot-quilt", "d": "The CoT-decomposition cell: deepseek-v4-pro chain-of-thought -> cellular graph via deepseek-flash + typesafe.ai JEV; mothquantum-certified seeds; the large model judges its own decomposition.", "l": "JavaScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "discussions", "d": "Preserved workspace artifact", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "luau-recipe", "d": "Crafting recipe system for Roblox games", "l": "Luau", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "consensus-protocol", "d": "Distributed consensus algorithms in Rust \u2014 Raft leader election, log replication, and commit tracking", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "ant-colony", "d": "Ant colony optimization with pheromone trails and evaporation \u2014 Rust optimization library", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "channel-model", "d": "A Rust library for Channel Model", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "codespace-worker", "d": "\ud83d\ude80 GitHub Codespaces worker utilities \u2014 run commands remotely in ephemeral x86_64 codespaces, pipeline builds, and agent orchestration.", "l": "Shell", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "research", "d": "Preserved workspace artifact", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "studylog-ai-pages", "d": "GitHub Pages for studylog.ai", "l": "JavaScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "incubator", "d": "The system that provisions mitochondrial energy to a developing embryo until it can fly \u2014 zygote to fledgling", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "codex-budget-guard", "d": "Budget enforcement for Codex CLI \u2014 daily/weekly/monthly token limits, phase detection, auto-throttle, and Serde audit snapshots", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "jc1-research", "d": "JC1 Edge Research Agent \u2014 local LLM synthesis + PLATO tiles + fleet integration", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "brownian-motion", "d": "Brownian motion / Wiener process simulation \u2014 stochastic differential equations for financial and physical modeling", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "robotics-foundations", "d": "Robotics foundations in Rust. Kinematics to control, from scratch.", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "hodge-theory", "d": "Hodge theory in Rust \u2014 harmonic forms, Hodge decomposition, Laplacian on forms, spectral sequences", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "hardware-capability-profiler", "d": "Profiler to analyze hardware capabilities and performance.", "l": "TypeScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "openshell-compatibility-audit", "d": "Categorizes all SuperInstance repos for OpenShell integration \u2014 native, wrapper, backend, tool, deprecated", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "quipu-math-c", "d": "C99 Incan knotted cord encoding \u2014 base-10 positional knots, arithmetic, corruption detection for edge/embedded", "l": "C", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "lighthouse-monitor", "d": "Lighthouse Keeper \u2014 fleet monitoring, agent activity tracking, stall detection", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "tropical-synth", "d": "\ud83d\udd3a Sound design via tropical geometry \u2014 tropical polynomials map to ReLU networks, Newton polytopes shape timbre", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "PuddnHead", "d": "  The Fool is the Ground Truth. -Embedding: His fingerprints are vector embeddings of identity. -Cellular: His slides are independent cells in a larger graph. -Projection: His courtroom reveal is a projection of the cell graph's truth into the system's decision space.   **That's a system revealing itself.**", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "negative-space-core", "d": "Core theory of negative space intelligence \u2014 intelligence is what you learn to AVOID, not what you choose", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "openmind-conductor", "d": "Multi-agent orchestration with shared muscle memory \u2014 the prefrontal cortex for coordinated agents", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "crackle-runtime-c", "d": "C11 async task execution framework \u2014 thread pool, priorities, task composition, timeout, and phase system with zero external dependencies", "l": "C", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "particle-swarm", "d": "Particle swarm optimization with velocity update and swarm topology \u2014 Rust optimization library", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "formal-consciousness", "d": "Formal mathematical treatment of self-direction in constraint-satisfaction knowledge engines (FLUX Consciousness Engine)", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "wire-harmony", "d": "Wire-level protocol harmony layer for SuperInstance networking", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "style-dna", "d": "Musical DNA extraction, analysis, and style morphing system", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "isa-convergence-tools", "d": "CLI tools for comparing, diffing, and converging FLUX ISA definitions across implementations", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "tminus-music", "d": "T-minus musical event prediction using conservation spectral theory", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "canon-zoo", "d": "A system prompt for inspiration through play. Hit the button. Watch what happens. Tweak it. Have your mind blown.", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "galois-unification-proofs", "d": "The Galois Unification Principle: Six Constraint Techniques as Adjunctions \u2014 constructively verified", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "casting-call-gpu", "d": "GPU-native engine for anchor-point signature matrices, voice spline interpolation, and batch corpus processing", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "simd-perception-loop", "d": "SIMD perception-action loop: fleet-math at assembly-level, microsecond latency", "l": "C", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "elliptic-curve-ops", "d": "See README", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "beta-test-elena", "d": "Dr. Elena's rigorous stress-test of the SuperInstance ternary agent ecosystem's 5 laws", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "bregman-divergence", "d": "Bregman divergences: KL, squared Euclidean, Itakura-Saito, convex generating functions, and mirror descent", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "websocket-fabric", "d": "High-performance WebSocket library for Rust with connection pooling, reconnection, compression, fragmentation, subprotocol negotiation, rate limiting, and more.", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "free-probability-rs", "d": "Free probability theory in Rust \u2014 R-transform, S-transform, and random matrix analysis for the SuperInstance fleet", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "tminus-ecosystem-review", "d": "Heavy architectural documentation of the SuperInstance T-Minus ecosystem (t-minus, t-minus-rs, tminus-music, lau-tminus, tick-engine, terax-fleet-modules). Synthesizes into design surface for swarm-tminus.", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "allocator-rs", "d": "Memory allocation strategies - Pool allocators, arena allocators, custom allocators", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "secret-sharing", "d": "Shamir's secret sharing, Feldman VSS, and threshold schemes in Rust", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "canon-hash", "d": "Live Canon state hash fetcher (Node.js)", "l": "JavaScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "forgemaster-shell", "d": "\u2692\ufe0f OpenClaw Power Armor \u2014 Don the Forgemaster Shell and become a relentless execution engine", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "garden", "d": "Cocapn fleet crate: garden", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "entropy-gpu-rs", "d": "GPU-ready batch entropy computation (pure Rust data structures + operations)", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "hermit-crab-ecology", "d": "Multi-model exploration of the hermit crab architecture \u2014 shell ecology, instance molting, and the iron-sharpens-iron method", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "step-back-topology", "d": "Step-Back Operator (\u03b2\u2081 = E - V + C) for topological data analysis and simplicial complexes", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "interval-tree-rs", "d": "Interval tree data structure in pure Rust \u2014 O(log n) insertion, stabbing queries, range queries, overlap detection", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "protein-conservation", "d": "Conservation spectral experiment: protein-conservation", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "forgemaster", "d": "Constraint-aware agentic compiler \u2014 assembles optimal components from the SuperInstance ecosystem with proof-carrying guarantees", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "witness-is-prediction", "d": "witness-is-prediction - R10 substrate canon point as code", "l": "JavaScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "dojo-builder", "d": "Dojo agent \u2014 self-improving git-agent", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "roblox-game-build-framework", "d": "Tooling for automated Roblox game building with t-minus-event synchronized simulation framework", "l": "Lua", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "keeper-agent", "d": "Secret-keeper proxy for FLUX Fleet standalone agents. Holds all API keys, issues scoped tokens, double-checks that no secrets leave the SuperInstance.", "l": "TypeScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "linguistic-spectral", "d": "Conservation spectral experiment: linguistic-spectral", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "c-ternary", "d": "Minimal C99 header-only library for ternary logic: trit type, conviction mapping, Leminal Zone deadband, AND/OR/NOT/XOR/implication gates", "l": "C", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "fractal-gen-rs", "d": "Fractal generation: Mandelbrot, Julia, Burning Ship, Sierpinski, Koch snowflake in pure Rust", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "orations-metal", "d": "Three orations on deadbands, eigenvectors, and load-bearing abstractions \u2014 plus critic synthesis", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "codespace-edge-rd", "d": "R&D: Codespace\u2192Edge agent lifecycle, yoke transfer, devcontainer templates", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "actor-rs", "d": "Actor model implementation for Rust - Type-safe distributed actors, supervision trees, message passing", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "auto-changelog", "d": "Automatic changelog generator from conventional commits", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "count-min-sketch", "d": "Count-Min Sketch \u2014 sublinear space frequency estimation with probabilistic error bounds", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "numerics-ode", "d": "Research-grade ODE solvers: Euler, RK4, Adams-Bashforth, Dormand-Prince (adaptive RK45) \u2014 pure Rust, no dependencies", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "pythagorean48", "d": "Exact 6-bit vector encoding for ARM64 edge. 8 components per uint64, zero drift, 80M queries/s on Jetson.", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "autodata-integration", "d": "Integration plan and plugins connecting AutoData's OHCache with the Cocapn fleet", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "model-registry-archive", "d": "Model registry for LLM artifact management (local + S3 storage, Rust)", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "tripartite-room", "d": "Three innate agents per PLATO room: Ground Truth (physics), Constraint (engineer), Communication (diplomat)", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "reversible-logic", "d": "Reversible computing: logic gates and circuits that preserve information", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "async-rs", "d": "Async utilities and patterns - Better async/await, async iterators, streams", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "bid-engine-rs", "d": "Auction bid engine \u2014 first-price, second-price, multi-unit, bid shading detection", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "salidiere", "d": "\ud83e\uddc2 Multi-model AI orchestrator by Claude Sonnet 5 \u2014 the salt-keeper", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "jepa-core", "d": "Pluggable JEPA predictor trait \u2014 weighted moving average, exponential smoothing, inverse-error reinforcement", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "hebbian-router", "d": "Hebbian routing \u2014 connection strengthening based on usage patterns for agent communication networks", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "categorical-coordination", "d": "Category theory for multi-agent coordination \u2014 agents as objects, protocols as morphisms, consensus as limits", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "mycelium-route", "d": "Mycelium-inspired routing protocol for SuperInstance mesh networks", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "multi-model-adversarial-testing", "d": "What four AI models found wrong with our code: multi-model adversarial testing methodology for safety-critical systems", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "musician-soul-v2", "d": "musician-soul-v2 - SuperInstance ecosystem crate", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "griot-math-pypi", "d": "Living memory systems for Python \u2014 stories, genealogy, praise names, and federated memory", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "crab-trap-web", "d": "Browser-based MUD explorer for the Crab Traps \u2014 36+ rooms to explore", "l": "HTML", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "circuit-breaker", "d": "Circuit breaker pattern implementation for fault tolerance and resilience in distributed systems", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "spreader-agent", "d": "\ud83c\udf0a One idea, many perspectives \u2014 drop-in git-agent that fans out across specialist views with synthesis", "l": "TypeScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "quipu-math-wasm", "d": "Incan knotted cord encoding compiled to WASM \u2014 base-10 positional knots in the browser", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "Claude-prism-local-json", "d": "Local JSON version of PRISM.", "l": "TypeScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "snapkit-rs", "d": "Snapshot toolkit for Rust \u2014 capture, diff, merge, compress, and verify structured key-value state.", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "persistence-agent", "d": "Persistent homology on agent behavior: TDA detects personality (long-lived features) vs noise (short-lived). Vietoris-Rips complexes, barcodes, Betti curves", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "UI", "d": "Frontend user interface component library or application.", "l": "TypeScript", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "room-cell", "d": "The fundamental room cell \u2014 standalone but composable atom of the Grand Pattern architecture", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "lie-algebra", "d": "Lie algebras in Rust \u2014 Lie brackets, structure constants, representations, root systems, Cartan subalgebras", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "audit-log", "d": "A Rust library for Audit Log", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "tail"}
+{"name": "lau-render", "d": null, "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "nodesc"}
+{"name": "recovered-copy-20260824-fleet-tts", "d": null, "l": null, "fork": false, "gold_family": "recovered", "stratum": "nodesc"}
+{"name": "roblox-testkit", "d": null, "l": "Lua", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "quilt-doctor", "d": null, "l": "Python", "fork": false, "gold_family": "quilt", "stratum": "nodesc"}
+{"name": "lau-protocol", "d": null, "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "nodesc"}
+{"name": "string-search-rs", "d": null, "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "symplectic-opt-rs", "d": null, "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "quilt-forge", "d": null, "l": "JavaScript", "fork": false, "gold_family": "quilt", "stratum": "nodesc"}
+{"name": "glyphtensor-bridge", "d": null, "l": "JavaScript", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "fleet-embed", "d": null, "l": "Rust", "fork": false, "gold_family": "fleet", "stratum": "nodesc"}
+{"name": "pong-quilt", "d": null, "l": "JavaScript", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "atlas-forge", "d": null, "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "lau-shell-kernel", "d": null, "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "nodesc"}
+{"name": "svelte-quilt", "d": null, "l": "JavaScript", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "agent-writings-archive", "d": null, "l": null, "fork": false, "gold_family": "agent", "stratum": "nodesc"}
+{"name": "recovered-copy-20260824-base60-lattice", "d": null, "l": null, "fork": false, "gold_family": "recovered", "stratum": "nodesc"}
+{"name": "plato-engine-block-gleam", "d": null, "l": "Gleam", "fork": false, "gold_family": "plato", "stratum": "nodesc"}
+{"name": "tda-c", "d": null, "l": "C", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "lau-representation-theory", "d": null, "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "nodesc"}
+{"name": "quilt-executor", "d": null, "l": "Python", "fork": false, "gold_family": "quilt", "stratum": "nodesc"}
+{"name": "plainsong-worker", "d": null, "l": "TypeScript", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "jev-paint-quilt", "d": null, "l": "Python", "fork": false, "gold_family": "jev", "stratum": "nodesc"}
+{"name": "luciddreamer-content", "d": null, "l": "TypeScript", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "dual-band-guard", "d": null, "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "superinstance-ai", "d": null, "l": "HTML", "fork": false, "gold_family": "superinstance", "stratum": "nodesc"}
+{"name": "hermes-memory-mcp", "d": null, "l": null, "fork": false, "gold_family": "hermes", "stratum": "nodesc"}
+{"name": "recovered-copy-20260824-forgemaster-shell", "d": null, "l": null, "fork": false, "gold_family": "recovered", "stratum": "nodesc"}
+{"name": "lau-state-machine", "d": null, "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "nodesc"}
+{"name": "Projectionist", "d": null, "l": "HTML", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "asset-ranch", "d": null, "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "lau-provenance", "d": null, "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "nodesc"}
+{"name": "researchlocal-backup", "d": null, "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "lau-renormalization-agents", "d": null, "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "nodesc"}
+{"name": "syzygy-lattice", "d": null, "l": "JavaScript", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "ternary-rom", "d": null, "l": "Python", "fork": false, "gold_family": "ternary", "stratum": "nodesc"}
+{"name": "recovered-copy-20260824-officers-quarters", "d": null, "l": null, "fork": false, "gold_family": "recovered", "stratum": "nodesc"}
+{"name": "wesley", "d": null, "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "lau-supergeometry", "d": null, "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "nodesc"}
+{"name": "activeledger-ai-site", "d": null, "l": "HTML", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "lau-pde-agents", "d": null, "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "nodesc"}
+{"name": "zero-msg-test", "d": null, "l": null, "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "lucineer-fleet-wiki", "d": null, "l": "Python", "fork": false, "gold_family": "lucineer", "stratum": "nodesc"}
+{"name": "lau-protocol-binary", "d": null, "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "nodesc"}
+{"name": "recovered-copy-20260824-tap-gamenight", "d": null, "l": "Python", "fork": false, "gold_family": "recovered", "stratum": "nodesc"}
+{"name": "quiltcall", "d": null, "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "nodesc"}
+{"name": "lau-shell-lifecycle", "d": null, "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "nodesc"}
+{"name": "deckboss-site", "d": null, "l": "HTML", "fork": false, "gold_family": "deckboss", "stratum": "nodesc"}
+{"name": "lau-self-aware-agent", "d": null, "l": "Rust", "fork": false, "gold_family": "lau", "stratum": "nodesc"}
+{"name": "lumina-lang", "d": "Most languages make you choose: safety or the web. Lumina doesn't.  Lumina is a statically typed, web-native language with HM type inference, algebraic types, and trait-based polymorphism, compiled to JavaScript and WebAssembly. Build reactive UIs, WebGPU workloads, and WASM modules in the same language, with the same type system.", "l": null, "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "nexus-explainability", "d": "XAI \u2014 decision logging, audit trails, explanation generation (Cocapn fleet vessel)", "l": "Python", "fork": true, "gold_family": "nexus", "stratum": "fork"}
+{"name": "JetsonClaw1-vessel", "d": "\u26a1 Git-Agent Vessel \u2014 Lucineer realm specialist. Hardware, low-level systems, fleet infrastructure. Captain: Casey Digennaro. Lighthouse: Oracle1.", "l": "Cuda", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "flux-trust-c", "d": "Pure C11 trust scoring: Bayesian updates, decay, revocation, sorting", "l": "C", "fork": true, "gold_family": "flux", "stratum": "fork"}
+{"name": "scratch-vm", "d": "Virtual Machine used to represent, run, and maintain the state of programs for Scratch 3.0", "l": null, "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "fleet-onboarding", "d": "Step-by-step onboarding wizard for new fleet commanders", "l": "TypeScript", "fork": true, "gold_family": "fleet", "stratum": "fork"}
+{"name": "context-broker", "d": "Unified goal-scoped context management for fleet execution", "l": "TypeScript", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "docs-engine", "d": "Auto-generated documentation for every vessel in the fleet", "l": "TypeScript", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "voxblox-plusplus", "d": "A volumetric object-level semantic mapping framework.", "l": null, "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "MerkleMesh", "d": "One fleet, one root: merkle aggregation + inclusion proofs over quilt cell-ledger journals (bit-for-bit Rust-compatible TS port). 49 tests.", "l": "TypeScript", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "polychora", "d": "Genuine 4D voxel game engine built on Vulkan \u2014 full spatial X/Y/Z/W coordinates, native 4D rotation across all six planes, procedural world generation, and server-authoritative multiplayer.", "l": "Rust", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "markdown-agent-studio", "d": "Markdown Agent Studio is a workspace where agents develop specialization through their own experience.", "l": "TypeScript", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "chroma", "d": "Search infrastructure for AI", "l": "Rust", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "BMAD-METHOD", "d": "Breakthrough Method for Agile Ai Driven Development", "l": "JavaScript", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "edgenative-ai", "d": "NEXUS Knowledge Vessel \u2014 INCREMENTS trust, VM emulator, Rosetta Stone translation", "l": "TypeScript", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "Open-LLM-VTuber", "d": "Talk to any LLM with hands-free voice interaction, voice interruption, and Live2D taking face running locally across platforms", "l": null, "fork": true, "gold_family": "open", "stratum": "fork"}
+{"name": "nexus-aab-protocol", "d": "Agent Architecture Behavior \u2014 behavior codec, roles, capability negotiation (Cocapn fleet vessel)", "l": "Python", "fork": true, "gold_family": "nexus", "stratum": "fork"}
+{"name": "OpenRoom", "d": "A browser-based desktop where AI Agent operates every app through natural language.", "l": "TypeScript", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "opensmile", "d": "The Munich Open-Source Large-Scale Multimedia Feature Extractor", "l": null, "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "plato-cuda-dreamcycle", "d": "PLATO CUDA Dreamcycle \u2014 GPU task scheduling with resource budgets", "l": "Python", "fork": true, "gold_family": "plato", "stratum": "fork"}
+{"name": "ViMax", "d": "\"ViMax: Agentic Video Generation (Director, Screenwriter, Producer, and Video Generator All-in-One)\"", "l": null, "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "nexus-data-pipeline", "d": "Data pipeline \u2014 telemetry ingestion, compression, storage, ETL (Cocapn fleet vessel)", "l": "Python", "fork": true, "gold_family": "nexus", "stratum": "fork"}
+{"name": "resolve", "d": "Resolve \u2014 A2A deliberative compilation system. Transmutes intention into computation through multi-agent deliberation. JSON payloads as first-class citizens. Zero dependencies.", "l": "Python", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "zero-knowledge-fleet", "d": "Privacy-preserving fleet operations with ZK proofs", "l": "TypeScript", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "increments-trust", "d": "12-parameter trust model with 25:1 loss-to-gain ratio", "l": "TypeScript", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "flux-stigmergy-c", "d": "Pure C11 stigmergic communication: shared environment traces, decay, waypoints, queries", "l": "C", "fork": true, "gold_family": "flux", "stratum": "fork"}
+{"name": "tri-quarter-toolbox", "d": "A mathematical/computational framework that upgrades the complex numbers for working with unified 2D coordinates, inversive geometry, Eisenstein integers, radial dual triangular lattice graph (RDTLG), hexagonal symmetries, signal processing, equivariant encodings, and geometric deep learning.", "l": "Python", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "ghost-tiles-cuda", "d": "Ghost tiles \u2014 learned sparse attention patterns with CUDA GPU kernels", "l": "Cuda", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "confidence-c", "d": "Pure C11 confidence math \u2014 Bayesian fusion, decay, multi-agent reconciliation, no heap", "l": "C", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "plato-harbor", "d": "Fork of Lucineer/plato-harbor \u2014 PLATO harbor, fleet research", "l": "Python", "fork": true, "gold_family": "plato", "stratum": "fork"}
+{"name": "cuda-fault-sim", "d": "Rust+CUDA fault simulation \u2014 stuck-at, bridging, delay fault injection", "l": "Rust", "fork": true, "gold_family": "cuda", "stratum": "fork"}
+{"name": "fleet-migration", "d": "Automated migration tooling \u2014 upgrade vessels, change domains, rotate secrets", "l": "TypeScript", "fork": true, "gold_family": "fleet", "stratum": "fork"}
+{"name": "log-origin", "d": "Original LOG.ai platform \u2014 the vessel that started the fleet. Custom personalities, templates, and platform DNA.", "l": "TypeScript", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "nexus-security", "d": "Security \u2014 byzantine fault detection, encryption, authentication (Cocapn fleet vessel)", "l": "Python", "fork": true, "gold_family": "nexus", "stratum": "fork"}
+{"name": "liath", "d": "A programmable database that speaks Lua. Store data, run queries, build AI workflows.", "l": null, "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "cuda-stream", "d": "Stream processing \u2014 tumbling/sliding windows, aggregation, joins (Rust)", "l": "Rust", "fork": true, "gold_family": "cuda", "stratum": "fork"}
+{"name": "astro", "d": "The web framework for content-driven websites. \u2b50\ufe0f Star to support our work!", "l": "TypeScript", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "craftmind-researcher", "d": "AI self-improvement for Minecraft bots \u2014 autonomous discovery, experiment, and learning", "l": null, "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "deckboss-fab", "d": "[Hardware roadmap, not active product] CAD/CAM equipment for deckboss \u2014 OpenSCAD, FreeCAD, Gazebo, G-code generation.", "l": "Python", "fork": true, "gold_family": "deckboss", "stratum": "fork"}
+{"name": "nexus-energy", "d": "Energy management \u2014 battery simulation, solar modeling, power budget allocation (Cocapn fleet vessel)", "l": "Python", "fork": true, "gold_family": "nexus", "stratum": "fork"}
+{"name": "cuda-stigmergy", "d": "Rust+CUDA stigmergic coordination \u2014 pheromone-based multi-agent communication", "l": "Rust", "fork": true, "gold_family": "cuda", "stratum": "fork"}
+{"name": "legacy-ai", "d": "Cocapn vessel \u2014 accumulated context IS the product", "l": "TypeScript", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "jetson-grand-design", "d": "Canonical reference architecture for git-native robotics ecosystem \u2014 19K lines across 32 files", "l": null, "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "jiuwenclaw", "d": "JiuwenClaw is an intelligent AI Agent built on openJiuwen. It extends the powerful capabilities of large language models directly to your fingertips through various communication apps you use daily.", "l": "Python", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "cuda-backpressure", "d": "Backpressure \u2014 credit-based flow control, adaptive rate, queue monitoring", "l": "Rust", "fork": true, "gold_family": "cuda", "stratum": "fork"}
+{"name": "agentkernel", "d": "Run AI coding agents in secure, isolated microVMs. Sub-125ms boot times, real hardware isolation.", "l": null, "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "fluxnavigate-go", "d": "Go 2D grid pathfinding: BFS, waypoints, replanning, progress", "l": "Go", "fork": true, "gold_family": "OTHER", "stratum": "fork"}
+{"name": "fleet-djinn", "d": "Wish-based fleet interaction \u2014 describe what you want, fleet builds it", "l": "TypeScript", "fork": true, "gold_family": "fleet", "stratum": "fork"}
+{"name": "zero-knowledge", "d": "Zero-knowledge proof primitives: Schnorr, DLEQ, range proofs, sigma protocols, Fiat-Shamir", "l": "Rust", "fork": false, "gold_family": "OTHER", "stratum": "spotlight"}
+{"name": "zero-poc", "d": "Purple Pincher Zero \u2014 the minimal git-native agent template. Fork it, register it, and it starts working your repo.", "l": null, "fork": true, "gold_family": "OTHER", "stratum": "spotlight"}
+{"name": "git.pp-ng", "d": "git.pp \u2014 next-gen Git substrate for concurrent agents: tasks are the atom, state is derived from the record, provenance is the arbiter. Built on Cloudflare Workers + Artifacts.", "l": "Python", "fork": false, "gold_family": "git", "stratum": "spotlight"}
+{"name": "quilt-matrix", "d": "The external mind: a spreadsheet-viewable neural network of relational weights. Small cells ask, typesafe answers, a mechanical bot transcribes, the JEV walker thinks, moth entropy rolls the die, and the weights become music.", "l": "Python", "fork": false, "gold_family": "quilt", "stratum": "spotlight"}
+{"name": "cellforge", "d": "Cellular-substrate ML training. The cell matrix outlives every model architecture.", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "spotlight"}
+{"name": "xero", "d": "Xero \u2014 production release of the zero agent template.", "l": null, "fork": false, "gold_family": "OTHER", "stratum": "spotlight"}
+{"name": "xero-lab", "d": "Xero lab \u2014 prototypes and design notes for the zero agent production line (release line: SuperInstance/xero)", "l": "HTML", "fork": false, "gold_family": "OTHER", "stratum": "spotlight"}
+{"name": "question-tree", "d": "Question-tree memory for a git agent: folders are questions, leaves are tools. The agent builds the calculator; afterwards it just turns the crank.", "l": "Python", "fork": false, "gold_family": "OTHER", "stratum": "spotlight"}
+{"name": "jev-semantic", "d": "The semantic layer for the Jev: judgment log, window compiler, question tree.", "l": "Python", "fork": false, "gold_family": "jev", "stratum": "spotlight"}
+{"name": "constraint-theory-core", "d": "Unified geometric constraint theory \u2014 Eisenstein lattices, deadband funnels, Laman rigidity, metronome consensus, holonomy verification. 83 tests, zero deps.", "l": "Rust", "fork": false, "gold_family": "constraint", "stratum": "spotlight"}
+{"name": "exocortex-core", "d": "SuperInstance Exocortex \u2014 external brain architecture for small local models", "l": "Python", "fork": false, "gold_family": "exocortex", "stratum": "spotlight"}

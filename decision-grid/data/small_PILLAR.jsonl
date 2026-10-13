@@ -1,0 +1,128 @@
+{"name": "ternary-cell-python", "v": "MISSING"}
+{"name": "plato-adapters", "v": "MISSING"}
+{"name": "lau-collab", "v": "MISSING"}
+{"name": "agent-riff-v3", "v": "MISSING"}
+{"name": "plato-engine-block-c", "v": "MISSING"}
+{"name": "eisenstein-tools", "v": "MISSING"}
+{"name": "mavis-skill-miner", "v": "MISSING"}
+{"name": "ternary-intent-cache", "v": "MISSING"}
+{"name": "substrate-forge", "v": "MISSING"}
+{"name": "quilt-conversation", "v": "MISSING"}
+{"name": "ternary-projection", "v": "MISSING"}
+{"name": "flux-signatures", "v": "MISSING"}
+{"name": "ternary-spiral", "v": "MISSING"}
+{"name": "ternary-ensign", "v": "MISSING"}
+{"name": "plato-core", "v": "MISSING"}
+{"name": "ternary-walk", "v": "MISSING"}
+{"name": "oxide-workflow", "v": ["pyramid-orchestration", "deployment"]}
+{"name": "cocapn-colora", "v": ["memory-grid", "interface-data-logic"]}
+{"name": "spectral-explorer", "v": ["interface-data-logic", "memory-grid"]}
+{"name": "quilt-fable", "v": ["walkthroughs-skills", "interface-data-logic"]}
+{"name": "ternary-search", "v": ["pyramid-orchestration", "memory-grid"]}
+{"name": "ternary-phase", "v": ["memory-grid", "gates-deadbands"]}
+{"name": "plato-policy", "v": ["gates-deadbands", "pyramid-orchestration"]}
+{"name": "lau-connes-spectral-triple", "v": []}
+{"name": "fleet-midi-chord", "v": ["memory-grid", "calculator-maker"]}
+{"name": "plato-agent-python", "v": ["agent-as-files", "pyramid-orchestration"]}
+{"name": "graph-planarity", "v": ["memory-grid", "calculator-maker"]}
+{"name": "agent-motif", "v": ["memory-grid", "interface-data-logic"]}
+{"name": "fleet-latin", "v": ["pyramid-orchestration", "interface-data-logic"]}
+{"name": "conservation-verify-c", "v": ["memory-grid", "two-logs"]}
+{"name": "ternary-manifesto", "v": []}
+{"name": "conservation-spectral-ada", "v": ["memory-grid", "two-logs"]}
+{"name": "ternary-spreadsheet-python", "v": "MISSING"}
+{"name": "fleet-midi-cycle", "v": "MISSING"}
+{"name": "ternary-fuse", "v": "MISSING"}
+{"name": "lau-hodge-decomposition-agents", "v": "MISSING"}
+{"name": "fleet-triage", "v": "MISSING"}
+{"name": "plato-runtime-kernel", "v": "MISSING"}
+{"name": "cuda-constraint-checker", "v": "MISSING"}
+{"name": "ternary-kalman", "v": "MISSING"}
+{"name": "ternary-regression", "v": "MISSING"}
+{"name": "quilt-fleet-snapshot", "v": "MISSING"}
+{"name": "graph-walker-go", "v": "MISSING"}
+{"name": "substrate-canary-pin", "v": "MISSING"}
+{"name": "oxide-canary", "v": "MISSING"}
+{"name": "plato-client-ruby", "v": "MISSING"}
+{"name": "plato-dashboard", "v": "MISSING"}
+{"name": "ternary-transformer", "v": "MISSING"}
+{"name": "plato-room-nav", "v": "MISSING"}
+{"name": "jev-harness", "v": "MISSING"}
+{"name": "conservation-spectral-zig", "v": "MISSING"}
+{"name": "jev-fusion", "v": "MISSING"}
+{"name": "constraint-tminus-bridge", "v": "MISSING"}
+{"name": "ternary-tnn", "v": "MISSING"}
+{"name": "fleet-rave-connector", "v": "MISSING"}
+{"name": "openconstruct-cs", "v": "MISSING"}
+{"name": "ternary-markov", "v": "MISSING"}
+{"name": "quilt-jev-toolkit-push", "v": "MISSING"}
+{"name": "oxide-constructs", "v": "MISSING"}
+{"name": "substrate-witness-log", "v": "MISSING"}
+{"name": "lau-modular-agents", "v": "MISSING"}
+{"name": "quilt-quantumaudio-demo-push", "v": "MISSING"}
+{"name": "ternary-reservoir", "v": "MISSING"}
+{"name": "lau-network-science", "v": "MISSING"}
+{"name": "si-wasserstein-fleet", "v": "MISSING"}
+{"name": "ai-character-integrations", "v": "MISSING"}
+{"name": "ternary-compiler-python", "v": "MISSING"}
+{"name": "ternary-sandbox", "v": "MISSING"}
+{"name": "plato-provenance", "v": "MISSING"}
+{"name": "flux-lang", "v": "MISSING"}
+{"name": "fleet-integration", "v": "MISSING"}
+{"name": "ternary-paxos", "v": "MISSING"}
+{"name": "quilt-substrate", "v": "MISSING"}
+{"name": "plato-tile-split", "v": "MISSING"}
+{"name": "flux-papers", "v": "MISSING"}
+{"name": "fleet-seeds", "v": "MISSING"}
+{"name": "fleet-deepinfra-test", "v": "MISSING"}
+{"name": "plato-backtest", "v": "MISSING"}
+{"name": "ternary-dissertation-c", "v": "MISSING"}
+{"name": "SuperInstance-archive", "v": "MISSING"}
+{"name": "plato-tile-metrics", "v": "MISSING"}
+{"name": "fleet-midi-gateway", "v": "MISSING"}
+{"name": "Equipment-Consensus-Engine", "v": "MISSING"}
+{"name": "lucineer-com", "v": "MISSING"}
+{"name": "lau-collections", "v": "MISSING"}
+{"name": "superinstance-ffi", "v": "MISSING"}
+{"name": "plato-room-phi", "v": "MISSING"}
+{"name": "SuperInstance-SDK1", "v": "MISSING"}
+{"name": "grand-pattern-java", "v": "MISSING"}
+{"name": "agent-polyrhythm", "v": "MISSING"}
+{"name": "gpu-persistent-homology", "v": "MISSING"}
+{"name": "fleet-midi-scale", "v": "MISSING"}
+{"name": "lau-teleomorphic", "v": "MISSING"}
+{"name": "ternary-renormalize", "v": "MISSING"}
+{"name": "ternary-proof", "v": "MISSING"}
+{"name": "flux-isa-edge", "v": "MISSING"}
+{"name": "lau-scheduling-theory", "v": "MISSING"}
+{"name": "ternary-attention", "v": "MISSING"}
+{"name": "Equipment-Consensus-Engine-Ruby", "v": "MISSING"}
+{"name": "ternary-compiler-optimizer", "v": "MISSING"}
+{"name": "plato-uidl", "v": "MISSING"}
+{"name": "flux-benchmarks", "v": "MISSING"}
+{"name": "flux-reasoner-engine", "v": "MISSING"}
+{"name": "Equipment-Teacher-Student", "v": "MISSING"}
+{"name": "ternary-cargo", "v": "MISSING"}
+{"name": "openconstruct-java", "v": "MISSING"}
+{"name": "ternary-mesh", "v": "MISSING"}
+{"name": "the-rotation", "v": "MISSING"}
+{"name": "ternary-stream-queue", "v": "MISSING"}
+{"name": "ternary-motion", "v": "MISSING"}
+{"name": "quilt-tui", "v": "MISSING"}
+{"name": "si-feedback", "v": "MISSING"}
+{"name": "flux-runtime-lat", "v": "MISSING"}
+{"name": "quilt-wiki-2126", "v": "MISSING"}
+{"name": "lau-spectral-agent", "v": "MISSING"}
+{"name": "fleet-auth", "v": "MISSING"}
+{"name": "fleet-midi-inversion", "v": "MISSING"}
+{"name": "fleet-survey", "v": "MISSING"}
+{"name": "plato-mud-server", "v": "MISSING"}
+{"name": "grand-pattern-mono", "v": "MISSING"}
+{"name": "plato-vision", "v": "MISSING"}
+{"name": "forge-pi", "v": "MISSING"}
+{"name": "forge-a2a", "v": "MISSING"}
+{"name": "ternary-benchmark", "v": "MISSING"}
+{"name": "lau-dg-algebra", "v": "MISSING"}
+{"name": "lau-bridge-tutor", "v": "MISSING"}
+{"name": "fleet-a2a-bridge", "v": "MISSING"}
+{"name": "cocapn", "v": "MISSING"}

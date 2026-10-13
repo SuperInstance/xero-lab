@@ -1,0 +1,10 @@
+{
+ "all_big": 39500,
+ "staffed_cost": 3285.3920000000808,
+ "staffed_by_tier": {
+  "JEV": 36,
+  "BIG": 126,
+  "ALGO": 1356,
+  "SMALL": 62
+ }
+}

@@ -1,0 +1,378 @@
+{
+ "FAM_ALGO_vs_GOLD": [
+  395,
+  395,
+  1.0
+ ],
+ "FAM_SMALL_vs_GOLD": [
+  203,
+  239,
+  0.8493723849372385
+ ],
+ "FAM_BIG_vs_GOLD": [
+  117,
+  119,
+  0.9831932773109243
+ ],
+ "FAM_SMALL_fidelity_BIG": [
+  62,
+  68,
+  0.9117647058823529
+ ],
+ "FAM_ALGO_fidelity_BIG": [
+  117,
+  119,
+  0.9831932773109243
+ ],
+ "FAM_SMALL_vs_GOLD_by_stratum": {
+  "bigfam": [
+   155,
+   159,
+   0.9748427672955975
+  ],
+  "tail": [
+   32,
+   64,
+   0.5
+  ],
+  "nodesc": [
+   16,
+   16,
+   1.0
+  ],
+  "fork": [
+   0,
+   0,
+   0.0
+  ],
+  "spotlight": [
+   0,
+   0,
+   0.0
+  ]
+ },
+ "FAM_SMALL_errors": [
+  [
+   "cuda-constraint-checker",
+   "constraint",
+   "cuda",
+   "bigfam"
+  ],
+  [
+   "quilt-fleet-snapshot",
+   "fleet",
+   "quilt",
+   "bigfam"
+  ],
+  [
+   "SuperInstance-archive",
+   "OTHER",
+   "superinstance",
+   "bigfam"
+  ],
+  [
+   "Equipment-Consensus-Engine",
+   "agent",
+   "equipment",
+   "bigfam"
+  ],
+  [
+   "crab",
+   "agent",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "multiagent-project-archive",
+   "agent",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "turbovec-integration-ccc",
+   "constraint",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "federation-protocol",
+   "plato",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "snapkit-zig",
+   "cocapn",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "makerlog-ai-pages",
+   "ai",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "servo-mind-theory",
+   "constraint",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "zai-worker",
+   "git",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "markov-blanket",
+   "superinstance",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "jeviter",
+   "jev",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "smartcrdt-git-agent",
+   "cocapn",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "conversation-toolkit",
+   "ai",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "kernel-conservation",
+   "conservation",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "rg-flow",
+   "flux",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "live-canon-gh",
+   "git",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "ecosystem-conservation",
+   "conservation",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "graphite-geometric-algebra",
+   "graph",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "reposphere",
+   "agent",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "cot-quilt",
+   "quilt",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "consensus-protocol",
+   "flux",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "codespace-worker",
+   "flux",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "studylog-ai-pages",
+   "ai",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "forgemaster-shell",
+   "forge",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "garden",
+   "cocapn",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "entropy-gpu-rs",
+   "gpu",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "protein-conservation",
+   "conservation",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "forgemaster",
+   "forge",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "witness-is-prediction",
+   "substrate",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "dojo-builder",
+   "agent",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "keeper-agent",
+   "flux",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "linguistic-spectral",
+   "conservation",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "c-ternary",
+   "ternary",
+   "OTHER",
+   "tail"
+  ]
+ ],
+ "TRAP_REF_base": {
+  "SUSPECT": 4,
+  "TRUST": 115
+ },
+ "TRAP_SMALL_vs_REF": [
+  32,
+  49,
+  0.6530612244897959
+ ],
+ "TRAP_ALGO_vs_REF": [
+  84,
+  119,
+  0.7058823529411765
+ ],
+ "TRAP_SMALL_confusion": {
+  "('SUSPECT', 'TRUST')": 1,
+  "('TRUST', 'SUSPECT')": 16,
+  "('TRUST', 'TRUST')": 31,
+  "('SUSPECT', 'SUSPECT')": 1
+ },
+ "TRAP_ALGO_confusion": {
+  "('SUSPECT', 'SUSPECT')": 2,
+  "('TRUST', 'TRUST')": 82,
+  "('TRUST', 'SUSPECT')": 33,
+  "('SUSPECT', 'TRUST')": 2
+ },
+ "TRAP_SMALL_vs_ALGO_agree": [
+  74,
+  138,
+  0.5362318840579711
+ ],
+ "PILLAR_ALGO_vs_SILVER": {
+  "n": 395,
+  "exact": 280,
+  "exact_rate": 0.7088607594936709,
+  "overlap": 298,
+  "overlap_rate": 0.7544303797468355
+ },
+ "PILLAR_SMALL_vs_SILVER": {
+  "n": 16,
+  "exact": 2,
+  "exact_rate": 0.125,
+  "overlap": 5,
+  "overlap_rate": 0.3125
+ },
+ "PILLAR_BIG_vs_SILVER": {
+  "n": 119,
+  "exact": 71,
+  "exact_rate": 0.5966386554621849,
+  "overlap": 81,
+  "overlap_rate": 0.680672268907563
+ },
+ "PILLAR_SMALL_vs_REF": {
+  "n": 6,
+  "exact": 1,
+  "exact_rate": 0.16666666666666666,
+  "overlap": 1,
+  "overlap_rate": 0.16666666666666666
+ },
+ "PILLAR_REF_base": {
+  "agent-as-files": 7,
+  "two-logs": 4,
+  "memory-grid": 11,
+  "walkthroughs-skills": 1,
+  "gates-deadbands": 4,
+  "deployment": 3,
+  "pyramid-orchestration": 6,
+  "calculator-maker": 2,
+  "interface-data-logic": 2
+ },
+ "PILLAR_SILVER_base": {
+  "memory-grid": 51,
+  "interface-data-logic": 26,
+  "deployment": 11,
+  "gates-deadbands": 16,
+  "calculator-maker": 20,
+  "walkthroughs-skills": 4,
+  "pyramid-orchestration": 76,
+  "agent-as-files": 7,
+  "two-logs": 8
+ },
+ "DISP_ALGO_vs_SILVER": [
+  305,
+  395,
+  0.7721518987341772
+ ],
+ "DISP_ALGO_vs_REF": [
+  93,
+  119,
+  0.7815126050420168
+ ],
+ "DISP_SILVER_vs_REF": [
+  76,
+  119,
+  0.6386554621848739
+ ],
+ "DISP_formula_on_BIG_cells_vs_REF": [
+  96,
+  119,
+  0.8067226890756303
+ ],
+ "DISP_REF_base": {
+  "TAIL": 49,
+  "DEEP": 14,
+  "COLLAPSE": 56
+ }
+}
