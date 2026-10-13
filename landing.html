@@ -243,7 +243,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
       <!-- 3 SPREADSHEET -->
       <article class="card">
-        <span class="tag lab">● Measured — partial run</span>
+        <span class="tag lab">● Measured — staircases closed</span>
         <h3>3 · The spreadsheet that fires its teacher</h3>
         <p class="what">Put the work in cells. The big model's job is the cut — breaking work into decisions small enough for little models to make. Judgment sets the gate on each one: go, hold, or stop.</p>
         <div class="demo">
@@ -253,16 +253,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div class="controls" style="margin-top:12px"><button class="btn primary small" id="grid-run" type="button">Run the gates →</button><button class="btn small" id="grid-reset" type="button">Reset</button></div>
         </div>
         <div class="stat-row" aria-label="Measured results from the real run">
-          <div><b>8.3%</b><span>Of all-big cost — staffed grid</span></div>
+          <div><b>8.6%</b><span>Of all-big cost — staffed grid</span></div>
           <div><b>0 / 395</b><span>Family cells kept by the big model</span></div>
           <div><b>11/11 · 0/18</b><span>Jev gates: correct accepted · wrong accepted</span></div>
         </div>
-        <p class="note"><strong>Measured on the real run</strong> — 395 repos × 4 decision cells. A naming rule staffs <strong>85.8%</strong> of cells; the big model keeps just <strong>8%</strong>. And the gates belong on <em>instances</em>, not blanket rules: gating individual decisions, Jev accepted <strong>11 of 11</strong> correct small-model calls and <strong>0 of 18</strong> wrong ones — the deadband caught the rest. <strong>The teacher works itself out of a job, cell by cell</strong> — and every verdict is logged. Nobody grades their own work: the decider doesn't set its own gate.<br><span style="font-size:12px">Honest caveat: the small-model tier ran partial — a rate-limit excursion stopped it mid-run, recorded in the sheet itself. A paced re-run is queued.</span></p>
+        <p class="note"><strong>Measured on the real run</strong> — 395 repos × 4 decision cells. A naming rule staffs <strong>85.8%</strong> of cells; the big model keeps just <strong>8%</strong>. And the gates belong on <em>instances</em>, not blanket rules: gating individual decisions, Jev accepted <strong>11 of 11</strong> correct small-model calls and <strong>0 of 18</strong> wrong ones — the deadband caught the rest. <strong>The teacher works itself out of a job, cell by cell</strong> — and every verdict is logged. Nobody grades their own work: the decider doesn't set its own gate.<br><span style="font-size:12px">Closure, from the paced re-run (all 1,580 cells completed, zero rate limits — the 8.6% repays the first run's rate-limit discount): the staircases are closed. Pillar cells staff the keyword rule — the small model managed only 33.6% there. Disposition's ceiling held at 80.7%, and both proposed fixes were tested and rejected with receipts: a substance cell changed nothing, and the honesty re-cut scored below its own floor in both halves — honesty stays big-model work.</span></p>
       </article>
 
       <!-- 4 WAVE -->
       <article class="card wide">
-        <span class="tag lab">● Measured — reader tuning is next</span>
+        <span class="tag lab">● Measured — v2: one skill learned, the rest is theatre (for now)</span>
         <h3>4 · The 20° turn, read in letters</h3>
         <p class="what">Point the same widget at the sea. A camera watches the waves; the sea is rendered as letters — character by height, resolution by motion. A model tuned to read waveforms as a first-class language pulls the gist — rhythm, height, throw — straight from the lettering. Now turn 20° into the wind: the general rules price the wind, but the letter-sea supplies the subtlety, because the camera sees the swell <em>before</em> the hull feels it.</p>
         <div class="demo">
@@ -281,7 +281,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div><b>46 MB</b><span>The same day as raw numeric text</span></div>
           <div><b>6.5×</b><span>Fewer tokens per reading — letters vs numeric grids</span></div>
         </div>
-        <p class="note"><strong>Measured — 36 synthetic seas read under four encodings.</strong> Compactness <strong>confirmed</strong>: letters cost 6.5× fewer tokens per reading than numeric grids and lost nothing to them on any question. One surprise: per-cell delta encoding <em>loses</em> on wave fields — everything moves a little, all the time — so plain frames plus the deadband idea win. The honest caveat is the reader, not the rendering: zero-shot, an untuned model reads the sea poorly in <em>every</em> encoding — it even insists every sea is “building.” The information doesn't die in the letters; it dies in an untrained reader. <strong>Next step:</strong> tune a small reader on the generator's labeled seas — Jev's verdict on that plan: <strong>0.73, yes</strong>. Then you prune away everything the reader doesn't need.</p>
+        <p class="note"><strong>Measured — v1: 36 synthetic seas read under four encodings.</strong> Compactness <strong>confirmed</strong>: letters cost 6.5× fewer tokens per reading than numeric grids and lost nothing to them on any question. One surprise: per-cell delta encoding <em>loses</em> on wave fields — everything moves a little, all the time — so plain frames plus the deadband idea win. Zero-shot, an untuned model reads the sea poorly in <em>every</em> encoding — the information doesn't die in the letters; it dies in an untrained reader.<br><strong>V2 — raising the reader:</strong> the reader was taught with worked examples, dose-tested over 36 fresh seas. <strong>Period is the real win, and it is dose-shaped:</strong> accuracy 0.00 zero-shot → <strong>0.61 at four worked examples</strong>, mean error 4.2 s → 1.2 s — counting crest peaks at the centre cell is a procedure a text reader can actually execute. But direction got <em>worse</em> with teaching (it answered SE on 36 of 36 streams at the top dose, narrating motion that wasn't there), and the “seas always build” prior didn't die — it follows the examples' label mix. The pattern, in one line: <strong>teaching transfers the script, not the measurement</strong> — it works exactly where the measurement is executable in the medium. <strong>Next routes:</strong> a deterministic pre-reader feeding exact measurements to the model's judgment, or a genuinely trained small reader — the generator now produces unlimited labeled seas. (V2 ran 126/126 calls with zero rate limits under the pacing gate.)<br><span style="font-size:12px">The judge priced the inference honestly: Jev's receipt on the updated claim cooled from 0.73 to <strong>0.59</strong>.</span></p>
       </article>
 
       <!-- 5 COMBADGE -->
