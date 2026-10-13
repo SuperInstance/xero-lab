@@ -1,0 +1,96 @@
+held-out: 36 seas (seed 777001, generator v2, balanced)
+  [alone] stream  0 meas=W/8.75/building/none
+  [alone] stream  1 meas=W/10.0/steady/4
+  [alone] stream  2 meas=SE/6.25/steady/5
+  [alone] stream  3 meas=NE/10.0/easing/4
+  [alone] stream  4 meas=N/7.5/steady/5
+  [alone] stream  5 meas=NE/10.0/steady/3
+  [alone] stream  6 meas=S/6.25/steady/3
+  [alone] stream  7 meas=SW/8.75/building/None
+  [alone] stream  8 meas=NW/6.88/steady/5
+  [alone] stream  9 meas=W/8.75/building/5
+  [alone] stream 10 meas=E/8.75/steady/None
+  [alone] stream 11 meas=NE/6.25/steady/none
+  [alone] stream 12 meas=S/8.75/easing/3
+  [alone] stream 13 meas=SW/10.0/building/None
+  [alone] stream 14 meas=NW/10.0/easing/none
+  [alone] stream 15 meas=S/7.5/steady/none
+  [alone] stream 16 meas=NE/7.5/easing/3
+  [alone] stream 17 meas=N/7.5/easing/none
+  [alone] stream 18 meas=NE/10.0/easing/None
+  [alone] stream 19 meas=SE/8.12/easing/3
+  [alone] stream 20 meas=SE/8.12/building/none
+  [alone] stream 21 meas=E/7.5/building/None
+  [alone] stream 22 meas=NW/8.75/building/4
+  [alone] stream 23 meas=SE/6.25/easing/5
+  [alone] stream 24 meas=E/9.38/easing/None
+  [alone] stream 25 meas=NW/7.5/steady/None
+  [alone] stream 26 meas=W/6.25/building/3
+  [alone] stream 27 meas=SE/8.75/easing/3
+  [alone] stream 28 meas=N/6.25/steady/4
+  [alone] stream 29 meas=E/10.0/steady/4
+  [alone] stream 30 meas=SW/6.25/easing/none
+  [alone] stream 31 meas=N/8.75/easing/None
+  [alone] stream 32 meas=N/6.25/building/None
+  [alone] stream 33 meas=SW/6.88/building/none
+  [alone] stream 34 meas=E/7.5/steady/4
+  [alone] stream 35 meas=S/7.5/steady/none
+estimator cost: 21 ms/sea (this VM, CPU)
+  [judge] stream  0 dir=True period=True trend=True sets=True 429s=0 4s
+  [judge] stream  1 dir=True period=True trend=False sets=True 429s=0 3s
+  [judge] stream  2 dir=True period=True trend=True sets=True 429s=0 4s
+  [judge] stream  3 dir=True period=True trend=True sets=True 429s=0 4s
+  [judge] stream  4 dir=True period=True trend=False sets=True 429s=0 3s
+  [judge] stream  5 dir=True period=True trend=False sets=True 429s=0 3s
+  [judge] stream  6 dir=True period=True trend=False sets=True 429s=0 3s
+  [judge] stream  7 dir=True period=True trend=False sets=False 429s=0 3s
+  [judge] stream  8 dir=True period=True trend=True sets=True 429s=0 4s
+  [judge] stream  9 dir=True period=True trend=True sets=True 429s=0 4s
+  [judge] stream 10 dir=True period=True trend=True sets=False 429s=0 3s
+  [judge] stream 11 dir=True period=True trend=True sets=True 429s=0 4s
+  [judge] stream 12 dir=True period=True trend=True sets=True 429s=0 4s
+  [judge] stream 13 dir=True period=True trend=True sets=False 429s=0 3s
+  [judge] stream 14 dir=True period=True trend=True sets=True 429s=0 4s
+  [judge] stream 15 dir=True period=True trend=True sets=True 429s=0 4s
+  [judge] stream 16 dir=True period=True trend=True sets=True 429s=0 2s
+  [judge] stream 17 dir=True period=True trend=True sets=True 429s=0 3s
+  [judge] stream 18 dir=True period=True trend=False sets=False 429s=0 4s
+  [judge] stream 19 dir=True period=True trend=False sets=True 429s=0 4s
+  [judge] stream 20 dir=True period=True trend=True sets=True 429s=0 4s
+  [judge] stream 21 dir=True period=True trend=True sets=False 429s=0 3s
+  [judge] stream 22 dir=True period=True trend=True sets=True 429s=0 3s
+  [judge] stream 23 dir=True period=True trend=True sets=True 429s=0 4s
+  [judge] stream 24 dir=True period=True trend=False sets=False 429s=0 3s
+  [judge] stream 25 dir=True period=True trend=True sets=False 429s=0 3s
+  [judge] stream 26 dir=True period=True trend=True sets=True 429s=0 3s
+  [judge] stream 27 dir=True period=True trend=False sets=True 429s=0 4s
+  [judge] stream 28 dir=True period=True trend=False sets=True 429s=0 3s
+  [judge] stream 29 dir=True period=True trend=False sets=True 429s=0 4s
+  [judge] stream 30 dir=True period=True trend=True sets=True 429s=0 3s
+  [judge] stream 31 dir=True period=True trend=True sets=False 429s=0 3s
+  [judge] stream 32 dir=True period=True trend=True sets=False 429s=0 3s
+  [judge] stream 33 dir=True period=True trend=True sets=True 429s=0 4s
+  [judge] stream 34 dir=True period=True trend=True sets=True 429s=0 3s
+  [judge] stream 35 dir=True period=True trend=False sets=True 429s=0 3s
+route A run complete
+judge rows=36 aborts=0 total429=0
+
+question    A-alone  A-judge
+direction      1.00     1.00
+direction_within45     1.00     1.00
+period         1.00     1.00
+trend          0.67     0.67
+sets           0.75     0.75
+period mean|err|: alone 0.3s (n=36), judge 0.3s (n=36)
+judge mean prompt tokens: 371
+  direction: judge fixed 0, judge broke 0
+  period: judge fixed 0, judge broke 0
+  trend: judge fixed 0, judge broke 0
+  sets: judge fixed 0, judge broke 0
+  alone trend answers: {'building': 10, 'steady': 14, 'easing': 12}
+  judge trend answers: {'building': 10, 'steady': 14, 'easing': 12}
+  truth trends: {'building': 12, 'easing': 12, 'steady': 12}
+  direction: judge overrode the instrument on 0/36
+  trend: judge overrode the instrument on 0/36
+  sets: judge overrode the instrument on 9/36
+EXIT=0

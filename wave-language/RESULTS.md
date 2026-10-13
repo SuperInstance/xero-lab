@@ -305,6 +305,143 @@ half of the claim is measured fact, the "script, not measurement"
 half is an inference — from the answer distributions and the
 readings quoted above — and the receipt prices it that way.
 
+## v3 — who measures (2026-10-13)
+
+The v2 section left a fork: (A) a deterministic pre-reader measures
+and the LLM judges, or (B) a genuinely trained small reader learns
+to measure. v3 ran **both, head-to-head, on the same 36 fresh seas**
+(seed 777001, generator v2, balanced labels, v1's scorer unchanged).
+Pacing held again: the route-A judge's 36/36 calls completed with
+zero 429s; everything else in v3 is local compute.
+
+### The comparison (accuracy; chance: dir .125, dir±45 .375, trend .33, sets .25)
+
+| condition | n | direction | dir ±45° | period | trend | sets | cost / reading |
+|---|---|---|---|---|---|---|---|
+| v1 zero-shot, letters 20×20 * | 24 | 0.21 | 0.50 | 0.00 | 0.38 | 0.29 | 11,300 tok |
+| v2 K=4 worked examples * | 36 | 0.14 | 0.39 | 0.61 | 0.44 | 0.19 | 45,230 tok |
+| **A — estimators alone** | 36 | **1.00** | **1.00** | **1.00** (err 0.3 s) | **0.67** | **0.75** | 0 tok, 21 ms CPU |
+| **A — estimators + LLM judge** | 36 | **1.00** | **1.00** | **1.00** (err 0.3 s) | **0.67** | **0.75** | 371 tok |
+| B1 student @512 seas | 36 | 0.08 | 0.31 | 0.61 (err 1.5 s) | 0.36 | 0.22 | 0 tok, <1 ms |
+| B1 student @2048 | 36 | 0.17 | 0.31 | 0.44 (err 2.0 s) | 0.36 | 0.19 | 0 tok, <1 ms |
+| B1 student @8192 | 36 | 0.11 | 0.36 | 0.39 (err 2.1 s) | 0.33 | 0.25 | 0 tok, <1 ms |
+| B2 student +motion @2048 | 36 | 0.81 | 0.89 | 0.97 (err 0.2 s) | 0.33 | 0.31 | 0 tok, <1 ms |
+| B2 student +motion @8192 | 36 | 0.92 | 0.94 | **1.00** (err 0.1 s) | 0.53 | 0.50 | 0 tok, <1 ms |
+
+\* v1/v2 rows are the published baselines on their own held-out sets
+(v1 seed 4242, pairs partially broken by the 429 scar; v2 seed
+90210). Every v3 row shares seed 777001 — the route comparison
+inside v3 is exactly paired.
+
+### Route A — the instrument measures; the judge speaks
+
+The pre-reader (`prereader.py`) wires the v2 authoring estimators
+into a standalone instrument: FFT direction and buoy-peak period
+from the field, bright-cell trend, set structure from the rendered
+marker channel and the *estimated* period. Nothing is admitted or
+rejected against ground truth — dead zones are reported, not hidden.
+
+- **Direction and period are solved** on synthetic seas: 36/36
+  each, period mean error 0.3 s. These were the LLM's two worst
+  questions across v1 and v2.
+- **Trend 0.67, with structured errors.** Misses bleed to the
+  adjacent class (building→steady 3, easing→steady 4, steady split
+  both ways) — the slope statistic fighting the set envelope, not a
+  prior: answers run 10/14/12 against a 12/12/12 truth mix. There
+  is no "building" flood anywhere on route A.
+- **Sets 0.75 = 27/27 when callable + 9 honest unknowns.** Every
+  miss is the estimator declining to call a window-truncated group
+  ("no complete set fits"). When it answers, it is right.
+- **The judge's measured added value is exactly zero.** Given only
+  the brief (371 tokens — 30× cheaper than v1's frame-reading,
+  120× cheaper than v2's K=4), MiniMax **fixed 0 and broke 0** on
+  every question. It overrode the instrument only where the brief
+  declared a dead zone — the 9 unknown sets — and there it guessed
+  "none" 9/9 times, all wrong: in a dead zone, the LLM's default is
+  a prior wearing a uniform. What the judge *does* produce is the
+  tongue: fluent one-line seamanship, faithful to the instrument
+  including its errors ("…a steady 10-second period and consistent
+  4-wave sets" for an easing sea the instrument misread as steady;
+  its prose once rendered direction in the mariner's FROM
+  convention while its JSON held the correct TO).
+
+### Route B — the student must be fed motion
+
+The student (`student.py`) is a numpy MLP — 439,604 parameters,
+letter frames 2×2-pooled to 4500 inputs, four softmax heads —
+trained locally on generator seas (pool seed 555000, disjoint from
+every test seed). **As specified, it fails**: direction, trend and
+sets sit at chance at all three doses, and the dose curve is flat
+because the model underfits its own training seas (final training
+accuracy on direction 0.11–0.19). Its period row (0.39–0.61) is a
+tolerance artifact — exact-class accuracy is ≈chance and mean
+error is 1.5–2.1 s; an always-≈8 s answer scores ~0.60 under v1's
+tolerance on a uniform 6–10 s mix, so read this table's period
+column by mean error. More data changed nothing: the bind was the
+representation, not the dose.
+
+The diagnostic variant (`student_motion.py`, B2) adds one thing —
+pooled frame-to-frame letter differences as a motion channel
+(862,004 parameters, 30 epochs) — and the two *phase* questions
+fall immediately: direction 0.81 → **0.92** and period 0.97 →
+**1.00** (error 0.2 → 0.1 s, matching the FFT instrument) across
+2048 → 8192 seas. Trend and sets climb more slowly (0.33 → 0.53,
+0.31 → 0.50) and remain well behind the estimators (0.67 / 0.75);
+the student is still fitting them (training accuracy 0.66 / 0.58),
+and its trend answers spread 15/13/8 — no flood, no language prior,
+just weaker envelope extraction. This is v2's law from the other
+side: **a student learns what its input makes executable.** Static
+letters hid the motion; explicit differences handed it over.
+Envelope questions need whole-window integration, which is what
+the estimators were built to do and this MLP does poorly.
+
+### The settlement
+
+- **Who measures: the algorithms, today, on all four questions** —
+  at ceiling on direction/period, in front on trend/sets, with
+  honest unknowns instead of guesses, at 21 ms and zero tokens.
+- **A trained reader is real but narrower**: with motion-explicit
+  input it matches the instrument on direction/period and then
+  runs in <1 ms with no instrument code — the candidate to replace
+  the pre-reader exactly where silicon must be smallest. It has
+  not earned trend or sets.
+- **The LLM judges and speaks; it does not measure.** Its brief-
+  only seat costs 371 tokens, transmits the measurements
+  faithfully, writes the seaman's line — and must never be allowed
+  to fill a dead zone, where its contribution is a confident
+  default. The architecture that falls out is the decision brief's
+  sequence, now measured rather than argued: pre-reader → brief →
+  LLM as judge/tongue, with the student distilled later from the
+  pre-reader's own labeled output (A is B's teacher; nothing here
+  is wasted).
+- **The "building" prior is a language artifact.** It appears in
+  every LLM condition (v1's flood, v2's prompt-following floods,
+  the judge's dead-zone "none") and nowhere in either measuring
+  route — not in the estimators' symmetric errors, not in the
+  trained student's spread answers.
+
+**Jev receipt (v3).** Asked (TypeSafe Jev, `noul`, 2026-10-13)
+whether the evidence justifies the per-question settlement above
+— estimators measure, a trained reader can match them on
+direction/period only with motion-explicit input, the LLM's added
+measurement value over the brief is zero so it should judge and
+speak but never measure: **0.83 — yes.** The warmest of the three
+receipts (0.73, 0.59, 0.83), tracking how much of each claim was
+measurement rather than inference.
+
+### What's next
+
+1. **Trend and sets are the open measurement problem**, now
+   precisely located: an envelope-aware trend statistic (the
+   slope-vs-envelope fight costs ~0.33), and a sets estimator for
+   truncated windows (25% of seas) that reasons about partial
+   groups instead of declining.
+2. **Route B's envelope problem**: recurrence or envelope-scale
+   features for trend/sets; the student replaces the pre-reader
+   question-by-question as it earns each one.
+3. **Throw** (carried from v1's list, still open): the helmsman's
+   third gist needs a boat-response model in the generator.
+
 ## Files
 
 `sea.py` (generator), `render.py` (renderer + delta encoders),
@@ -315,3 +452,11 @@ token usage), `runs/reading_log.txt`.
 v2 additions: `authoring.py` (measured-work-through example
 authoring), `tuning_test.py` (dose-curve tuning run),
 `runs/v2_tuning_results.jsonl`, `runs/v2_tuning_log.txt`.
+v3 additions: `prereader.py` (route A instrument: estimators +
+brief), `route_a_test.py` (estimators-alone + brief-only judge run),
+`student.py` (route B numpy-MLP student, doses 512/2048/8192),
+`student_motion.py` (B2 diagnostic: motion-channel student),
+`runs/v3_heldout_truths.json` (seed-777001 ground truth),
+`runs/v3_routeA_results.jsonl`, `runs/v3_routeA_log.txt`,
+`runs/v3_routeB_results.json`, `runs/v3_routeB_log.txt`,
+`runs/v3_routeB2_results.json`, `runs/v3_routeB2_log.txt`.

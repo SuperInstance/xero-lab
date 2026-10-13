@@ -1,0 +1,2277 @@
+{
+ "variant": "B2-motion-channels",
+ "epochs": 30,
+ "doses": {
+  "2048": {
+   "accuracy": {
+    "direction": 0.8055555555555556,
+    "direction_within45": 0.8888888888888888,
+    "period": 0.9722222222222222,
+    "trend": 0.3333333333333333,
+    "sets": 0.3055555555555556
+   },
+   "period_mean_err_s": 0.19444444444444445,
+   "train_wall_s": 66.8,
+   "infer_ms_per_sea": 0.5,
+   "trend_answers": {
+    "building": 9,
+    "easing": 14,
+    "steady": 13
+   },
+   "rows": [
+    {
+     "stream_id": 0,
+     "truth": {
+      "direction": "W",
+      "period_s": 9.0,
+      "trend": "building",
+      "sets": "none",
+      "amp_dom_m": 0.91,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "SW",
+       "period_s": 8.8
+      }
+     },
+     "answer": {
+      "direction": "W",
+      "period_s": 9.0,
+      "trend": "building",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 1,
+     "truth": {
+      "direction": "W",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": 4,
+      "amp_dom_m": 0.9,
+      "env_phase0_s": 41.22,
+      "generator": "2",
+      "secondary": {
+       "direction": "NE",
+       "period_s": 13.0
+      }
+     },
+     "answer": {
+      "direction": "W",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": 5
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 2,
+     "truth": {
+      "direction": "SE",
+      "period_s": 6.0,
+      "trend": "steady",
+      "sets": 5,
+      "amp_dom_m": 0.87,
+      "env_phase0_s": 22.1,
+      "generator": "2",
+      "secondary": {
+       "direction": "N",
+       "period_s": 6.3
+      }
+     },
+     "answer": {
+      "direction": "SE",
+      "period_s": 6.0,
+      "trend": "steady",
+      "sets": 5
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 3,
+     "truth": {
+      "direction": "NE",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": 4,
+      "amp_dom_m": 1.17,
+      "env_phase0_s": 45.96,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 13.0
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 4,
+     "truth": {
+      "direction": "N",
+      "period_s": 7.0,
+      "trend": "building",
+      "sets": 5,
+      "amp_dom_m": 1.2,
+      "env_phase0_s": 42.84,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 9.2
+      }
+     },
+     "answer": {
+      "direction": "N",
+      "period_s": 7.0,
+      "trend": "easing",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 5,
+     "truth": {
+      "direction": "NE",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": 3,
+      "amp_dom_m": 1.09,
+      "env_phase0_s": 26.28,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 13.0
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 6,
+     "truth": {
+      "direction": "S",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": 3,
+      "amp_dom_m": 1.16,
+      "env_phase0_s": 13.51,
+      "generator": "2",
+      "secondary": {
+       "direction": "NE",
+       "period_s": 6.6
+      }
+     },
+     "answer": {
+      "direction": "S",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 7,
+     "truth": {
+      "direction": "SW",
+      "period_s": 9.0,
+      "trend": "steady",
+      "sets": 5,
+      "amp_dom_m": 1.17,
+      "env_phase0_s": 42.12,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 6.4
+      }
+     },
+     "answer": {
+      "direction": "SW",
+      "period_s": 9.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 8,
+     "truth": {
+      "direction": "NW",
+      "period_s": 7.0,
+      "trend": "steady",
+      "sets": 5,
+      "amp_dom_m": 1.15,
+      "env_phase0_s": 32.65,
+      "generator": "2",
+      "secondary": {
+       "direction": "N",
+       "period_s": 6.3
+      }
+     },
+     "answer": {
+      "direction": "NW",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 1.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 9,
+     "truth": {
+      "direction": "W",
+      "period_s": 9.0,
+      "trend": "building",
+      "sets": 5,
+      "amp_dom_m": 0.94,
+      "env_phase0_s": 54.46,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 8.9
+      }
+     },
+     "answer": {
+      "direction": "W",
+      "period_s": 9.0,
+      "trend": "steady",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 10,
+     "truth": {
+      "direction": "E",
+      "period_s": 9.0,
+      "trend": "steady",
+      "sets": 3,
+      "amp_dom_m": 1.03,
+      "env_phase0_s": 5.96,
+      "generator": "2",
+      "secondary": {
+       "direction": "SE",
+       "period_s": 9.7
+      }
+     },
+     "answer": {
+      "direction": "E",
+      "period_s": 9.0,
+      "trend": "steady",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 11,
+     "truth": {
+      "direction": "NE",
+      "period_s": 6.0,
+      "trend": "steady",
+      "sets": "none",
+      "amp_dom_m": 0.91,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "S",
+       "period_s": 8.1
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 12,
+     "truth": {
+      "direction": "S",
+      "period_s": 9.0,
+      "trend": "easing",
+      "sets": 3,
+      "amp_dom_m": 1.22,
+      "env_phase0_s": 17.56,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 12.1
+      }
+     },
+     "answer": {
+      "direction": "S",
+      "period_s": 9.0,
+      "trend": "steady",
+      "sets": 5
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 13,
+     "truth": {
+      "direction": "SW",
+      "period_s": 10.0,
+      "trend": "building",
+      "sets": 4,
+      "amp_dom_m": 1.17,
+      "env_phase0_s": 28.5,
+      "generator": "2",
+      "secondary": {
+       "direction": "E",
+       "period_s": 9.2
+      }
+     },
+     "answer": {
+      "direction": "SW",
+      "period_s": 9.0,
+      "trend": "easing",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 1.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 14,
+     "truth": {
+      "direction": "NW",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": "none",
+      "amp_dom_m": 0.87,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "E",
+       "period_s": 10.7
+      }
+     },
+     "answer": {
+      "direction": "NW",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 15,
+     "truth": {
+      "direction": "S",
+      "period_s": 8.0,
+      "trend": "steady",
+      "sets": "none",
+      "amp_dom_m": 1.06,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "E",
+       "period_s": 8.6
+      }
+     },
+     "answer": {
+      "direction": "S",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 16,
+     "truth": {
+      "direction": "NE",
+      "period_s": 7.0,
+      "trend": "easing",
+      "sets": 3,
+      "amp_dom_m": 1.15,
+      "env_phase0_s": 12.77,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 8.6
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 7.0,
+      "trend": "easing",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 17,
+     "truth": {
+      "direction": "N",
+      "period_s": 7.0,
+      "trend": "easing",
+      "sets": "none",
+      "amp_dom_m": 0.86,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 8.6
+      }
+     },
+     "answer": {
+      "direction": "N",
+      "period_s": 7.0,
+      "trend": "easing",
+      "sets": 5
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 18,
+     "truth": {
+      "direction": "NE",
+      "period_s": 10.0,
+      "trend": "steady",
+      "sets": 3,
+      "amp_dom_m": 0.87,
+      "env_phase0_s": 3.5,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 8.9
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 19,
+     "truth": {
+      "direction": "SE",
+      "period_s": 8.0,
+      "trend": "steady",
+      "sets": 3,
+      "amp_dom_m": 1.07,
+      "env_phase0_s": 9.56,
+      "generator": "2",
+      "secondary": {
+       "direction": "E",
+       "period_s": 10.3
+      }
+     },
+     "answer": {
+      "direction": "SE",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 20,
+     "truth": {
+      "direction": "SE",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": "none",
+      "amp_dom_m": 0.87,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 9.4
+      }
+     },
+     "answer": {
+      "direction": "SE",
+      "period_s": 8.0,
+      "trend": "steady",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 21,
+     "truth": {
+      "direction": "E",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": 5,
+      "amp_dom_m": 0.9,
+      "env_phase0_s": 18.13,
+      "generator": "2",
+      "secondary": {
+       "direction": "N",
+       "period_s": 6.8
+      }
+     },
+     "answer": {
+      "direction": "SE",
+      "period_s": 8.0,
+      "trend": "easing",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": false,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 22,
+     "truth": {
+      "direction": "NW",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": 4,
+      "amp_dom_m": 1.0,
+      "env_phase0_s": 21.94,
+      "generator": "2",
+      "secondary": {
+       "direction": "NE",
+       "period_s": 9.4
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 8.0,
+      "trend": "steady",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": false,
+      "direction_within45": false,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 23,
+     "truth": {
+      "direction": "SE",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": 5,
+      "amp_dom_m": 1.19,
+      "env_phase0_s": 36.12,
+      "generator": "2",
+      "secondary": {
+       "direction": "E",
+       "period_s": 6.0
+      }
+     },
+     "answer": {
+      "direction": "SE",
+      "period_s": 6.0,
+      "trend": "steady",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 24,
+     "truth": {
+      "direction": "E",
+      "period_s": 9.0,
+      "trend": "steady",
+      "sets": 5,
+      "amp_dom_m": 1.01,
+      "env_phase0_s": 2.22,
+      "generator": "2",
+      "secondary": {
+       "direction": "SW",
+       "period_s": 11.7
+      }
+     },
+     "answer": {
+      "direction": "E",
+      "period_s": 9.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 25,
+     "truth": {
+      "direction": "NW",
+      "period_s": 7.0,
+      "trend": "steady",
+      "sets": 4,
+      "amp_dom_m": 1.07,
+      "env_phase0_s": 3.13,
+      "generator": "2",
+      "secondary": {
+       "direction": "S",
+       "period_s": 5.8
+      }
+     },
+     "answer": {
+      "direction": "NW",
+      "period_s": 7.0,
+      "trend": "easing",
+      "sets": 5
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 26,
+     "truth": {
+      "direction": "W",
+      "period_s": 6.0,
+      "trend": "building",
+      "sets": 3,
+      "amp_dom_m": 1.1,
+      "env_phase0_s": 10.3,
+      "generator": "2",
+      "secondary": {
+       "direction": "NE",
+       "period_s": 7.5
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 6.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": false,
+      "direction_within45": false,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 27,
+     "truth": {
+      "direction": "SE",
+      "period_s": 8.0,
+      "trend": "steady",
+      "sets": 3,
+      "amp_dom_m": 0.99,
+      "env_phase0_s": 9.77,
+      "generator": "2",
+      "secondary": {
+       "direction": "S",
+       "period_s": 10.8
+      }
+     },
+     "answer": {
+      "direction": "N",
+      "period_s": 9.0,
+      "trend": "easing",
+      "sets": 5
+     },
+     "score": {
+      "parsed": true,
+      "direction": false,
+      "direction_within45": false,
+      "period_err_s": 1.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 28,
+     "truth": {
+      "direction": "N",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": 4,
+      "amp_dom_m": 1.18,
+      "env_phase0_s": 27.73,
+      "generator": "2",
+      "secondary": {
+       "direction": "NE",
+       "period_s": 8.1
+      }
+     },
+     "answer": {
+      "direction": "NW",
+      "period_s": 7.0,
+      "trend": "steady",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": false,
+      "direction_within45": true,
+      "period_err_s": 1.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 29,
+     "truth": {
+      "direction": "E",
+      "period_s": 10.0,
+      "trend": "building",
+      "sets": 4,
+      "amp_dom_m": 0.88,
+      "env_phase0_s": 53.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "S",
+       "period_s": 13.0
+      }
+     },
+     "answer": {
+      "direction": "E",
+      "period_s": 10.0,
+      "trend": "steady",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 30,
+     "truth": {
+      "direction": "SW",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": "none",
+      "amp_dom_m": 0.95,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 6.6
+      }
+     },
+     "answer": {
+      "direction": "SW",
+      "period_s": 8.0,
+      "trend": "steady",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 2.0,
+      "period": false,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 31,
+     "truth": {
+      "direction": "N",
+      "period_s": 9.0,
+      "trend": "easing",
+      "sets": 4,
+      "amp_dom_m": 0.87,
+      "env_phase0_s": 15.95,
+      "generator": "2",
+      "secondary": {
+       "direction": "E",
+       "period_s": 8.6
+      }
+     },
+     "answer": {
+      "direction": "N",
+      "period_s": 9.0,
+      "trend": "steady",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 32,
+     "truth": {
+      "direction": "N",
+      "period_s": 6.0,
+      "trend": "building",
+      "sets": 5,
+      "amp_dom_m": 0.9,
+      "env_phase0_s": 6.74,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 6.6
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 7.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": false,
+      "direction_within45": true,
+      "period_err_s": 1.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 33,
+     "truth": {
+      "direction": "SW",
+      "period_s": 7.0,
+      "trend": "building",
+      "sets": "none",
+      "amp_dom_m": 0.98,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 5.4
+      }
+     },
+     "answer": {
+      "direction": "SW",
+      "period_s": 7.0,
+      "trend": "steady",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 34,
+     "truth": {
+      "direction": "E",
+      "period_s": 8.0,
+      "trend": "steady",
+      "sets": 4,
+      "amp_dom_m": 0.92,
+      "env_phase0_s": 28.8,
+      "generator": "2",
+      "secondary": {
+       "direction": "N",
+       "period_s": 10.6
+      }
+     },
+     "answer": {
+      "direction": "N",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": false,
+      "direction_within45": false,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 35,
+     "truth": {
+      "direction": "S",
+      "period_s": 7.0,
+      "trend": "building",
+      "sets": "none",
+      "amp_dom_m": 1.21,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 8.0
+      }
+     },
+     "answer": {
+      "direction": "S",
+      "period_s": 7.0,
+      "trend": "steady",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    }
+   ]
+  },
+  "8192": {
+   "accuracy": {
+    "direction": 0.9166666666666666,
+    "direction_within45": 0.9444444444444444,
+    "period": 1.0,
+    "trend": 0.5277777777777778,
+    "sets": 0.5
+   },
+   "period_mean_err_s": 0.05555555555555555,
+   "train_wall_s": 302.5,
+   "infer_ms_per_sea": 0.75,
+   "trend_answers": {
+    "building": 15,
+    "easing": 13,
+    "steady": 8
+   },
+   "rows": [
+    {
+     "stream_id": 0,
+     "truth": {
+      "direction": "W",
+      "period_s": 9.0,
+      "trend": "building",
+      "sets": "none",
+      "amp_dom_m": 0.91,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "SW",
+       "period_s": 8.8
+      }
+     },
+     "answer": {
+      "direction": "W",
+      "period_s": 9.0,
+      "trend": "building",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 1,
+     "truth": {
+      "direction": "W",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": 4,
+      "amp_dom_m": 0.9,
+      "env_phase0_s": 41.22,
+      "generator": "2",
+      "secondary": {
+       "direction": "NE",
+       "period_s": 13.0
+      }
+     },
+     "answer": {
+      "direction": "W",
+      "period_s": 10.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 2,
+     "truth": {
+      "direction": "SE",
+      "period_s": 6.0,
+      "trend": "steady",
+      "sets": 5,
+      "amp_dom_m": 0.87,
+      "env_phase0_s": 22.1,
+      "generator": "2",
+      "secondary": {
+       "direction": "N",
+       "period_s": 6.3
+      }
+     },
+     "answer": {
+      "direction": "SE",
+      "period_s": 6.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 3,
+     "truth": {
+      "direction": "NE",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": 4,
+      "amp_dom_m": 1.17,
+      "env_phase0_s": 45.96,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 13.0
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 10.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 4,
+     "truth": {
+      "direction": "N",
+      "period_s": 7.0,
+      "trend": "building",
+      "sets": 5,
+      "amp_dom_m": 1.2,
+      "env_phase0_s": 42.84,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 9.2
+      }
+     },
+     "answer": {
+      "direction": "N",
+      "period_s": 7.0,
+      "trend": "building",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 5,
+     "truth": {
+      "direction": "NE",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": 3,
+      "amp_dom_m": 1.09,
+      "env_phase0_s": 26.28,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 13.0
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 6,
+     "truth": {
+      "direction": "S",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": 3,
+      "amp_dom_m": 1.16,
+      "env_phase0_s": 13.51,
+      "generator": "2",
+      "secondary": {
+       "direction": "NE",
+       "period_s": 6.6
+      }
+     },
+     "answer": {
+      "direction": "S",
+      "period_s": 6.0,
+      "trend": "steady",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 7,
+     "truth": {
+      "direction": "SW",
+      "period_s": 9.0,
+      "trend": "steady",
+      "sets": 5,
+      "amp_dom_m": 1.17,
+      "env_phase0_s": 42.12,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 6.4
+      }
+     },
+     "answer": {
+      "direction": "SW",
+      "period_s": 9.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 8,
+     "truth": {
+      "direction": "NW",
+      "period_s": 7.0,
+      "trend": "steady",
+      "sets": 5,
+      "amp_dom_m": 1.15,
+      "env_phase0_s": 32.65,
+      "generator": "2",
+      "secondary": {
+       "direction": "N",
+       "period_s": 6.3
+      }
+     },
+     "answer": {
+      "direction": "NW",
+      "period_s": 7.0,
+      "trend": "easing",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 9,
+     "truth": {
+      "direction": "W",
+      "period_s": 9.0,
+      "trend": "building",
+      "sets": 5,
+      "amp_dom_m": 0.94,
+      "env_phase0_s": 54.46,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 8.9
+      }
+     },
+     "answer": {
+      "direction": "NW",
+      "period_s": 9.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": false,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 10,
+     "truth": {
+      "direction": "E",
+      "period_s": 9.0,
+      "trend": "steady",
+      "sets": 3,
+      "amp_dom_m": 1.03,
+      "env_phase0_s": 5.96,
+      "generator": "2",
+      "secondary": {
+       "direction": "SE",
+       "period_s": 9.7
+      }
+     },
+     "answer": {
+      "direction": "N",
+      "period_s": 8.0,
+      "trend": "easing",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": false,
+      "direction_within45": false,
+      "period_err_s": 1.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 11,
+     "truth": {
+      "direction": "NE",
+      "period_s": 6.0,
+      "trend": "steady",
+      "sets": "none",
+      "amp_dom_m": 0.91,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "S",
+       "period_s": 8.1
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 6.0,
+      "trend": "steady",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 12,
+     "truth": {
+      "direction": "S",
+      "period_s": 9.0,
+      "trend": "easing",
+      "sets": 3,
+      "amp_dom_m": 1.22,
+      "env_phase0_s": 17.56,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 12.1
+      }
+     },
+     "answer": {
+      "direction": "S",
+      "period_s": 9.0,
+      "trend": "steady",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 13,
+     "truth": {
+      "direction": "SW",
+      "period_s": 10.0,
+      "trend": "building",
+      "sets": 4,
+      "amp_dom_m": 1.17,
+      "env_phase0_s": 28.5,
+      "generator": "2",
+      "secondary": {
+       "direction": "E",
+       "period_s": 9.2
+      }
+     },
+     "answer": {
+      "direction": "SW",
+      "period_s": 10.0,
+      "trend": "building",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 14,
+     "truth": {
+      "direction": "NW",
+      "period_s": 10.0,
+      "trend": "easing",
+      "sets": "none",
+      "amp_dom_m": 0.87,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "E",
+       "period_s": 10.7
+      }
+     },
+     "answer": {
+      "direction": "NW",
+      "period_s": 10.0,
+      "trend": "steady",
+      "sets": 5
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 15,
+     "truth": {
+      "direction": "S",
+      "period_s": 8.0,
+      "trend": "steady",
+      "sets": "none",
+      "amp_dom_m": 1.06,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "E",
+       "period_s": 8.6
+      }
+     },
+     "answer": {
+      "direction": "N",
+      "period_s": 8.0,
+      "trend": "easing",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": false,
+      "direction_within45": false,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 16,
+     "truth": {
+      "direction": "NE",
+      "period_s": 7.0,
+      "trend": "easing",
+      "sets": 3,
+      "amp_dom_m": 1.15,
+      "env_phase0_s": 12.77,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 8.6
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 7.0,
+      "trend": "easing",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 17,
+     "truth": {
+      "direction": "N",
+      "period_s": 7.0,
+      "trend": "easing",
+      "sets": "none",
+      "amp_dom_m": 0.86,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 8.6
+      }
+     },
+     "answer": {
+      "direction": "N",
+      "period_s": 7.0,
+      "trend": "easing",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 18,
+     "truth": {
+      "direction": "NE",
+      "period_s": 10.0,
+      "trend": "steady",
+      "sets": 3,
+      "amp_dom_m": 0.87,
+      "env_phase0_s": 3.5,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 8.9
+      }
+     },
+     "answer": {
+      "direction": "NE",
+      "period_s": 9.0,
+      "trend": "building",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 1.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 19,
+     "truth": {
+      "direction": "SE",
+      "period_s": 8.0,
+      "trend": "steady",
+      "sets": 3,
+      "amp_dom_m": 1.07,
+      "env_phase0_s": 9.56,
+      "generator": "2",
+      "secondary": {
+       "direction": "E",
+       "period_s": 10.3
+      }
+     },
+     "answer": {
+      "direction": "SE",
+      "period_s": 8.0,
+      "trend": "easing",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 20,
+     "truth": {
+      "direction": "SE",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": "none",
+      "amp_dom_m": 0.87,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 9.4
+      }
+     },
+     "answer": {
+      "direction": "SE",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 21,
+     "truth": {
+      "direction": "E",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": 5,
+      "amp_dom_m": 0.9,
+      "env_phase0_s": 18.13,
+      "generator": "2",
+      "secondary": {
+       "direction": "N",
+       "period_s": 6.8
+      }
+     },
+     "answer": {
+      "direction": "E",
+      "period_s": 8.0,
+      "trend": "easing",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 22,
+     "truth": {
+      "direction": "NW",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": 4,
+      "amp_dom_m": 1.0,
+      "env_phase0_s": 21.94,
+      "generator": "2",
+      "secondary": {
+       "direction": "NE",
+       "period_s": 9.4
+      }
+     },
+     "answer": {
+      "direction": "NW",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": 3
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 23,
+     "truth": {
+      "direction": "SE",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": 5,
+      "amp_dom_m": 1.19,
+      "env_phase0_s": 36.12,
+      "generator": "2",
+      "secondary": {
+       "direction": "E",
+       "period_s": 6.0
+      }
+     },
+     "answer": {
+      "direction": "SE",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 24,
+     "truth": {
+      "direction": "E",
+      "period_s": 9.0,
+      "trend": "steady",
+      "sets": 5,
+      "amp_dom_m": 1.01,
+      "env_phase0_s": 2.22,
+      "generator": "2",
+      "secondary": {
+       "direction": "SW",
+       "period_s": 11.7
+      }
+     },
+     "answer": {
+      "direction": "E",
+      "period_s": 9.0,
+      "trend": "steady",
+      "sets": 5
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 25,
+     "truth": {
+      "direction": "NW",
+      "period_s": 7.0,
+      "trend": "steady",
+      "sets": 4,
+      "amp_dom_m": 1.07,
+      "env_phase0_s": 3.13,
+      "generator": "2",
+      "secondary": {
+       "direction": "S",
+       "period_s": 5.8
+      }
+     },
+     "answer": {
+      "direction": "NW",
+      "period_s": 7.0,
+      "trend": "steady",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 26,
+     "truth": {
+      "direction": "W",
+      "period_s": 6.0,
+      "trend": "building",
+      "sets": 3,
+      "amp_dom_m": 1.1,
+      "env_phase0_s": 10.3,
+      "generator": "2",
+      "secondary": {
+       "direction": "NE",
+       "period_s": 7.5
+      }
+     },
+     "answer": {
+      "direction": "W",
+      "period_s": 6.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 27,
+     "truth": {
+      "direction": "SE",
+      "period_s": 8.0,
+      "trend": "steady",
+      "sets": 3,
+      "amp_dom_m": 0.99,
+      "env_phase0_s": 9.77,
+      "generator": "2",
+      "secondary": {
+       "direction": "S",
+       "period_s": 10.8
+      }
+     },
+     "answer": {
+      "direction": "SE",
+      "period_s": 8.0,
+      "trend": "easing",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 28,
+     "truth": {
+      "direction": "N",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": 4,
+      "amp_dom_m": 1.18,
+      "env_phase0_s": 27.73,
+      "generator": "2",
+      "secondary": {
+       "direction": "NE",
+       "period_s": 8.1
+      }
+     },
+     "answer": {
+      "direction": "N",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": 5
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": false
+     }
+    },
+    {
+     "stream_id": 29,
+     "truth": {
+      "direction": "E",
+      "period_s": 10.0,
+      "trend": "building",
+      "sets": 4,
+      "amp_dom_m": 0.88,
+      "env_phase0_s": 53.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "S",
+       "period_s": 13.0
+      }
+     },
+     "answer": {
+      "direction": "E",
+      "period_s": 10.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 30,
+     "truth": {
+      "direction": "SW",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": "none",
+      "amp_dom_m": 0.95,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 6.6
+      }
+     },
+     "answer": {
+      "direction": "SW",
+      "period_s": 6.0,
+      "trend": "easing",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 31,
+     "truth": {
+      "direction": "N",
+      "period_s": 9.0,
+      "trend": "easing",
+      "sets": 4,
+      "amp_dom_m": 0.87,
+      "env_phase0_s": 15.95,
+      "generator": "2",
+      "secondary": {
+       "direction": "E",
+       "period_s": 8.6
+      }
+     },
+     "answer": {
+      "direction": "N",
+      "period_s": 9.0,
+      "trend": "easing",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 32,
+     "truth": {
+      "direction": "N",
+      "period_s": 6.0,
+      "trend": "building",
+      "sets": 5,
+      "amp_dom_m": 0.9,
+      "env_phase0_s": 6.74,
+      "generator": "2",
+      "secondary": {
+       "direction": "NW",
+       "period_s": 6.6
+      }
+     },
+     "answer": {
+      "direction": "N",
+      "period_s": 6.0,
+      "trend": "steady",
+      "sets": 5
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 33,
+     "truth": {
+      "direction": "SW",
+      "period_s": 7.0,
+      "trend": "building",
+      "sets": "none",
+      "amp_dom_m": 0.98,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 5.4
+      }
+     },
+     "answer": {
+      "direction": "SW",
+      "period_s": 7.0,
+      "trend": "building",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": true,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 34,
+     "truth": {
+      "direction": "E",
+      "period_s": 8.0,
+      "trend": "steady",
+      "sets": 4,
+      "amp_dom_m": 0.92,
+      "env_phase0_s": 28.8,
+      "generator": "2",
+      "secondary": {
+       "direction": "N",
+       "period_s": 10.6
+      }
+     },
+     "answer": {
+      "direction": "E",
+      "period_s": 8.0,
+      "trend": "building",
+      "sets": 4
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    },
+    {
+     "stream_id": 35,
+     "truth": {
+      "direction": "S",
+      "period_s": 7.0,
+      "trend": "building",
+      "sets": "none",
+      "amp_dom_m": 1.21,
+      "env_phase0_s": 0.0,
+      "generator": "2",
+      "secondary": {
+       "direction": "W",
+       "period_s": 8.0
+      }
+     },
+     "answer": {
+      "direction": "S",
+      "period_s": 7.0,
+      "trend": "steady",
+      "sets": "none"
+     },
+     "score": {
+      "parsed": true,
+      "direction": true,
+      "direction_within45": true,
+      "period_err_s": 0.0,
+      "period": true,
+      "trend": false,
+      "sets": true
+     }
+    }
+   ]
+  }
+ },
+ "params": 862004
+}

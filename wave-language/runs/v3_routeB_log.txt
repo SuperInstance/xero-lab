@@ -1,0 +1,26 @@
+held-out truths cross-checked against route A file: identical
+generating pool of 8192 training seas (seed 555000)...
+  pool 2048/8192 (11s)
+  pool 4096/8192 (23s)
+  pool 6144/8192 (34s)
+  pool 8192/8192 (46s)
+pool label distribution: {'dir': {3: 1023, 5: 1071, 2: 988, 4: 1091, 7: 996, 6: 977, 0: 1014, 1: 1032}, 'period': {4: 1705, 2: 1611, 0: 1620, 1: 1662, 3: 1594}, 'trend': {0: 2724, 2: 2722, 1: 2746}, 'sets': {3: 2130, 0: 1990, 1: 2041, 2: 2031}}
+
+=== dose 512 seas ===
+student parameters: 439,604
+    epoch 10/10 train-head-acc (first512) dir=0.19 per=0.31 trend=0.44 sets=0.29
+  held-out: dir=0.08 dir45=0.31 period=0.61 (err 1.5s) trend=0.36 sets=0.22 | train 3s, infer 0.2 ms/sea
+  trend answers: {'steady': 17, 'easing': 17, 'building': 2}
+
+=== dose 2048 seas ===
+    epoch 10/10 train-head-acc (first512) dir=0.13 per=0.17 trend=0.37 sets=0.26
+  held-out: dir=0.17 dir45=0.31 period=0.44 (err 2.0s) trend=0.36 sets=0.19 | train 14s, infer 0.6 ms/sea
+  trend answers: {'building': 23, 'steady': 13}
+
+=== dose 8192 seas ===
+    epoch 10/10 train-head-acc (first512) dir=0.11 per=0.19 trend=0.34 sets=0.27
+  held-out: dir=0.11 dir45=0.36 period=0.39 (err 2.1s) trend=0.33 sets=0.25 | train 48s, infer 0.2 ms/sea
+  trend answers: {'easing': 36}
+
+wrote runs/v3_routeB_results.json
+EXIT=0

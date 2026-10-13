@@ -1,0 +1,13 @@
+pool 8192 seas with motion features (47s), dim=8900
+
+=== B2 dose 2048 ===
+student parameters: 862,004
+    epoch 30/30 train-head-acc (first512) dir=0.95 per=0.97 trend=0.71 sets=0.68
+  held-out: dir=0.81 dir45=0.89 period=0.97 (err 0.2s) trend=0.33 sets=0.31 | train 67s
+
+=== B2 dose 8192 ===
+    epoch 30/30 train-head-acc (first512) dir=0.99 per=0.98 trend=0.66 sets=0.58
+  held-out: dir=0.92 dir45=0.94 period=1.00 (err 0.1s) trend=0.53 sets=0.50 | train 302s
+
+wrote runs/v3_routeB2_results.json
+EXIT=0
