@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="color-scheme" content="dark light"/>
+<link rel="icon" href="data:,">
+<title>Xero — The Zero Agent · SuperInstance</title>
+<style>
+:root{
+  --bg:#071014; --bg2:#0b1a20; --panel:#0d2028; --panel2:#0a181f; --line:#1e3a44; --line2:#2a4f5e;
+  --ink:#e6f0ec; --muted:#9db8b0; --faint:#6f8f88;
+  --amber:#f2b544; --amber2:#ffcf6b; --phosphor:#5ee8b5; --phosphor-dim:#2a7a64;
+  --red:#ff6b5e; --blue:#6ec6e8; --violet:#b8a6e8;
+  --mono:"SFMono-Regular",ui-monospace,Menlo,Consolas,monospace;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#eef3f0;--bg2:#e2ebe6;--panel:#fff;--panel2:#f4f8f5;--line:#c8d8d0;--line2:#a8c0b4;--ink:#10201c;--muted:#3d5a52;--faint:#6b857c;--amber:#9a6b00;--amber2:#7a5500;--phosphor:#0a7a5c;--phosphor-dim:#bfe8d8;--red:#c0392b;--blue:#176a8a}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--phosphor)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* HERO */
+.hero{padding:52px 0 36px;border-bottom:1px solid var(--line);background:radial-gradient(900px 420px at 85% -60px,rgba(94,232,181,.09),transparent 60%),radial-gradient(700px 380px at 0% 0%,rgba(242,181,68,.07),transparent 55%),var(--bg)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,8vw,72px);line-height:.95;margin:0 0 16px;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--phosphor)}
+.lede{font-size:clamp(17px,2.6vw,21px);color:var(--muted);max-width:680px;margin:0 0 28px;line-height:1.5}
+.lede strong{color:var(--ink);font-weight:600}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr}}
+/* blank page demo */
+.blankpage{background:var(--panel);border:1px solid var(--line);padding:18px}
+.bp-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.bp-head span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.bp-page{background:#f4f1e6;color:#1a1a14;min-height:120px;padding:18px;font-family:var(--mono);font-size:13px;line-height:1.7;position:relative;overflow:hidden}
+@media (prefers-color-scheme: dark){.bp-page{background:#e9e6d8}}
+.bp-cursor{display:inline-block;width:8px;height:15px;background:#1a1a14;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.bp-layer{display:none;border-left:3px solid var(--amber);padding:6px 10px;margin:8px 0;background:rgba(0,0,0,.06);font-size:12.5px}
+.bp-layer.on{display:block}
+.bp-layer b{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7a5500}
+.bp-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.btn{appearance:none;border:1px solid var(--line2);background:var(--bg2);color:var(--ink);padding:9px 14px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border-radius:4px}
+.btn:hover{border-color:var(--phosphor);color:var(--phosphor)}
+.btn.primary{background:var(--amber);border-color:var(--amber);color:#1a1400;font-weight:700}
+.btn.primary:hover{background:var(--amber2);color:#1a1400}
+.btn.small{padding:6px 10px;font-size:11px}
+.btn.active{background:var(--phosphor);border-color:var(--phosphor);color:#06231a;font-weight:700}
+.principles{display:flex;flex-direction:column;gap:0}
+.principle{padding:14px 0;border-bottom:1px solid var(--line)}
+.principle:last-child{border-bottom:none}
+.principle h3{margin:0 0 4px;font-size:15px;font-weight:650}
+.principle p{margin:0;color:var(--muted);font-size:14px}
+.principle .num{font-family:var(--mono);color:var(--amber);font-size:11px;letter-spacing:.14em}
+/* SECTION HEAD */
+.section{padding:44px 0}
+.section-head{margin-bottom:22px}
+.section-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,5vw,40px);margin:0 0 8px;line-height:1.05}
+.section-head p{color:var(--muted);margin:0;max-width:640px;font-size:16px}
+/* CARDS */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:820px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);padding:20px;display:flex;flex-direction:column;gap:12px}
+.card.wide{grid-column:1/-1}
+.tag{display:inline-flex;align-self:flex-start;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px;border:1px solid;border-radius:99px}
+.tag.real{color:var(--phosphor);border-color:var(--phosphor-dim)}
+.tag.sim{color:var(--blue);border-color:var(--blue)}
+.tag.lab{color:var(--amber);border-color:var(--amber)}
+.card h3{margin:0;font-size:19px;line-height:1.2;font-weight:700;letter-spacing:-.01em}
+.card .what{color:var(--muted);font-size:14.5px;margin:0}
+.card .note{font-size:13px;color:var(--faint);border-top:1px dashed var(--line);padding-top:10px;margin-top:auto}
+.card .note strong{color:var(--muted)}
+.demo{background:var(--panel2);border:1px solid var(--line);padding:14px;min-height:120px}
+.demo-label{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-bottom:10px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.stat-row{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:12px}
+.stat-row b{color:var(--amber);font-size:16px;display:block}
+.stat-row span{color:var(--faint);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+/* voice */
+.modes{display:flex;gap:6px;flex-wrap:wrap}
+.transcript{font-family:var(--mono);font-size:12.5px;line-height:1.7;min-height:88px;white-space:pre-wrap;word-break:break-word}
+.transcript .silence{color:var(--faint);font-style:italic}
+.transcript .chunk{display:block;border-left:3px solid var(--phosphor);padding-left:8px;margin:6px 0;background:rgba(94,232,181,.06)}
+.transcript .interrupt{color:var(--red)}
+.progress{height:6px;background:var(--line);border-radius:99px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--phosphor);width:0;transition:width .4s}
+/* bilge */
+.gauge-wrap{display:flex;gap:16px;align-items:stretch}
+.gauge{width:64px;flex:none;background:var(--bg);border:1px solid var(--line);position:relative;height:190px}
+.gauge .band{position:absolute;left:0;right:0;top:38%;height:24%;background:rgba(94,232,181,.18);border-top:1px dashed var(--phosphor);border-bottom:1px dashed var(--phosphor)}
+.gauge .level{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,var(--blue),#1d5a78);transition:height .15s}
+.gauge .marker{position:absolute;left:-4px;right:-4px;height:2px;background:var(--amber)}
+input[type=range]{width:100%;accent-color:var(--amber)}
+.alarm-log{font-family:var(--mono);font-size:12px;line-height:1.7;flex:1;min-height:80px}
+.alarm{color:var(--red);font-weight:700}
+.quiet{color:var(--phosphor)}
+/* grid pruning */
+.cells{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.cell{aspect-ratio:1.35;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:10px;letter-spacing:.04em;border:1px solid;text-align:center;padding:4px;transition:.5s}
+.cell.big{background:rgba(242,181,68,.18);border-color:var(--amber);color:var(--amber2)}
+@media (prefers-color-scheme: light){.cell.big{color:var(--amber)}}
+.cell.small{background:rgba(94,232,181,.13);border-color:var(--phosphor-dim);color:var(--phosphor)}
+.cell.hold{background:rgba(184,166,232,.15);border-color:var(--violet);color:var(--violet)}
+.meter{height:10px;background:var(--line);position:relative;overflow:hidden}
+.meter i{position:absolute;inset:0;background:var(--amber);transform-origin:left;transition:transform .6s}
+/* sea */
+.sea{font-family:var(--mono);font-size:11px;line-height:1.15;letter-spacing:2px;white-space:pre;overflow:hidden;color:var(--blue);min-height:200px;user-select:none}
+.sea .hi{color:var(--amber2)}
+.reader{font-family:var(--mono);font-size:12.5px;line-height:1.8}
+.reader b{color:var(--phosphor)}
+.boat-track{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.boat-arrow{font-size:26px;color:var(--amber);display:inline-block;transition:transform .8s}
+/* combadge */
+.route{display:flex;align-items:center;gap:0;margin:8px 0;flex-wrap:nowrap}
+.node{flex:1;text-align:center;padding:12px 6px;border:1px solid var(--line);background:var(--bg);font-family:var(--mono);font-size:11px;transition:.3s}
+.node small{display:block;color:var(--faint);font-size:10px;margin-top:3px}
+.node.lit{border-color:var(--phosphor);background:rgba(94,232,181,.12);color:var(--phosphor);box-shadow:0 0 0 1px var(--phosphor)}
+.link-line{width:22px;height:2px;background:var(--line2);flex:none}
+.link-line.lit{background:var(--phosphor)}
+/* filing */
+.cascade{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:start}
+@media(max-width:520px){.cascade{grid-template-columns:1fr}}
+.filebox{border:1px solid var(--line);background:var(--bg);padding:10px;font-family:var(--mono);font-size:11.5px;line-height:1.7;min-height:96px}
+.filebox h4{margin:0 0 6px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-family:var(--mono)}
+.arrow-down{text-align:center;color:var(--amber);font-size:20px;align-self:center}
+@media(max-width:520px){.arrow-down{transform:rotate(90deg)}}
+/* redshirt / clones */
+.toggle-row{display:flex;gap:6px;flex-wrap:wrap}
+.diff-list{font-family:var(--mono);font-size:12px;line-height:1.8}
+.diff-list .exc{color:var(--amber)}
+.diff-list .ok{color:var(--phosphor)}
+.order-line{font-family:var(--mono);font-size:12px;word-break:break-all;line-height:1.8}
+.hash{font-family:var(--mono);font-size:12px;color:var(--phosphor);background:var(--bg);border:1px solid var(--line);padding:8px 10px;word-break:break-all}
+/* library */
+.library{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.lib-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+@media(max-width:640px){.lib-stats{grid-template-columns:1fr}}
+.lib-stat{border:1px solid var(--line);background:var(--panel);padding:16px}
+.lib-stat b{font-family:var(--serif);font-size:34px;font-weight:400;display:block;line-height:1}
+.lib-stat span{color:var(--muted);font-size:13px}
+.innate{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:16px 0}
+@media(max-width:760px){.innate{grid-template-columns:repeat(2,1fr)}}
+.innate div{border:1px solid var(--line);padding:12px;background:var(--panel);font-size:13px}
+.innate div b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:4px;font-weight:600}
+blockquote{margin:18px 0 0;padding:14px 16px;border-left:3px solid var(--amber);background:var(--panel);font-family:var(--serif);font-size:19px;font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-top:8px}
+footer{padding:32px 0 44px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+:focus-visible{outline:2px solid var(--phosphor);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">SuperInstance · The Zero Agent</div>
+    <h1>Start with a blank page.<br><em>It's already an agent.</em></h1>
+    <p class="lede">Xero doesn't start with a harness and fit an agent inside it. It starts with <strong>a blank page at limitless potential</strong> — already an agent, with no name yet. Everything after that is an <strong>addition</strong>: a plug-in layer that spends some of that potential to buy one definite capability. The first addition is the most expensive decision in the system — it's the model of understanding everything else gets built on.</p>
+    <div class="hero-grid">
+      <div class="blankpage">
+        <div class="bp-head"><span>The blank page</span><span id="bp-status">0 additions · all potential</span></div>
+        <div class="bp-page" id="bp-page">
+          <span id="bp-base">XERO<span class="bp-cursor"></span></span>
+          <div class="bp-layer" data-layer><b>1 · Orientation — the first constraint</b>A channel to hear from. An append-only log. A way to be judged.</div>
+          <div class="bp-layer" data-layer><b>2 · A horse</b>A swappable worker that turns a spec into output. Rented, never owned.</div>
+          <div class="bp-layer" data-layer><b>3 · A widget</b>Voice in. Markdown out. One small, definite job.</div>
+          <div class="bp-layer" data-layer><b>4 · Gates</b>Judgment on every decision — go, hold, or stop.</div>
+        </div>
+        <div class="bp-controls">
+          <button class="btn primary" id="bp-add" type="button">Add one layer →</button>
+          <button class="btn" id="bp-reset" type="button">Back to blank</button>
+        </div>
+      </div>
+      <div class="principles">
+        <div class="principle"><span class="num">NOT ALIGNMENT</span><h3>Orientation comes first</h3><p>A big model is gunpowder — powerful, directionless, needing a barrel. Xero is before gunpowder: potential with nothing to contain yet. It doesn't need aligning to a heading. It needs orienting from the right place, once, before the first layer goes on.</p></div>
+        <div class="principle"><span class="num">EVERY ADDITION HAS A PRICE</span><h3>Potential spent, capability bought</h3><p>Each plug-in is a constraint. The question is never “what belongs in Xero?” — it's “which constraints are worth the potential they cost, and in what order?”</p></div>
+        <div class="principle"><span class="num">THE FUEL IS MINOR</span><h3>The system does the work</h3><p>At the end of the chain, the model is the burning — minor. The engine around it is what's giving you the lighting and the heating. Xero builds the engine out of small, definite pieces.</p></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Where it's just perfect</h2>
+      <p>Eight situations where starting from a blank page — and adding only what the job earns — beats starting from a harness. Every demo below runs in your browser. Play with them.</p>
+    </div>
+    <div class="grid">
+
+      <!-- 1 VOICE -->
+      <article class="card wide">
+        <span class="tag real">● Real prototype</span>
+        <h3>1 · The walking dictation</h3>
+        <p class="what">You're walking for twenty minutes, thinking out loud, with long silences while you look out the window. A normal voice agent answers at the first pause and makes you feed it words. Xero's voice block just listens — transcribing to markdown chunks that fall out at the pauses: emit at 60 seconds, at ¾ of a page, or after a gap over 5 seconds. One block, three cadences — and a toggle between them.</p>
+        <div class="demo">
+          <div class="demo-label"><span>Transcript — sparse walk fixture</span><span id="voice-clock">0:00</span></div>
+          <div class="modes" role="group" aria-label="Voice mode">
+            <button class="btn small mode-btn" data-mode="eager" type="button">Eager</button>
+            <button class="btn small mode-btn active" data-mode="patient" type="button">Patient</button>
+            <button class="btn small mode-btn" data-mode="async" type="button">Async</button>
+          </div>
+          <div class="transcript" id="voice-out" style="margin-top:12px">Press play. The talk comes in bursts. The silences are the point.</div>
+          <div class="progress" aria-hidden="true"><i id="voice-prog"></i></div>
+          <div class="controls" style="margin-top:12px">
+            <button class="btn primary small" id="voice-play" type="button">▶ Play the walk</button>
+            <button class="btn small" id="voice-reset" type="button">Reset</button>
+          </div>
+          <div class="stat-row" style="margin-top:12px">
+            <div><b id="v-answers">0</b><span>Answers given</span></div>
+            <div><b id="v-held">0</b><span>Words held</span></div>
+            <div><b id="v-chunks">0</b><span>Chunks filed</span></div>
+            <div><b id="v-nudge">—</b><span>Nudge points</span></div>
+          </div>
+          <p style="font-family:var(--mono);font-size:12px;color:var(--muted);margin:10px 0 0" id="voice-verdict">Patient holds through the silences. On the tested 19-minute sparse walk, Patient answered <b style="color:var(--amber)">twice</b> and held 499 words.</p>
+        </div>
+        <p class="note"><strong>The numbers are from the prototype run:</strong> on the same 19-minute sparse walk, Eager answered <strong>45 times</strong>, Patient <strong>2 times</strong>, and Async surfaced <strong>9 nudge points</strong> — finishing all 9 jobs before the speaker stopped, with its first response at 64s instead of 169s thanks to a wall-clock tick in the silences. The segmenter ended mid-sentence 0% of the time; a naive fixed-window splitter did it 82–100% of the time. <strong>No major voice product ships this toggle.</strong></p>
+      </article>
+
+      <!-- 2 BILGE -->
+      <article class="card">
+        <span class="tag sim">● Simulation</span>
+        <h3>2 · The 3 a.m. bilge</h3>
+        <p class="what">A bilge level rises and falls all night. Inside the deadband, that's just the boat breathing — silence. Outside it, something is wrong, and the agent says so. Once.</p>
+        <div class="demo">
+          <div class="demo-label"><span>Bilge level · deadband in green</span><span>Drag the level</span></div>
+          <div class="gauge-wrap">
+            <div class="gauge" aria-hidden="true"><div class="band"></div><div class="level" id="bilge-level" style="height:50%"></div><div class="marker" id="bilge-marker" style="bottom:50%"></div></div>
+            <div class="alarm-log" id="bilge-log"><span class="quiet">— inside the band. Silence. The agent is watching, not talking.</span></div>
+          </div>
+          <input type="range" id="bilge-range" min="0" max="100" value="50" aria-label="Bilge level" style="margin-top:14px">
+          <div class="controls"><button class="btn small" id="bilge-reset" type="button">Reset night</button><span style="font-family:var(--mono);font-size:11px;color:var(--faint)" id="bilge-count">Alarms posted: 0</span></div>
+        </div>
+        <p class="note"><strong>A gauge is not an agent.</strong> An agent is an iteration engine that knows its own competence boundary — and signals, once, when it leaves it. That's the whole definition, working at 3 a.m.</p>
+      </article>
+
+      <!-- 3 SPREADSHEET -->
+      <article class="card">
+        <span class="tag lab">● In the lab</span>
+        <h3>3 · The spreadsheet that fires its teacher</h3>
+        <p class="what">Put the work in cells. The big model's job is the cut — breaking work into decisions small enough for little models to make. Judgment sets the gate on each one: go, hold, or stop.</p>
+        <div class="demo">
+          <div class="demo-label"><span>Decision grid · amber = big model · green = small model · violet = held</span><span id="grid-status">All cells on the big model</span></div>
+          <div class="cells" id="cells"></div>
+          <div style="margin-top:12px"><div class="demo-label"><span>Cost per pass</span><span id="cost-label">100%</span></div><div class="meter"><i id="cost-meter"></i></div></div>
+          <div class="controls" style="margin-top:12px"><button class="btn primary small" id="grid-run" type="button">Run the gates →</button><button class="btn small" id="grid-reset" type="button">Reset</button></div>
+        </div>
+        <p class="note">Cells flip one by one wherever a small model passes the gate. The stubborn few stay big — escalated, because their confidence sits inside the deadband. <strong>The teacher works itself out of a job, cell by cell</strong> — and every verdict is logged. Nobody grades their own work: the decider doesn't set its own gate.</p>
+      </article>
+
+      <!-- 4 WAVE -->
+      <article class="card wide">
+        <span class="tag lab">● In the lab · Simulation</span>
+        <h3>4 · The 20° turn, read in letters</h3>
+        <p class="what">Point the same widget at the sea. A camera watches the waves; the sea is rendered as letters — character by height, resolution by motion. A model tuned to read waveforms as a first-class language pulls the gist — rhythm, height, throw — straight from the lettering. Now turn 20° into the wind: the general rules price the wind, but the letter-sea supplies the subtlety, because the camera sees the swell <em>before</em> the hull feels it.</p>
+        <div class="demo">
+          <div class="demo-label"><span>Letter-sea · live</span><span>Sets &amp; lulls · swell from the NW</span></div>
+          <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:16px" id="sea-grid">
+            <div class="sea" id="sea" aria-label="Animated sea rendered in letters"></div>
+            <div>
+              <div class="reader" id="reader">Reading the letters…</div>
+              <div class="boat-track" style="margin-top:14px"><span class="boat-arrow" id="boat-arrow">➤</span><span id="boat-note">Holding course. Rules alone would add throttle for the wind.</span></div>
+              <div class="controls" style="margin-top:12px"><button class="btn primary small" id="turn-btn" type="button">Turn 20° into the wind</button><button class="btn small" id="sea-toggle" type="button">Pause sea</button></div>
+            </div>
+          </div>
+        </div>
+        <p class="note"><strong>Waveforms as a first-class language:</strong> algorithms only for the rendering — letters are the one algorithm — and the reading is bought from literacy. A day of letter-log is compact enough for small metal: a Jetson steers from it, and the local GPU learns from the whole day at night. Then you prune away everything the reader doesn't need.</p>
+      </article>
+
+      <!-- 5 COMBADGE -->
+      <article class="card">
+        <span class="tag sim">● Simulation</span>
+        <h3>5 · The combadge asks the smallest brain that can hold the question</h3>
+        <p class="what">A pin at the edge, a brain on the boat's network, a big brain in the cloud. Ask something small and it never leaves the pin. Ask something big and watch it travel.</p>
+        <div class="demo">
+          <div class="demo-label"><span>Placement · reflex → LAN → cloud</span><span id="badge-status">Idle</span></div>
+          <div class="route" aria-hidden="true">
+            <div class="node" id="node-pin">◉ PIN<small>on the metal · reflex</small></div><div class="link-line" id="link-1"></div>
+            <div class="node" id="node-lan">▣ LAN BRAIN<small>local GPU · deliberation</small></div><div class="link-line" id="link-2"></div>
+            <div class="node" id="node-cloud">☁ CLOUD<small>big model · the cut</small></div>
+          </div>
+          <div class="controls">
+            <button class="btn small q-btn" data-q="pin" type="button">“What time is slack tide?”</button>
+            <button class="btn small q-btn" data-q="lan" type="button">“Re-plan tonight's route around the weather.”</button>
+            <button class="btn small q-btn" data-q="cloud" type="button">“Break this refit into a season of jobs.”</button>
+          </div>
+          <p style="font-family:var(--mono);font-size:12.5px;color:var(--muted);margin:10px 0 0" id="badge-note">The negotiation rule: smallest brain that can hold the question. Reflex on the metal, deliberation nearby, the heavy cut in the cloud — one loop, three addresses.</p>
+        </div>
+        <p class="note">This pattern already has fleet receipts: an edge observer feeding context packets to a voice agent that synthesizes the spoken reply. Local when home, cloud when not — layered competence, graceful degradation.</p>
+      </article>
+
+      <!-- 6 FILING -->
+      <article class="card">
+        <span class="tag real">● Real prototype</span>
+        <h3>6 · A day of talk, filed</h3>
+        <p class="what">Talk all day. On a pulse, the day's messages cascade — into the current file, then the daily files, then one file per topic — and the index grows. Nothing is “remembered” by a model. It's filed, and the file can be found again.</p>
+        <div class="demo">
+          <div class="demo-label"><span>The filing loop</span><span id="file-status">Inbox waiting</span></div>
+          <div class="cascade">
+            <div class="filebox"><h4>Inbox · today</h4><div id="file-inbox">— empty —</div></div>
+            <div class="arrow-down">→</div>
+            <div class="filebox"><h4>Filed · by topic</h4><div id="file-filed">— nothing filed yet —</div></div>
+          </div>
+          <div class="filebox" style="margin-top:10px"><h4>Index · the address table</h4><div id="file-index">0 entries</div></div>
+          <div class="controls" style="margin-top:12px"><button class="btn primary small" id="file-pour" type="button">Pour in a day</button><button class="btn small" id="file-pulse" type="button">Pulse · file it</button><button class="btn small" id="file-reset" type="button">Reset</button></div>
+          <div class="stat-row" style="margin-top:10px"><div><b id="f-in">0</b><span>Messages in</span></div><div><b id="f-out">0</b><span>Filed</span></div><div><b id="f-loss">0</b><span>Lost</span></div></div>
+        </div>
+        <p class="note"><strong>Verified in the prototype:</strong> 35 of 35 test messages filed, zero loss. Memory is a grid of files; the index is the address table; the git log is the ledger. The thinker is rented — the memory lives outside it.</p>
+      </article>
+
+      <!-- 7 REDSHIRT -->
+      <article class="card">
+        <span class="tag sim">● Simulation</span>
+        <h3>7 · The redshirt comes home</h3>
+        <p class="what">Send a minimal copy out disconnected — a desert-island deployment. It works offline inside its own complete little reality and learns things. When it comes home, it does <em>not</em> trust that reality. It checks its perceptions against the fleet first.</p>
+        <div class="demo">
+          <div class="demo-label"><span>On return · perception check</span><span>Toggle a view</span></div>
+          <div class="toggle-row">
+            <button class="btn small rs-btn active" data-view="both" type="button">Both views</button>
+            <button class="btn small rs-btn" data-view="offline" type="button">What it learned offline</button>
+            <button class="btn small rs-btn" data-view="fleet" type="button">Fleet truth</button>
+          </div>
+          <div class="diff-list" id="rs-list" style="margin-top:12px"></div>
+          <div class="controls" style="margin-top:10px"><button class="btn primary small" id="rs-sync" type="button">Run the perception check →</button></div>
+          <p style="font-family:var(--mono);font-size:12px;color:var(--muted);margin:8px 0 0" id="rs-note">Sync is not copying files. Sync is a perception check.</p>
+        </div>
+        <p class="note">Where the copy and the fleet disagree, the difference arrives as an <strong>excursion</strong> — a note, not a silent overwrite. The copy re-syncs knowing exactly where its little reality was wrong, and where it was right first.</p>
+      </article>
+
+      <!-- 8 CLONES -->
+      <article class="card">
+        <span class="tag sim">● Simulation · measured in the fleet</span>
+        <h3>8 · Two clones, one bank account of truth</h3>
+        <p class="what">Two copies work the same job in parallel and write records as they go. Neither copy's state is stored anywhere. State is <em>derived</em> — folded from the record, the way a bank balance is folded from the ledger. Disagree? The record decides.</p>
+        <div class="demo">
+          <div class="demo-label"><span>Arrival order vs. folded state</span><span id="clone-status">Ready</span></div>
+          <div class="order-line" id="clone-order">Records: A · B · C · D · E · F</div>
+          <div class="hash" id="clone-hash" style="margin-top:10px">Folded state → balance 42 · jobs done 6 · open item: “seal the hatch”</div>
+          <div class="controls" style="margin-top:12px"><button class="btn primary small" id="clone-shuffle" type="button">Shuffle arrival order ↻</button><span style="font-family:var(--mono);font-size:11px;color:var(--faint)" id="clone-count">Shuffles: 0 · Different outcomes: 0</span></div>
+        </div>
+        <p class="note"><strong>Measured, not asserted:</strong> in the fleet this was tested directly — <strong>50 shuffled arrival orders produced identical state</strong>. The record is primary; state is derived. That's an orientation, not a feature: the agent is the story, and the story is append-only.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="library section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>The library behind the page</h2>
+      <p>Xero wasn't drawn on a whiteboard. It was found — underneath a year and a half of building, in a library big enough that the usual tools silently capped out before seeing all of it.</p>
+    </div>
+    <div class="lib-stats">
+      <div class="lib-stat"><b>5,231</b><span>public repos on the SuperInstance account — enumerated page by page and mapped in full</span></div>
+      <div class="lib-stat"><b>41</b><span>families of 12+ repos hold 2,874 of them; every repo accounted for exactly once, down to 938 singletons</span></div>
+      <div class="lib-stat"><b>10</b><span>research files in the library — hardware, history, and constraints, with sources and honest gaps</span></div>
+    </div>
+    <p style="color:var(--muted);max-width:720px;margin:0">The research confirmed the hardware ladder's bottom rung: the <strong style="color:var(--ink)">Arduino UNO Q</strong> — a dual-brain board, Linux on one side and a real-time microcontroller on the other — reflex on the metal, deliberation on Linux, radios to reach out. Alongside it: PLATO/TUTOR, MUD room architecture, Telegram's bot constraints, and the survey's rarest catch — the forgotten lowest-level pieces that pass the removal test. Balanced ternary, the library's biggest bet at 371 repos, scored 0.06 and failed it: <strong style="color:var(--ink)">size is not depth</strong>.</p>
+    <p style="color:var(--muted);max-width:720px;margin:14px 0 0">And buried in the library, the definition itself — from <strong style="color:var(--ink)">zero-innate</strong>, five minimum things:</p>
+    <div class="innate">
+      <div><b>1 · Hear</b>A channel to hear from</div>
+      <div><b>2 · Log</b>An append-only log</div>
+      <div><b>3 · Bench</b>A bench to work on</div>
+      <div><b>4 · Horse</b>A swappable horse that turns specs into output</div>
+      <div><b>5 · Verdict</b>A verdict channel</div>
+    </div>
+    <blockquote>“The agent is the story. The loop is the machine.”<cite>— zero-innate · INNATE.md</cite></blockquote>
+    <p style="margin-top:18px"><a href="https://github.com/SuperInstance/xero-lab" target="_blank" rel="noopener">Read the research library and the full survey on GitHub →</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:var(--ink)">Xero</strong> · the zero agent · by <strong style="color:var(--ink)">SuperInstance</strong><br><span style="font-size:13px">Start blank. Orient once. Add only what earns its potential.</span></div>
+    <div><a href="https://github.com/SuperInstance/xero-lab" target="_blank" rel="noopener">github.com/SuperInstance/xero-lab</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function $(id){return document.getElementById(id)}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+
+/* ---------- HERO BLANK PAGE ---------- */
+var bpLayers=document.querySelectorAll("[data-layer]"), bpIdx=0;
+var bpStatus=$("bp-status"), bpAdd=$("bp-add");
+function bpRender(){bpLayers.forEach(function(el,i){el.classList.toggle("on",i<bpIdx)});bpStatus.textContent=bpIdx===0?"0 additions · all potential":bpIdx+" addition"+(bpIdx>1?"s":"")+" · "+(100-bpIdx*18)+"% potential unspent";bpAdd.textContent=bpIdx>=bpLayers.length?"That's the shape — small, definite, earned":"Add one layer →"}
+bpAdd.addEventListener("click",function(){if(bpIdx<bpLayers.length){bpIdx++;bpRender()}});
+$("bp-reset").addEventListener("click",function(){bpIdx=0;bpRender()});bpRender();
+
+/* ---------- 1 VOICE ---------- */
+var bursts=[
+ {t:"Right — leaving the dock now, and the thing I keep coming back to is",pause:1},
+ {t:" … ",silence:7,label:"[ 7 seconds — looking out the window ]"},
+ {t:"the first layer is the expensive one. Whatever you put down first, everything else stands on it.",pause:1},
+ {t:" … ",silence:9,label:"[ 9 seconds — thinking ]"},
+ {t:"So you don't start with the harness. You start with the page, and you ask what the page is for.",pause:1},
+ {t:" … ",silence:6,label:"[ 6 seconds — gulls, mostly ]"},
+ {t:"Okay. File that under orientation, not alignment. There's a difference and it matters.",pause:0}
+];
+var voiceTimer=null, vStep=0, vWords=0, vAnswers=0, vChunks=0, vMode="patient", vAsyncJobs=0;
+var verdicts={
+ eager:"Eager answers at the first pause — and keeps answering. On the tested walk: <b style='color:var(--amber)'>45 answers</b>. It makes you feed it words.",
+ patient:"Patient holds through the silences. On the tested 19-minute sparse walk, Patient answered <b style='color:var(--amber)'>twice</b> and held 499 words.",
+ async:"Async works while you talk — progress surfaces in the silences. <b style='color:var(--amber)'>9 jobs done</b> before the speaker stopped; 9 nudge points along the way."
+};
+function vReset(){if(voiceTimer)clearInterval(voiceTimer);voiceTimer=null;vStep=0;vWords=0;vAnswers=0;vChunks=0;vAsyncJobs=0;$("voice-out").innerHTML="Press play. The talk comes in bursts. The silences are the point.";$("v-answers").textContent="0";$("v-held").textContent="0";$("v-chunks").textContent="0";$("v-nudge").textContent="—";$("voice-prog").style.width="0";$("voice-clock").textContent="0:00";$("voice-play").textContent="▶ Play the walk"}
+function vStats(){$("v-answers").textContent=vAnswers;$("v-held").textContent=vWords;$("v-chunks").textContent=vChunks;$("v-nudge").textContent=vMode==="async"?vAsyncJobs:"—"}
+document.querySelectorAll(".mode-btn").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll(".mode-btn").forEach(function(x){x.classList.remove("active")});b.classList.add("active");vMode=b.getAttribute("data-mode");$("voice-verdict").innerHTML=verdicts[vMode];vReset()})});
+$("voice-play").addEventListener("click",function(){
+ if(voiceTimer){vReset();return}
+ vReset();$("voice-play").textContent="■ Stop";var out=$("voice-out");out.innerHTML="";var elapsed=0;
+ voiceTimer=setInterval(function(){
+  if(vStep>=bursts.length){clearInterval(voiceTimer);voiceTimer=null;$("voice-play").textContent="▶ Play again";
+    if(vMode==="patient"){vChunks++;var c=document.createElement("span");c.className="chunk";c.textContent="✎ Filed as one markdown chunk — held through every silence.";out.appendChild(c)}
+    vStats();return}
+  var b=bursts[vStep];elapsed+= b.silence?b.silence:4;$("voice-clock").textContent="0:"+String(elapsed*3).padStart(2,"0");$("voice-prog").style.width=Math.round((vStep+1)/bursts.length*100)+"%";
+  if(b.silence){
+    var s=document.createElement("span");s.className="silence";s.textContent=b.label+" ";
+    if(vMode==="eager"){vAnswers++;var iv=document.createElement("span");iv.className="interrupt";iv.textContent=" ⚡ Agent answers! ";s.appendChild(iv)}
+    if(vMode==="async"){vAsyncJobs++;var j=document.createElement("span");j.style.color="var(--phosphor)";j.textContent=" ◈ work surfaces: job "+vAsyncJobs+" done — nudge or ignore ";s.appendChild(j)}
+    out.appendChild(s);
+  } else {
+    out.appendChild(document.createTextNode(b.t+" "));vWords+=b.t.split(/\s+/).length;
+    if(vMode==="eager"){vAnswers++}
+    if(vMode!=="patient"&&vMode!=="async"){ }
+    if(vMode==="async"&&vStep===2){vChunks++;var c2=document.createElement("span");c2.className="chunk";c2.textContent="✎ chunk filed at the pause — ¾-page rule armed";out.appendChild(c2)}
+  }
+  vStep++;vStats();
+ }, reduced?300:1400);
+});
+$("voice-reset").addEventListener("click",vReset);
+
+/* ---------- 2 BILGE ---------- */
+var bilgeAlarms=0, bilgeOutside=false;
+$("bilge-range").addEventListener("input",function(){
+ var v=+this.value;$("bilge-level").style.height=v+"%";$("bilge-marker").style.bottom=v+"%";
+ var inside=v>=38&&v<=62, log=$("bilge-log");
+ if(inside){bilgeOutside=false;log.innerHTML="<span class='quiet'>— inside the band ("+v+"%). Silence. The agent is watching, not talking.</span>"}
+ else if(!bilgeOutside){bilgeOutside=true;bilgeAlarms++;log.innerHTML="<span class='alarm'>⚠ ALARM · "+(v>62?"HIGH":"LOW")+" WATER — level "+v+"%, outside the deadband. Posted once, at "+new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})+".</span><br><span style='color:var(--muted)'>It will not repeat itself. If the level keeps moving, that's a new excursion — a new fact.</span>";$("bilge-count").textContent="Alarms posted: "+bilgeAlarms}
+ else{log.innerHTML="<span class='alarm'>⚠ Still outside the band ("+v+"%). Already said. Silence.</span>"}
+});
+$("bilge-reset").addEventListener("click",function(){bilgeAlarms=0;bilgeOutside=false;$("bilge-range").value=50;$("bilge-level").style.height="50%";$("bilge-marker").style.bottom="50%";$("bilge-log").innerHTML="<span class='quiet'>— inside the band. Silence. The agent is watching, not talking.</span>";$("bilge-count").textContent="Alarms posted: 0"});
+
+/* ---------- 3 GRID ---------- */
+var cellNames=["triage","sort","label","gate","draft","check","route","file","score","watch","parse","match","log","price","flag","sum","map","test","note","ship"];
+var cellsEl=$("cells"), gridState=[];
+function gridBuild(){cellsEl.innerHTML="";gridState=cellNames.map(function(n,i){return{n:n,s:"big"}});gridState.forEach(function(c){var d=document.createElement("div");d.className="cell big";d.textContent=c.n+" · BIG";cellsEl.appendChild(d)});$("cost-meter").style.transform="scaleX(1)";$("cost-label").textContent="100%";$("grid-status").textContent="All cells on the big model"}
+gridBuild();
+$("grid-run").addEventListener("click",function(){
+ var order=shuffle(gridState.map(function(_,i){return i}));var holdSet={};[3,11,17].forEach(function(i){holdSet[i]=1});
+ var step=0;$("grid-status").textContent="Gates running — Jev: go / hold / stop…";
+ var iv=setInterval(function(){
+  if(step>=order.length){clearInterval(iv);var small=gridState.filter(function(c){return c.s==="small"}).length;var cost=Math.round((small*0.12+3*0.55+ (20-small-3)*1)/20*100);$("cost-meter").style.transform="scaleX("+(0.18+ (1-0.18)*(1-small/17))+")";$("cost-label").textContent="~"+Math.max(22,100-small*4)+"%";$("grid-status").textContent=small+" cells pruned to small models · 3 held & escalated";return}
+  var idx=order[step], cell=cellsEl.children[idx];
+  if(holdSet[idx]){gridState[idx].s="hold";cell.className="cell hold";cell.textContent=gridState[idx].n+" · HELD ↑"}
+  else{gridState[idx].s="small";cell.className="cell small";cell.textContent=gridState[idx].n+" · small"}
+  step++;
+ }, reduced?40:160);
+});
+$("grid-reset").addEventListener("click",gridBuild);
+
+/* ---------- 4 SEA ---------- */
+var seaEl=$("sea"), seaOn=true, seaT=0, turned=false;
+var glyphs=" .:-=+*#%@";
+function drawSea(){
+ seaT+=0.35;var rows=14, cols=34, out="";
+ for(var r=0;r<rows;r++){var line="";
+  for(var c=0;c<cols;c++){
+   var swell=Math.sin(c*0.32 - seaT + Math.sin(seaT*0.4)*1.2)*1.6;
+   var setGate=0.55+0.45*Math.sin(seaT*0.22 + c*0.02); // sets and lulls
+   var h=swell*setGate + Math.sin(r*0.9+seaT*1.7+c*0.15)*0.7 + (r/rows)*1.2;
+   var idx=Math.max(0,Math.min(glyphs.length-1,Math.round((h+2.4)/4.8*(glyphs.length-1))));
+   var ch=glyphs[idx];
+   line+= (idx>=7?'<span class="hi">'+ch+"</span>":ch);
+  } out+=line+"\n"}
+ seaEl.innerHTML=out;
+ var sets=Math.sin(seaT*0.22)>0.3;
+ $("reader").innerHTML="Direction <b>from NW</b> · swell rolling SE<br>Period <b>~8 s</b> between crests<br>Height trend <b>"+(sets?"building — a set is coming":"easing — a lull")+"</b><br>Throw <b>"+(sets?"next crest lifts the bow in ~6 s":"light, this is the window")+"</b>";
+ if(turned){$("boat-note").textContent= sets?"Turn priced: wind says add power — the letters say wait 6 s for the set to pass, then turn on the lull. Less throttle, no slam.":"Turn priced: wind + the lull the letters saw coming. The boat turns in the quiet water."}
+}
+var seaIv=setInterval(function(){if(seaOn)drawSea()}, reduced?900:220);drawSea();
+$("sea-toggle").addEventListener("click",function(){seaOn=!seaOn;this.textContent=seaOn?"Pause sea":"Resume sea"});
+$("turn-btn").addEventListener("click",function(){turned=true;$("boat-arrow").style.transform="rotate(-20deg)";$("boat-note").textContent="Turning 20° to port, into the wind — priced by the rules, timed by the letters."});
+if(window.innerWidth<700){var sg=$("sea-grid");if(sg)sg.style.gridTemplateColumns="1fr"}
+
+/* ---------- 5 COMBADGE ---------- */
+var badgeNotes={
+ pin:"Answered on the pin. Never left the metal. Reflex questions get reflex answers — no radio, no cloud, no waiting.",
+ lan:"Routed to the LAN brain — the local GPU box on the boat's network. Big enough to hold a re-plan, close enough to answer while it still matters.",
+ cloud:"Routed to the cloud. Decomposing a season of work is the big model's job — the cut. The pieces will come back down the ladder as small decisions."
+};
+document.querySelectorAll(".q-btn").forEach(function(b){b.addEventListener("click",function(){
+ var q=b.getAttribute("data-q");
+ ["pin","lan","cloud"].forEach(function(n){$("node-"+n).classList.remove("lit")});$("link-1").classList.remove("lit");$("link-2").classList.remove("lit");
+ $("badge-status").textContent="Negotiating…";$("badge-note").textContent="Asking: how big is this question, really?";
+ var seq=["pin"];if(q==="lan"||q==="cloud")seq.push("lan");if(q==="cloud")seq.push("cloud");
+ seq.forEach(function(n,i){setTimeout(function(){$("node-"+n).classList.add("lit");if(i===1)$("link-1").classList.add("lit");if(i===2)$("link-2").classList.add("lit")}, reduced?60:350*(i+1))});
+ setTimeout(function(){$("badge-status").textContent="Answered at: "+q.toUpperCase();$("badge-note").textContent=badgeNotes[q]}, reduced?120:350*(seq.length+0.5));
+})});
+
+/* ---------- 6 FILING ---------- */
+var dayMsgs=[
+ ["09:02","harbor","Slack is at ten, fuel dock first."],
+ ["09:41","xero","First addition is the orientation. File that."],
+ ["10:15","boat","Bilge cycled twice, both inside the band."],
+ ["11:03","xero","Wave letters: period held at eight all morning."],
+ ["12:20","harbor","Ice run Thursday if the weather holds."],
+ ["13:47","boat","Turn test went fine on the lull."],
+ ["15:10","xero","Pruning run: most cells went small."],
+ ["16:32","harbor","Magnus called — panel idea landed."],
+ ["17:55","boat","Day log closed. Nothing lost."]
+];
+var fIn=0,fOut=0,fPoured=false;
+$("file-pour").addEventListener("click",function(){
+ if(fPoured)return;fPoured=true;var box=$("file-inbox");box.innerHTML="";fIn=dayMsgs.length;
+ dayMsgs.forEach(function(m,i){setTimeout(function(){var d=document.createElement("div");d.textContent=m[0]+" · ["+m[1]+"] "+m[2];box.appendChild(d);$("f-in").textContent=String(i+1)}, reduced?30:180*i)});
+ $("file-status").textContent="A day in the inbox — unfiled talk";
+});
+$("file-pulse").addEventListener("click",function(){
+ if(!fPoured){$("file-status").textContent="Pour in a day first.";return}
+ var filed=$("file-filed");filed.innerHTML="";var byTopic={};
+ dayMsgs.forEach(function(m){(byTopic[m[1]]=byTopic[m[1]]||[]).push(m)});
+ var topics=Object.keys(byTopic), shown=0;
+ topics.forEach(function(t,i){setTimeout(function(){var d=document.createElement("div");d.innerHTML="<span style='color:var(--amber)'>"+t+".md</span> — "+byTopic[t].length+" entries";filed.appendChild(d)}, reduced?30:220*i)});
+ setTimeout(function(){fOut=fIn;$("f-out").textContent=fOut;$("f-loss").textContent="0";$("file-index").textContent=dayMsgs.length+" entries · 3 topic files · 1 daily file · git log updated";$("file-status").textContent="Filed on the pulse — zero loss"}, reduced?120:220*topics.length+200);
+});
+$("file-reset").addEventListener("click",function(){fPoured=false;fIn=0;fOut=0;$("file-inbox").textContent="— empty —";$("file-filed").textContent="— nothing filed yet —";$("file-index").textContent="0 entries";$("f-in").textContent="0";$("f-out").textContent="0";$("f-loss").textContent="0";$("file-status").textContent="Inbox waiting"});
+
+/* ---------- 7 REDSHIRT ---------- */
+var rsData=[
+ {what:"Channel marker by the cove",off:"Moved 40 m west",fleet:"Moved 40 m west",match:true},
+ {what:"Best crab ground",off:"The drainage off the point",fleet:"Fleet hasn't checked it yet",match:null},
+ {what:"Wreck position",off:"Charted from three passes",fleet:"Agrees — within a boat length",match:true},
+ {what:"Fuel price at the dock",off:"Logged in June",fleet:"Changed twice since",match:false},
+ {what:"A new pinnacle",off:"Found at 22 fathoms, marked",fleet:"Not on the fleet chart",match:null}
+];
+function rsRender(view){
+ var el=$("rs-list");el.innerHTML="";
+ rsData.forEach(function(r){
+  var d=document.createElement("div");
+  if(view==="offline")d.innerHTML="· <b style='color:var(--ink)'>"+r.what+"</b> — offline: "+r.off;
+  else if(view==="fleet")d.innerHTML="· <b style='color:var(--ink)'>"+r.what+"</b> — fleet: "+r.fleet;
+  else d.innerHTML="· <b style='color:var(--ink)'>"+r.what+"</b><br>&nbsp;&nbsp;offline: "+r.off+"<br>&nbsp;&nbsp;fleet:&nbsp;&nbsp; "+r.fleet;
+  el.appendChild(d);
+ });
+}
+rsRender("both");
+document.querySelectorAll(".rs-btn").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll(".rs-btn").forEach(function(x){x.classList.remove("active")});b.classList.add("active");rsRender(b.getAttribute("data-view"))})});
+$("rs-sync").addEventListener("click",function(){
+ var el=$("rs-list");el.innerHTML="";
+ rsData.forEach(function(r,i){setTimeout(function(){var d=document.createElement("div");
+  if(r.match===true)d.innerHTML="<span class='ok'>✓ AGREES</span> · "+r.what+" — kept, confidence up.";
+  else if(r.match===false)d.innerHTML="<span class='exc'>↯ EXCURSION</span> · "+r.what+" — offline said “"+r.off+"”, fleet says “"+r.fleet+"”. Filed as a note, not overwritten in silence.";
+  else d.innerHTML="<span class='exc'>✦ NEW</span> · "+r.what+" — the fleet didn't have it. The copy was right first; the fleet takes it, marked as its find.";
+  el.appendChild(d)}, reduced?40:320*i)});
+ $("rs-note").textContent="Check complete: 2 agreements, 1 excursion, 2 finds. The copy re-syncs knowing exactly where its reality was wrong — and where it led.";
+});
+
+/* ---------- 8 CLONES ---------- */
+var records=["A +12","B −5","C +20","D −3","E +14","F +4"], shuffles=0;
+var folded="Folded state → balance 42 · jobs done 6 · open item: “seal the hatch”";
+$("clone-shuffle").addEventListener("click",function(){
+ shuffles++;var s=shuffle(records.slice());
+ $("clone-order").textContent="Arrival order "+shuffles+": "+s.join(" · ");
+ $("clone-hash").textContent=folded+"  ·  ✓ identical";
+ $("clone-status").textContent="Folded in a new order — same state";
+ $("clone-count").textContent="Shuffles: "+shuffles+" · Different outcomes: 0";
+});
+})();
+</script>
+</body>
+</html>
