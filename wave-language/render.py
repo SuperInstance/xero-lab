@@ -36,13 +36,14 @@ def to_numeric(frame):
     return [" ".join(f"{v:+.1f}" for v in row) for row in frame]
 
 
-def markers(times, period_s, sets):
+def markers(times, period_s, sets, phase0=0.0):
     """Per-frame structural marker: 'SET' when a set begins, 'LULL' when
-    a lull begins, else None. Frame 0 gets 'SET' if it starts in a set."""
+    a lull begins, else None. Frame 0 gets 'SET' if it starts in a set.
+    phase0 (generator v2): the sea's set-envelope starting phase."""
     out = []
     prev = None
     for t in times:
-        cur = in_set(float(t), period_s, sets)
+        cur = in_set(float(t), period_s, sets, phase0)
         if prev is None:
             out.append("SET" if cur else None)
         elif cur and not prev:
@@ -55,11 +56,11 @@ def markers(times, period_s, sets):
     return out
 
 
-def assemble_stream(times, frames, period_s, sets, fmt="letters"):
+def assemble_stream(times, frames, period_s, sets, fmt="letters", phase0=0.0):
     """Full pulsed stream text. fmt: 'letters' or 'numeric'.
     Structural markers are identical across formats (held constant so
     the reading test compares encodings, not stream structure)."""
-    marks = markers(times, period_s, sets)
+    marks = markers(times, period_s, sets, phase0)
     lines = []
     for i, (t, fr) in enumerate(zip(times, frames)):
         if marks[i] == "SET":
@@ -71,7 +72,7 @@ def assemble_stream(times, frames, period_s, sets, fmt="letters"):
     return "\n".join(lines)
 
 
-def summary_stream(times, frames, period_s=None, sets=None):
+def summary_stream(times, frames, period_s=None, sets=None, phase0=0.0):
     """Control (c): per-frame statistics + a centre 'buoy' time series.
     This is what classical instruments give: exact numbers, no picture.
     A single point cannot see direction; the frame stats cannot either.
@@ -79,7 +80,7 @@ def summary_stream(times, frames, period_s=None, sets=None):
     stream structure constant across encodings."""
     n = frames.shape[1]
     c = n // 2
-    marks = markers(times, period_s, sets) if period_s is not None else [None] * len(times)
+    marks = markers(times, period_s, sets, phase0) if period_s is not None else [None] * len(times)
     lines = []
     for i, (t, fr) in enumerate(zip(times, frames)):
         if marks[i] == "SET":

@@ -19,10 +19,18 @@ patch (so grids print like a map). Direction is the direction the
 dominant swell TRAVELS TOWARD, as an 8-point compass label.
 
 Physics: deep-water dispersion, wavelength = g*T^2/(2*pi) ~= 1.56*T^2 m.
+
+GENERATOR v2 (2026-10-13): the set envelope's starting phase is
+randomized per sea (Sea.env_phase0). v1 always opened every stream at
+phase 0 — the start of a set — a confound flagged in RESULTS.md.
+Pass env_phase0=0.0 to reproduce v1 streams exactly (the phase draw is
+the LAST rng draw in __init__, so all other attributes keep their v1
+draw order either way).
 """
 import numpy as np
 
 G = 9.81
+GENERATOR_VERSION = "2"
 COMPASS = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
 # unit vectors (east, north) for direction of travel
 COMPASS_VEC = {
@@ -37,20 +45,20 @@ def wavelength(period_s):
     return G * period_s ** 2 / (2.0 * np.pi)
 
 
-def set_envelope(t, period_s, sets):
+def set_envelope(t, period_s, sets, phase0=0.0):
     """Amplitude envelope in [lull_floor, 1] from set grouping.
 
     sets: int N (groups of N waves, then a lull of ~1.4 wave periods)
           or None (continuous sea, envelope ~1 with mild breathing).
     Implemented as a smooth raised-cosine gate so crests grow and die
     gradually, like real wave groups.
+    phase0: seconds offset into the group cycle at t=0 (v2; v1 was
+    always 0, so every stream opened at the start of a set).
     """
     if sets is None:
         return 0.92 + 0.08 * np.sin(2 * np.pi * t / (7.3 * period_s))
-    if sets is None:
-        return 0.92 + 0.08 * np.sin(2 * np.pi * t / (7.3 * period_s))
     group_period = (sets + 1.4) * period_s
-    phase = (t % group_period) / group_period  # 0..1 within a group cycle
+    phase = ((t + phase0) % group_period) / group_period  # 0..1 within a group cycle
     on_frac = sets / (sets + 1.4)              # fraction of cycle "in the set"
     if phase < on_frac:
         # inside the set: smooth hump, 0.30 at the edges, 1.0 mid-set
@@ -70,7 +78,8 @@ def trend_ramp(t, duration, trend):
 
 
 class Sea:
-    def __init__(self, rng, direction=None, period_s=None, trend=None, sets="random"):
+    def __init__(self, rng, direction=None, period_s=None, trend=None, sets="random",
+                 env_phase0=None):
         self.direction = direction or COMPASS[rng.integers(0, 8)]
         self.period_s = float(period_s) if period_s else float(rng.choice([6.0, 7.0, 8.0, 9.0, 10.0]))
         self.trend = trend or ["building", "easing", "steady"][rng.integers(0, 3)]
@@ -99,6 +108,15 @@ class Sea:
                 "amp": float(rng.uniform(0.08, 0.20)),
                 "phase": float(rng.uniform(0, 2 * np.pi)),
             })
+        # v2: where in the set cycle does the stream open? Drawn LAST,
+        # after every v1 attribute, so v1 rng draw order is preserved;
+        # pass env_phase0=0.0 explicitly to reproduce v1 exactly.
+        if env_phase0 is None:
+            if self.sets is not None:
+                env_phase0 = float(rng.uniform(0, (self.sets + 1.4) * self.period_s))
+            else:
+                env_phase0 = 0.0
+        self.env_phase0 = float(env_phase0)
         self.rng = rng
 
     def truth(self):
@@ -108,12 +126,14 @@ class Sea:
             "trend": self.trend,
             "sets": self.sets if self.sets is not None else "none",
             "amp_dom_m": round(self.amp_dom, 2),
+            "env_phase0_s": round(self.env_phase0, 2),
+            "generator": GENERATOR_VERSION,
             "secondary": {"direction": self.dir_sec, "period_s": round(self.period_sec, 1)},
         }
 
     def height(self, X, Y, t, duration):
         """Height field (m) at time t. X, Y are meshgrid arrays in metres."""
-        env = set_envelope(t, self.period_s, self.sets) * trend_ramp(t, duration, self.trend)
+        env = set_envelope(t, self.period_s, self.sets, self.env_phase0) * trend_ramp(t, duration, self.trend)
         # dominant
         lam = wavelength(self.period_s)
         ux, uy = COMPASS_VEC[self.direction]
@@ -144,12 +164,12 @@ def sample_stream(sea, duration=55.0, dt=1.25, n=20):
     return times, frames
 
 
-def in_set(t, period_s, sets):
+def in_set(t, period_s, sets, phase0=0.0):
     """Ground-truth: is time t inside a set (vs a lull)? For stream markers."""
     if sets is None:
         return True
     group_period = (sets + 1.4) * period_s
-    phase = (t % group_period) / group_period
+    phase = ((t + phase0) % group_period) / group_period
     return phase < sets / (sets + 1.4)
 
 

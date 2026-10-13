@@ -1,0 +1,178 @@
+  cand  1 dir=NE T=7 trend=easing   sets=4    -> drop {'peak_times': [7.5, 15.0, 28.8, 35.0], 'est_period': 7.5, 'fft_dir': 'NE', 'fft_lambda_m': 75, 'fft_peak_frac': 0.004, 'bright_early_half': 105.4, 'bright_late_half': 101.1, 'trend_rel_change': -0.18, 'trend_class': 'steady', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand  2 dir=E  T=8 trend=steady   sets=5    -> drop {'peak_times': [7.5, 15.0, 22.5, 30.0, 38.8], 'est_period': 7.5, 'fft_dir': 'E', 'fft_lambda_m': 101, 'fft_peak_frac': 0.004, 'bright_early_half': 132.2, 'bright_late_half': 60.6, 'trend_rel_change': -1.35, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 1, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand  3 dir=SE T=6 trend=building sets=None -> KEEP 
+  cand  4 dir=S  T=7 trend=easing   sets=3    -> drop {'peak_times': [3.8, 11.2, 31.2, 38.8], 'est_period': 7.5, 'fft_dir': 'S', 'fft_lambda_m': 78, 'fft_peak_frac': 0.004, 'bright_early_half': 122.9, 'bright_late_half': 100.2, 'trend_rel_change': -0.41, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand  5 dir=SW T=8 trend=steady   sets=4    -> drop {'peak_times': [2.5, 10.0, 17.5, 25.0, 33.8], 'est_period': 7.5, 'fft_dir': 'SW', 'fft_lambda_m': 102, 'fft_peak_frac': 0.004, 'bright_early_half': 122.7, 'bright_late_half': 51.6, 'trend_rel_change': -1.22, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand  6 dir=W  T=6 trend=building sets=5    -> drop {'peak_times': [1.2, 7.5, 12.5, 18.8, 25.0, 31.2, 36.2], 'est_period': 6.25, 'fft_dir': 'W', 'fft_lambda_m': 56, 'fft_peak_frac': 0.005, 'bright_early_half': 120.9, 'bright_late_half': 92.2, 'trend_rel_change': -0.22, 'trend_class': 'steady', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand  7 dir=NW T=7 trend=easing   sets=None -> KEEP 
+  cand  8 dir=N  T=8 trend=steady   sets=3    -> drop {'peak_times': [8.8, 17.5, 25.0, 32.5], 'est_period': 7.5, 'fft_dir': 'N', 'fft_lambda_m': 101, 'fft_peak_frac': 0.004, 'bright_early_half': 75.8, 'bright_late_half': 132.3, 'trend_rel_change': 0.65, 'trend_class': 'building', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand  9 dir=NE T=6 trend=building sets=4    -> KEEP 
+  cand 10 dir=E  T=7 trend=easing   sets=5    -> drop {'peak_times': [3.8, 11.2, 18.8, 26.2, 32.5], 'est_period': 7.5, 'fft_dir': 'E', 'fft_lambda_m': 78, 'fft_peak_frac': 0.004, 'bright_early_half': 87.8, 'bright_late_half': 124.1, 'trend_rel_change': 0.4, 'trend_class': 'building', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 11 dir=SE T=8 trend=steady   sets=None -> KEEP 
+  cand 12 dir=S  T=6 trend=building sets=3    -> KEEP 
+  cand 13 dir=SW T=7 trend=easing   sets=4    -> drop {'peak_times': [7.5, 15.0, 21.2, 27.5, 35.0], 'est_period': 6.88, 'fft_dir': 'SW', 'fft_lambda_m': 75, 'fft_peak_frac': 0.004, 'bright_early_half': 151.3, 'bright_late_half': 63.0, 'trend_rel_change': -1.26, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 14 dir=W  T=8 trend=steady   sets=5    -> drop {'peak_times': [6.2, 13.8, 22.5, 30.0, 38.8], 'est_period': 8.12, 'fft_dir': 'W', 'fft_lambda_m': 101, 'fft_peak_frac': 0.004, 'bright_early_half': 122.1, 'bright_late_half': 68.4, 'trend_rel_change': -0.9, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 15 dir=NW T=6 trend=building sets=None -> KEEP 
+  cand 16 dir=N  T=7 trend=easing   sets=3    -> KEEP 
+  cand 17 dir=NE T=8 trend=steady   sets=4    -> drop {'peak_times': [2.5, 10.0, 17.5, 26.2, 33.8], 'est_period': 7.5, 'fft_dir': 'NE', 'fft_lambda_m': 102, 'fft_peak_frac': 0.004, 'bright_early_half': 57.4, 'bright_late_half': 124.2, 'trend_rel_change': 1.09, 'trend_class': 'building', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 18 dir=E  T=6 trend=building sets=5    -> drop {'peak_times': [1.2, 7.5, 13.8, 20.0, 26.2, 32.5, 37.5], 'est_period': 6.25, 'fft_dir': 'E', 'fft_lambda_m': 56, 'fft_peak_frac': 0.005, 'bright_early_half': 102.8, 'bright_late_half': 95.6, 'trend_rel_change': 0.07, 'trend_class': 'steady', 'est_sets': 5, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': 'run', 'run_frames': 24.0, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 19 dir=SE T=7 trend=easing   sets=None -> KEEP 
+  cand 20 dir=S  T=8 trend=steady   sets=3    -> drop {'peak_times': [1.2, 10.0, 18.8, 26.2, 35.0], 'est_period': 8.75, 'fft_dir': 'S', 'fft_lambda_m': 101, 'fft_peak_frac': 0.004, 'bright_early_half': 141.1, 'bright_late_half': 76.8, 'trend_rel_change': -0.65, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 21 dir=SW T=6 trend=building sets=4    -> KEEP 
+  cand 22 dir=W  T=7 trend=easing   sets=5    -> drop {'peak_times': [6.2, 13.8, 21.2, 27.5, 33.8], 'est_period': 6.88, 'fft_dir': 'W', 'fft_lambda_m': 78, 'fft_peak_frac': 0.004, 'bright_early_half': 130.6, 'bright_late_half': 78.0, 'trend_rel_change': -0.95, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 1, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 23 dir=NW T=8 trend=steady   sets=None -> KEEP 
+examples verified: 4 (nested order ['{"direction": "S", "period_s": 6.0, "trend": "building", "sets": 3}', '{"direction": "NW", "period_s": 7.0, "trend": "easing", "sets": "none"}', '{"direction": "SE", "period_s": 8.0, "trend": "steady", "sets": "none"}', '{"direction": "NE", "period_s": 6.0, "trend": "building", "sets": 4}'])
+held-out: 36 seas (seed 90210, generator v2, balanced)
+jobs: 126, already done: 1, to run: 125
+  [dose 4] stream  1 parsed=True dir=False period=True trend=False sets=True 429s=0 13s
+  [dose 4] stream  2 parsed=True dir=False period=False trend=False sets=False 429s=0 14s
+  [dose 4] stream  3 parsed=True dir=False period=False trend=False sets=False 429s=0 12s
+  [dose 4] stream  4 parsed=True dir=False period=True trend=False sets=True 429s=0 16s
+  [dose 4] stream  5 parsed=True dir=False period=True trend=False sets=False 429s=0 16s
+  [dose 4] stream  6 parsed=True dir=False period=True trend=False sets=False 429s=0 15s
+  [dose 4] stream  7 parsed=True dir=True period=False trend=False sets=False 429s=0 10s
+  [dose 4] stream  8 parsed=True dir=True period=True trend=True sets=False 429s=0 12s
+  [dose 4] stream  9 parsed=True dir=False period=False trend=True sets=False 429s=0 17s
+  [dose 4] stream 10 parsed=True dir=False period=False trend=True sets=False 429s=0 17s
+  [dose 4] stream 11 parsed=True dir=False period=True trend=False sets=False 429s=0 14s
+  [dose 4] stream 12 parsed=True dir=False period=False trend=False sets=False 429s=0 24s
+  [dose 4] stream 13 parsed=True dir=True period=True trend=True sets=False 429s=0 14s
+  [dose 4] stream 14 parsed=True dir=False period=True trend=True sets=False 429s=0 13s
+  [dose 4] stream 15 parsed=True dir=False period=False trend=True sets=False 429s=0 15s
+  [dose 4] stream 16 parsed=True dir=False period=True trend=False sets=False 429s=0 17s
+  [dose 4] stream 17 parsed=True dir=False period=True trend=True sets=False 429s=0 16s
+  [dose 4] stream 18 parsed=True dir=False period=True trend=False sets=True 429s=0 11s
+  [dose 4] stream 19 parsed=True dir=False period=True trend=True sets=False 429s=0 17s
+  [dose 4] stream 20 parsed=True dir=False period=False trend=False sets=True 429s=0 15s
+  [dose 4] stream 21 parsed=True dir=True period=False trend=False sets=False 429s=0 16s
+  [dose 4] stream 22 parsed=True dir=False period=True trend=True sets=False 429s=0 15s
+  [dose 4] stream 23 parsed=True dir=False period=False trend=True sets=True 429s=0 13s
+  [dose 4] stream 24 parsed=True dir=False period=True trend=False sets=False 429s=0 16s
+  [dose 4] stream 25 parsed=True dir=False period=True trend=False sets=True 429s=0 16s
+  [dose 4] stream 26 parsed=True dir=False period=True trend=True sets=True 429s=0 17s
+  [dose 4] stream 27 parsed=True dir=False period=False trend=False sets=False 429s=0 16s
+  [dose 4] stream 28 parsed=True dir=False period=False trend=False sets=False 429s=0 12s
+  [dose 4] stream 29 parsed=True dir=False period=True trend=False sets=False 429s=0 19s
+  [dose 4] stream 30 parsed=True dir=True period=False trend=True sets=False 429s=0 17s
+  [dose 4] stream 31 parsed=True dir=False period=True trend=True sets=False 429s=0 16s
+  [dose 4] stream 32 parsed=True dir=False period=True trend=True sets=False 429s=0 18s
+  [dose 4] stream 33 parsed=True dir=False period=True trend=False sets=False 429s=0 17s
+  [dose 4] stream 34 parsed=True dir=False period=False trend=False sets=False 429s=0 13s
+  [dose 4] stream 35 parsed=True dir=False period=True trend=True sets=False 429s=0 14s
+  [dose 0] stream  0 parsed=True dir=False period=False trend=True sets=False 429s=0 14s
+  [dose 0] stream  1 parsed=True dir=False period=False trend=False sets=False 429s=0 15s
+  [dose 0] stream  2 parsed=True dir=False period=False trend=False sets=False 429s=0 10s
+  [dose 0] stream  3 parsed=True dir=False period=False trend=False sets=False 429s=0 19s
+  [dose 0] stream  4 parsed=True dir=False period=False trend=True sets=False 429s=0 16s
+  [dose 0] stream  5 parsed=True dir=False period=False trend=False sets=True 429s=0 11s
+  [dose 0] stream  6 parsed=True dir=False period=False trend=False sets=False 429s=0 13s
+  [dose 0] stream  7 parsed=True dir=True period=False trend=False sets=False 429s=0 15s
+  [dose 0] stream  8 parsed=True dir=True period=False trend=True sets=True 429s=0 10s
+  [dose 0] stream  9 parsed=True dir=False period=True trend=True sets=False 429s=0 13s
+  [dose 0] stream 10 parsed=True dir=False period=True trend=True sets=True 429s=0 7s
+  [dose 0] stream 11 parsed=True dir=False period=True trend=False sets=False 429s=0 14s
+  [dose 0] stream 12 parsed=True dir=False period=False trend=False sets=False 429s=0 16s
+  [dose 0] stream 13 parsed=True dir=True period=False trend=True sets=False 429s=0 11s
+  [dose 0] stream 14 parsed=True dir=False period=False trend=True sets=True 429s=0 11s
+  [dose 0] stream 15 parsed=True dir=False period=False trend=True sets=False 429s=0 11s
+  [dose 0] stream 16 parsed=True dir=False period=False trend=False sets=False 429s=0 10s
+  [dose 0] stream 17 parsed=True dir=False period=False trend=False sets=False 429s=0 11s
+  [dose 0] stream 18 parsed=True dir=False period=False trend=False sets=False 429s=0 15s
+  [dose 0] stream 19 parsed=True dir=False period=False trend=True sets=False 429s=0 14s
+  [dose 0] stream 20 parsed=True dir=False period=False trend=False sets=False 429s=0 11s
+  [dose 0] stream 21 parsed=True dir=True period=False trend=False sets=False 429s=0 10s
+  [dose 0] stream 22 parsed=True dir=False period=False trend=True sets=False 429s=0 11s
+  [dose 0] stream 23 parsed=True dir=False period=False trend=True sets=True 429s=0 10s
+  [dose 0] stream 24 parsed=True dir=False period=False trend=False sets=False 429s=0 23s
+  [dose 0] stream 25 parsed=True dir=False period=False trend=False sets=True 429s=0 10s
+  [dose 0] stream 26 parsed=True dir=False period=False trend=True sets=False 429s=0 14s
+  [dose 0] stream 27 parsed=True dir=False period=False trend=False sets=False 429s=0 36s
+  [dose 0] stream 28 parsed=True dir=False period=False trend=False sets=False 429s=0 25s
+  [dose 0] stream 29 parsed=True dir=False period=False trend=False sets=False 429s=0 14s
+  [dose 0] stream 30 parsed=True dir=True period=False trend=True sets=True 429s=0 11s
+  [dose 0] stream 31 parsed=True dir=False period=False trend=False sets=False 429s=0 13s
+  [dose 0] stream 32 parsed=True dir=False period=False trend=False sets=False 429s=0 11s
+  [dose 0] stream 33 parsed=True dir=False period=False trend=False sets=True 429s=0 11s
+  [dose 0] stream 34 parsed=True dir=False period=False trend=False sets=False 429s=0 11s
+  [dose 0] stream 35 parsed=True dir=False period=False trend=False sets=False 429s=0 9s
+  [dose 2] stream  0 parsed=True dir=False period=True trend=False sets=False 429s=0 13s
+  [dose 2] stream  1 parsed=True dir=True period=True trend=False sets=False 429s=0 17s
+  [dose 2] stream  2 parsed=True dir=False period=False trend=False sets=False 429s=0 11s
+  [dose 2] stream  3 parsed=True dir=False period=False trend=True sets=False 429s=0 10s
+  [dose 2] stream  4 parsed=True dir=False period=True trend=False sets=False 429s=0 15s
+  [dose 2] stream  5 parsed=True dir=False period=True trend=True sets=True 429s=0 12s
+  [dose 2] stream  6 parsed=True dir=False period=False trend=False sets=False 429s=0 18s
+  [dose 2] stream  7 parsed=True dir=False period=False trend=True sets=False 429s=0 13s
+  [dose 2] stream  8 parsed=True dir=False period=False trend=False sets=False 429s=0 14s
+  [dose 2] stream  9 parsed=True dir=False period=False trend=False sets=False 429s=0 13s
+  [dose 2] stream 10 parsed=True dir=False period=False trend=False sets=False 429s=0 14s
+  [dose 2] stream 11 parsed=True dir=False period=True trend=False sets=False 429s=0 11s
+  [dose 2] stream 12 parsed=True dir=False period=False trend=False sets=False 429s=0 13s
+  [dose 2] stream 13 parsed=True dir=False period=False trend=False sets=False 429s=0 18s
+  cand  1 dir=NE T=7 trend=easing   sets=4    -> drop {'peak_times': [7.5, 15.0, 28.8, 35.0], 'est_period': 7.5, 'fft_dir': 'NE', 'fft_lambda_m': 75, 'fft_peak_frac': 0.004, 'bright_early_half': 105.4, 'bright_late_half': 101.1, 'trend_rel_change': -0.18, 'trend_class': 'steady', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand  2 dir=E  T=8 trend=steady   sets=5    -> drop {'peak_times': [7.5, 15.0, 22.5, 30.0, 38.8], 'est_period': 7.5, 'fft_dir': 'E', 'fft_lambda_m': 101, 'fft_peak_frac': 0.004, 'bright_early_half': 132.2, 'bright_late_half': 60.6, 'trend_rel_change': -1.35, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 1, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand  3 dir=SE T=6 trend=building sets=None -> KEEP 
+  cand  4 dir=S  T=7 trend=easing   sets=3    -> drop {'peak_times': [3.8, 11.2, 31.2, 38.8], 'est_period': 7.5, 'fft_dir': 'S', 'fft_lambda_m': 78, 'fft_peak_frac': 0.004, 'bright_early_half': 122.9, 'bright_late_half': 100.2, 'trend_rel_change': -0.41, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand  5 dir=SW T=8 trend=steady   sets=4    -> drop {'peak_times': [2.5, 10.0, 17.5, 25.0, 33.8], 'est_period': 7.5, 'fft_dir': 'SW', 'fft_lambda_m': 102, 'fft_peak_frac': 0.004, 'bright_early_half': 122.7, 'bright_late_half': 51.6, 'trend_rel_change': -1.22, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand  6 dir=W  T=6 trend=building sets=5    -> drop {'peak_times': [1.2, 7.5, 12.5, 18.8, 25.0, 31.2, 36.2], 'est_period': 6.25, 'fft_dir': 'W', 'fft_lambda_m': 56, 'fft_peak_frac': 0.005, 'bright_early_half': 120.9, 'bright_late_half': 92.2, 'trend_rel_change': -0.22, 'trend_class': 'steady', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand  7 dir=NW T=7 trend=easing   sets=None -> KEEP 
+  cand  8 dir=N  T=8 trend=steady   sets=3    -> drop {'peak_times': [8.8, 17.5, 25.0, 32.5], 'est_period': 7.5, 'fft_dir': 'N', 'fft_lambda_m': 101, 'fft_peak_frac': 0.004, 'bright_early_half': 75.8, 'bright_late_half': 132.3, 'trend_rel_change': 0.65, 'trend_class': 'building', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand  9 dir=NE T=6 trend=building sets=4    -> KEEP 
+  cand 10 dir=E  T=7 trend=easing   sets=5    -> drop {'peak_times': [3.8, 11.2, 18.8, 26.2, 32.5], 'est_period': 7.5, 'fft_dir': 'E', 'fft_lambda_m': 78, 'fft_peak_frac': 0.004, 'bright_early_half': 87.8, 'bright_late_half': 124.1, 'trend_rel_change': 0.4, 'trend_class': 'building', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 11 dir=SE T=8 trend=steady   sets=None -> KEEP 
+  cand 12 dir=S  T=6 trend=building sets=3    -> KEEP 
+  cand 13 dir=SW T=7 trend=easing   sets=4    -> drop {'peak_times': [7.5, 15.0, 21.2, 27.5, 35.0], 'est_period': 6.88, 'fft_dir': 'SW', 'fft_lambda_m': 75, 'fft_peak_frac': 0.004, 'bright_early_half': 151.3, 'bright_late_half': 63.0, 'trend_rel_change': -1.26, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 14 dir=W  T=8 trend=steady   sets=5    -> drop {'peak_times': [6.2, 13.8, 22.5, 30.0, 38.8], 'est_period': 8.12, 'fft_dir': 'W', 'fft_lambda_m': 101, 'fft_peak_frac': 0.004, 'bright_early_half': 122.1, 'bright_late_half': 68.4, 'trend_rel_change': -0.9, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 15 dir=NW T=6 trend=building sets=None -> KEEP 
+  cand 16 dir=N  T=7 trend=easing   sets=3    -> KEEP 
+  cand 17 dir=NE T=8 trend=steady   sets=4    -> drop {'peak_times': [2.5, 10.0, 17.5, 26.2, 33.8], 'est_period': 7.5, 'fft_dir': 'NE', 'fft_lambda_m': 102, 'fft_peak_frac': 0.004, 'bright_early_half': 57.4, 'bright_late_half': 124.2, 'trend_rel_change': 1.09, 'trend_class': 'building', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 18 dir=E  T=6 trend=building sets=5    -> drop {'peak_times': [1.2, 7.5, 13.8, 20.0, 26.2, 32.5, 37.5], 'est_period': 6.25, 'fft_dir': 'E', 'fft_lambda_m': 56, 'fft_peak_frac': 0.005, 'bright_early_half': 102.8, 'bright_late_half': 95.6, 'trend_rel_change': 0.07, 'trend_class': 'steady', 'est_sets': 5, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': 'run', 'run_frames': 24.0, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 19 dir=SE T=7 trend=easing   sets=None -> KEEP 
+  cand 20 dir=S  T=8 trend=steady   sets=3    -> drop {'peak_times': [1.2, 10.0, 18.8, 26.2, 35.0], 'est_period': 8.75, 'fft_dir': 'S', 'fft_lambda_m': 101, 'fft_peak_frac': 0.004, 'bright_early_half': 141.1, 'bright_late_half': 76.8, 'trend_rel_change': -0.65, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 2, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 21 dir=SW T=6 trend=building sets=4    -> KEEP 
+  cand 22 dir=W  T=7 trend=easing   sets=5    -> drop {'peak_times': [6.2, 13.8, 21.2, 27.5, 33.8], 'est_period': 6.88, 'fft_dir': 'W', 'fft_lambda_m': 78, 'fft_peak_frac': 0.004, 'bright_early_half': 130.6, 'bright_late_half': 78.0, 'trend_rel_change': -0.95, 'trend_class': 'easing', 'est_sets': None, 'sets_info': {'n_set_markers': 1, 'n_lull_markers': 1, 'method': None, 'run_frames': None, 'cycle_s': None, 'lull_s': None}, 'ok': False}
+  cand 23 dir=NW T=8 trend=steady   sets=None -> KEEP 
+examples verified: 4 (nested order ['{"direction": "S", "period_s": 6.0, "trend": "building", "sets": 3}', '{"direction": "NW", "period_s": 7.0, "trend": "easing", "sets": "none"}', '{"direction": "SE", "period_s": 8.0, "trend": "steady", "sets": "none"}', '{"direction": "NE", "period_s": 6.0, "trend": "building", "sets": 4}'])
+held-out: 36 seas (seed 90210, generator v2, balanced)
+jobs: 126, already done: 86, to run: 40
+  [dose 2] stream 14 parsed=True dir=False period=False trend=False sets=True 429s=0 10s
+  [dose 2] stream 15 parsed=True dir=False period=False trend=False sets=True 429s=0 11s
+  [dose 2] stream 16 parsed=True dir=False period=True trend=True sets=False 429s=0 10s
+  [dose 2] stream 17 parsed=True dir=False period=True trend=True sets=False 429s=0 12s
+  [dose 2] stream 18 parsed=True dir=False period=True trend=True sets=True 429s=0 11s
+  [dose 2] stream 19 parsed=True dir=False period=True trend=False sets=False 429s=0 14s
+  [dose 2] stream 20 parsed=True dir=False period=False trend=False sets=False 429s=0 19s
+  [dose 2] stream 21 parsed=True dir=False period=True trend=True sets=True 429s=0 18s
+  [dose 2] stream 22 parsed=True dir=False period=True trend=False sets=False 429s=0 14s
+  [dose 2] stream 23 parsed=True dir=False period=False trend=False sets=True 429s=0 14s
+  [dose 2] stream 24 parsed=True dir=False period=True trend=False sets=False 429s=0 11s
+  [dose 2] stream 25 parsed=True dir=False period=True trend=False sets=True 429s=0 9s
+  [dose 2] stream 26 parsed=True dir=False period=True trend=False sets=False 429s=0 12s
+  [dose 2] stream 27 parsed=True dir=False period=False trend=True sets=False 429s=0 15s
+  [dose 2] stream 28 parsed=True dir=False period=False trend=False sets=False 429s=0 21s
+  [dose 2] stream 29 parsed=True dir=False period=True trend=True sets=False 429s=0 14s
+  [dose 2] stream 30 parsed=True dir=False period=False trend=False sets=True 429s=0 10s
+  [dose 2] stream 31 parsed=True dir=False period=False trend=False sets=False 429s=0 16s
+  [dose 2] stream 32 parsed=True dir=False period=True trend=True sets=False 429s=0 13s
+  [dose 2] stream 33 parsed=True dir=False period=True trend=False sets=True 429s=0 13s
+  [dose 2] stream 34 parsed=True dir=False period=False trend=False sets=False 429s=0 11s
+  [dose 2] stream 35 parsed=True dir=False period=True trend=True sets=False 429s=0 18s
+  [dose 1] stream  0 parsed=True dir=False period=True trend=False sets=False 429s=0 19s
+  [dose 1] stream  1 parsed=True dir=False period=False trend=True sets=False 429s=0 14s
+  [dose 1] stream  2 parsed=True dir=False period=False trend=False sets=False 429s=0 10s
+  [dose 1] stream  3 parsed=True dir=False period=False trend=False sets=False 429s=0 14s
+  [dose 1] stream  4 parsed=True dir=False period=False trend=True sets=False 429s=0 14s
+  [dose 1] stream  5 parsed=True dir=False period=False trend=False sets=False 429s=0 14s
+  [dose 1] stream  6 parsed=True dir=False period=False trend=False sets=False 429s=0 17s
+  [dose 1] stream  7 parsed=True dir=True period=False trend=False sets=True 429s=0 15s
+  [dose 1] stream  8 parsed=True dir=True period=False trend=True sets=False 429s=0 13s
+  [dose 1] stream  9 parsed=True dir=False period=True trend=False sets=False 429s=0 14s
+  [dose 1] stream 10 parsed=True dir=False period=True trend=False sets=False 429s=0 10s
+  [dose 1] stream 11 parsed=True dir=False period=True trend=False sets=False 429s=0 12s
+  [dose 1] stream 12 parsed=True dir=False period=True trend=True sets=False 429s=0 14s
+  [dose 1] stream 13 parsed=True dir=True period=True trend=False sets=True 429s=0 14s
+  [dose 1] stream 14 parsed=True dir=False period=False trend=True sets=False 429s=0 13s
+  [dose 1] stream 15 parsed=True dir=False period=False trend=True sets=False 429s=0 10s
+  [dose 1] stream 16 parsed=True dir=False period=False trend=False sets=False 429s=0 15s
+  [dose 1] stream 17 parsed=True dir=False period=False trend=False sets=False 429s=0 11s
+run complete

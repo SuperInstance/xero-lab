@@ -169,10 +169,149 @@ lossless-enough; the reader must be raised, not found.
    helmsman's third gist — how the sea *throws* the boat — needs a
    boat-response model in the generator before it can be tested.
 
+## v2 — raising the reader (2026-10-13)
+
+The v2 list above asked three things: fix the confounds, let the
+reader reason, and tune it with labeled examples. All three were
+done. The result is sharper than a simple win: **examples teach
+exactly one of the four skills, and the work-through exposes why
+the other three fail.**
+
+### Confound fixes (generator v2)
+
+- **Set-envelope phase randomized.** v1 opened every stream at
+  envelope phase 0 — the start of a set (diagnostic: 100% of v1
+  streams opened in-set, envelope(0) = 0.30 ± 0.00). Generator v2
+  (`sea.py`, `GENERATOR_VERSION = "2"`) draws a uniform starting
+  phase per sea; v2 streams open in-set 76% of the time with
+  envelope(0) spread 0.60 ± 0.27 across the cycle. The phase is
+  drawn *after* every v1 draw, so `env_phase0=0.0` reproduces all
+  144/144 v1 streams bit-for-bit (verified against the seed-4242
+  battery) — v1 stays reproducible, v2 is honest.
+- **Balanced labels.** The held-out set is exactly balanced by
+  construction (asserted in code): trends 12 building / 12 easing /
+  12 steady; sets 9 each of 3 / 4 / 5 / none; directions 4–5 per
+  point; periods spread over 6–10 s. Under v1's unbalanced
+  answering, a label prior could masquerade as skill; here it can't.
+- **Pairs stay intact.** Strictly sequential calls (concurrency 1),
+  ≥3 s between calls, exponential backoff 30/60/120/240 s armed on
+  any 429 with a hard abort if one survived. **Outcome: 126/126
+  calls recorded, 126/126 parsed, zero 429s, zero backoffs** — the
+  v1 scar (59/144 lost) did not recur. (One call was lost to a
+  service restart mid-run; the resumable runner re-did exactly that
+  pair. Total tokens: 3.40M prompt, 50k completion.)
+
+### Route chosen
+
+Few-shot prompting with *worked* examples + a visible work-through
+before the JSON — the strongest lever available without training
+infrastructure, and the one v1's list prescribed. The four examples
+(`authoring.py`) are generator seas whose work-throughs are
+**measured from the frames** by deterministic estimators (FFT
+direction, buoy-peak period, bright-cell trend, SET/LULL set
+structure); an example enters the pool only if every estimate
+agrees with ground truth, so no worked solution teaches a wrong
+number. Doses are nested (K=1 ⊂ K=2 ⊂ K=4): K=0 is the
+work-through instruction alone. Held-out: 36 fresh v2 seas
+(seed 90210), letters 20×20, scored with v1's scorer unchanged.
+
+### The dose curve (accuracy; v1 zero-shot floor in the first row)
+
+| dose | n | direction | dir ±45° | period | trend | sets |
+|---|---|---|---|---|---|---|
+| v1 (JSON only) | 24 | 0.21 | 0.50 | 0.00 | 0.38 | 0.29 |
+| K=0 (work-through only) | 36 | 0.14 | 0.33 | 0.08 | 0.36 | 0.22 |
+| K=1 | 18 | 0.17 | 0.33 | 0.33 | 0.33 | 0.11 |
+| K=2 | 36 | 0.03 | 0.14 | 0.50 | 0.31 | 0.25 |
+| K=4 | 36 | 0.14 | 0.39 | **0.61** | 0.44 | 0.19 |
+| chance | | 0.125 | 0.375 | — | 0.33 | 0.25 |
+
+**Period is the one real win, and it is dose-shaped**: 0.00 → 0.08
+→ 0.33 → 0.50 → 0.61, mean error falling 4.2 s → 1.2 s. Counting
+peaks at the centre cell is a procedure the reader can actually
+execute on a letter grid — discrete peak times in one column are
+legible — and the examples genuinely teach it.
+
+**The "seas always build" prior did not die; it moved.** Under
+balanced labels the trend answers are prior-driven at every dose,
+and the prior's *label follows the prompt*: K=1 (one example,
+building) → "building" 14/18; K=2 (last example easing) →
+"easing" 30/36; K=4 → "steady" 27/36; K=0 → "steady" 32/36.
+Trend accuracy never beats 0.44. The reader is not measuring the
+bright-cell counts its work-through recites — the counts in its
+text are round, repeated, and asserted (≈150 vs ≈150 → "steady")
+— it is adopting whichever label the prompt makes salient. v1's
+"building prior" was this same mechanism wearing v1's prompt.
+
+**Direction gets worse with a work-through, not better**
+(0.21 v1 → 0.03–0.17), because band-tracking is theatre: the model
+writes a plausible shift and the compass follows the prose. At K=4
+it answered **SE on 36 of 36 streams** (its 0.14 is exactly the
+share of SE truths); at K=2 the attractor rotated to SW/NW. A
+typical dose-4 reading, truth SW:
+
+> "we notice that the pattern shifts approximately 1 cell east and
+> 1 cell south. This indicates that the wave train is traveling in
+> the **SE** direction."
+
+**Sets never reach v1's floor.** The marker procedure is recited
+correctly and executed on a misread marker structure. Dose-4,
+truth sets of 5:
+
+> "The stream has a single '--- SET ---' marker at the beginning
+> and a '~~~ LULL ~~~' marker at t = 7.5 seconds. The time between
+> these markers is 7.5 seconds, which corresponds to less than one
+> complete wave cycle … so sets = none."
+
+("none" flooded 19/36 at K=4 against 9 truths; at K=0 the model
+instead divided stream length by period and answered 18 waves per
+set.) Part of this is real task hardness — a 55 s window against
+set cycles up to 64 s often shows no complete group — but the
+reader neither notices the truncation nor falls back the way its
+own instructions describe.
+
+The pattern across all four: **the work-through transfers the
+script, not the measurement.** Where the measurement is executable
+in text (count peaks in one column), accuracy climbs with dose.
+Where it is not (track bands across 44 frames, count hundreds of
+cells, reconstruct marker runs), the model produces the *form* of
+the procedure with fabricated numbers, and a label prior decides
+the answer. More examples sharpen the script; they do not give
+the reader eyes.
+
+### What this means / what's next
+
+- **Prompting is pruned as the reader route** — this is the prune
+  the dose curve was bought for. K=8 would polish the theatre.
+- The two live routes are the ones that change *who measures*:
+  (a) a deterministic pre-reader that computes the four statistics
+  (the authoring estimators already do, exactly) and renders them
+  as text for the LLM to judge — separating measurement from
+  judgement; or (b) a genuinely trained small reader on generator
+  data (the generator is an unlimited labeled training set; the
+  jev-student pattern), which v1's list already pointed at.
+- Phase rendering (v2-list item 4) stays open and now looks
+  better-motivated: if the motion is pre-extracted, the reader's
+  job shrinks toward the period task — the one it proved it can do.
+
+**Jev receipt (v2).** Asked (TypeSafe Jev, `noul`, 2026-10-13)
+whether the dose-curve evidence justifies "worked examples teach
+the reader only the skill it can actually execute in text (period);
+the other work-throughs are recited scripts with fabricated
+measurements decided by a label prior; prompt-tuning the reader is
+therefore exhausted — the measurement must move out of the LLM":
+**0.59 — yes.** Cooler than v1's 0.73, as it should be: the period
+half of the claim is measured fact, the "script, not measurement"
+half is an inference — from the answer distributions and the
+readings quoted above — and the receipt prices it that way.
+
 ## Files
 
 `sea.py` (generator), `render.py` (renderer + delta encoders),
 `reading_test.py` (paired test), `daylog.py` (compactness),
-`make_samples.py`, `samples/` (viewable streams), 
+`make_samples.py`, `samples/` (viewable streams),
 `runs/reading_results.jsonl` (every call: truth, answer, scores,
 token usage), `runs/reading_log.txt`.
+v2 additions: `authoring.py` (measured-work-through example
+authoring), `tuning_test.py` (dose-curve tuning run),
+`runs/v2_tuning_results.jsonl`, `runs/v2_tuning_log.txt`.
