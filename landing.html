@@ -71,7 +71,12 @@ a{color:var(--phosphor)}
 .tag{display:inline-flex;align-self:flex-start;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px;border:1px solid;border-radius:99px}
 .tag.real{color:var(--phosphor);border-color:var(--phosphor-dim)}
 .tag.sim{color:var(--blue);border-color:var(--blue)}
-.tag.lab{color:var(--amber);border-color:var(--amber)}
+.tag.measured{color:var(--amber);border-color:var(--amber)}
+.legend{display:flex;gap:8px 22px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;line-height:1.65;color:var(--muted);border:1px solid var(--line);background:var(--panel);padding:12px 14px;margin-bottom:20px}
+.legend b{font-weight:700}
+.legend .lg-measured{color:var(--amber)}
+.legend .lg-real{color:var(--phosphor)}
+.legend .lg-sim{color:var(--blue)}
 .card h3{margin:0;font-size:19px;line-height:1.2;font-weight:700;letter-spacing:-.01em}
 .card .what{color:var(--muted);font-size:14.5px;margin:0}
 .card .note{font-size:13px;color:var(--faint);border-top:1px dashed var(--line);padding-top:10px;margin-top:auto}
@@ -193,11 +198,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <h2>Where it's just perfect</h2>
       <p>Eight situations where starting from a blank page — and adding only what the job earns — beats starting from a harness. Every demo below runs in your browser. Play with them.</p>
     </div>
+    <div class="legend" role="note" aria-label="How to read the status labels">
+      <span><b class="lg-measured">● Measured</b> — numbers from a real run, receipts in the repo.</span>
+      <span><b class="lg-real">● Real prototype</b> — working code, shown as a simulation of itself.</span>
+      <span><b class="lg-sim">● Simulation</b> — a designed behavior, illustrated.</span>
+    </div>
     <div class="grid">
 
       <!-- 1 VOICE -->
       <article class="card wide">
-        <span class="tag real">● Real prototype</span>
+        <span class="tag measured">● Measured</span>
         <h3>1 · The walking dictation</h3>
         <p class="what">You're walking for twenty minutes, thinking out loud, with long silences while you look out the window. A normal voice agent answers at the first pause and makes you feed it words. Xero's voice block just listens — transcribing to markdown chunks that fall out at the pauses: emit at 60 seconds, at ¾ of a page, or after a gap over 5 seconds. One block, three cadences — and a toggle between them.</p>
         <div class="demo">
@@ -243,7 +253,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
       <!-- 3 SPREADSHEET -->
       <article class="card">
-        <span class="tag lab">● Measured — staircases closed</span>
+        <span class="tag measured">● Measured — staircases closed</span>
         <h3>3 · The spreadsheet that fires its teacher</h3>
         <p class="what">Put the work in cells. The big model's job is the cut — breaking work into decisions small enough for little models to make. Judgment sets the gate on each one: go, hold, or stop.</p>
         <div class="demo">
@@ -262,7 +272,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
       <!-- 4 WAVE -->
       <article class="card wide">
-        <span class="tag lab">● Measured — v3: settled (the instrument measures, the model speaks)</span>
+        <span class="tag measured">● Measured — v3: settled (the instrument measures, the model speaks)</span>
         <h3>4 · The 20° turn, read in letters</h3>
         <p class="what">Point the same widget at the sea. A camera watches the waves; the sea is rendered as letters — character by height, resolution by motion. The waveform becomes a first-class language — and v3 settled who reads it: small estimators measure the gist — rhythm, height, throw — and the model judges and speaks over their numbers. Now turn 20° into the wind: the general rules price the wind, but the letter-sea supplies the subtlety, because the camera sees the swell <em>before</em> the hull feels it.</p>
         <div class="demo">
@@ -286,7 +296,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
       <!-- 5 COMBADGE -->
       <article class="card">
-        <span class="tag sim">● Simulation</span>
+        <span class="tag real">● Real prototype</span>
         <h3>5 · The combadge asks the smallest brain that can hold the question</h3>
         <p class="what">A pin at the edge, a brain on the boat's network, a big brain in the cloud. Ask something small and it never leaves the pin. Ask something big and watch it travel.</p>
         <div class="demo">
@@ -308,7 +318,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
       <!-- 6 FILING -->
       <article class="card">
-        <span class="tag real">● Real prototype</span>
+        <span class="tag measured">● Measured</span>
         <h3>6 · A day of talk, filed</h3>
         <p class="what">Talk all day. On a pulse, the day's messages cascade — into the current file, then the daily files, then one file per topic — and the index grows. Nothing is “remembered” by a model. It's filed, and the file can be found again.</p>
         <div class="demo">
@@ -327,7 +337,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
       <!-- 7 REDSHIRT -->
       <article class="card">
-        <span class="tag sim">● Simulation</span>
+        <span class="tag real">● Real prototype</span>
         <h3>7 · The redshirt comes home</h3>
         <p class="what">Send a minimal copy out disconnected — a desert-island deployment. It works offline inside its own complete little reality and learns things. When it comes home, it does <em>not</em> trust that reality. It checks its perceptions against the fleet first.</p>
         <div class="demo">
@@ -346,7 +356,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
       <!-- 8 CLONES -->
       <article class="card">
-        <span class="tag sim">● Simulation · measured in the fleet</span>
+        <span class="tag real">● Real prototype</span>
         <h3>8 · Two clones, one bank account of truth</h3>
         <p class="what">Two copies work the same job in parallel and write records as they go. Neither copy's state is stored anywhere. State is <em>derived</em> — folded from the record, the way a bank balance is folded from the ledger. Disagree? The record decides.</p>
         <div class="demo">
