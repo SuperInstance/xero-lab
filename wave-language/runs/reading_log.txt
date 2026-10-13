@@ -1,0 +1,151 @@
+144 calls (36 streams x 4 conditions)
+  [1/144] stream 0 letters20 err=None usage=11368
+  [2/144] stream 0 letters12 err=None usage=4831
+  [3/144] stream 0 numeric err=None usage=73621
+  [4/144] stream 0 summary err=None usage=2014
+  [5/144] stream 1 letters20 err=None usage=12187
+  [6/144] stream 1 letters12 err=None usage=5023
+  [7/144] stream 1 numeric err=None usage=73607
+  [8/144] stream 1 summary err=None usage=2003
+  [9/144] stream 2 letters20 err=None usage=10756
+  [10/144] stream 2 letters12 err=None usage=4598
+  [11/144] stream 2 numeric err=None usage=73615
+  [12/144] stream 2 summary err=None usage=2011
+  [13/144] stream 3 letters20 err=None usage=11676
+  [14/144] stream 3 letters12 err=None usage=4980
+  [15/144] stream 3 numeric err=None usage=73615
+  [16/144] stream 3 summary err=None usage=2010
+  [17/144] stream 4 letters20 err=None usage=10859
+  [18/144] stream 4 letters12 err=None usage=4577
+  [19/144] stream 4 numeric err=None usage=73607
+  [20/144] stream 4 summary err=None usage=2004
+  [21/144] stream 5 letters20 err=None usage=11645
+  [22/144] stream 5 letters12 err=None usage=4965
+  [23/144] stream 5 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [24/144] stream 5 summary err=HTTP Error 429: Too Many Requests usage=None
+  [25/144] stream 6 letters20 err=None usage=11736
+  [26/144] stream 6 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [27/144] stream 6 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [28/144] stream 6 summary err=HTTP Error 429: Too Many Requests usage=None
+  [29/144] stream 7 letters20 err=None usage=11200
+  [30/144] stream 7 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [31/144] stream 7 numeric err=None usage=73623
+  [32/144] stream 7 summary err=HTTP Error 429: Too Many Requests usage=None
+  [33/144] stream 8 letters20 err=HTTP Error 429: Too Many Requests usage=None
+  [34/144] stream 8 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [35/144] stream 8 numeric err=None usage=73612
+  [36/144] stream 8 summary err=HTTP Error 429: Too Many Requests usage=None
+  [37/144] stream 9 letters20 err=HTTP Error 429: Too Many Requests usage=None
+  [38/144] stream 9 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [39/144] stream 9 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [40/144] stream 9 summary err=HTTP Error 429: Too Many Requests usage=None
+  [41/144] stream 10 letters20 err=HTTP Error 429: Too Many Requests usage=None
+  [42/144] stream 10 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [43/144] stream 10 numeric err=None usage=73621
+  [44/144] stream 10 summary err=None usage=1998
+  [45/144] stream 11 letters20 err=None usage=11312
+  [46/144] stream 11 letters12 err=None usage=4873
+  [47/144] stream 11 numeric err=None usage=73613
+  [48/144] stream 11 summary err=None usage=2001
+  [49/144] stream 12 letters20 err=None usage=12076
+  [50/144] stream 12 letters12 err=None usage=4948
+  [51/144] stream 12 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [52/144] stream 12 summary err=HTTP Error 429: Too Many Requests usage=None
+  [53/144] stream 13 letters20 err=HTTP Error 429: Too Many Requests usage=None
+  [54/144] stream 13 letters12 err=None usage=4988
+  [55/144] stream 13 numeric err=None usage=73607
+  [56/144] stream 13 summary err=None usage=1993
+  [57/144] stream 14 letters20 err=HTTP Error 429: Too Many Requests usage=None
+  [58/144] stream 14 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [59/144] stream 14 numeric err=None usage=73613
+  [60/144] stream 14 summary err=None usage=2003
+  [61/144] stream 15 letters20 err=HTTP Error 429: Too Many Requests usage=None
+  [62/144] stream 15 letters12 err=None usage=5140
+  [63/144] stream 15 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [64/144] stream 15 summary err=None usage=1999
+  [65/144] stream 16 letters20 err=HTTP Error 429: Too Many Requests usage=None
+  [66/144] stream 16 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [67/144] stream 16 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [68/144] stream 16 summary err=None usage=2011
+  [69/144] stream 17 letters20 err=None usage=12213
+  [70/144] stream 17 letters12 err=None usage=4966
+  [71/144] stream 17 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [72/144] stream 17 summary err=HTTP Error 429: Too Many Requests usage=None
+  [73/144] stream 18 letters20 err=HTTP Error 429: Too Many Requests usage=None
+  [74/144] stream 18 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [75/144] stream 18 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [76/144] stream 18 summary err=HTTP Error 429: Too Many Requests usage=None
+  [77/144] stream 19 letters20 err=None usage=12192
+  [78/144] stream 19 letters12 err=None usage=4908
+  [79/144] stream 19 numeric err=None usage=73615
+  [80/144] stream 19 summary err=HTTP Error 429: Too Many Requests usage=None
+  [81/144] stream 20 letters20 err=None usage=11438
+  [82/144] stream 20 letters12 err=None usage=4912
+  [83/144] stream 20 numeric err=None usage=73615
+  [84/144] stream 20 summary err=None usage=2012
+  [85/144] stream 21 letters20 err=None usage=11757
+  [86/144] stream 21 letters12 err=None usage=4949
+  [87/144] stream 21 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [88/144] stream 21 summary err=HTTP Error 429: Too Many Requests usage=None
+  [89/144] stream 22 letters20 err=None usage=10593
+  [90/144] stream 22 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [91/144] stream 22 numeric err=None usage=73615
+  [92/144] stream 22 summary err=HTTP Error 429: Too Many Requests usage=None
+  [93/144] stream 23 letters20 err=None usage=8362
+  [94/144] stream 23 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [95/144] stream 23 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [96/144] stream 23 summary err=HTTP Error 429: Too Many Requests usage=None
+  [97/144] stream 24 letters20 err=None usage=11285
+  [98/144] stream 24 letters12 err=None usage=4894
+  [99/144] stream 24 numeric err=None usage=73618
+  [100/144] stream 24 summary err=None usage=2006
+  [101/144] stream 25 letters20 err=None usage=9631
+  [102/144] stream 25 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [103/144] stream 25 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [104/144] stream 25 summary err=HTTP Error 429: Too Many Requests usage=None
+  [105/144] stream 26 letters20 err=None usage=11950
+  [106/144] stream 26 letters12 err=None usage=5018
+  [107/144] stream 26 numeric err=None usage=73615
+  [108/144] stream 26 summary err=None usage=1999
+  [109/144] stream 27 letters20 err=HTTP Error 429: Too Many Requests usage=None
+  [110/144] stream 27 letters12 err=None usage=4690
+  [111/144] stream 27 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [112/144] stream 27 summary err=HTTP Error 429: Too Many Requests usage=None
+  [113/144] stream 28 letters20 err=HTTP Error 429: Too Many Requests usage=None
+  [114/144] stream 28 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [115/144] stream 28 numeric err=None usage=73623
+  [116/144] stream 28 summary err=None usage=2023
+  [117/144] stream 29 letters20 err=None usage=11457
+  [118/144] stream 29 letters12 err=None usage=4862
+  [119/144] stream 29 numeric err=None usage=73612
+  [120/144] stream 29 summary err=HTTP Error 429: Too Many Requests usage=None
+  [121/144] stream 30 letters20 err=None usage=12203
+  [122/144] stream 30 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [123/144] stream 30 numeric err=None usage=73613
+  [124/144] stream 30 summary err=HTTP Error 429: Too Many Requests usage=None
+  [125/144] stream 31 letters20 err=None usage=11668
+  [126/144] stream 31 letters12 err=None usage=4923
+  [127/144] stream 31 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [128/144] stream 31 summary err=HTTP Error 429: Too Many Requests usage=None
+  [129/144] stream 32 letters20 err=None usage=10820
+  [130/144] stream 32 letters12 err=None usage=4839
+  [131/144] stream 32 numeric err=None usage=73615
+  [132/144] stream 32 summary err=HTTP Error 429: Too Many Requests usage=None
+  [133/144] stream 33 letters20 err=None usage=11639
+  [134/144] stream 33 letters12 err=HTTP Error 429: Too Many Requests usage=None
+  [135/144] stream 33 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [136/144] stream 33 summary err=None usage=2012
+  [137/144] stream 34 letters20 err=HTTP Error 429: Too Many Requests usage=None
+  [138/144] stream 34 letters12 err=None usage=4945
+  [139/144] stream 34 numeric err=HTTP Error 429: Too Many Requests usage=None
+  [140/144] stream 34 summary err=None usage=2014
+  [141/144] stream 35 letters20 err=HTTP Error 429: Too Many Requests usage=None
+  [142/144] stream 35 letters12 err=None usage=4915
+  [143/144] stream 35 numeric err=None usage=73621
+  [144/144] stream 35 summary err=None usage=2010
+
+=== SUMMARY ===
+letters20  n=36 parsed=24 dir=0.14 dir45=0.33 period=0.00 (mean err 3.8s) trend=0.25 sets=0.19 mean_prompt_tokens=7533
+letters12  n=36 parsed=22 dir=0.14 dir45=0.25 period=0.06 (mean err 3.3s) trend=0.19 sets=0.11 mean_prompt_tokens=2973
+numeric    n=36 parsed=21 dir=0.08 dir45=0.28 period=0.03 (mean err 4.1s) trend=0.14 sets=0.22 mean_prompt_tokens=42923
+summary    n=36 parsed=18 dir=0.11 dir45=0.31 period=0.00 (mean err 3.9s) trend=0.22 sets=0.08 mean_prompt_tokens=986
