@@ -35,12 +35,12 @@ Just a transcriber, plus two tools and a pulse:
 segmenter/   Python reference implementation (stdlib only)
              segmenter.py    triggers, best-break, markup, tick()
              fixtures.py     seeded synthetic word-timed streams
-             test_segmenter.py   16 tests — python3 -m unittest test_segmenter
-             demo.py         segmenter vs naive baseline, measured
+             test_segmenter.py   16 tests — from segmenter/: python3 -m unittest test_segmenter
+             demo.py         segmenter vs naive baseline, measured (run from segmenter/)
 modes/       simulate.py     replays fixtures through the 3 configs
              RESULTS.md      the numbers + how the modes feel
 worker/      Cloudflare Worker variant (TypeScript) — see worker/README.md
-             node --test test/  → 8 tests; wrangler deploy-ready, NOT deployed
+             npm test (from worker/)  → 8 tests; wrangler deploy-ready, NOT deployed
 research.md  prior art with sources (endpointing, barge-in, captions,
              dictation, the eager/patient tension in big products)
 ```
