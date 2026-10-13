@@ -15,16 +15,32 @@ sets (waves per group, or "none").
 Usage (real token counts) is captured from the API response.
 Results land in runs/reading_results.jsonl, one row per call.
 """
-import argparse, json, re, sys, time
+import argparse, json, os, re, sys, time
 from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
 import numpy as np
 
-sys.path.insert(0, "/home/hatch/workspace/skills/minimax/bin")
-from chat import chat  # the fleet skill's client (returns full API JSON)
-
-sys.path.insert(0, "/home/hatch/workspace/xero-wave-language")
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from sea import Sea, sample_stream, COMPASS
 from render import assemble_stream, summary_stream
+
+def _load_chat():
+    """The reader under test is MiniMax-Text-01, reached through a small
+    client module named chat.py exposing
+        chat(messages, max_tokens=..., temperature=...) -> API JSON dict
+    (the author's fleet skill provides one). Point MINIMAX_CHAT_DIR at
+    the folder containing chat.py, or put that folder on PYTHONPATH.
+    Returns None when no such module is available."""
+    d = os.environ.get("MINIMAX_CHAT_DIR")
+    if d:
+        sys.path.insert(0, d)
+    try:
+        from chat import chat
+        return chat
+    except ImportError:
+        return None
+
+chat = _load_chat()
 
 SYSTEM = ("You are reading a synthetic ocean-wave sensor stream. "
           "Answer with a single JSON object only, no other text.")
@@ -176,6 +192,18 @@ def main():
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--out", default="runs/reading_results.jsonl")
     args = ap.parse_args()
+
+    if chat is None:
+        sys.exit("reading_test.py: no MiniMax `chat` module found — the "
+                 "reading test sends every sea to MiniMax-Text-01 through "
+                 "a small client module (chat.py) exposing chat(messages, "
+                 "max_tokens=..., temperature=...) -> API JSON.\n"
+                 "Supply one with:\n"
+                 "  MINIMAX_CHAT_DIR=/path/to/folder-with-chat.py "
+                 "python3 reading_test.py --streams 36\n"
+                 "  (or put that folder on PYTHONPATH.)\n"
+                 "The rest of this folder (sea.py, make_samples.py, "
+                 "daylog.py) runs offline with no credentials.")
 
     conds = args.conditions.split(",")
     streams = build_streams(args.streams)

@@ -6,11 +6,13 @@ TRAP: SUSPECT when the family token's signal is absent from the description
 PILLAR: name-only keywords. DISP: formula over ALGO's own FAM/PILLAR cells
      (spreadsheet chaining: downstream cells read upstream cells)."""
 import json, re, sys
-sys.path.insert(0, "/home/hatch/workspace/xero-decision-grid/code")
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from standards import pillar_nameonly, disp_rule
 
-SAMPLE = "/home/hatch/workspace/xero-decision-grid/data/sample.jsonl"
-OUT = "/home/hatch/workspace/xero-decision-grid/data/decisions_algo.jsonl"
+_ROOT = Path(__file__).resolve().parents[1]
+SAMPLE = _ROOT / "data" / "sample.jsonl"
+OUT = _ROOT / "data" / "decisions_algo.jsonl"
 
 COLLISION = ["knowledge", "shot", "trust", "claw"]  # famous-word traps per survey S.C
 

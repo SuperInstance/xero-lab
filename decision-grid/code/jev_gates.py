@@ -3,10 +3,20 @@
 evidence; (b) per-instance gates on SMALL decisions in the BIG subsample.
 Every call is logged to data/jev_calls.jsonl. Mapping: p>=0.70 ACCEPT (pos),
 0.40<p<0.70 ESCALATE (zero/deadband), p<=0.40 REJECT (neg; redo by BIG)."""
-import json, subprocess, random, sys
+import json, subprocess, random, sys, os
+from pathlib import Path
 
-JEV = "/home/hatch/workspace/skills/typesafe/bin/jev.py"
-D = "/home/hatch/workspace/xero-decision-grid/data"
+D = Path(__file__).resolve().parents[1] / "data"
+# The Jev CLI (jev.py, TypeSafe skill) is an external tool, not part of
+# this repo. Its committed results live in data/jev_calls.jsonl and
+# data/jev_instance_results.json.
+JEV = os.environ.get("JEV_CLI")
+if not JEV or not os.path.exists(JEV):
+    sys.exit("jev_gates.py needs the Jev gate CLI (jev.py). It is not in "
+             "this repo — point JEV_CLI at it:\n"
+             "  JEV_CLI=/path/to/jev.py python3 code/jev_gates.py\n"
+             "Everything else in the pipeline runs from the committed "
+             "data without it.")
 random.seed(4242)
 LOG = open(f"{D}/jev_calls.jsonl", "a")
 

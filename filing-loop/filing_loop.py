@@ -75,6 +75,7 @@ def git_commit(store, message):
 
 
 def init_store(store):
+    """Create the store if needed. Returns True if it was created."""
     os.makedirs(store, exist_ok=True)
     if not os.path.isdir(os.path.join(store, ".git")):
         git(store, "init", "-q", "-b", "main")
@@ -84,6 +85,8 @@ def init_store(store):
             f.write("# filing-loop store\n\nChat deposits, filed by the loop. "
                     "The git log is the ledger.\n")
         git_commit(store, "init: filing-loop store")
+        return True
+    return False
 
 
 # ---------- entries ----------
@@ -205,9 +208,10 @@ def all_source_entries(store, chat):
 
 
 def refine(store, chat):
+    """Rebuild topic views for one chat. Returns entries processed."""
     entries = all_source_entries(store, chat)
     if not entries:
-        return
+        return 0
     topics = top_keywords([b for _, _, b in entries], TOPIC_K)
     tdir = os.path.join(store, "topics", chat)
     os.makedirs(tdir, exist_ok=True)
@@ -224,6 +228,7 @@ def refine(store, chat):
     with open(os.path.join(tdir, "INDEX.md"), "w") as f:
         f.write("\n".join(index) + "\n")
     git_commit(store, f"refine: {chat} topics ({', '.join(topics)})")
+    return len(entries)
 
 
 # ---------- status ----------
@@ -256,9 +261,10 @@ def main(argv):
         print(__doc__)
         return 2
     cmd, store = argv[1], argv[2]
-    init_store(store)
+    created = init_store(store)
     if cmd == "init":
-        pass
+        print(f"✅ init: store ready at {store} "
+              f"({'new git store created' if created else 'already initialized'})")
     elif cmd == "deposit":
         ts, source = None, "chat"
         rest = argv[5:]
@@ -268,11 +274,18 @@ def main(argv):
             if a == "--source":
                 source = rest[i + 1]
         deposit(store, argv[3], argv[4], ts=ts, source=source)
+        n = len(all_source_entries(store, argv[3]))
+        commits = len(git(store, "log", "--oneline").stdout.strip().splitlines())
+        print(f"✅ deposit: {argv[3]}: {n} entries in store, "
+              f"{commits} commits (the ledger)")
     elif cmd == "refine":
         chats = [argv[3]] if len(argv) > 3 else sorted(
             os.listdir(os.path.join(store, "inbox")))
+        total = 0
         for c in chats:
-            refine(store, c)
+            total += refine(store, c)
+        print(f"✅ refine: {total} entries -> topic views for "
+              f"{len(chats)} chat(s)")
     elif cmd == "status":
         status(store)
     else:

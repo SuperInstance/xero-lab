@@ -3,12 +3,27 @@
 GOLD family = survey's programmatic clustering: first name-token family
 (split on [-_.]) if that family has >=12 members across the account, else OTHER.
 """
-import json, re, random
+import json, re, random, os, sys
 from collections import Counter, defaultdict
+from pathlib import Path
 
-SRC = "/home/hatch/workspace/xero-research/superinstance/.scratch/all-repos.jsonl"
-OUT = "/home/hatch/workspace/xero-decision-grid/data/sample.jsonl"
+DATA = Path(__file__).resolve().parents[1] / "data"
+OUT = DATA / "sample.jsonl"
+# The full 5,231-repo enumeration is an OPTIONAL regeneration input (it
+# lives in the survey's private scratch, not in this repo). Without it,
+# the committed data/sample.jsonl stands as the sample.
+SRC = os.environ.get("XERO_ENUMERATION") or (sys.argv[1] if len(sys.argv) > 1 else None)
 random.seed(20261013)
+
+if SRC is None:
+    if OUT.exists():
+        n = sum(1 for _ in open(OUT))
+        print(f"sample: keeping committed {OUT} ({n} repos)")
+        print("regenerate with: XERO_ENUMERATION=/path/to/all-repos.jsonl "
+              "python3 code/sample.py   (or pass the path as an argument)")
+        sys.exit(0)
+    sys.exit("error: no enumeration supplied and no committed sample at "
+             f"{OUT} — set XERO_ENUMERATION or pass the enumeration path")
 
 rows = [json.loads(l) for l in open(SRC) if l.strip()]
 def tok(n): return re.split(r"[-_.]", n.lower())[0]

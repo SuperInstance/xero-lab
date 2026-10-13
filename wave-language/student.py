@@ -21,11 +21,11 @@ Training seeds are disjoint from every test seed (4242, 90210,
 
 Usage: python3 student.py [--doses 512,2048,8192] [--epochs 10]
 """
-import argparse, json, sys, time
+import argparse, json, os, sys, time
 from collections import Counter
 import numpy as np
 
-sys.path.insert(0, "/home/hatch/workspace/xero-wave-language")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import reading_test
 from sea import Sea, sample_stream, COMPASS
 from render import letter_index

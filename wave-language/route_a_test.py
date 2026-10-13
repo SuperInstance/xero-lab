@@ -20,7 +20,7 @@ import argparse, json, os, re, sys, time
 from collections import Counter
 import numpy as np
 
-sys.path.insert(0, "/home/hatch/workspace/xero-wave-language")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import reading_test
 from tuning_test import build_heldout, call_with_backoff, AbortRun
 from prereader import measure, estimator_answer, render_brief

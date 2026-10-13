@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 import json, random
+from pathlib import Path
 random.seed(777)
-DATA = "/home/hatch/workspace/xero-decision-grid/data"
+DATA = Path(__file__).resolve().parents[1] / "data"
 sample = [json.loads(l) for l in open(f"{DATA}/sample.jsonl")]
 spot = [r for r in sample if r["stratum"] == "spotlight"]
 rest = [r for r in sample if r["stratum"] != "spotlight"]

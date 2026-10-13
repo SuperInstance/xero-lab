@@ -5,9 +5,9 @@
   1.0
  ],
  "FAM_SMALL_vs_GOLD": [
-  203,
-  239,
-  0.8493723849372385
+  289,
+  395,
+  0.7316455696202532
  ],
  "FAM_BIG_vs_GOLD": [
   117,
@@ -15,9 +15,9 @@
   0.9831932773109243
  ],
  "FAM_SMALL_fidelity_BIG": [
-  62,
-  68,
-  0.9117647058823529
+  93,
+  119,
+  0.7815126050420168
  ],
  "FAM_ALGO_fidelity_BIG": [
   117,
@@ -26,29 +26,29 @@
  ],
  "FAM_SMALL_vs_GOLD_by_stratum": {
   "bigfam": [
-   155,
-   159,
-   0.9748427672955975
+   156,
+   160,
+   0.975
   ],
   "tail": [
-   32,
-   64,
-   0.5
+   59,
+   128,
+   0.4609375
   ],
   "nodesc": [
-   16,
-   16,
-   1.0
+   42,
+   48,
+   0.875
   ],
   "fork": [
-   0,
-   0,
-   0.0
+   23,
+   48,
+   0.4791666666666667
   ],
   "spotlight": [
-   0,
-   0,
-   0.0
+   9,
+   11,
+   0.8181818181818182
   ]
  },
  "FAM_SMALL_errors": [
@@ -209,62 +209,86 @@
    "tail"
   ],
   [
-   "forgemaster-shell",
-   "forge",
+   "jc1-research",
+   "jev",
    "OTHER",
    "tail"
   ],
   [
-   "garden",
-   "cocapn",
+   "openshell-compatibility-audit",
+   "open",
    "OTHER",
    "tail"
   ],
   [
-   "entropy-gpu-rs",
-   "gpu",
+   "lighthouse-monitor",
+   "fleet",
    "OTHER",
    "tail"
   ],
   [
-   "protein-conservation",
-   "conservation",
+   "openmind-conductor",
+   "open",
    "OTHER",
    "tail"
   ],
   [
-   "forgemaster",
-   "forge",
-   "OTHER",
-   "tail"
-  ],
-  [
-   "witness-is-prediction",
-   "substrate",
-   "OTHER",
-   "tail"
-  ],
-  [
-   "dojo-builder",
-   "agent",
-   "OTHER",
-   "tail"
-  ],
-  [
-   "keeper-agent",
+   "formal-consciousness",
    "flux",
    "OTHER",
    "tail"
   ],
   [
-   "linguistic-spectral",
+   "wire-harmony",
+   "superinstance",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "isa-convergence-tools",
+   "flux",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "tminus-music",
    "conservation",
    "OTHER",
    "tail"
   ],
   [
-   "c-ternary",
-   "ternary",
+   "galois-unification-proofs",
+   "constraint",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "casting-call-gpu",
+   "gpu",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "simd-perception-loop",
+   "fleet",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "beta-test-elena",
+   "superinstance",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "free-probability-rs",
+   "superinstance",
+   "OTHER",
+   "tail"
+  ],
+  [
+   "tminus-ecosystem-review",
+   "superinstance",
    "OTHER",
    "tail"
   ]
@@ -274,9 +298,9 @@
   "TRUST": 115
  },
  "TRAP_SMALL_vs_REF": [
-  32,
-  49,
-  0.6530612244897959
+  90,
+  119,
+  0.7563025210084033
  ],
  "TRAP_ALGO_vs_REF": [
   84,
@@ -284,9 +308,9 @@
   0.7058823529411765
  ],
  "TRAP_SMALL_confusion": {
-  "('SUSPECT', 'TRUST')": 1,
-  "('TRUST', 'SUSPECT')": 16,
-  "('TRUST', 'TRUST')": 31,
+  "('SUSPECT', 'TRUST')": 3,
+  "('TRUST', 'SUSPECT')": 26,
+  "('TRUST', 'TRUST')": 89,
   "('SUSPECT', 'SUSPECT')": 1
  },
  "TRAP_ALGO_confusion": {
@@ -296,9 +320,9 @@
   "('SUSPECT', 'TRUST')": 2
  },
  "TRAP_SMALL_vs_ALGO_agree": [
-  74,
-  138,
-  0.5362318840579711
+  238,
+  395,
+  0.6025316455696202
  ],
  "PILLAR_ALGO_vs_SILVER": {
   "n": 395,
@@ -308,11 +332,11 @@
   "overlap_rate": 0.7544303797468355
  },
  "PILLAR_SMALL_vs_SILVER": {
-  "n": 16,
-  "exact": 2,
-  "exact_rate": 0.125,
-  "overlap": 5,
-  "overlap_rate": 0.3125
+  "n": 395,
+  "exact": 130,
+  "exact_rate": 0.3291139240506329,
+  "overlap": 211,
+  "overlap_rate": 0.5341772151898734
  },
  "PILLAR_BIG_vs_SILVER": {
   "n": 119,
@@ -322,11 +346,11 @@
   "overlap_rate": 0.680672268907563
  },
  "PILLAR_SMALL_vs_REF": {
-  "n": 6,
-  "exact": 1,
-  "exact_rate": 0.16666666666666666,
-  "overlap": 1,
-  "overlap_rate": 0.16666666666666666
+  "n": 119,
+  "exact": 40,
+  "exact_rate": 0.33613445378151263,
+  "overlap": 56,
+  "overlap_rate": 0.47058823529411764
  },
  "PILLAR_REF_base": {
   "agent-as-files": 7,

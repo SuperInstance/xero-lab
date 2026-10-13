@@ -14,11 +14,11 @@ Same pool seed (555000 -> the identical training seas), same held-out
 optimization room). Labeled a diagnostic variant, not a replacement:
 route B's headline numbers stand as run.
 """
-import json, sys, time
+import json, os, sys, time
 from collections import Counter
 import numpy as np
 
-sys.path.insert(0, "/home/hatch/workspace/xero-wave-language")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import reading_test
 from sea import Sea, sample_stream, COMPASS
 from render import letter_index

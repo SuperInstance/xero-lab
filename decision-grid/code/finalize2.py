@@ -13,12 +13,13 @@ Staffing policy (run-1 policy, updated by re-run measurements + Jev):
          (SUBSTANCE cell not adopted — Jev pos 0.74)
 Units (same proxy as run 1): ALGO=0.001, SMALL=1, BIG=25, Jev=2/gated cell.
 Also regenerates data/decisions_small.jsonl from the completed cell files."""
-import json, sys, csv, re
+import json, sys, csv, re, os
 from collections import Counter
-sys.path.insert(0, "/home/hatch/workspace/xero-decision-grid/code")
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from standards import pillar_silver, disp_rule
 
-D = "/home/hatch/workspace/xero-decision-grid/data"
+D = Path(__file__).resolve().parents[1] / "data"
 sample = {json.loads(l)["name"]: json.loads(l) for l in open(f"{D}/sample.jsonl")}
 algo = {json.loads(l)["name"]: json.loads(l) for l in open(f"{D}/decisions_algo.jsonl")}
 big = {json.loads(l)["name"]: json.loads(l) for l in open(f"{D}/big_labels.jsonl")}
@@ -32,9 +33,18 @@ def load_small(cell):
     except FileNotFoundError: pass
     return d
 small = {c: load_small(c) for c in ["FAM", "TRAP", "PILLAR", "DISP"]}
-src = [json.loads(l) for l in open("/home/hatch/workspace/xero-research/superinstance/.scratch/all-repos.jsonl")]
-cnt = Counter(re.split(r"[-_.]", r["name"].lower())[0] for r in src)
-BIGTOKENS = {t for t, n in cnt.items() if n >= 12}
+def _bigtokens():
+    """First-token families with >=12 members account-wide. Counted from
+    the full enumeration when XERO_ENUMERATION points at it; otherwise
+    the committed sample's GOLD families — the same set for the repos
+    this sheet covers (their gold_family was computed from that count)."""
+    enum = os.environ.get("XERO_ENUMERATION")
+    if enum:
+        src = [json.loads(l) for l in open(enum)]
+        cnt = Counter(re.split(r"[-_.]", r["name"].lower())[0] for r in src)
+        return {t for t, n in cnt.items() if n >= 12}
+    return {r["gold_family"] for r in sample.values() if r["gold_family"] != "OTHER"}
+BIGTOKENS = _bigtokens()
 def fused(name):
     n = name.lower()
     if re.split(r"[-_.]", n)[0] in BIGTOKENS: return False

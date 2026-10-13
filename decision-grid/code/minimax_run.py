@@ -6,17 +6,29 @@ already present in the per-cell output file). DISP reads this decider's
 own FAM/PILLAR outputs (grid chaining)."""
 import json, re, subprocess, sys, os
 from collections import Counter
+from pathlib import Path
 
-CHAT = "/home/hatch/workspace/skills/minimax/bin/chat.py"
-DATA = "/home/hatch/workspace/xero-decision-grid/data"
+# The MiniMax chat CLI is an external tool (a script called as
+# `chat.py PROMPT --system SYS --max-tokens N`, printing the reply).
+# It is only invoked for cells not already answered in data/.
+CHAT = os.environ.get("MINIMAX_CHAT")
+DATA = Path(__file__).resolve().parents[1] / "data"
 CELL = sys.argv[1]
 BATCH = 16
 
 sample = [json.loads(l) for l in open(f"{DATA}/sample.jsonl")]
-src = [json.loads(l) for l in open("/home/hatch/workspace/xero-research/superinstance/.scratch/all-repos.jsonl")]
 def tok(n): return re.split(r"[-_.]", n.lower())[0]
-cnt = Counter(tok(r["name"]) for r in src)
-FAMS = sorted(t for t, n in cnt.items() if n >= 12)
+def _fams():
+    """Families with >=12 members account-wide: counted from the full
+    enumeration when XERO_ENUMERATION points at it, else the committed
+    sample's GOLD families (the same set for the sampled repos)."""
+    enum = os.environ.get("XERO_ENUMERATION")
+    if enum:
+        src = [json.loads(l) for l in open(enum)]
+        cnt = Counter(tok(r["name"]) for r in src)
+        return sorted(t for t, n in cnt.items() if n >= 12)
+    return sorted({r["gold_family"] for r in sample if r["gold_family"] != "OTHER"})
+FAMS = _fams()
 
 def load_cell(cell):
     p = f"{DATA}/small_{cell}.jsonl"
@@ -88,6 +100,12 @@ def main():
     done = load_cell(CELL)
     todo = [r for r in sample if r["name"] not in done]
     print(f"{CELL}: {len(done)} done, {len(todo)} to go", flush=True)
+    if todo and not (CHAT and os.path.exists(CHAT)):
+        sys.exit(f"error: {len(todo)} repos still need MiniMax calls but no "
+                 "MiniMax chat CLI was found. Point MINIMAX_CHAT at one:\n"
+                 "  MINIMAX_CHAT=/path/to/chat.py python3 code/minimax_run.py "
+                 f"{CELL}\n(The committed data/small_*.jsonl already cover "
+                 "the sample; scoring and finalize run without it.)")
     out = open(f"{DATA}/small_{CELL}.jsonl", "a")
     for i in range(0, len(todo), BATCH):
         batch = todo[i:i+BATCH]

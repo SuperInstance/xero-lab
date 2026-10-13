@@ -29,10 +29,19 @@ import argparse, json, os, re, sys, time
 import urllib.error
 import numpy as np
 
-sys.path.insert(0, "/home/hatch/workspace/skills/minimax/bin")
-from chat import chat
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-sys.path.insert(0, "/home/hatch/workspace/xero-wave-language")
+def _load_chat():
+    d = os.environ.get("MINIMAX_CHAT_DIR")
+    if d:
+        sys.path.insert(0, d)
+    try:
+        from chat import chat
+        return chat
+    except ImportError:
+        return None
+
+chat = _load_chat()
 from sea import Sea, sample_stream, COMPASS
 from render import assemble_stream
 from authoring import build_pool
@@ -197,6 +206,13 @@ def main():
 
     if args.analyze:
         return analyze(args.out)
+
+    if chat is None:
+        print("tuning_test needs a chat.py module (chat(messages, ...) -> API JSON) "
+              "to call the reader under test: set MINIMAX_CHAT_DIR to the folder "
+              "containing chat.py, or put that folder on PYTHONPATH. "
+              "--analyze works offline.", file=sys.stderr)
+        return 1
 
     examples = load_examples()
     print(f"examples verified: {len(examples)} (nested order {[e['answer'] for e in examples]})", flush=True)

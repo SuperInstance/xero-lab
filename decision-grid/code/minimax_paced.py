@@ -19,9 +19,12 @@ Prompts for the original four cells are copied verbatim from
 minimax_run.py so the re-run is measured against identical standards.
 """
 import json, re, subprocess, sys, os, time, datetime
+from pathlib import Path
 
-CHAT = "/home/hatch/workspace/skills/minimax/bin/chat.py"
-DATA = "/home/hatch/workspace/xero-decision-grid/data"
+# The MiniMax chat CLI is an external tool (see minimax_run.py); it is
+# only invoked for cells not already answered in data/.
+CHAT = os.environ.get("MINIMAX_CHAT")
+DATA = Path(__file__).resolve().parents[1] / "data"
 BATCH = 16
 PACE_S = 2.0
 BACKOFF_429 = [20, 45, 90]
@@ -38,11 +41,19 @@ def log_call(cell, batch_no, attempt, result):
 sample = [json.loads(l) for l in open(f"{DATA}/sample.jsonl")]
 big_names = [json.loads(l)["name"] for l in open(f"{DATA}/big_labels.jsonl")]
 by_name = {r["name"]: r for r in sample}
-src = [json.loads(l) for l in open("/home/hatch/workspace/xero-research/superinstance/.scratch/all-repos.jsonl")]
 def tok(n): return re.split(r"[-_.]", n.lower())[0]
 from collections import Counter
-cnt = Counter(tok(r["name"]) for r in src)
-FAMS = sorted(t for t, n in cnt.items() if n >= 12)
+def _fams():
+    """Families with >=12 members account-wide: counted from the full
+    enumeration when XERO_ENUMERATION points at it, else the committed
+    sample's GOLD families (the same set for the sampled repos)."""
+    enum = os.environ.get("XERO_ENUMERATION")
+    if enum:
+        src = [json.loads(l) for l in open(enum)]
+        cnt = Counter(tok(r["name"]) for r in src)
+        return sorted(t for t, n in cnt.items() if n >= 12)
+    return sorted({r["gold_family"] for r in sample if r["gold_family"] != "OTHER"})
+FAMS = _fams()
 
 def load_done(cell):
     """name -> value for non-MISSING entries (later lines win)."""
@@ -195,6 +206,10 @@ def run_cell(cell):
     aux = {}
     if cell == "DISP":
         aux = {"FAM": load_done("FAM"), "PILLAR": load_done("PILLAR")}
+    if todo and not (CHAT and os.path.exists(CHAT)):
+        raise Halt("MiniMax chat CLI not found — point MINIMAX_CHAT at one "
+                   "(MINIMAX_CHAT=/path/to/chat.py). The committed "
+                   "data/small_*.jsonl already cover the sample.")
     out = open(f"{DATA}/small_{cell}.jsonl", "a")
     nb = (len(todo) + BATCH - 1) // BATCH
     for i in range(0, len(todo), BATCH):

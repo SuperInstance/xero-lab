@@ -5,10 +5,11 @@ SMALL metrics are computed ONLY on instances MiniMax actually answered
 before the provider 429 hard-stop; n is always printed."""
 import json, sys
 from collections import Counter, defaultdict
-sys.path.insert(0, "/home/hatch/workspace/xero-decision-grid/code")
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from standards import pillar_silver, disp_rule
 
-D = "/home/hatch/workspace/xero-decision-grid/data"
+D = Path(__file__).resolve().parents[1] / "data"
 sample = {json.loads(l)["name"]: json.loads(l) for l in open(f"{D}/sample.jsonl")}
 algo = {json.loads(l)["name"]: json.loads(l) for l in open(f"{D}/decisions_algo.jsonl")}
 big = {json.loads(l)["name"]: json.loads(l) for l in open(f"{D}/big_labels.jsonl")}

@@ -4,10 +4,20 @@ of {kind: noul|choice, cell, target, context, question, true, false} or
 {kind: choice, options:{key:gloss}}. Executes sequentially, appends every
 call to data/jev_calls.jsonl in the run-1 format, prints verdicts.
 Band mapping (same as run 1): p>=0.70 pos, 0.40<p<0.70 zero, p<=0.40 neg."""
-import json, subprocess, sys
+import json, subprocess, sys, os
+from pathlib import Path
 
-JEV = "/home/hatch/workspace/skills/typesafe/bin/jev.py"
-D = "/home/hatch/workspace/xero-decision-grid/data"
+D = Path(__file__).resolve().parents[1] / "data"
+# The Jev CLI (jev.py, TypeSafe skill) is an external tool, not part of
+# this repo. Its committed re-run results live in
+# data/jev_rerun_results.json.
+JEV = os.environ.get("JEV_CLI")
+if not JEV or not os.path.exists(JEV):
+    sys.exit("jev_rerun.py needs the Jev gate CLI (jev.py). It is not in "
+             "this repo — point JEV_CLI at it:\n"
+             "  JEV_CLI=/path/to/jev.py python3 code/jev_rerun.py\n"
+             "Everything else in the pipeline runs from the committed "
+             "data without it.")
 
 def jev_noul(context, question, tgloss, fgloss):
     r = subprocess.run(["python3", JEV, "noul", context, question,
