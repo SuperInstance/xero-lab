@@ -1,0 +1,567 @@
+{
+ "title": "The Filing Agent",
+ "kind": "playthrough",
+ "gallery": "Xero Bootcamp Gallery",
+ "promise": "Watch it build; then it's yours.",
+ "agent": "A filing agent built from the zero agent: chat tosses utterances in, a gated cascade files them by day and topic, and an idle refine pass keeps topic views over everything. The ledger is the memory.",
+ "source": {
+  "prototype": "SuperInstance/xero-lab — filing-loop/ (filing_loop.py, demo.py)",
+  "engine": "cascade.js — a faithful port of the prototype, verified byte-for-byte on this fixture (VERIFY.md)",
+  "recordDerivedFrom": "trace.py — an instrumented run of the Python prototype on the demo fixture"
+ },
+ "config": {
+  "splitBytesReplay": 1000,
+  "splitBytesProduction": 60000,
+  "topicK": 8,
+  "note": "The replay tightens the size gate to 1,000 bytes (the prototype demo's own setting) so the cascade fires on a 35-deposit fixture; production default is 60,000 bytes ≈ 20 pages."
+ },
+ "fixture": {
+  "deposits": 35,
+  "chats": [
+   "telegram-main",
+   "zero-lab"
+  ],
+  "days": [
+   "2026-10-10",
+   "2026-10-11",
+   "2026-10-12"
+  ],
+  "note": "The prototype demo's synthetic deposits, replayed in their original order with their original timestamps."
+ },
+ "honesty": "Steps compress groups of deposits into single ticks; the narration says so where it happens. Every count, file list, and ledger line in this record is sliced from the trace of the real run — none is invented. The end state is the working cascade.",
+ "finalState": {
+  "files": 30,
+  "tree": [
+   "README.md",
+   "archive/telegram-main/2026-10-10.md",
+   "archive/telegram-main/2026-10-11.md",
+   "archive/telegram-main/2026-10-12/autopilot.md",
+   "archive/telegram-main/2026-10-12/compass.md",
+   "archive/telegram-main/2026-10-12/deadband.md",
+   "archive/telegram-main/2026-10-12/telegram.md",
+   "archive/telegram-main/2026-10-12/xero.md",
+   "archive/zero-lab/2026-10-10.md",
+   "archive/zero-lab/2026-10-11.md",
+   "inbox/telegram-main/current.md",
+   "inbox/zero-lab/current.md",
+   "topics/telegram-main/INDEX.md",
+   "topics/telegram-main/autopilot.md",
+   "topics/telegram-main/compass.md",
+   "topics/telegram-main/deadband.md",
+   "topics/telegram-main/heavy.md",
+   "topics/telegram-main/rams.md",
+   "topics/telegram-main/seas.md",
+   "topics/telegram-main/telegram.md",
+   "topics/telegram-main/xero.md",
+   "topics/zero-lab/INDEX.md",
+   "topics/zero-lab/agent.md",
+   "topics/zero-lab/brandons.md",
+   "topics/zero-lab/compass.md",
+   "topics/zero-lab/files.md",
+   "topics/zero-lab/heavy.md",
+   "topics/zero-lab/invoice.md",
+   "topics/zero-lab/rams.md",
+   "topics/zero-lab/seas.md"
+  ],
+  "entriesTotal": 35,
+  "entriesByChat": {
+   "telegram-main": 20,
+   "zero-lab": 15
+  },
+  "archiveFiles": 9,
+  "topicViews": 16,
+  "commits": 42
+ },
+ "steps": [
+  {
+   "id": 0,
+   "chapter": "0 · The blank page",
+   "title": "The blank page",
+   "narration": "The zero agent starts as a blank page — no files, no memory, nothing spent. Everything after this is additions.",
+   "action": "none",
+   "delta": {
+    "deposits": 0,
+    "filesAdded": [],
+    "filesRemoved": [],
+    "ledgerAdded": []
+   },
+   "state": {
+    "files": 0,
+    "tree": [],
+    "entriesTotal": 0,
+    "entriesByChat": {
+     "telegram-main": 0,
+     "zero-lab": 0
+    },
+    "archiveFiles": 0,
+    "topicViews": 0,
+    "commits": 0
+   }
+  },
+  {
+   "id": 1,
+   "chapter": "1 · A place to stand",
+   "title": "Init — the store appears",
+   "narration": "The store appears: one README and the first ledger entry. From here, nothing moves without being written down.",
+   "action": "init",
+   "delta": {
+    "deposits": 0,
+    "filesAdded": [
+     "README.md"
+    ],
+    "filesRemoved": [],
+    "ledgerAdded": [
+     "init: filing-loop store"
+    ]
+   },
+   "state": {
+    "files": 1,
+    "tree": [
+     "README.md"
+    ],
+    "entriesTotal": 0,
+    "entriesByChat": {
+     "telegram-main": 0,
+     "zero-lab": 0
+    },
+    "archiveFiles": 0,
+    "topicViews": 0,
+    "commits": 1
+   }
+  },
+  {
+   "id": 2,
+   "chapter": "2 · Talk lands",
+   "title": "Day one — talk lands in the inbox",
+   "narration": "Ten deposits land — five per chat, one an hour through day one. Each is its own ledger entry in the real run; the replay ticks them as a group. Talk becomes files: everything waits in the inbox.",
+   "action": "deposits",
+   "delta": {
+    "deposits": 10,
+    "filesAdded": [
+     "inbox/telegram-main/current.md",
+     "inbox/zero-lab/current.md"
+    ],
+    "filesRemoved": [],
+    "ledgerAdded": [
+     "deposit: telegram-main 2026-10-10T08:15:00-08:00",
+     "deposit: zero-lab 2026-10-10T08:15:00-08:00",
+     "deposit: telegram-main 2026-10-10T09:15:00-08:00",
+     "deposit: zero-lab 2026-10-10T09:15:00-08:00",
+     "deposit: telegram-main 2026-10-10T10:15:00-08:00",
+     "deposit: zero-lab 2026-10-10T10:15:00-08:00",
+     "deposit: telegram-main 2026-10-10T11:15:00-08:00",
+     "deposit: zero-lab 2026-10-10T11:15:00-08:00",
+     "deposit: telegram-main 2026-10-10T12:15:00-08:00",
+     "deposit: zero-lab 2026-10-10T12:15:00-08:00"
+    ]
+   },
+   "state": {
+    "files": 3,
+    "tree": [
+     "README.md",
+     "inbox/telegram-main/current.md",
+     "inbox/zero-lab/current.md"
+    ],
+    "entriesTotal": 10,
+    "entriesByChat": {
+     "telegram-main": 5,
+     "zero-lab": 5
+    },
+    "archiveFiles": 0,
+    "topicViews": 0,
+    "commits": 11
+   }
+  },
+  {
+   "id": 3,
+   "chapter": "2 · Talk lands",
+   "title": "Day two — the size gate fires",
+   "narration": "Ten more deposits. Mid-day, each inbox crosses the size gate — 1,000 bytes in this replay, 60,000 (≈20 pages) in production — and the cascade rolls both days into daily archive files. The inbox drains; nothing is lost.",
+   "action": "deposits+cascade",
+   "delta": {
+    "deposits": 10,
+    "filesAdded": [
+     "archive/telegram-main/2026-10-10.md",
+     "archive/telegram-main/2026-10-11.md",
+     "archive/zero-lab/2026-10-10.md",
+     "archive/zero-lab/2026-10-11.md"
+    ],
+    "filesRemoved": [],
+    "ledgerAdded": [
+     "deposit: telegram-main 2026-10-11T08:15:00-08:00",
+     "deposit: zero-lab 2026-10-11T08:15:00-08:00",
+     "deposit: telegram-main 2026-10-11T09:15:00-08:00",
+     "deposit: zero-lab 2026-10-11T09:15:00-08:00",
+     "deposit: telegram-main 2026-10-11T10:15:00-08:00",
+     "deposit: zero-lab 2026-10-11T10:15:00-08:00",
+     "deposit: telegram-main 2026-10-11T11:15:00-08:00",
+     "deposit: zero-lab 2026-10-11T11:15:00-08:00",
+     "split L1: zero-lab -> 2 daily file(s)",
+     "deposit: telegram-main 2026-10-11T12:15:00-08:00",
+     "split L1: telegram-main -> 2 daily file(s)",
+     "deposit: zero-lab 2026-10-11T12:15:00-08:00"
+    ]
+   },
+   "state": {
+    "files": 7,
+    "tree": [
+     "README.md",
+     "archive/telegram-main/2026-10-10.md",
+     "archive/telegram-main/2026-10-11.md",
+     "archive/zero-lab/2026-10-10.md",
+     "archive/zero-lab/2026-10-11.md",
+     "inbox/telegram-main/current.md",
+     "inbox/zero-lab/current.md"
+    ],
+    "entriesTotal": 20,
+    "entriesByChat": {
+     "telegram-main": 10,
+     "zero-lab": 10
+    },
+    "archiveFiles": 4,
+    "topicViews": 0,
+    "commits": 23
+   }
+  },
+  {
+   "id": 4,
+   "chapter": "3 · The burst",
+   "title": "Day three — the burst splits by topic",
+   "narration": "A ten-message burst, all on one day, one chat. The day alone crosses the gate, so it splits twice: out of the inbox into a daily file, then by topic into five files. The flat daily file exists only inside this step — created by the first split, consumed by the second.",
+   "action": "deposits+cascade",
+   "delta": {
+    "deposits": 10,
+    "filesAdded": [
+     "archive/telegram-main/2026-10-12/autopilot.md",
+     "archive/telegram-main/2026-10-12/compass.md",
+     "archive/telegram-main/2026-10-12/deadband.md",
+     "archive/telegram-main/2026-10-12/telegram.md",
+     "archive/telegram-main/2026-10-12/xero.md"
+    ],
+    "filesRemoved": [],
+    "ledgerAdded": [
+     "deposit: telegram-main 2026-10-12T08:15:00-08:00",
+     "deposit: telegram-main 2026-10-12T09:15:00-08:00",
+     "deposit: telegram-main 2026-10-12T10:15:00-08:00",
+     "deposit: telegram-main 2026-10-12T11:15:00-08:00",
+     "deposit: telegram-main 2026-10-12T12:15:00-08:00",
+     "deposit: telegram-main 2026-10-12T13:15:00-08:00",
+     "deposit: telegram-main 2026-10-12T14:15:00-08:00",
+     "deposit: telegram-main 2026-10-12T15:15:00-08:00",
+     "deposit: telegram-main 2026-10-12T16:15:00-08:00",
+     "deposit: telegram-main 2026-10-12T17:15:00-08:00",
+     "split L1: telegram-main -> 1 daily file(s)",
+     "split L2: telegram-main 2026-10-12 -> 5 topic file(s)"
+    ]
+   },
+   "state": {
+    "files": 12,
+    "tree": [
+     "README.md",
+     "archive/telegram-main/2026-10-10.md",
+     "archive/telegram-main/2026-10-11.md",
+     "archive/telegram-main/2026-10-12/autopilot.md",
+     "archive/telegram-main/2026-10-12/compass.md",
+     "archive/telegram-main/2026-10-12/deadband.md",
+     "archive/telegram-main/2026-10-12/telegram.md",
+     "archive/telegram-main/2026-10-12/xero.md",
+     "archive/zero-lab/2026-10-10.md",
+     "archive/zero-lab/2026-10-11.md",
+     "inbox/telegram-main/current.md",
+     "inbox/zero-lab/current.md"
+    ],
+    "entriesTotal": 30,
+    "entriesByChat": {
+     "telegram-main": 20,
+     "zero-lab": 10
+    },
+    "archiveFiles": 9,
+    "topicViews": 0,
+    "commits": 35
+   }
+  },
+  {
+   "id": 5,
+   "chapter": "3 · The burst",
+   "title": "Day three — the quiet channel waits",
+   "narration": "Five quieter deposits on the other chat. No gate fires; they wait in the inbox. Filing is patient — the cascade only moves what crosses a gate.",
+   "action": "deposits",
+   "delta": {
+    "deposits": 5,
+    "filesAdded": [],
+    "filesRemoved": [],
+    "ledgerAdded": [
+     "deposit: zero-lab 2026-10-12T08:15:00-08:00",
+     "deposit: zero-lab 2026-10-12T09:15:00-08:00",
+     "deposit: zero-lab 2026-10-12T10:15:00-08:00",
+     "deposit: zero-lab 2026-10-12T11:15:00-08:00",
+     "deposit: zero-lab 2026-10-12T12:15:00-08:00"
+    ]
+   },
+   "state": {
+    "files": 12,
+    "tree": [
+     "README.md",
+     "archive/telegram-main/2026-10-10.md",
+     "archive/telegram-main/2026-10-11.md",
+     "archive/telegram-main/2026-10-12/autopilot.md",
+     "archive/telegram-main/2026-10-12/compass.md",
+     "archive/telegram-main/2026-10-12/deadband.md",
+     "archive/telegram-main/2026-10-12/telegram.md",
+     "archive/telegram-main/2026-10-12/xero.md",
+     "archive/zero-lab/2026-10-10.md",
+     "archive/zero-lab/2026-10-11.md",
+     "inbox/telegram-main/current.md",
+     "inbox/zero-lab/current.md"
+    ],
+    "entriesTotal": 35,
+    "entriesByChat": {
+     "telegram-main": 20,
+     "zero-lab": 15
+    },
+    "archiveFiles": 9,
+    "topicViews": 0,
+    "commits": 40
+   }
+  },
+  {
+   "id": 6,
+   "chapter": "4 · Idle churn",
+   "title": "Refine — telegram-main gets topic views",
+   "narration": "Idle churn: refine reads every source entry — inbox plus archive, never the views — and builds topic views with an index. Topics here are a word-frequency heuristic: the marked seam where a smarter pass slots in later.",
+   "action": "refine",
+   "delta": {
+    "deposits": 0,
+    "filesAdded": [
+     "topics/telegram-main/INDEX.md",
+     "topics/telegram-main/autopilot.md",
+     "topics/telegram-main/compass.md",
+     "topics/telegram-main/deadband.md",
+     "topics/telegram-main/heavy.md",
+     "topics/telegram-main/rams.md",
+     "topics/telegram-main/seas.md",
+     "topics/telegram-main/telegram.md",
+     "topics/telegram-main/xero.md"
+    ],
+    "filesRemoved": [],
+    "ledgerAdded": [
+     "refine: telegram-main topics (compass, autopilot, seas, deadband, rams, xero, telegram, heavy)"
+    ]
+   },
+   "state": {
+    "files": 21,
+    "tree": [
+     "README.md",
+     "archive/telegram-main/2026-10-10.md",
+     "archive/telegram-main/2026-10-11.md",
+     "archive/telegram-main/2026-10-12/autopilot.md",
+     "archive/telegram-main/2026-10-12/compass.md",
+     "archive/telegram-main/2026-10-12/deadband.md",
+     "archive/telegram-main/2026-10-12/telegram.md",
+     "archive/telegram-main/2026-10-12/xero.md",
+     "archive/zero-lab/2026-10-10.md",
+     "archive/zero-lab/2026-10-11.md",
+     "inbox/telegram-main/current.md",
+     "inbox/zero-lab/current.md",
+     "topics/telegram-main/INDEX.md",
+     "topics/telegram-main/autopilot.md",
+     "topics/telegram-main/compass.md",
+     "topics/telegram-main/deadband.md",
+     "topics/telegram-main/heavy.md",
+     "topics/telegram-main/rams.md",
+     "topics/telegram-main/seas.md",
+     "topics/telegram-main/telegram.md",
+     "topics/telegram-main/xero.md"
+    ],
+    "entriesTotal": 35,
+    "entriesByChat": {
+     "telegram-main": 20,
+     "zero-lab": 15
+    },
+    "archiveFiles": 9,
+    "topicViews": 8,
+    "commits": 41
+   }
+  },
+  {
+   "id": 7,
+   "chapter": "4 · Idle churn",
+   "title": "Refine — zero-lab completes the build",
+   "narration": "Refine does the same for the second chat. Thirty files, thirty-five entries, forty-two ledger entries: the build is complete.",
+   "action": "refine",
+   "delta": {
+    "deposits": 0,
+    "filesAdded": [
+     "topics/zero-lab/INDEX.md",
+     "topics/zero-lab/agent.md",
+     "topics/zero-lab/brandons.md",
+     "topics/zero-lab/compass.md",
+     "topics/zero-lab/files.md",
+     "topics/zero-lab/heavy.md",
+     "topics/zero-lab/invoice.md",
+     "topics/zero-lab/rams.md",
+     "topics/zero-lab/seas.md"
+    ],
+    "filesRemoved": [],
+    "ledgerAdded": [
+     "refine: zero-lab topics (agent, compass, files, heavy, seas, rams, invoice, brandons)"
+    ]
+   },
+   "state": {
+    "files": 30,
+    "tree": [
+     "README.md",
+     "archive/telegram-main/2026-10-10.md",
+     "archive/telegram-main/2026-10-11.md",
+     "archive/telegram-main/2026-10-12/autopilot.md",
+     "archive/telegram-main/2026-10-12/compass.md",
+     "archive/telegram-main/2026-10-12/deadband.md",
+     "archive/telegram-main/2026-10-12/telegram.md",
+     "archive/telegram-main/2026-10-12/xero.md",
+     "archive/zero-lab/2026-10-10.md",
+     "archive/zero-lab/2026-10-11.md",
+     "inbox/telegram-main/current.md",
+     "inbox/zero-lab/current.md",
+     "topics/telegram-main/INDEX.md",
+     "topics/telegram-main/autopilot.md",
+     "topics/telegram-main/compass.md",
+     "topics/telegram-main/deadband.md",
+     "topics/telegram-main/heavy.md",
+     "topics/telegram-main/rams.md",
+     "topics/telegram-main/seas.md",
+     "topics/telegram-main/telegram.md",
+     "topics/telegram-main/xero.md",
+     "topics/zero-lab/INDEX.md",
+     "topics/zero-lab/agent.md",
+     "topics/zero-lab/brandons.md",
+     "topics/zero-lab/compass.md",
+     "topics/zero-lab/files.md",
+     "topics/zero-lab/heavy.md",
+     "topics/zero-lab/invoice.md",
+     "topics/zero-lab/rams.md",
+     "topics/zero-lab/seas.md"
+    ],
+    "entriesTotal": 35,
+    "entriesByChat": {
+     "telegram-main": 20,
+     "zero-lab": 15
+    },
+    "archiveFiles": 9,
+    "topicViews": 16,
+    "commits": 42
+   }
+  },
+  {
+   "id": 8,
+   "chapter": "5 · Proof",
+   "title": "Refine again — nothing moves",
+   "narration": "Run refine again and nothing moves — every regenerated view is byte-identical, so the ledger stays at 42. A filing system you can re-run without fear.",
+   "action": "refine",
+   "delta": {
+    "deposits": 0,
+    "filesAdded": [],
+    "filesRemoved": [],
+    "ledgerAdded": []
+   },
+   "state": {
+    "files": 30,
+    "tree": [
+     "README.md",
+     "archive/telegram-main/2026-10-10.md",
+     "archive/telegram-main/2026-10-11.md",
+     "archive/telegram-main/2026-10-12/autopilot.md",
+     "archive/telegram-main/2026-10-12/compass.md",
+     "archive/telegram-main/2026-10-12/deadband.md",
+     "archive/telegram-main/2026-10-12/telegram.md",
+     "archive/telegram-main/2026-10-12/xero.md",
+     "archive/zero-lab/2026-10-10.md",
+     "archive/zero-lab/2026-10-11.md",
+     "inbox/telegram-main/current.md",
+     "inbox/zero-lab/current.md",
+     "topics/telegram-main/INDEX.md",
+     "topics/telegram-main/autopilot.md",
+     "topics/telegram-main/compass.md",
+     "topics/telegram-main/deadband.md",
+     "topics/telegram-main/heavy.md",
+     "topics/telegram-main/rams.md",
+     "topics/telegram-main/seas.md",
+     "topics/telegram-main/telegram.md",
+     "topics/telegram-main/xero.md",
+     "topics/zero-lab/INDEX.md",
+     "topics/zero-lab/agent.md",
+     "topics/zero-lab/brandons.md",
+     "topics/zero-lab/compass.md",
+     "topics/zero-lab/files.md",
+     "topics/zero-lab/heavy.md",
+     "topics/zero-lab/invoice.md",
+     "topics/zero-lab/rams.md",
+     "topics/zero-lab/seas.md"
+    ],
+    "entriesTotal": 35,
+    "entriesByChat": {
+     "telegram-main": 20,
+     "zero-lab": 15
+    },
+    "archiveFiles": 9,
+    "topicViews": 16,
+    "commits": 42
+   }
+  },
+  {
+   "id": 9,
+   "chapter": "6 · Working state",
+   "title": "Working state — it's yours",
+   "narration": "This is the working state, not a picture of it. The same cascade engine that just replayed the build is live below: paste your own notes and watch them file themselves.",
+   "action": "handoff",
+   "delta": {
+    "deposits": 0,
+    "filesAdded": [],
+    "filesRemoved": [],
+    "ledgerAdded": []
+   },
+   "state": {
+    "files": 30,
+    "tree": [
+     "README.md",
+     "archive/telegram-main/2026-10-10.md",
+     "archive/telegram-main/2026-10-11.md",
+     "archive/telegram-main/2026-10-12/autopilot.md",
+     "archive/telegram-main/2026-10-12/compass.md",
+     "archive/telegram-main/2026-10-12/deadband.md",
+     "archive/telegram-main/2026-10-12/telegram.md",
+     "archive/telegram-main/2026-10-12/xero.md",
+     "archive/zero-lab/2026-10-10.md",
+     "archive/zero-lab/2026-10-11.md",
+     "inbox/telegram-main/current.md",
+     "inbox/zero-lab/current.md",
+     "topics/telegram-main/INDEX.md",
+     "topics/telegram-main/autopilot.md",
+     "topics/telegram-main/compass.md",
+     "topics/telegram-main/deadband.md",
+     "topics/telegram-main/heavy.md",
+     "topics/telegram-main/rams.md",
+     "topics/telegram-main/seas.md",
+     "topics/telegram-main/telegram.md",
+     "topics/telegram-main/xero.md",
+     "topics/zero-lab/INDEX.md",
+     "topics/zero-lab/agent.md",
+     "topics/zero-lab/brandons.md",
+     "topics/zero-lab/compass.md",
+     "topics/zero-lab/files.md",
+     "topics/zero-lab/heavy.md",
+     "topics/zero-lab/invoice.md",
+     "topics/zero-lab/rams.md",
+     "topics/zero-lab/seas.md"
+    ],
+    "entriesTotal": 35,
+    "entriesByChat": {
+     "telegram-main": 20,
+     "zero-lab": 15
+    },
+    "archiveFiles": 9,
+    "topicViews": 16,
+    "commits": 42
+   }
+  }
+ ]
+}

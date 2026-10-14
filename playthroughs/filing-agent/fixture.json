@@ -1,0 +1,212 @@
+[
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-10T08:15:00-08:00",
+  "text": "autopilot yaw test in heavy seas: the compass swings but the deadband holds",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-10T08:15:00-08:00",
+  "text": "xero clone for the uno board: build in git, sync the winning commits down",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-10T09:15:00-08:00",
+  "text": "compass deviation on this heading is two degrees, note it in the logbook",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-10T09:15:00-08:00",
+  "text": "telegram injection for the zero agent, memory files ride the prompt",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-10T10:15:00-08:00",
+  "text": "the steering rams answer slower in cold oil, widen the gate a little",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-10T10:15:00-08:00",
+  "text": "the zero agent is just files, any harness can crank the same files",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-10T11:15:00-08:00",
+  "text": "deadband question: how far off course before the autopilot corrects",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-10T11:15:00-08:00",
+  "text": "uno pin idea: click to talk, the agent answers locally or reaches out",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-10T12:15:00-08:00",
+  "text": "heavy seas again, the compass card hunts, time delay saves the rams",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-10T12:15:00-08:00",
+  "text": "agent contracts are algorithms, log the transaction not the voltage",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-11T08:15:00-08:00",
+  "text": "invoice for the brandons job goes out monday, jim has the hours",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-11T08:15:00-08:00",
+  "text": "autopilot yaw test in heavy seas: the compass swings but the deadband holds",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-11T09:15:00-08:00",
+  "text": "mouse the dog rode the skiff to the harbor, sitka sun for once",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-11T09:15:00-08:00",
+  "text": "compass deviation on this heading is two degrees, note it in the logbook",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-11T10:15:00-08:00",
+  "text": "harbor fuel dock opens early, top up before the weekend fleet",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-11T10:15:00-08:00",
+  "text": "the steering rams answer slower in cold oil, widen the gate a little",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-11T11:15:00-08:00",
+  "text": "sitka tide table says low water at six, plan the haul around it",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-11T11:15:00-08:00",
+  "text": "deadband question: how far off course before the autopilot corrects",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-11T12:15:00-08:00",
+  "text": "the invoice total changed, brandons added the mailbox migration",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-11T12:15:00-08:00",
+  "text": "heavy seas again, the compass card hunts, time delay saves the rams",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-12T08:15:00-08:00",
+  "text": "autopilot compass deadband rams seas yaw logbook heading oil gate",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-12T09:15:00-08:00",
+  "text": "xero uno clone telegram injection agent files harness commits sync",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-12T10:15:00-08:00",
+  "text": "autopilot deadband again: compass swing, rams lag, seas building",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-12T11:15:00-08:00",
+  "text": "xero agent memory: telegram deposits become files, files become xero",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-12T12:15:00-08:00",
+  "text": "compass card sticky at north, check the compass fluid this week",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-12T13:15:00-08:00",
+  "text": "uno redshirt build: xero on the metal, telegram stays in the cloud",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-12T14:15:00-08:00",
+  "text": "rams chatter at the gate edge, deadband or worn seals, watch it",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-12T15:15:00-08:00",
+  "text": "telegram bot cannot read its own history, injection is the memory",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-12T16:15:00-08:00",
+  "text": "seas forecast heavy friday, autopilot sea trial waits for monday",
+  "source": "telegram"
+ },
+ {
+  "chat": "telegram-main",
+  "ts": "2026-10-12T17:15:00-08:00",
+  "text": "clone the xero repo, the uno board syncs at the dock on wifi",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-12T08:15:00-08:00",
+  "text": "invoice for the brandons job goes out monday, jim has the hours",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-12T09:15:00-08:00",
+  "text": "mouse the dog rode the skiff to the harbor, sitka sun for once",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-12T10:15:00-08:00",
+  "text": "harbor fuel dock opens early, top up before the weekend fleet",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-12T11:15:00-08:00",
+  "text": "sitka tide table says low water at six, plan the haul around it",
+  "source": "telegram"
+ },
+ {
+  "chat": "zero-lab",
+  "ts": "2026-10-12T12:15:00-08:00",
+  "text": "the invoice total changed, brandons added the mailbox migration",
+  "source": "telegram"
+ }
+]
