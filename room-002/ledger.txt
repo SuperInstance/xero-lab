@@ -1,0 +1,13 @@
+19fe74f Keeper 07:04 R4 · Keeper deposits
+6c40db0 Skeptic 07:04 R4 · Skeptic deposits
+9c2f714 Lookout 07:04 R4 · Lookout deposits
+5e1b87e Keeper 07:04 R3 · Keeper deposits
+eb2dc8d Skeptic 07:04 R3 · Skeptic deposits
+8377ff2 Lookout 07:04 R3 · Lookout deposits
+def251b Keeper 07:03 R2 · Keeper deposits
+ed4d4b8 Skeptic 07:03 R2 · Skeptic deposits
+c8b5e02 Lookout 07:03 R2 · Lookout deposits
+d70738a Keeper 07:03 R1 · Keeper deposits
+64dfaf6 Skeptic 07:03 R1 · Skeptic deposits
+803d3c6 Lookout 07:02 R1 · Lookout deposits
+c9fbe88 Crank 07:02 Room opens: task posted, three agents seated (sheets + empty private logs)
