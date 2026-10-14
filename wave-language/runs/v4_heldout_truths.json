@@ -1,0 +1,470 @@
+{
+ "0": {
+  "direction": "W",
+  "period_s": 6.0,
+  "trend": "easing",
+  "sets": 5,
+  "amp_dom_m": 0.87,
+  "env_phase0_s": 16.63,
+  "generator": "2",
+  "secondary": {
+   "direction": "SW",
+   "period_s": 5.0
+  }
+ },
+ "1": {
+  "direction": "N",
+  "period_s": 9.0,
+  "trend": "steady",
+  "sets": 4,
+  "amp_dom_m": 1.03,
+  "env_phase0_s": 38.0,
+  "generator": "2",
+  "secondary": {
+   "direction": "NE",
+   "period_s": 7.1
+  }
+ },
+ "2": {
+  "direction": "NE",
+  "period_s": 8.0,
+  "trend": "building",
+  "sets": 5,
+  "amp_dom_m": 0.97,
+  "env_phase0_s": 9.7,
+  "generator": "2",
+  "secondary": {
+   "direction": "E",
+   "period_s": 8.9
+  }
+ },
+ "3": {
+  "direction": "SW",
+  "period_s": 6.0,
+  "trend": "building",
+  "sets": 4,
+  "amp_dom_m": 1.18,
+  "env_phase0_s": 0.91,
+  "generator": "2",
+  "secondary": {
+   "direction": "W",
+   "period_s": 4.5
+  }
+ },
+ "4": {
+  "direction": "W",
+  "period_s": 6.0,
+  "trend": "steady",
+  "sets": 5,
+  "amp_dom_m": 1.19,
+  "env_phase0_s": 14.15,
+  "generator": "2",
+  "secondary": {
+   "direction": "NW",
+   "period_s": 8.0
+  }
+ },
+ "5": {
+  "direction": "S",
+  "period_s": 10.0,
+  "trend": "steady",
+  "sets": "none",
+  "amp_dom_m": 1.05,
+  "env_phase0_s": 0.0,
+  "generator": "2",
+  "secondary": {
+   "direction": "SE",
+   "period_s": 10.7
+  }
+ },
+ "6": {
+  "direction": "SE",
+  "period_s": 7.0,
+  "trend": "easing",
+  "sets": 3,
+  "amp_dom_m": 0.91,
+  "env_phase0_s": 7.65,
+  "generator": "2",
+  "secondary": {
+   "direction": "W",
+   "period_s": 9.4
+  }
+ },
+ "7": {
+  "direction": "SE",
+  "period_s": 6.0,
+  "trend": "building",
+  "sets": 5,
+  "amp_dom_m": 1.14,
+  "env_phase0_s": 22.93,
+  "generator": "2",
+  "secondary": {
+   "direction": "NE",
+   "period_s": 8.7
+  }
+ },
+ "8": {
+  "direction": "E",
+  "period_s": 6.0,
+  "trend": "steady",
+  "sets": 4,
+  "amp_dom_m": 1.0,
+  "env_phase0_s": 9.97,
+  "generator": "2",
+  "secondary": {
+   "direction": "NW",
+   "period_s": 4.7
+  }
+ },
+ "9": {
+  "direction": "NW",
+  "period_s": 10.0,
+  "trend": "easing",
+  "sets": 3,
+  "amp_dom_m": 1.01,
+  "env_phase0_s": 9.42,
+  "generator": "2",
+  "secondary": {
+   "direction": "E",
+   "period_s": 10.5
+  }
+ },
+ "10": {
+  "direction": "NW",
+  "period_s": 7.0,
+  "trend": "easing",
+  "sets": 4,
+  "amp_dom_m": 1.21,
+  "env_phase0_s": 1.89,
+  "generator": "2",
+  "secondary": {
+   "direction": "SW",
+   "period_s": 9.8
+  }
+ },
+ "11": {
+  "direction": "SE",
+  "period_s": 9.0,
+  "trend": "building",
+  "sets": "none",
+  "amp_dom_m": 0.95,
+  "env_phase0_s": 0.0,
+  "generator": "2",
+  "secondary": {
+   "direction": "E",
+   "period_s": 12.3
+  }
+ },
+ "12": {
+  "direction": "W",
+  "period_s": 8.0,
+  "trend": "easing",
+  "sets": 4,
+  "amp_dom_m": 0.86,
+  "env_phase0_s": 31.46,
+  "generator": "2",
+  "secondary": {
+   "direction": "S",
+   "period_s": 9.9
+  }
+ },
+ "13": {
+  "direction": "W",
+  "period_s": 7.0,
+  "trend": "building",
+  "sets": 3,
+  "amp_dom_m": 1.06,
+  "env_phase0_s": 21.21,
+  "generator": "2",
+  "secondary": {
+   "direction": "NE",
+   "period_s": 7.9
+  }
+ },
+ "14": {
+  "direction": "N",
+  "period_s": 9.0,
+  "trend": "easing",
+  "sets": 4,
+  "amp_dom_m": 0.95,
+  "env_phase0_s": 29.27,
+  "generator": "2",
+  "secondary": {
+   "direction": "W",
+   "period_s": 6.9
+  }
+ },
+ "15": {
+  "direction": "NE",
+  "period_s": 10.0,
+  "trend": "steady",
+  "sets": "none",
+  "amp_dom_m": 1.15,
+  "env_phase0_s": 0.0,
+  "generator": "2",
+  "secondary": {
+   "direction": "NW",
+   "period_s": 12.8
+  }
+ },
+ "16": {
+  "direction": "S",
+  "period_s": 9.0,
+  "trend": "easing",
+  "sets": 3,
+  "amp_dom_m": 1.0,
+  "env_phase0_s": 30.44,
+  "generator": "2",
+  "secondary": {
+   "direction": "NE",
+   "period_s": 7.8
+  }
+ },
+ "17": {
+  "direction": "E",
+  "period_s": 9.0,
+  "trend": "building",
+  "sets": 3,
+  "amp_dom_m": 0.97,
+  "env_phase0_s": 37.5,
+  "generator": "2",
+  "secondary": {
+   "direction": "SW",
+   "period_s": 8.9
+  }
+ },
+ "18": {
+  "direction": "S",
+  "period_s": 6.0,
+  "trend": "building",
+  "sets": "none",
+  "amp_dom_m": 1.24,
+  "env_phase0_s": 0.0,
+  "generator": "2",
+  "secondary": {
+   "direction": "NE",
+   "period_s": 7.3
+  }
+ },
+ "19": {
+  "direction": "SW",
+  "period_s": 7.0,
+  "trend": "steady",
+  "sets": 5,
+  "amp_dom_m": 0.89,
+  "env_phase0_s": 18.96,
+  "generator": "2",
+  "secondary": {
+   "direction": "W",
+   "period_s": 7.9
+  }
+ },
+ "20": {
+  "direction": "N",
+  "period_s": 8.0,
+  "trend": "steady",
+  "sets": 3,
+  "amp_dom_m": 1.16,
+  "env_phase0_s": 33.82,
+  "generator": "2",
+  "secondary": {
+   "direction": "NE",
+   "period_s": 10.7
+  }
+ },
+ "21": {
+  "direction": "NE",
+  "period_s": 8.0,
+  "trend": "steady",
+  "sets": 3,
+  "amp_dom_m": 1.22,
+  "env_phase0_s": 32.69,
+  "generator": "2",
+  "secondary": {
+   "direction": "N",
+   "period_s": 6.6
+  }
+ },
+ "22": {
+  "direction": "NW",
+  "period_s": 7.0,
+  "trend": "steady",
+  "sets": 3,
+  "amp_dom_m": 0.91,
+  "env_phase0_s": 6.74,
+  "generator": "2",
+  "secondary": {
+   "direction": "NE",
+   "period_s": 10.1
+  }
+ },
+ "23": {
+  "direction": "NE",
+  "period_s": 7.0,
+  "trend": "easing",
+  "sets": "none",
+  "amp_dom_m": 1.13,
+  "env_phase0_s": 0.0,
+  "generator": "2",
+  "secondary": {
+   "direction": "NW",
+   "period_s": 9.3
+  }
+ },
+ "24": {
+  "direction": "N",
+  "period_s": 8.0,
+  "trend": "steady",
+  "sets": 4,
+  "amp_dom_m": 1.22,
+  "env_phase0_s": 7.66,
+  "generator": "2",
+  "secondary": {
+   "direction": "SW",
+   "period_s": 9.9
+  }
+ },
+ "25": {
+  "direction": "E",
+  "period_s": 10.0,
+  "trend": "building",
+  "sets": 5,
+  "amp_dom_m": 1.22,
+  "env_phase0_s": 41.67,
+  "generator": "2",
+  "secondary": {
+   "direction": "S",
+   "period_s": 10.8
+  }
+ },
+ "26": {
+  "direction": "SW",
+  "period_s": 10.0,
+  "trend": "easing",
+  "sets": 3,
+  "amp_dom_m": 1.1,
+  "env_phase0_s": 18.82,
+  "generator": "2",
+  "secondary": {
+   "direction": "W",
+   "period_s": 8.0
+  }
+ },
+ "27": {
+  "direction": "S",
+  "period_s": 10.0,
+  "trend": "easing",
+  "sets": "none",
+  "amp_dom_m": 1.08,
+  "env_phase0_s": 0.0,
+  "generator": "2",
+  "secondary": {
+   "direction": "NW",
+   "period_s": 12.8
+  }
+ },
+ "28": {
+  "direction": "E",
+  "period_s": 9.0,
+  "trend": "easing",
+  "sets": "none",
+  "amp_dom_m": 0.96,
+  "env_phase0_s": 0.0,
+  "generator": "2",
+  "secondary": {
+   "direction": "SW",
+   "period_s": 7.7
+  }
+ },
+ "29": {
+  "direction": "N",
+  "period_s": 8.0,
+  "trend": "steady",
+  "sets": 4,
+  "amp_dom_m": 1.24,
+  "env_phase0_s": 13.65,
+  "generator": "2",
+  "secondary": {
+   "direction": "SE",
+   "period_s": 5.8
+  }
+ },
+ "30": {
+  "direction": "NE",
+  "period_s": 10.0,
+  "trend": "building",
+  "sets": 5,
+  "amp_dom_m": 1.02,
+  "env_phase0_s": 19.89,
+  "generator": "2",
+  "secondary": {
+   "direction": "E",
+   "period_s": 10.1
+  }
+ },
+ "31": {
+  "direction": "SE",
+  "period_s": 8.0,
+  "trend": "easing",
+  "sets": 4,
+  "amp_dom_m": 0.95,
+  "env_phase0_s": 2.03,
+  "generator": "2",
+  "secondary": {
+   "direction": "N",
+   "period_s": 6.3
+  }
+ },
+ "32": {
+  "direction": "SE",
+  "period_s": 6.0,
+  "trend": "building",
+  "sets": 5,
+  "amp_dom_m": 1.15,
+  "env_phase0_s": 16.78,
+  "generator": "2",
+  "secondary": {
+   "direction": "W",
+   "period_s": 4.8
+  }
+ },
+ "33": {
+  "direction": "E",
+  "period_s": 9.0,
+  "trend": "building",
+  "sets": 5,
+  "amp_dom_m": 0.94,
+  "env_phase0_s": 43.01,
+  "generator": "2",
+  "secondary": {
+   "direction": "N",
+   "period_s": 6.3
+  }
+ },
+ "34": {
+  "direction": "SW",
+  "period_s": 7.0,
+  "trend": "steady",
+  "sets": "none",
+  "amp_dom_m": 1.16,
+  "env_phase0_s": 0.0,
+  "generator": "2",
+  "secondary": {
+   "direction": "NW",
+   "period_s": 8.2
+  }
+ },
+ "35": {
+  "direction": "NW",
+  "period_s": 6.0,
+  "trend": "building",
+  "sets": "none",
+  "amp_dom_m": 0.85,
+  "env_phase0_s": 0.0,
+  "generator": "2",
+  "secondary": {
+   "direction": "N",
+   "period_s": 4.5
+  }
+ }
+}

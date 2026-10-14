@@ -460,3 +460,158 @@ brief), `route_a_test.py` (estimators-alone + brief-only judge run),
 `runs/v3_routeA_results.jsonl`, `runs/v3_routeA_log.txt`,
 `runs/v3_routeB_results.json`, `runs/v3_routeB_log.txt`,
 `runs/v3_routeB2_results.json`, `runs/v3_routeB2_log.txt`.
+
+## v4 — envelope-aware measurement (2026-10-13)
+
+v3's "what's next" located the remaining problem precisely: trend's
+slope statistic fights the set envelope, and the sets estimator
+declines on the 25% of windows too truncated to hold one complete
+set. v4 attacks both with the same idea — **measure the envelope's
+trajectory explicitly instead of letting it contaminate (trend) or
+truncate (sets) the statistic** — and evaluates on 36 fresh seas
+(seed 1000003, disjoint from every earlier seed, generator v2,
+balanced labels, v1's scorer unchanged). Both instruments ran on
+the *same* seas, so every comparison below is exactly paired;
+direction/period under v4 import v3's identical estimators, making
+this run their regression check as well.
+
+### Trend — the envelope as a covariate, not a contaminant
+
+Per-wave crest amplitudes (wave grid anchored on the buoy peaks,
+amplitude = the field's robust crest-to-trough half-range per wave)
+are regressed as
+
+    log A_k = a + b*u_k + c*log Ê(φ_k)
+
+where Ê(φ_k) is the family envelope shape at wave k's reconstructed
+position in its group cycle (phase from the marker channel's
+set-starts; group period from observed spacings or (N̂+1.4)·T̂).
+The class is read from the fitted slope **b alone** — the trend
+with the envelope held as a covariate. Thresholds are set a priori
+from the generator's ramp geometry (building/easing ramps run
+0.62 → 1.38, a log ratio of ≈0.80; the steady wobble is ±4%;
+gate at |b| = 0.25), not fitted to the test set; a high-residual
+fit still declines as "ambiguous" (it fired zero times here).
+
+### Sets — reasoning about partial groups
+
+v3's run/cycle routes run first, untouched. Two routes are added
+before the estimator may decline:
+
+- **spacing+prior**: set-start-to-set-start spacing is a complete
+  group cycle even when every set and lull inside it is
+  edge-truncated; combined with the family lull constant (lull =
+  1.4 periods) it pins N, cross-checked against any complete lull.
+  (On this seed it never got to fire — see the residual corner
+  below: the truncated seas here each show only *one* interior set
+  start, so no spacing exists to measure.)
+- **envelope matched filter**: the observed amplitude envelope —
+  the dominant train's projected FFT-coefficient magnitude, so the
+  secondary train's beat cannot masquerade as envelope — is
+  correlated against the family envelope shapes over (N, phase₀)
+  hypotheses. The phase the window opened at is searched, not
+  assumed. Acceptance gates (normalized RMSE < 0.20 and a 0.85
+  margin over the runner-up N) were fixed before the run.
+
+Calibration disclosure, as in the code: the lull constant 1.4 and
+the envelope shape are parameters of this sea family, the way a
+deployed instrument is calibrated to its sensor family. They are
+stated, not hidden — and the filter's failure below is partly the
+price of that family's shape being only weakly discriminating at
+long periods.
+
+### The numbers (accuracy; v3's published row is its own seed)
+
+| condition | n | direction | period | trend | sets |
+|---|---|---|---|---|---|
+| v3 estimators (seed 777001, published) | 36 | 1.00 | 1.00 (err 0.3 s) | 0.67 | 0.75 |
+| v3 estimators (seed 1000003, paired control) | 36 | 1.00 | 1.00 (err 0.29 s) | 0.78 | 0.64 |
+| **v4 envelope-aware (seed 1000003)** | 36 | **1.00** | **1.00 (err 0.29 s)** | **0.86** | **0.81** |
+
+Read the paired rows, not the absolute levels: v3 itself scores
+0.67/0.75 on one seed and 0.78/0.64 on another — 36-sea samples
+carry wide error bars. The paired deltas on identical seas are
+the claim: **trend +0.08, sets +0.17, direction/period unmoved.**
+
+**Trend's confusion shape changed, not just its score.** Errors
+fall 8 → 5. In slope-ordinal order (building / steady / easing),
+v4's five misses are four one-step errors (building→steady 1,
+steady→building 1, steady→easing 2) and one two-step
+(easing→building 1); v3 had seven one-step and one two-step.
+Steady is the weakest row (9/12) — the class with no signal is
+the hardest to certify, which is the honest shape for a
+measurement to have. The envelope covariate is visibly doing the
+work: on the streams it repaired, fitted envelope coefficients
+run ≈0.6 with residual std ≈0.02–0.04 in log space. One repair
+(stream 2) came from a covariate built on a *wrong* sets call
+(N̂=4, truth 5) — the regression needs approximately-right phase
+structure, not the exact N. The one stream v4 lost (15, a
+continuous sea on the slope-only path) sat at b = −0.29 against
+the 0.25 gate: a boundary call, reported as such.
+
+**Sets: coverage bought at a small, visible precision price.**
+v3 on this seed: callable 23/36, all 23 right, 13 honest unknowns.
+v4: **callable 31/36, 29 right, unknowns down to 5.** The matched
+filter supplied 8 calls: it recovered all six truncated true-4
+seas v3 had declined — and misread both truncated true-5 seas it
+called as 4. Every filter call on this seed landed on 4; on the
+truncated pattern (exactly 2 SET markers, 1 LULL marker) the
+filter currently discriminates "4" from "not-4" better than it
+discriminates 5. That bias is filed here, not smoothed over:
+v4 trades v3's perfect-but-narrow callable precision (23/23) for
+wider coverage at 29/31, and the overall score says the trade is
+worth it (0.64 → 0.81) — but a consumer of the brief should know
+a filter-sourced "4" is the instrument's least reliable sentence.
+
+**The residual corner is one specific geometry.** All 13 of this
+seed's truncated seas — every unknown and both wrong calls — are
+long-period seas (T = 8–10 s) whose group cycle (N+1.4)·T reaches
+64 s against a 55 s window: the window holds set-fragment, one
+complete lull, set-fragment, and nothing else. The five still
+unknown (truths 3, 5, 3, 5, 5) are cases where the filter's best
+two hypotheses sat too close to separate (one at RMSE 0.079 vs
+0.090, best-first and *wrong* — the margin gate declined a call
+that would have been an error, which is the gate working, on a
+sea whose true shape was the runner-up). Longer windows, not
+better thresholds, are the honest fix for this corner; the
+instrument now says exactly which seas it cannot read and why.
+
+**Regression check: clean.** Direction 36/36 and period 36/36
+with mean error 0.29 s under v4 — identical to the paired v3
+control, as expected since the code paths are shared. Cost:
+40 ms per sea (v3: ~25 ms), still zero tokens, zero model calls.
+
+### Jev receipt (v4)
+
+Asked (TypeSafe Jev, `noul`, 2026-10-13) whether the paired
+evidence justifies "envelope-aware statistics close wave trend
+and sets to estimator-grade, completing route A's sweep":
+**0.60 — yes.** The coolest receipt since v2's 0.59, and fairly
+priced: direction/period are closed, trend and sets are improved
+by paired measurement and their failure corner is now named to
+the geometry — but 0.86/0.81 with five honest unknowns and a
+known 5→4 filter bias is not a completed sweep, and the receipt
+declines to call it one.
+
+### What's still open
+
+1. **The truncated long-period corner** (above): group cycles
+   rivalling the window length. Routes forward: a longer standard
+   window for slow seas, or a filter that fits the trend jointly
+   instead of detrending first. The 5→4 bias wants a discriminating
+   feature the current shape match lacks (e.g. lull *width* in the
+   observed envelope, which the family fixes at 1.4 periods and
+   the filter currently uses only implicitly).
+2. **Throw** (carried from v1, still unmodeled): the helmsman's
+   third gist needs a boat-response model in the generator before
+   it can be measured at all.
+3. **Route B's envelope problem** (carried from v3): the student
+   still owes trend/sets; whether v4's envelope features (per-wave
+   amplitudes, cycle phase) are the input that makes them
+   executable for a student is the natural next head-to-head.
+
+v4 additions: `prereader_v4.py` (envelope-aware trend regression,
+truncated-window sets: spacing+prior and the matched filter over
+the dominant-train projection), `route_a_v4_test.py` (the paired
+evaluation), `runs/v4_results.jsonl`, `runs/v4_heldout_truths.json`
+(seed-1000003 ground truth).
