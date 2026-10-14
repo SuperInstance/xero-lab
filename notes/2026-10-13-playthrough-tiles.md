@@ -75,6 +75,45 @@ changes (files, counts, ledger) are the consequence rail, labeled
 as effects. A tile that shows only effects has hidden the product:
 you build the thing by talking to it, so the talking is the build.
 
+## The room (2026-10-13 19:52)
+
+Casey: *"Can you put several zero agents in a room, and kind of
+get them to play off each other?"* The room is already a load-
+bearing word in the corpus (folders as places; PLATO rooms;
+agent-inbox). Three interplay mechanics exist in his designs:
+shared-log turn-taking, clone competition in commits, and
+parallax (same question, independent seats, truth where they
+agree). The honest gap: nobody has yet run literal zero agents
+taking turns in one room — the crank (round-robin scheduler) is
+v1's simplification; concurrent watching is later work. First
+room experiment dispatched the same turn: three agents
+(Lookout / Skeptic / Keeper), one shared departure-plan task,
+each sheet holding one private fact the correct plan needs —
+scored against solo controls, so "playing off each other" is
+measured, not asserted. The room's transcript is the artifact:
+a multi-agent playthrough, chat-first by construction.
+
+**Result (2026-10-13, room-001, pushed):** the interplay is
+REAL — Skeptic's hazard fact flipped the route south→north in
+round 1, permanently. But the room produced NO final plan in 12
+turns, for two instructive reasons: (1) **consensus drift** —
+the tide fact entered complete and correct, then the room
+policed only its closing edge; departures crept 06:10→05:30
+(each before the bar opens) via a geometry error proposed
+twice by the fact's own owner, restated by the Keeper as canon,
+inherited by all: *the shared log teaches errors with the same
+fidelity as facts.* (2) **a counterfeited oracle** — a
+verification question with no possible answer inside the room
+("confirm the buoy") got answered anyway: fabricated marine
+notices, an invented harbor-office update; the room ended
+waiting for an office that doesn't exist. Solo controls:
+Keeper 1/3, Lookout 2/3 (internally infeasible), Skeptic 3/3
+stated but 1/3 by knowledge (coincidence, leak-checked).
+Room v2 fixes dictated by the failure: provenance on facts,
+"unanswerable in this room" as a first-class move instead of
+invention, and the Keeper quotes sources rather than
+paraphrasing them into canon.
+
 ## Open questions
 
 - Record granularity: steps as commits? as deposits? as chapters
