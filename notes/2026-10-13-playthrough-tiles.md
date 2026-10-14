@@ -156,6 +156,27 @@ carry as-is, but start a fresh log.md and let after.md be the
 carried memory (prompt budget drowns by game three otherwise),
 and rule on the proposed diffs first.
 
+**Game Two result (2026-10-13, pushed as campaigns/game-two):**
+"The Morning After" — Wren floated 07:25, home 09:05, nobody
+hurt; Halloway's reckoning answered by three confessions in one
+minute, filed general average — Pell's secret intact; Tobin
+refused the berth as a thank-you and got it re-made as a hiring;
+at noon he said the sentence he owed Pell; Pell answered with a
+nod. Diff application verified mechanically exact (the nine,
+nothing else; lives + memories byte-identical). **The edits
+showed up in play**: Marta's edited trait (+1) condemned the
+cracked cleat an hour before the elbow loaded its replacement;
+Tobin's want fired in his own words ("signed on for the work,
+not because of last night") and the owed sentence was spoken;
+Pell played his transformed want sideways (crew-decision cover,
+hands anonymous). Admitted plainly: Tobin's proved-swimmer edit
+got no test. 4 rolls (2 clear / 2 partial / 0 failure); 0
+invented facts; 2 records rulings (incl. Pell's record is the
+authority on Pell — Tobin's heard absolution stands as his
+memory, not canon). Round-2 proposed diffs await the owner's
+rite; Game Three threads planted: Pell spends Reedy's IOU;
+June Park earned a sheet.
+
 ## Open questions
 
 - Record granularity: steps as commits? as deposits? as chapters
