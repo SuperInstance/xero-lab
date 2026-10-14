@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Patient Dictation Agent — Xero Bootcamp Gallery · SuperInstance</title>
+<style>
+  :root{
+    --ink:#060b13;
+    --navy:#0a141f;
+    --panel:#0d1a29;
+    --panel2:#0a1624;
+    --line:#1e3448;
+    --line-soft:#16283a;
+    --brass:#d9a441;
+    --amber:#eec25e;
+    --paper:#e9e3d3;
+    --mut:#8fa5ba;
+    --dim:#5d748c;
+    --live:#6fd68a;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(1200px 500px at 50% -120px, #12283e 0%, rgba(18,40,62,0) 60%),
+      var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
+
+  /* ---------- masthead ---------- */
+  .brand{
+    font-family:var(--mono);font-size:12px;letter-spacing:.28em;
+    color:var(--brass);text-transform:uppercase;
+  }
+  .brand .dot{color:var(--dim)}
+  h1{
+    margin:10px 0 2px;font-size:clamp(30px,5.4vw,52px);font-weight:700;
+    letter-spacing:.01em;color:#f4efe0;
+  }
+  .promise{
+    margin:0;font-size:clamp(16px,2.6vw,21px);color:var(--amber);
+    font-style:italic;
+  }
+  .agent{margin:12px 0 0;max-width:72ch;color:var(--mut);font-size:15px}
+  .rule{height:1px;background:linear-gradient(90deg,var(--brass),rgba(217,164,65,0) 70%);margin:22px 0}
+
+  /* ---------- panels ---------- */
+  .panel{
+    background:linear-gradient(180deg,var(--panel) 0%,var(--panel2) 100%);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 20px 16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  .panel + .panel{margin-top:18px}
+
+  /* ---------- stage head ---------- */
+  .stage-head{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:flex-end}
+  .chapter{
+    font-family:var(--mono);font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--brass);
+  }
+  .step-title{margin:4px 0 0;font-size:clamp(20px,3.4vw,28px);font-weight:650;color:#f4efe0}
+  .progress-wrap{min-width:210px;flex:0 1 260px}
+  .progress-label{
+    font-family:var(--mono);font-size:12px;color:var(--mut);
+    text-align:right;letter-spacing:.08em;margin-bottom:6px;
+  }
+  .progress-bar{height:6px;background:#081120;border:1px solid var(--line-soft);border-radius:3px;overflow:hidden}
+  .progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#8a6420,var(--brass),var(--amber));transition:width .45s ease}
+  .narration{
+    margin:16px 0 4px;font-size:clamp(15px,2.3vw,17.5px);color:var(--paper);
+    max-width:88ch;min-height:3.1em;
+  }
+
+  /* ---------- stage grid: chat main stage + consequence rail ---------- */
+  .stage-grid{
+    display:grid;grid-template-columns:1.55fr 1fr;gap:14px;
+    margin-top:14px;align-items:start;
+  }
+  .pane{
+    border:1px solid var(--line-soft);border-radius:8px;background:rgba(5,10,18,.6);
+    display:flex;flex-direction:column;overflow:hidden;
+  }
+  .pane h3{
+    margin:0;padding:9px 12px;font-family:var(--mono);font-size:11px;font-weight:600;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--brass);
+    border-bottom:1px solid var(--line-soft);background:rgba(217,164,65,.05);
+  }
+  .pane .body{padding:10px 12px;overflow:auto}
+  .empty-note{color:var(--dim);font-style:italic}
+
+  /* the chat — main stage */
+  .chat-pane .body{
+    min-height:470px;max-height:620px;
+    font-family:var(--sans);font-size:14.5px;
+    padding:14px 14px 6px;
+  }
+  .chat-step-divider{
+    display:flex;align-items:center;gap:10px;margin:16px 2px 12px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--dim);
+  }
+  .chat-step-divider:first-child{margin-top:2px}
+  .chat-step-divider::before,.chat-step-divider::after{
+    content:"";flex:1;height:1px;background:var(--line-soft);
+  }
+  .turn{max-width:92%;margin:0 0 12px;animation:none}
+  .turn.fresh{animation:turnIn .55s ease-out 1}
+  @keyframes turnIn{
+    0%{opacity:0;transform:translateY(7px)}
+    100%{opacity:1;transform:translateY(0)}
+  }
+  .turn-lab{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;
+    text-transform:uppercase;margin-bottom:4px;
+  }
+  .turn-body{white-space:pre-wrap;word-break:break-word}
+  /* Casey — the human's turns: brass bubbles, right side */
+  .turn.casey{
+    margin-left:auto;max-width:86%;
+    background:linear-gradient(180deg,rgba(217,164,65,.16),rgba(217,164,65,.07));
+    border:1px solid var(--brass);border-radius:12px 12px 3px 12px;
+    padding:10px 13px 9px;color:#f7efdb;font-size:15px;
+  }
+  .turn.casey .turn-lab{color:var(--amber);text-align:right}
+  /* The brief — the instruction: a document block */
+  .turn.brief{
+    background:rgba(233,227,211,.05);
+    border:1px solid var(--line);border-left:3px solid var(--brass);
+    border-radius:3px 8px 8px 3px;
+    padding:10px 13px 9px;color:var(--paper);
+  }
+  .turn.brief .turn-lab{color:var(--brass)}
+  .turn.brief .turn-body{font-size:14px}
+  /* The builder — what came back: a receipt */
+  .turn.builder{
+    background:rgba(111,214,138,.05);
+    border:1px dashed rgba(111,214,138,.45);
+    border-radius:8px;
+    padding:9px 13px 8px;
+    font-family:var(--mono);font-size:12.8px;color:#d7ecd9;
+  }
+  .turn.builder .turn-lab{color:var(--live)}
+  /* coined vocabulary */
+  .coined{
+    background:rgba(238,194,94,.28);color:#ffe9a8;border-radius:3px;
+    padding:0 4px;font-weight:650;
+  }
+  .coined-note{
+    margin-top:6px;font-family:var(--mono);font-size:10.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--brass);
+  }
+  .turn-note{
+    margin-top:6px;font-size:12px;font-style:italic;color:var(--dim);
+  }
+  .turn.casey .turn-note{text-align:right}
+
+  /* the rail — what the chat caused */
+  .rail{display:flex;flex-direction:column;gap:12px;min-width:0}
+  .rail-head{
+    font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--mut);
+    border-bottom:1px solid var(--line-soft);padding-bottom:7px;
+  }
+  .rail-head b{color:var(--brass);font-weight:600}
+  .rail .pane .body{font-family:var(--mono);font-size:12.5px;max-height:235px}
+  .rail .pane.reader-pane .body{max-height:200px}
+
+  /* counts strip (in the rail) */
+  .counts{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:10px;
+  }
+  .stat{
+    border:1px solid var(--line-soft);border-radius:8px;background:rgba(6,13,22,.55);
+    padding:10px 12px 8px;
+  }
+  .stat .num{font-family:var(--mono);font-size:clamp(20px,3.4vw,26px);color:var(--amber);line-height:1.1}
+  .stat .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-top:3px}
+
+  /* tree */
+  #tree ul{list-style:none;margin:0;padding-left:15px}
+  #tree > ul{padding-left:2px}
+  #tree li{margin:2px 0;white-space:nowrap}
+  #tree .dir-name{color:var(--mut)}
+  #tree .file{color:var(--paper);border-radius:3px;padding:0 3px}
+  #tree .file.added{animation:pulse 1.6s ease-out 1;color:var(--amber)}
+  @keyframes pulse{
+    0%{background:rgba(238,194,94,.55)}
+    100%{background:rgba(238,194,94,0)}
+  }
+
+  /* receipts ticker (the rail's ledger analogue) */
+  #receipts .receipt-line{color:var(--mut);padding:2px 0;border-bottom:1px dotted rgba(30,52,72,.5)}
+  #receipts .receipt-line.fresh{color:var(--amber)}
+  #receipts .receipt-line:last-child{border-bottom:none}
+
+  /* reader */
+  #reader-meta{color:var(--dim);font-size:11.5px;margin-bottom:6px;word-break:break-all}
+  #reader{
+    margin:0;white-space:pre-wrap;word-break:break-word;color:var(--paper);
+    font-family:var(--mono);font-size:12.5px;line-height:1.55;
+  }
+
+  /* ---------- controls ---------- */
+  .controls{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px;
+    border-top:1px solid var(--line-soft);padding-top:16px;
+  }
+  .btn{
+    appearance:none;background:#0a1626;border:1px solid var(--brass);color:var(--amber);
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;
+    padding:9px 14px;border-radius:6px;cursor:pointer;min-height:40px;
+  }
+  .btn:hover{background:rgba(217,164,65,.14)}
+  .btn:active{transform:translateY(1px)}
+  .btn:disabled{opacity:.38;cursor:default;transform:none;background:#0a1626}
+  .btn:focus-visible,.scrub:focus-visible,textarea:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+  .btn.wide{min-width:118px}
+  .scrub-wrap{flex:1 1 180px;display:flex;align-items:center;gap:10px}
+  .scrub{flex:1;accent-color:var(--brass);height:28px;cursor:pointer}
+  .speed-group{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .speed-group .btn{border:none;border-radius:0;min-height:40px}
+  .speed-group .btn + .btn{border-left:1px solid var(--line)}
+  .speed-group .btn[aria-pressed="true"]{background:var(--brass);color:#131003}
+  .speed-lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase}
+
+  /* ---------- live pad ---------- */
+  .live-panel h3{
+    margin:0 0 6px;font-size:19px;color:#f4efe0;font-weight:650;
+  }
+  .live-dot{
+    display:inline-block;width:9px;height:9px;border-radius:50%;
+    background:var(--live);margin-left:6px;vertical-align:middle;
+    box-shadow:0 0 8px var(--live);
+  }
+  #boot-status{font-family:var(--mono);font-size:12.5px;color:var(--live);margin:4px 0 12px}
+  .live-panel label{display:block;font-size:14.5px;color:var(--paper);margin-bottom:8px}
+  textarea{
+    width:100%;background:#060d17;border:1px solid var(--line);border-radius:8px;
+    color:var(--paper);font-family:var(--mono);font-size:13.5px;line-height:1.55;
+    padding:12px;resize:vertical;min-height:110px;
+  }
+  textarea::placeholder{color:var(--dim)}
+  .mode-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:6px 0 14px}
+  .mode-note{font-size:13px;color:var(--mut);flex:1 1 320px}
+  .live-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:12px}
+  .btn.primary{background:var(--brass);color:#131003;font-weight:700}
+  .btn.primary:hover{background:var(--amber)}
+  .btn.primary:disabled{background:#0a1626;color:var(--amber)}
+  .btn.ghost{border-color:var(--line);color:var(--mut)}
+  .btn.ghost:hover{color:var(--paper);background:rgba(143,165,186,.08)}
+  .btn.ghost:disabled:hover{color:var(--mut);background:#0a1626}
+  .pad-stats{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px;
+  }
+  .pad-stats .stat .num{font-size:clamp(17px,3vw,23px)}
+  .pad-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;align-items:start}
+  .pad-grid .pane .body{max-height:300px;font-size:13.5px}
+  #transcript{font-family:var(--sans);color:var(--mut);line-height:1.65}
+  #transcript .w{color:var(--paper)}
+  #transcript .silence-mark{color:var(--brass);font-family:var(--mono);font-size:11.5px}
+  .chunk-card{
+    border:1px solid var(--line-soft);border-radius:8px;background:rgba(6,13,22,.55);
+    padding:10px 12px;margin-bottom:10px;cursor:pointer;
+  }
+  .chunk-card:hover{border-color:var(--brass)}
+  .chunk-card.fresh{animation:pulse 1.6s ease-out 1}
+  .chunk-meta{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--brass);margin-bottom:5px;
+  }
+  .chunk-meta .trig{color:var(--amber)}
+  .chunk-text{font-size:13.5px;color:var(--paper);white-space:pre-wrap;word-break:break-word}
+  #pad-status{font-family:var(--mono);font-size:12.5px;color:var(--amber);margin:12px 0 2px;min-height:1.4em}
+  .fine{font-size:12.5px;color:var(--dim);margin:12px 0 2px;max-width:88ch}
+
+  /* ---------- receipts / footer ---------- */
+  .receipts{margin-top:22px;border-top:1px solid var(--line-soft);padding-top:16px}
+  .receipts p{font-size:13px;color:var(--mut);max-width:92ch;margin:0 0 9px}
+  .receipts .k{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--brass);display:block;margin-bottom:2px;
+  }
+  .receipts a{color:var(--amber)}
+  .err{
+    border:1px solid #7a2e2e;background:rgba(122,46,46,.15);color:#f0b9b9;
+    border-radius:8px;padding:12px 14px;font-family:var(--mono);font-size:13px;display:none;
+  }
+
+  @media (max-width:1000px){
+    .stage-grid{grid-template-columns:1fr}
+    .pad-grid{grid-template-columns:1fr}
+    .pad-stats{grid-template-columns:repeat(2,1fr)}
+    .chat-pane .body{min-height:0;max-height:480px}
+    .rail .pane .body{max-height:300px}
+    .narration{min-height:0}
+    .progress-wrap{flex:1 1 100%}
+    .progress-label{text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">SuperInstance <span class="dot">·</span> <span id="r-gallery">Xero Bootcamp Gallery</span></div>
+    <h1 id="r-title">The Patient Dictation Agent</h1>
+    <p class="promise" id="r-promise">Watch it build; then it&rsquo;s yours.</p>
+    <p class="agent" id="r-agent"></p>
+    <div class="rule"></div>
+  </header>
+
+  <div class="err" id="load-err"></div>
+
+  <main>
+    <section class="panel" aria-label="Playthrough player">
+      <div class="stage-head">
+        <div>
+          <div class="chapter" id="chapter">&nbsp;</div>
+          <h2 class="step-title" id="step-title">Loading the record&hellip;</h2>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label" id="progress-label">Step – of –</div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+
+      <p class="narration" id="narration"></p>
+
+      <div class="stage-grid">
+        <div class="pane chat-pane">
+          <h3>The chat — where it was built</h3>
+          <div class="body" id="chat"></div>
+        </div>
+
+        <div class="rail" aria-label="What the chat caused">
+          <div class="rail-head">Effects — <b>what the chat caused</b></div>
+
+          <div class="counts">
+            <div class="stat"><div class="num" id="c-files">0</div><div class="lab">Files</div></div>
+            <div class="stat"><div class="num" id="c-tests">0</div><div class="lab">Tests passing</div></div>
+            <div class="stat"><div class="num" id="c-modes">0</div><div class="lab">Modes on the toggle</div></div>
+            <div class="stat"><div class="num" id="c-fourth">—</div><div class="lab" id="c-fourth-lab">Nothing yet</div></div>
+          </div>
+
+          <div class="pane">
+            <h3>The block — files</h3>
+            <div class="body" id="tree"></div>
+          </div>
+          <div class="pane">
+            <h3>Receipts — measured, not claimed</h3>
+            <div class="body" id="receipts"></div>
+          </div>
+          <div class="pane reader-pane">
+            <h3>Reading pane</h3>
+            <div class="body">
+              <div id="reader-meta"></div>
+              <pre id="reader">Reach the final step — the pad boots live, on the same
+segmenter this chat built, and every chunk it files
+becomes readable here.</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="btn-restart" title="Back to step 1" aria-label="Restart">&#9198; Restart</button>
+        <button class="btn" id="btn-back" title="Previous step" aria-label="Step back">&#9664; Back</button>
+        <button class="btn wide" id="btn-play" aria-label="Play or pause">&#9654; Play</button>
+        <button class="btn" id="btn-fwd" title="Next step" aria-label="Step forward">Step &#9654;</button>
+        <div class="scrub-wrap">
+          <input class="scrub" type="range" id="scrub" min="0" max="9" step="1" value="0" aria-label="Scrub through the steps">
+        </div>
+        <span class="speed-lab">Speed</span>
+        <div class="speed-group" role="group" aria-label="Playback speed">
+          <button class="btn" id="spd-slow" aria-pressed="true">Slow</button>
+          <button class="btn" id="spd-fast" aria-pressed="false">Fast</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel live-panel" id="live-panel" hidden>
+      <h3>The pad is live <span style="font-weight:400">— Patient mode</span><span class="live-dot"></span></h3>
+      <p id="boot-status">Booting the segmenter&hellip;</p>
+
+      <div class="mode-row">
+        <span class="speed-lab">Mode</span>
+        <div class="speed-group" role="group" aria-label="Dictation mode">
+          <button class="btn" id="mode-patient" aria-pressed="true">Patient</button>
+          <button class="btn" id="mode-eager" aria-pressed="false">Eager</button>
+          <button class="btn" id="mode-async" aria-pressed="false">Async-parallel</button>
+        </div>
+        <span class="mode-note" id="mode-note"></span>
+      </div>
+
+      <label for="script">Your speech, as text. The pad releases it word by word, timed like speech, and the segmenter hears only the stream — press <b>Start speaking</b>, then take a <b>thinking pause</b> and watch what the mode does with your silence.</label>
+      <textarea id="script"></textarea>
+      <div class="live-actions">
+        <button class="btn primary" id="btn-speak">&#9654; Start speaking</button>
+        <button class="btn ghost" id="btn-silence" disabled>Thinking pause · 6 s</button>
+        <button class="btn ghost" id="btn-end" disabled>End session (flush)</button>
+        <button class="btn ghost" id="btn-pad-reset">Reset pad</button>
+        <button class="btn ghost" id="btn-sample">Restore the sample script</button>
+        <span class="speed-lab">Pace</span>
+        <div class="speed-group" role="group" aria-label="Speaking pace">
+          <button class="btn" id="pace-90" aria-pressed="false">90 wpm</button>
+          <button class="btn" id="pace-150" aria-pressed="true">150 wpm</button>
+          <button class="btn" id="pace-240" aria-pressed="false">240 wpm</button>
+        </div>
+      </div>
+
+      <div class="pad-stats">
+        <div class="stat"><div class="num" id="p-clock">0:00</div><div class="lab">Stream clock</div></div>
+        <div class="stat"><div class="num" id="p-spoken">0</div><div class="lab">Words spoken</div></div>
+        <div class="stat"><div class="num" id="p-held">0</div><div class="lab">Words held now</div></div>
+        <div class="stat"><div class="num" id="p-peak">0</div><div class="lab">Peak held</div></div>
+        <div class="stat"><div class="num" id="p-chunks">0</div><div class="lab">Chunks filed</div></div>
+      </div>
+
+      <div class="pad-grid">
+        <div class="pane">
+          <h3>Live transcript — the stream as the segmenter hears it</h3>
+          <div class="body" id="transcript"><span class="empty-note">Nothing yet. Your words will land here, one at a time — and in Patient mode, nothing will answer them for a long while.</span></div>
+        </div>
+        <div class="pane">
+          <h3>Filed chunks — click one to read it in full</h3>
+          <div class="body" id="chunks"><span class="empty-note">No chunks yet. Patient files on a full page (500 words) or when the session ends.</span></div>
+        </div>
+      </div>
+
+      <p id="pad-status"></p>
+      <p class="fine" id="live-note"></p>
+    </section>
+
+    <footer class="receipts">
+      <p><span class="k">Mode note</span><span id="config-note"></span></p>
+      <p><span class="k">Honesty</span><span id="honesty"></span></p>
+      <p><span class="k">Verification</span>
+        The engine on this page (<span style="font-family:var(--mono)">segmenter.js</span>) is a port of the
+        Python prototype, verified against it: all 16 of the prototype's tests ported and passing,
+        the chunk output identical chunk-for-chunk across all eight fixture streams
+        (6,159 words), and the modes
+        simulator's published numbers reproduced exactly — including this tile's headline,
+        patient on the walk: 2 chunks, 499 words held. Receipts: <a href="VERIFY.md">VERIFY.md</a>.</p>
+    </footer>
+  </main>
+</div>
+
+<script src="segmenter.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var VS = window.VoiceSegmenter;
+  var SPEEDS = { slow: 2400, fast: 600 };
+
+  var record = null, fixtures = null;
+  var idx = 0, playing = false, timer = null, speed = "slow";
+  var booted = false;
+
+  function el(id) { return document.getElementById(id); }
+  var els = {
+    gallery: el("r-gallery"), title: el("r-title"), promise: el("r-promise"),
+    agent: el("r-agent"), err: el("load-err"),
+    chapter: el("chapter"), stepTitle: el("step-title"),
+    progressLabel: el("progress-label"), progressFill: el("progress-fill"),
+    narration: el("narration"),
+    chat: el("chat"),
+    cFiles: el("c-files"), cTests: el("c-tests"), cModes: el("c-modes"),
+    cFourth: el("c-fourth"), cFourthLab: el("c-fourth-lab"),
+    tree: el("tree"), receipts: el("receipts"),
+    readerMeta: el("reader-meta"), reader: el("reader"),
+    scrub: el("scrub"),
+    play: el("btn-play"), back: el("btn-back"), fwd: el("btn-fwd"),
+    restart: el("btn-restart"),
+    spdSlow: el("spd-slow"), spdFast: el("spd-fast"),
+    livePanel: el("live-panel"), bootStatus: el("boot-status"),
+    configNote: el("config-note"), honesty: el("honesty"),
+    modeNote: el("mode-note"),
+    script: el("script"), speak: el("btn-speak"), silence: el("btn-silence"),
+    end: el("btn-end"), padReset: el("btn-pad-reset"), sample: el("btn-sample"),
+    pClock: el("p-clock"), pSpoken: el("p-spoken"), pHeld: el("p-held"),
+    pPeak: el("p-peak"), pChunks: el("p-chunks"),
+    transcript: el("transcript"), chunks: el("chunks"),
+    padStatus: el("pad-status"), liveNote: el("live-note")
+  };
+
+  /* ---------------- the chat (main stage; renders the record) ---------------- */
+
+  function appendTurnText(body, turn) {
+    var text = turn.text, marks = [];
+    (turn.coined || []).forEach(function (term) {
+      var i = text.toLowerCase().indexOf(term.toLowerCase());
+      if (i >= 0) marks.push({ i: i, len: term.length });
+    });
+    marks.sort(function (a, b) { return a.i - b.i; });
+    var pos = 0;
+    marks.forEach(function (mk) {
+      if (mk.i < pos) return;
+      body.appendChild(document.createTextNode(text.slice(pos, mk.i)));
+      var sp = document.createElement("span");
+      sp.className = "coined";
+      sp.textContent = text.slice(mk.i, mk.i + mk.len);
+      body.appendChild(sp);
+      pos = mk.i + mk.len;
+    });
+    body.appendChild(document.createTextNode(text.slice(pos)));
+  }
+
+  function renderTurn(turn, fresh) {
+    var kind = turn.speaker === "Casey" ? "casey"
+             : turn.speaker === "The brief" ? "brief" : "builder";
+    var wrap = document.createElement("div");
+    wrap.className = "turn " + kind + (fresh ? " fresh" : "");
+    var lab = document.createElement("div");
+    lab.className = "turn-lab";
+    lab.textContent = turn.speaker;
+    wrap.appendChild(lab);
+    var body = document.createElement("div");
+    body.className = "turn-body";
+    appendTurnText(body, turn);
+    wrap.appendChild(body);
+    if (turn.coined && turn.coined.length) {
+      var cn = document.createElement("div");
+      cn.className = "coined-note";
+      cn.textContent = "◆ coined here — " + turn.coined.join(", ");
+      wrap.appendChild(cn);
+    }
+    if (turn.note) {
+      var nt = document.createElement("div");
+      nt.className = "turn-note";
+      nt.textContent = turn.note;
+      wrap.appendChild(nt);
+    }
+    return wrap;
+  }
+
+  function renderChat() {
+    els.chat.textContent = "";
+    var any = false;
+    for (var s = 0; s <= idx; s++) {
+      var step = record.steps[s];
+      var turns = step.chat || [];
+      if (!turns.length) continue;
+      any = true;
+      var div = document.createElement("div");
+      div.className = "chat-step-divider";
+      div.textContent = "Step " + (s + 1) + " · " + step.title;
+      els.chat.appendChild(div);
+      (function (stepTurns, isCurrent) {
+        stepTurns.forEach(function (t) {
+          els.chat.appendChild(renderTurn(t, isCurrent));
+        });
+      })(turns, s === idx);
+    }
+    if (!any) {
+      var n = document.createElement("div");
+      n.className = "empty-note";
+      n.textContent = "(no words yet — the blank page. The chat comes first; the files follow.)";
+      els.chat.appendChild(n);
+    }
+    els.chat.scrollTop = els.chat.scrollHeight;
+  }
+
+  /* ---------------- record rendering (never computes state) ---------------- */
+
+  function buildTreeData(paths) {
+    var root = { dirs: {}, files: [] };
+    paths.forEach(function (p) {
+      var parts = p.split("/"), node = root;
+      for (var i = 0; i < parts.length - 1; i++) {
+        if (!node.dirs[parts[i]]) node.dirs[parts[i]] = { dirs: {}, files: [] };
+        node = node.dirs[parts[i]];
+      }
+      node.files.push(p);
+    });
+    return root;
+  }
+
+  function renderTreeInto(container, paths, added) {
+    container.textContent = "";
+    if (!paths.length) {
+      var n = document.createElement("div");
+      n.className = "empty-note";
+      n.textContent = "(empty — the blank page)";
+      container.appendChild(n);
+      return;
+    }
+    var ul = document.createElement("ul");
+    renderTreeNode(buildTreeData(paths), ul, added);
+    container.appendChild(ul);
+  }
+
+  function renderTreeNode(node, ul, added) {
+    Object.keys(node.dirs).forEach(function (name) {
+      var li = document.createElement("li");
+      var lab = document.createElement("span");
+      lab.className = "dir-name";
+      lab.textContent = name + "/";
+      li.appendChild(lab);
+      var sub = document.createElement("ul");
+      renderTreeNode(node.dirs[name], sub, added);
+      li.appendChild(sub);
+      ul.appendChild(li);
+    });
+    node.files.forEach(function (p) {
+      var li = document.createElement("li");
+      li.className = "file";
+      if (added && added.has(p)) li.classList.add("added");
+      li.textContent = p.split("/").pop();
+      ul.appendChild(li);
+    });
+  }
+
+  function renderReceipts(lines) {
+    els.receipts.textContent = "";
+    if (!lines.length) {
+      var n = document.createElement("div");
+      n.className = "empty-note";
+      n.textContent = "(nothing measured yet)";
+      els.receipts.appendChild(n);
+      return;
+    }
+    lines.forEach(function (L) {
+      var d = document.createElement("div");
+      d.className = "receipt-line" + (L.fresh ? " fresh" : "");
+      d.textContent = L.text;
+      els.receipts.appendChild(d);
+    });
+    els.receipts.scrollTop = els.receipts.scrollHeight;
+  }
+
+  function render() {
+    var step = record.steps[idx];
+    els.chapter.textContent = step.chapter;
+    els.stepTitle.textContent = step.title;
+    els.narration.textContent = step.narration;
+    els.progressLabel.textContent = "Step " + (idx + 1) + " of " + record.steps.length;
+    els.progressFill.style.width = ((idx + 1) / record.steps.length * 100) + "%";
+    els.scrub.value = idx;
+    els.cFiles.textContent = step.state.files;
+    els.cTests.textContent = step.state.tests;
+    els.cModes.textContent = step.state.modes;
+    els.cFourth.textContent = step.delta.fourth.value;
+    els.cFourthLab.textContent = step.delta.fourth.label;
+    renderTreeInto(els.tree, step.state.tree, new Set(step.delta.filesAdded));
+    var lines = [];
+    for (var s = 0; s <= idx; s++) {
+      record.steps[s].delta.measurementsAdded.forEach(function (t) {
+        lines.push({ text: t, fresh: s === idx });
+      });
+    }
+    renderReceipts(lines);
+    renderChat();
+    var atEnd = idx === record.steps.length - 1;
+    els.livePanel.hidden = !(atEnd && booted);
+    if (atEnd) boot();
+  }
+
+  /* ---------------- transport ---------------- */
+
+  function stopTimer() {
+    if (timer !== null) { window.clearInterval(timer); timer = null; }
+    playing = false;
+    els.play.innerHTML = "&#9654; Play";
+  }
+
+  function startTimer() {
+    stopTimer();
+    playing = true;
+    els.play.innerHTML = "&#10073;&#10073; Pause";
+    timer = window.setInterval(function () {
+      if (idx >= record.steps.length - 1) { stopTimer(); return; }
+      goTo(idx + 1);
+      if (idx >= record.steps.length - 1) stopTimer();
+    }, SPEEDS[speed]);
+  }
+
+  function goTo(i) {
+    idx = Math.max(0, Math.min(record.steps.length - 1, i));
+    render();
+  }
+
+  els.play.addEventListener("click", function () {
+    if (!record) return;
+    if (playing) { stopTimer(); return; }
+    if (idx >= record.steps.length - 1) goTo(0);
+    startTimer();
+  });
+  els.back.addEventListener("click", function () { if (record) { stopTimer(); goTo(idx - 1); } });
+  els.fwd.addEventListener("click", function () { if (record) { stopTimer(); goTo(idx + 1); } });
+  els.restart.addEventListener("click", function () { if (record) { stopTimer(); goTo(0); } });
+  els.scrub.addEventListener("input", function () {
+    if (!record) return;
+    stopTimer();
+    goTo(parseInt(els.scrub.value, 10));
+  });
+
+  function setSpeed(s) {
+    speed = s;
+    els.spdSlow.setAttribute("aria-pressed", s === "slow" ? "true" : "false");
+    els.spdFast.setAttribute("aria-pressed", s === "fast" ? "true" : "false");
+    if (playing) startTimer();
+  }
+  els.spdSlow.addEventListener("click", function () { setSpeed("slow"); });
+  els.spdFast.addEventListener("click", function () { setSpeed("fast"); });
+
+  document.addEventListener("keydown", function (e) {
+    var t = e.target;
+    if (!record || !t || t.tagName === "TEXTAREA" || t.tagName === "INPUT") return;
+    if (e.key === "ArrowRight") { stopTimer(); goTo(idx + 1); }
+    else if (e.key === "ArrowLeft") { stopTimer(); goTo(idx - 1); }
+  });
+
+  /* ---------------- boot check (the port re-proves itself) ---------------- */
+
+  function runStream(events, config) {
+    var seg = new VS.Segmenter(config);
+    var chunks = [];
+    events.forEach(function (ev) {
+      seg.feed(ev).forEach(function (c) { chunks.push(c); });
+    });
+    var tail = seg.flush();
+    if (tail !== null) chunks.push(tail);
+    return chunks;
+  }
+
+  function silences(events, minGap) {
+    var out = [];
+    for (var i = 0; i + 1 < events.length; i++) {
+      if (events[i + 1].start - events[i].end > minGap)
+        out.push([events[i].end, events[i + 1].start]);
+    }
+    return out;
+  }
+  function inSilence(t, sils) {
+    return sils.some(function (se) { return se[0] <= t && t <= se[1]; });
+  }
+
+  var SIM_MODES = {
+    eager: { config: { maxWords: 120, maxSeconds: 15.0, gapTrigger: 0.8 }, work: false },
+    patient: { config: { maxWords: 500, maxSeconds: 1200.0, gapTrigger: 1e9 }, work: false },
+    async: { config: {}, work: true }
+  };
+
+  function simulate(mode, events) {
+    var cfg = VS.makeConfig(mode.config);
+    var seg = new VS.Segmenter(mode.config);
+    var streamEnd = events[events.length - 1].end;
+    var sils = silences(events, 2.0);
+    var emissions = [];
+    var maxBuffered = 0, prevEnd = null;
+    events.forEach(function (ev) {
+      if (prevEnd !== null && ev.start - prevEnd > cfg.gapTrigger) {
+        var tickTime = prevEnd + cfg.gapTrigger + 0.05;
+        seg.tick(tickTime).forEach(function (c) { emissions.push([tickTime, c]); });
+      }
+      seg.feed(ev).forEach(function (c) { emissions.push([ev.end, c]); });
+      maxBuffered = Math.max(maxBuffered, seg.bufferedWords);
+      prevEnd = ev.end;
+    });
+    var tail = seg.flush();
+    if (tail !== null) emissions.push([streamEnd, tail]);
+    var responses = emissions.map(function (e) { return e[0] + 0.3; });
+    var result = {
+      firstResponseS: responses.length ? responses[0] : null,
+      chunks: emissions.length,
+      maxBuffered: maxBuffered,
+      talkedOver: null, jobsDone: null, nudges: null
+    };
+    if (!mode.work) {
+      var talked = 0;
+      var starts = events.map(function (e) { return e.start; });
+      responses.forEach(function (rt) {
+        var nxt;
+        for (var i = 0; i < starts.length; i++) {
+          if (starts[i] > rt - 0.3) { nxt = starts[i]; break; }
+        }
+        if (nxt !== undefined && nxt < rt) talked++;
+      });
+      result.talkedOver = talked;
+    }
+    if (mode.work) {
+      var jobs = emissions.filter(function (e) { return e[0] < streamEnd; })
+        .map(function (e) { return [e[0], 5.0 + 0.02 * e[1].wordCount]; });
+      result.jobsDone = jobs.filter(function (j) { return j[0] + j[1] <= streamEnd; }).length;
+      var nudges = jobs.length;
+      for (var i = 0; i + 1 < events.length; i++) {
+        var a = events[i], b = events[i + 1];
+        if (b.start - a.end > 5.0 &&
+            jobs.some(function (j) { return j[0] <= a.end && a.end < j[0] + j[1]; }))
+          nudges++;
+      }
+      jobs.forEach(function (j) {
+        [0.25, 0.5, 0.75].forEach(function (frac) {
+          var tick = j[0] + frac * j[1];
+          if (tick <= streamEnd && !inSilence(tick, sils)) nudges++;
+        });
+      });
+      result.nudges = nudges;
+    }
+    return result;
+  }
+
+  function boot() {
+    if (booted || !record || !fixtures) return;
+    booted = true;
+    var checks = record.finalState.checks;
+    var problems = [];
+    var totalChunks = 0;
+    Object.keys(checks.fixtures).forEach(function (name) {
+      var events = fixtures[name];
+      var chunks = runStream(events);
+      var words = chunks.reduce(function (n, c) { return n + c.wordCount; }, 0);
+      var mid = chunks.slice(0, -1).reduce(function (n, c) {
+        return n + (c.endsMidSentence ? 1 : 0);
+      }, 0);
+      var want = checks.fixtures[name];
+      totalChunks += chunks.length;
+      if (chunks.length !== want.chunks) problems.push(name + ": " + chunks.length + " chunks, record says " + want.chunks);
+      if (words !== want.words) problems.push(name + ": " + words + " words out, " + want.words + " in");
+      if (mid !== want.midSentenceEnds) problems.push(name + ": " + mid + " mid-sentence ends, record says " + want.midSentenceEnds);
+    });
+    Object.keys(checks.walkModes).forEach(function (modeName) {
+      var got = simulate(SIM_MODES[modeName], fixtures.walk);
+      var want = checks.walkModes[modeName];
+      if (got.chunks !== want.chunks) problems.push("walk/" + modeName + ": " + got.chunks + " chunks, record says " + want.chunks);
+      if (got.maxBuffered !== want.maxBuffered) problems.push("walk/" + modeName + ": max buffered " + got.maxBuffered + ", record says " + want.maxBuffered);
+      if (got.talkedOver !== want.talkedOver) problems.push("walk/" + modeName + ": talked over " + got.talkedOver + ", record says " + want.talkedOver);
+      if (got.jobsDone !== want.jobsDone) problems.push("walk/" + modeName + ": jobs " + got.jobsDone + ", record says " + want.jobsDone);
+      if (got.nudges !== want.nudges) problems.push("walk/" + modeName + ": nudges " + got.nudges + ", record says " + want.nudges);
+      if (Math.abs(got.firstResponseS - want.firstResponseS) > 1e-6)
+        problems.push("walk/" + modeName + ": first response differs");
+    });
+    if (problems.length) {
+      els.bootStatus.style.color = "#f0b9b9";
+      els.bootStatus.textContent = "Boot check found differences from the record: " +
+        problems.join("; ") + ". The pad still runs the port — the receipts are in VERIFY.md.";
+    } else {
+      var pw = checks.walkModes.patient;
+      els.bootStatus.textContent = "Boot check passed here, in your browser: the port on this page " +
+        "reproduces the Python prototype on all five fixtures (" + totalChunks +
+        " chunks, zero word loss) and on the walk three ways — patient: " + pw.chunks +
+        " chunks, " + pw.maxBuffered + " words held, first response at " +
+        Math.round(pw.firstResponseS) + " s of stream time. The pad below runs that verified engine.";
+    }
+    els.liveNote.textContent = "Honest labels: the stream is simulated text with word timings, " +
+      "not audio — the segmenter consumes word-timed streams, and the microphone front end is a " +
+      "separate block that was deliberately not built. The numbers quoted in this tile are the " +
+      "Python prototype's measured ones; the pad runs segmenter.js, the port verified against it " +
+      "(VERIFY.md). Your words never leave this page.";
+    initPad();
+    els.livePanel.hidden = false;
+  }
+
+  /* ---------------- the live pad ---------------- */
+
+  var PAD_MODES = {
+    patient: {
+      cfg: { maxWords: 500, maxSeconds: 1200, gapTrigger: 1e9 },
+      note: "gap never · page 500 words · clock 20 min — accumulates while you stop, " +
+            "think, look out the window. It answers when a page fills, or when the session ends."
+    },
+    eager: {
+      cfg: { maxWords: 120, maxSeconds: 15, gapTrigger: 0.8 },
+      note: "gap 0.8 s · page 120 words · clock 15 s — answers at the first short pause, " +
+            "even a long sentence-breath. The chatbot that makes you keep feeding it words."
+    },
+    async: {
+      cfg: { maxWords: 500, maxSeconds: 60, gapTrigger: 5 },
+      note: "gap 5 s · page 500 words · clock 60 s — the base cadence. In the build, a work " +
+            "model rode on top of it (a job per chunk, progress live, nudges in the gaps); " +
+            "the pad runs the cadence itself — jobs and nudges live in modes/RESULTS.md."
+    }
+  };
+  var SAMPLE = "the tide was slack when we left the dock and nobody had checked the bilge " +
+    "since tuesday. you could hear the halyards ticking against the mast. the chart said " +
+    "one thing and the sounder said another, so we marked the spot where the eddy folds " +
+    "back on itself. a good watch is mostly a matter of noticing early. keep the red nun " +
+    "to port and the channel opens up. the engine took two tries and then caught clean. " +
+    "rain came sideways off the point just after dark. by the time we anchored the bay " +
+    "had gone flat calm, and the coffee went cold before the fog burned off.";
+
+  var padMode = "patient", padWpm = 150;
+  var padSeg = null, schedule = [], fedIdx = 0;
+  var streamNow = 0, wallLast = 0, driver = null;
+  var sessionLive = false, frozen = false, speechDone = false, sessionOver = false;
+  var silencing = null;   // {start, end}
+  var peakHeld = 0, filedChunks = [], lastEmitAt = -10;
+
+  function fmtClock(t) {
+    var m = Math.floor(t / 60), s = t - m * 60;
+    return m + ":" + (s < 10 ? "0" : "") + s.toFixed(0);
+  }
+
+  function padStatus(msg) { els.padStatus.textContent = msg; }
+
+  function buildSchedule(text, wpm) {
+    var words = text.split(/\s+/).map(function (s) { return s.trim(); })
+      .filter(function (s) { return s.length > 0; });
+    var slot = 60 / wpm;
+    var state = 1234567 + words.length * 977;
+    function rnd() {
+      state = (state * 1103515245 + 12345) % 2147483648;
+      return state / 2147483648;
+    }
+    var evs = [], clock = 0;
+    words.forEach(function (w) {
+      var dur = slot * (0.64 + 0.18 * rnd());
+      evs.push({ word: w, start: clock, end: clock + dur });
+      clock += slot + (VS.endsSentence(w) ? slot * 1.9 : 0);
+    });
+    return evs;
+  }
+
+  function updatePadStats() {
+    els.pClock.textContent = fmtClock(streamNow);
+    els.pSpoken.textContent = fedIdx;
+    els.pHeld.textContent = padSeg ? padSeg.bufferedWords : 0;
+    els.pPeak.textContent = peakHeld;
+    els.pChunks.textContent = filedChunks.length;
+  }
+
+  function appendWord(ev) {
+    if (fedIdx === 1) els.transcript.textContent = "";
+    var sp = document.createElement("span");
+    sp.className = "w";
+    sp.textContent = (fedIdx > 1 ? " " : "") + ev.word;
+    els.transcript.appendChild(sp);
+    els.transcript.scrollTop = els.transcript.scrollHeight;
+  }
+
+  function fileChunk(chunk, fresh) {
+    filedChunks.push({ chunk: chunk, at: streamNow });
+    if (filedChunks.length === 1) els.chunks.textContent = "";
+    var card = document.createElement("div");
+    card.className = "chunk-card" + (fresh ? " fresh" : "");
+    var meta = document.createElement("div");
+    meta.className = "chunk-meta";
+    meta.textContent = "Chunk " + filedChunks.length + " · ";
+    var trig = document.createElement("span");
+    trig.className = "trig";
+    trig.textContent = chunk.trigger;
+    meta.appendChild(trig);
+    meta.appendChild(document.createTextNode(
+      " · " + chunk.wordCount + " words · filed at " + fmtClock(streamNow)));
+    card.appendChild(meta);
+    var text = document.createElement("div");
+    text.className = "chunk-text";
+    text.textContent = chunk.text;   // textContent only — untrusted input
+    card.appendChild(text);
+    (function (rec) {
+      card.addEventListener("click", function () {
+        els.readerMeta.textContent = "chunk " + (filedChunks.indexOf(rec) + 1) +
+          " — " + rec.chunk.trigger + ", " + rec.chunk.wordCount +
+          " words, filed at " + fmtClock(rec.at);
+        els.reader.textContent = rec.chunk.text;
+      });
+    })(filedChunks[filedChunks.length - 1]);
+    els.chunks.appendChild(card);
+    els.chunks.scrollTop = els.chunks.scrollHeight;
+    if (padSeg) peakHeld = Math.max(peakHeld, padSeg.bufferedWords);
+    updatePadStats();
+  }
+
+  function emitAll(chunks, why) {
+    chunks.forEach(function (c) { fileChunk(c, true); });
+    if (!chunks.length) return;
+    lastEmitAt = streamNow;
+    var c = chunks[chunks.length - 1];
+    if (padMode === "eager" && c.trigger === "gap") {
+      padStatus("Eager answered at the pause — " + c.wordCount +
+        " words. That is the feeling: you stopped, so it talked.");
+    } else if (padMode === "async" && c.trigger === "gap") {
+      padStatus("Async filed at the gap — " + c.wordCount +
+        " words. In the build, a job would start on this chunk now.");
+    } else if (c.trigger === "size") {
+      padStatus("Filed on the page trigger — " + c.wordCount + " words. " +
+        (padMode === "patient" ? "A full page is one of the only two ways Patient ever answers." : ""));
+    } else if (c.trigger === "time") {
+      padStatus("Filed on the clock trigger — " + c.wordCount + " words.");
+    } else if (c.trigger === "flush") {
+      padStatus("Session end filed the rest — " + c.wordCount + " words.");
+    }
+  }
+
+  function drive() {
+    var nowMs = performance.now();
+    var dt = Math.min(0.25, (nowMs - wallLast) / 1000);
+    wallLast = nowMs;
+    if (!sessionLive || frozen) return;
+    streamNow += dt;
+
+    if (silencing) {
+      var left = silencing.end - streamNow;
+      if (left <= 0) { endSilence(); }
+      else if (streamNow - lastEmitAt > 1.0) {
+        var el2 = (streamNow - silencing.start).toFixed(1);
+        var hint = padMode === "patient"
+          ? "Patient's gap trigger is never. It is simply still listening."
+          : padMode === "eager"
+            ? "Eager's gap trigger is 0.8 s — if anything was buffered, it has already answered."
+            : "Async notices the gap at 5 s, via the tick — not when you resume.";
+        padStatus("silence " + el2 + " s of 6 s — " + hint +
+          " (Skip ends the silence early.)");
+      }
+    } else {
+      while (fedIdx < schedule.length && schedule[fedIdx].end <= streamNow) {
+        var ev = schedule[fedIdx];
+        fedIdx++;
+        appendWord(ev);
+        if (padSeg) {
+          emitAll(padSeg.feed(ev));
+          peakHeld = Math.max(peakHeld, padSeg.bufferedWords);
+        }
+      }
+      if (!speechDone && fedIdx >= schedule.length) {
+        speechDone = true;
+        padStatus("Speech finished — " + fedIdx + " words in. The clock keeps running: " +
+          (padSeg && padSeg.bufferedWords > 0
+            ? (padMode === "patient"
+                ? "Patient is holding all " + padSeg.bufferedWords + " of them. Take a thinking pause and watch it not answer — or end the session."
+                : "The rest is still buffered (" + padSeg.bufferedWords + " words) — a pause or the session end will file it.")
+            : "Everything spoken has been filed."));
+      }
+    }
+    // The wall-clock tick — a live deployment's watchdog. This is
+    // what notices a silence while it is happening.
+    if (padSeg && !sessionOver) emitAll(padSeg.tick(streamNow));
+    updatePadStats();
+  }
+
+  function startDriver() {
+    if (driver !== null) return;
+    wallLast = performance.now();
+    driver = window.setInterval(drive, 50);
+  }
+  function stopDriver() {
+    if (driver !== null) { window.clearInterval(driver); driver = null; }
+  }
+
+  function setSpeakUI() {
+    els.speak.innerHTML = sessionOver ? "&#9654; Speak again"
+      : frozen ? "&#9654; Resume"
+      : sessionLive ? "&#10073;&#10073; Pause the stream"
+      : "&#9654; Start speaking";
+    els.silence.disabled = !sessionLive || sessionOver;
+    els.end.disabled = !sessionLive || sessionOver;
+    els.silence.textContent = silencing ? "Skip the rest of this silence ▸▸"
+      : "Thinking pause · 6 s";
+  }
+
+  function startSession() {
+    var text = els.script.value;
+    schedule = buildSchedule(text, padWpm);
+    if (!schedule.length) {
+      padStatus("Nothing to say yet — type or paste some speech first.");
+      return;
+    }
+    padSeg = new VS.Segmenter(PAD_MODES[padMode].cfg);
+    fedIdx = 0; streamNow = 0; peakHeld = 0; filedChunks = [];
+    silencing = null; sessionOver = false; frozen = false; speechDone = false; lastEmitAt = -10;
+    els.transcript.textContent = "";
+    els.chunks.textContent = "";
+    els.readerMeta.textContent = "";
+    els.reader.textContent = "Chunks the pad files will be readable here — click one.";
+    els.script.disabled = true;
+    sessionLive = true;
+    startDriver();
+    setSpeakUI();
+    updatePadStats();
+    padStatus(padMode === "patient"
+      ? "Speaking. Patient is listening — and will keep listening through everything short of a 500-word page."
+      : padMode === "eager"
+        ? "Speaking. Eager is listening for any pause of 0.8 s — including the breath at the end of a sentence."
+        : "Speaking. Async files on the base cadence; watch the gaps.");
+  }
+
+  function endSilence() {
+    if (!silencing) return;
+    var shift = streamNow - silencing.start;
+    for (var i = fedIdx; i < schedule.length; i++) {
+      schedule[i].start += shift;
+      schedule[i].end += shift;
+    }
+    if (fedIdx > 0) {
+      var mark = document.createElement("span");
+      mark.className = "silence-mark";
+      mark.textContent = " ⏸ " + shift.toFixed(1) + " s of silence ";
+      els.transcript.appendChild(mark);
+      els.transcript.scrollTop = els.transcript.scrollHeight;
+    }
+    silencing = null;
+    setSpeakUI();
+    padStatus(padMode === "patient"
+      ? "You thought for " + shift.toFixed(1) + " s. Patient noticed nothing to answer — it just kept the words coming."
+      : "Silence over (" + shift.toFixed(1) + " s). Whatever the tick filed during it is in the chunks.");
+    if (padSeg) emitAll(padSeg.tick(streamNow));
+  }
+
+  function resetPad() {
+    stopDriver();
+    padSeg = null; schedule = []; fedIdx = 0;
+    streamNow = 0; peakHeld = 0; filedChunks = [];
+    sessionLive = false; frozen = false; speechDone = false; sessionOver = false; silencing = null; lastEmitAt = -10;
+    els.script.disabled = false;
+    els.transcript.innerHTML = "<span class=\"empty-note\">Nothing yet. Your words will land here, one at a time — and in Patient mode, nothing will answer them for a long while.</span>";
+    els.chunks.innerHTML = "<span class=\"empty-note\">No chunks yet. Patient files on a full page (500 words) or when the session ends.</span>";
+    setSpeakUI();
+    updatePadStats();
+    padStatus("");
+  }
+
+  function setMode(m) {
+    var wasLive = sessionLive || filedChunks.length > 0;
+    padMode = m;
+    ["patient", "eager", "async"].forEach(function (k) {
+      el("mode-" + k).setAttribute("aria-pressed", k === m ? "true" : "false");
+    });
+    els.modeNote.textContent = PAD_MODES[m].note;
+    if (wasLive) {
+      resetPad();
+      padStatus("Mode switched to " + (m === "async" ? "async-parallel" : m) +
+        " — same block, new cadence; the session restarted. Press Start speaking.");
+    }
+  }
+
+  function setPace(w) {
+    padWpm = w;
+    [90, 150, 240].forEach(function (k) {
+      el("pace-" + k).setAttribute("aria-pressed", k === w ? "true" : "false");
+    });
+    if (sessionLive) padStatus("Pace set to " + w + " wpm — it applies to the next session.");
+  }
+
+  function initPad() {
+    if (els.script.value.trim() === "") els.script.value = SAMPLE;
+    els.modeNote.textContent = PAD_MODES.patient.note;
+    els.speak.addEventListener("click", function () {
+      if (sessionOver || !sessionLive) { resetPad(); startSession(); return; }
+      if (frozen) { frozen = false; padStatus("Resumed."); }
+      else { frozen = true; padStatus("Stream paused — the clock is frozen with it."); }
+      setSpeakUI();
+    });
+    els.silence.addEventListener("click", function () {
+      if (!sessionLive || sessionOver) return;
+      if (silencing) { silencing.end = streamNow; endSilence(); return; }
+      silencing = { start: streamNow, end: streamNow + 6 };
+      setSpeakUI();
+      padStatus("Thinking… the clock keeps running; the words wait.");
+    });
+    els.end.addEventListener("click", function () {
+      if (!sessionLive || sessionOver) return;
+      if (silencing) { silencing.end = streamNow; endSilence(); }
+      if (padSeg) {
+        var tail = padSeg.flush();
+        if (tail !== null) fileChunk(tail, true);
+      }
+      sessionOver = true;
+      sessionLive = false;
+      stopDriver();
+      setSpeakUI();
+      updatePadStats();
+      var held = peakHeld;
+      padStatus("Session ended — " + fedIdx + " words spoken, " + filedChunks.length +
+        " chunks filed, peak held " + held + ". " +
+        (padMode === "patient"
+          ? "In Patient's world, this — or a full 500-word page — is the only way it ever answers."
+          : padMode === "eager"
+            ? "Count the gap chunks: every one is a pause Eager treated as your turn being over."
+            : "The cadence did its work; the jobs were the simulator's layer."));
+    });
+    els.padReset.addEventListener("click", function () {
+      resetPad();
+      padStatus("Pad reset. Same verified segmenter, clean buffer.");
+    });
+    els.sample.addEventListener("click", function () {
+      if (sessionLive) { padStatus("Reset the pad before changing the script."); return; }
+      els.script.value = SAMPLE;
+      padStatus("Sample script restored — the fixture sentences, as dictation.");
+    });
+    ["patient", "eager", "async"].forEach(function (m) {
+      el("mode-" + m).addEventListener("click", function () { setMode(m); });
+    });
+    [90, 150, 240].forEach(function (w) {
+      el("pace-" + w).addEventListener("click", function () { setPace(w); });
+    });
+    setSpeakUI();
+    updatePadStats();
+  }
+
+  /* ---------------- load ---------------- */
+
+  function fail(msg) {
+    els.err.style.display = "block";
+    els.err.textContent = msg;
+  }
+
+  function maybeInit() {
+    if (!record) return;
+    els.gallery.textContent = record.gallery || "Xero Bootcamp Gallery";
+    els.title.textContent = record.title;
+    els.promise.textContent = record.promise;
+    els.agent.textContent = record.agent;
+    els.configNote.textContent = record.config.note;
+    els.honesty.textContent = record.honesty;
+    els.scrub.max = record.steps.length - 1;
+    goTo(0);
+  }
+
+  fetch("playthrough.json")
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (rec) { record = rec; maybeInit(); })
+    .catch(function (e) { fail("Could not load playthrough.json (" + e.message + "). Serve this folder over HTTP — the player reads its record from the same folder."); });
+
+  fetch("fixtures.json")
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (fx) {
+      fixtures = fx;
+      if (record && idx === record.steps.length - 1) render();
+    })
+    .catch(function (e) { fail("Could not load fixtures.json (" + e.message + "). The replay works from the record, but the boot check and the pad need the fixture streams."); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,651 @@
+{
+ "title": "The Patient Dictation Agent",
+ "kind": "playthrough",
+ "gallery": "Xero Bootcamp Gallery",
+ "promise": "Watch it build; then it's yours.",
+ "agent": "A dictation agent built from the zero agent: the most basic voice agent \u2014 a transcriber \u2014 plus a segmenter that files a word-timed stream into markdown chunks on a pulse, under a mode toggle. This playthrough builds its Patient mode: the one that keeps listening while you stop, think, and look out the window.",
+ "source": {
+  "prototype": "SuperInstance/xero-lab \u2014 voice-block/ (segmenter/, modes/, worker/, research.md)",
+  "engine": "segmenter.js \u2014 a faithful port of segmenter.py, verified against the prototype test-for-test and chunk-for-chunk on identical streams (VERIFY.md)",
+  "recordDerivedFrom": "the 2026-10-12 design record and the prototype's own measured runs (ground_truth.py over fixtures.py's seeded streams)"
+ },
+ "config": {
+  "modes": {
+   "base": {
+    "maxWords": 500,
+    "maxSeconds": 60,
+    "gapTrigger": 5
+   },
+   "eager": {
+    "maxWords": 120,
+    "maxSeconds": 15,
+    "gapTrigger": 0.8
+   },
+   "patient": {
+    "maxWords": 500,
+    "maxSeconds": 1200,
+    "gapTrigger": "never"
+   },
+   "async": {
+    "maxWords": 500,
+    "maxSeconds": 60,
+    "gapTrigger": 5,
+    "workModel": "jobs on chunks (simulator layer)"
+   }
+  },
+  "note": "Modes are configurations of one block \u2014 a toggle, not three products. The live pad's stream is simulated text with word timings, not audio: the segmenter consumes word-timed streams, and a microphone front end is a separate block that was deliberately not built."
+ },
+ "honesty": "The chat is sourced, not scripted: Casey's turns render his recorded 2026-10-12 voice-block design \u2014 the building-block sketch as decomposed at the time under his ramble protocol, kept short and fragmentary in its shape; the 'go long' dispatch and the seeds doctrine framed the build but are not staged as turns. The brief and builder turns condense the actual spec (segmenter.py, the block README) and the verified receipts (the 16 tests, demo.py, modes/RESULTS.md). Every measured number in the state rail is sliced from the prototype's recorded runs by make_playthrough.py and asserted against them; none is invented. The tree lists the block's source files (lockfile and installed dependencies not shown). The end state is the working segmenter: the pad runs segmenter.js, the port verified in VERIFY.md.",
+ "finalState": {
+  "files": 17,
+  "tree": [
+   "segmenter/segmenter.py",
+   "segmenter/fixtures.py",
+   "segmenter/demo.py",
+   "segmenter/test_segmenter.py",
+   "modes/simulate.py",
+   "modes/RESULTS.md",
+   "README.md",
+   "research.md",
+   "worker/README.md",
+   "worker/package.json",
+   "worker/src/index.ts",
+   "worker/src/segmenter.ts",
+   "worker/src/session-do.ts",
+   "worker/test/segmenter.test.ts",
+   "worker/test/worker.test.ts",
+   "worker/tsconfig.json",
+   "worker/wrangler.toml"
+  ],
+  "tests": "16 + 8",
+  "modes": 3,
+  "measurements": [
+   "demo \u00b7 monologue: segmenter 0/21 mid-sentence ends \u2014 naive 9/11",
+   "mean pause at the chosen break: 0.87 s (segmenter) vs 0.21 s (naive)",
+   "16/16 tests pass \u2014 zero word loss on all five fixtures",
+   "one block, three configs \u2014 eager 0.8 s / 120 wds / 15 s \u00b7 patient \u221e / 500 wds / 20 min \u00b7 async 5 s / 500 wds / 60 s + jobs",
+   "the walk (886 words, 19 min) \u00b7 eager: 45 responses, first at 10 s",
+   "the walk \u00b7 patient: 2 responses, first at 549 s \u2014 499 words held, nothing lost",
+   "the walk \u00b7 async: 10 chunks, first response 64 s, 9/9 jobs done while he talked",
+   "eager talked over resumed speech 64/75 in monologue \u2014 but 4/50 between thoughts",
+   "async first response on the walk: 169 s stream-only \u2192 64 s with tick()",
+   "at speech rate the 60 s clock fires at ~180 words \u2014 the \u00be-page rule binds only faster-than-real-time feeds",
+   "worker variant: 8/8 tests, tsc clean, 6.04 KiB dry-run bundle \u2014 not deployed"
+  ],
+  "checks": {
+   "fixtures": {
+    "monologue": {
+     "words": 1542,
+     "chunks": 22,
+     "midSentenceEnds": 0
+    },
+    "stop_and_think": {
+     "words": 810,
+     "chunks": 40,
+     "midSentenceEnds": 0
+    },
+    "rapid_fire": {
+     "words": 1300,
+     "chunks": 11,
+     "midSentenceEnds": 0
+    },
+    "metronome": {
+     "words": 50,
+     "chunks": 3,
+     "midSentenceEnds": 2
+    },
+    "walk": {
+     "words": 886,
+     "chunks": 10,
+     "midSentenceEnds": 0
+    }
+   },
+   "walkModes": {
+    "eager": {
+     "chunks": 45,
+     "maxBuffered": 35,
+     "firstResponseS": 9.606902126586663,
+     "talkedOver": 30,
+     "jobsDone": null,
+     "nudges": null
+    },
+    "patient": {
+     "chunks": 2,
+     "maxBuffered": 499,
+     "firstResponseS": 549.0187195615698,
+     "talkedOver": 0,
+     "jobsDone": null,
+     "nudges": null
+    },
+    "async": {
+     "chunks": 10,
+     "maxBuffered": 128,
+     "firstResponseS": 64.24192642096348,
+     "talkedOver": null,
+     "jobsDone": 9,
+     "nudges": 9
+    }
+   }
+  }
+ },
+ "steps": [
+  {
+   "id": 0,
+   "chapter": "0 \u00b7 The blank page",
+   "title": "The blank page",
+   "narration": "The zero agent starts as a blank page \u2014 no files, no memory, nothing spent. Everything after this is additions. This time the addition is an ear.",
+   "chat": [],
+   "action": "none",
+   "delta": {
+    "filesAdded": [],
+    "measurementsAdded": [],
+    "fourth": {
+     "value": "\u2014",
+     "label": "nothing yet"
+    }
+   },
+   "state": {
+    "files": 0,
+    "tree": [],
+    "tests": "0",
+    "modes": 0,
+    "measurements": []
+   }
+  },
+  {
+   "id": 1,
+   "chapter": "1 \u00b7 The block",
+   "title": "The most basic voice agent",
+   "narration": "The block is a transcriber and nothing more \u2014 plus the tools a transcriber needs to be useful: a segmenter that files speech into chunks, and an assembler that marks them up honestly.",
+   "chat": [
+    {
+     "speaker": "Casey",
+     "text": "the most basic voice agent. just a transcriber \u2014 transcribe english speech to text.",
+     "note": "The sketch \u2014 2026-10-12, rendered from the record made at the time."
+    },
+    {
+     "speaker": "Casey",
+     "text": "but split it into markdown chunks \u2014 no more than about three-quarters of a page. and an assembler that puts the codings on the words, from how the transcriber worked.",
+     "coined": [
+      "chunk"
+     ]
+    },
+    {
+     "speaker": "The brief",
+     "text": "The block consumes a word-timed stream \u2014 every word carrying start and end times, as an STT engine produces it. The segmenter accumulates words and emits markdown chunks; the assembler adds only the markup the timing signal supports: paragraph breaks at long pauses, sentence casing, emphasis on words held notably long."
+    },
+    {
+     "speaker": "The builder",
+     "text": "\u2705 segmenter.py \u2014 a Segmenter with feed and flush, emitting markdown chunks. The word-timed stream is the contract; the microphone is a different block, deliberately not built."
+    }
+   ],
+   "action": "build",
+   "delta": {
+    "filesAdded": [
+     "segmenter/segmenter.py"
+    ],
+    "measurementsAdded": [],
+    "fourth": {
+     "value": "500",
+     "label": "words per chunk, at most (~\u00be page)"
+    }
+   },
+   "state": {
+    "files": 1,
+    "tree": [
+     "segmenter/segmenter.py"
+    ],
+    "tests": "0",
+    "modes": 0,
+    "measurements": []
+   }
+  },
+  {
+   "id": 2,
+   "chapter": "1 \u00b7 The block",
+   "title": "The pulse \u2014 three triggers and a best break",
+   "narration": "The block runs on a pulse: three triggers, any of them fires. And when size or time fires, the cut doesn't land where the trigger did \u2014 it lands at the best break the buffer offers.",
+   "chat": [
+    {
+     "speaker": "Casey",
+     "text": "put it on a pulse. emit every minute or so, every three-quarter page, or when there's a gap of more than about five seconds. the gaps are where someone can say something in between \u2014 to make it stop.",
+     "note": "The sketch \u2014 2026-10-12, rendered from the record made at the time."
+    },
+    {
+     "speaker": "Casey",
+     "text": "and don't cut where the trigger lands \u2014 pick the best-break. the cue is the pause: somebody took a breath, a sentence ended.",
+     "coined": [
+      "best-break"
+     ]
+    },
+    {
+     "speaker": "The brief",
+     "text": "Three triggers, any fires. GAP \u2014 a pause before the next word longer than 5 s ends the chunk on the spot, and the gap is recorded. SIZE \u2014 500 words. TIME \u2014 60 s inside the chunk. SIZE and TIME pick the best break instead: score every boundary, min(pause, 3 s) + 2 if the word ends a sentence; ties go to the later boundary; the remainder starts the next chunk. Plus tick(now) \u2014 a wall-clock call, so a live deployment can learn that a silence has happened without waiting for speech to resume.",
+     "coined": [
+      "tick"
+     ]
+    },
+    {
+     "speaker": "The builder",
+     "text": "\u2705 demo, the segmenter against a naive fixed-window cutter: 0% of chunks end mid-sentence, on every speech fixture \u2014 the naive cutter ends 82\u2013100% of its chunks mid-sentence. Mean pause at the chosen break: 0.87 s, against the naive 0.21 s."
+    }
+   ],
+   "action": "build",
+   "delta": {
+    "filesAdded": [
+     "segmenter/fixtures.py",
+     "segmenter/demo.py"
+    ],
+    "measurementsAdded": [
+     "demo \u00b7 monologue: segmenter 0/21 mid-sentence ends \u2014 naive 9/11",
+     "mean pause at the chosen break: 0.87 s (segmenter) vs 0.21 s (naive)"
+    ],
+    "fourth": {
+     "value": "0%",
+     "label": "mid-sentence ends (naive: 82\u2013100%)"
+    }
+   },
+   "state": {
+    "files": 3,
+    "tree": [
+     "segmenter/segmenter.py",
+     "segmenter/fixtures.py",
+     "segmenter/demo.py"
+    ],
+    "tests": "0",
+    "modes": 0,
+    "measurements": [
+     "demo \u00b7 monologue: segmenter 0/21 mid-sentence ends \u2014 naive 9/11",
+     "mean pause at the chosen break: 0.87 s (segmenter) vs 0.21 s (naive)"
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "chapter": "2 \u00b7 Proof",
+   "title": "Sixteen tests",
+   "narration": "Before the block is trusted with anyone's voice, its invariants become tests: nothing lost, nothing oversize, nothing out of order \u2014 and the planted break at word 480 must beat the trigger point at 500.",
+   "chat": [
+    {
+     "speaker": "The brief",
+     "text": "The invariants, as tests. No word is ever lost, on any stream shape. No chunk passes 500 words. Chunks stay time-ordered. The best-break test plants a pause and a sentence end at word 480 of 500 \u2014 the cut must land at 480. The tick test: silent at 2.35 s of gap, emitted at 5.35 s, never twice."
+    },
+    {
+     "speaker": "The builder",
+     "text": "\u2705 16/16 tests pass. Stop-and-think: 11 gap chunks for 12 bursts, every end_pause over 5 s. Metronome: the time trigger only \u2014 its 2.7 s pauses stay under the gap gate, as designed. Zero word loss across all five fixtures."
+    }
+   ],
+   "action": "proof",
+   "delta": {
+    "filesAdded": [
+     "segmenter/test_segmenter.py"
+    ],
+    "measurementsAdded": [
+     "16/16 tests pass \u2014 zero word loss on all five fixtures"
+    ],
+    "fourth": {
+     "value": "16/16",
+     "label": "tests passing"
+    }
+   },
+   "state": {
+    "files": 4,
+    "tree": [
+     "segmenter/segmenter.py",
+     "segmenter/fixtures.py",
+     "segmenter/demo.py",
+     "segmenter/test_segmenter.py"
+    ],
+    "tests": "16",
+    "modes": 0,
+    "measurements": [
+     "demo \u00b7 monologue: segmenter 0/21 mid-sentence ends \u2014 naive 9/11",
+     "mean pause at the chosen break: 0.87 s (segmenter) vs 0.21 s (naive)",
+     "16/16 tests pass \u2014 zero word loss on all five fixtures"
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "chapter": "3 \u00b7 The toggle",
+   "title": "Modes are a toggle, not three products",
+   "narration": "Same block, three cadence-and-initiative configurations. The ask was never three agents \u2014 it was one agent with a toggle, because neither eager nor patient is better. They are different situations.",
+   "chat": [
+    {
+     "speaker": "Casey",
+     "text": "the modes are a toggle, not three products. eager \u2014 the other chatbot: stop talking and it answers right away; you have to keep feeding it words. patient \u2014 you will keep on listening: i can walk twenty minutes saying not much \u2014 stop, think, look out the window. async-parallel \u2014 it works while i keep talking, its work on screen as it happens, and i can interrupt or nudge it mid-stream.",
+     "coined": [
+      "eager",
+      "patient",
+      "async-parallel"
+     ],
+     "note": "The sketch \u2014 2026-10-12, rendered from the record made at the time."
+    },
+    {
+     "speaker": "The brief",
+     "text": "One block, three configs. EAGER: gap 0.8 s, page 120 words, clock 15 s. PATIENT: gap effectively never, page 500, clock 20 minutes. ASYNC-PARALLEL: the base cadence \u2014 gap 5 s, page 500, clock 60 s \u2014 plus a work model: each emitted chunk starts a job, progress surfaces live, and a gap with a job in flight is a nudge point. The simulator replays identical streams through all three, emissions timed by wall-clock ticks as a live system would notice them."
+    },
+    {
+     "speaker": "The builder",
+     "text": "\u2705 modes/simulate.py \u2014 the three configs over the same word-timed streams, with a nominal 0.3 s processing delay on responses. Model latency is out of scope: this measures the block's cadence, not a model."
+    }
+   ],
+   "action": "build",
+   "delta": {
+    "filesAdded": [
+     "modes/simulate.py"
+    ],
+    "measurementsAdded": [
+     "one block, three configs \u2014 eager 0.8 s / 120 wds / 15 s \u00b7 patient \u221e / 500 wds / 20 min \u00b7 async 5 s / 500 wds / 60 s + jobs"
+    ],
+    "fourth": {
+     "value": "3",
+     "label": "modes, one toggle"
+    }
+   },
+   "state": {
+    "files": 5,
+    "tree": [
+     "segmenter/segmenter.py",
+     "segmenter/fixtures.py",
+     "segmenter/demo.py",
+     "segmenter/test_segmenter.py",
+     "modes/simulate.py"
+    ],
+    "tests": "16",
+    "modes": 3,
+    "measurements": [
+     "demo \u00b7 monologue: segmenter 0/21 mid-sentence ends \u2014 naive 9/11",
+     "mean pause at the chosen break: 0.87 s (segmenter) vs 0.21 s (naive)",
+     "16/16 tests pass \u2014 zero word loss on all five fixtures",
+     "one block, three configs \u2014 eager 0.8 s / 120 wds / 15 s \u00b7 patient \u221e / 500 wds / 20 min \u00b7 async 5 s / 500 wds / 60 s + jobs"
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "chapter": "4 \u00b7 On the walk",
+   "title": "The 20-minute walk, measured",
+   "narration": "The fixture is Casey's walk: 886 words over 19 minutes, talk in bursts, silence while he looks out the window. Patient holds everything \u2014 499 words at the peak \u2014 answers twice, and loses nothing.",
+   "chat": [
+    {
+     "speaker": "The builder",
+     "text": "\u2705 the sparse walk, three ways. Eager: 45 responses, the first at 10 s. Patient: exactly 2 responses in 19 minutes, the first at 549 s; up to 499 words sat buffered and unacknowledged \u2014 and nothing was lost; every word was eventually filed. Async: 10 chunks, first response at 64 s, all 9 jobs finished before he stopped talking."
+    },
+    {
+     "speaker": "The builder",
+     "text": "The reading of it: patient is total recall and zero companionship. For nine minutes there is no signal that anyone is listening. It is a recorder with good filing \u2014 which is exactly what the walking mode was asked to be."
+    }
+   ],
+   "action": "measured",
+   "delta": {
+    "filesAdded": [
+     "modes/RESULTS.md"
+    ],
+    "measurementsAdded": [
+     "the walk (886 words, 19 min) \u00b7 eager: 45 responses, first at 10 s",
+     "the walk \u00b7 patient: 2 responses, first at 549 s \u2014 499 words held, nothing lost",
+     "the walk \u00b7 async: 10 chunks, first response 64 s, 9/9 jobs done while he talked"
+    ],
+    "fourth": {
+     "value": "499",
+     "label": "words patient held on the walk"
+    }
+   },
+   "state": {
+    "files": 6,
+    "tree": [
+     "segmenter/segmenter.py",
+     "segmenter/fixtures.py",
+     "segmenter/demo.py",
+     "segmenter/test_segmenter.py",
+     "modes/simulate.py",
+     "modes/RESULTS.md"
+    ],
+    "tests": "16",
+    "modes": 3,
+    "measurements": [
+     "demo \u00b7 monologue: segmenter 0/21 mid-sentence ends \u2014 naive 9/11",
+     "mean pause at the chosen break: 0.87 s (segmenter) vs 0.21 s (naive)",
+     "16/16 tests pass \u2014 zero word loss on all five fixtures",
+     "one block, three configs \u2014 eager 0.8 s / 120 wds / 15 s \u00b7 patient \u221e / 500 wds / 20 min \u00b7 async 5 s / 500 wds / 60 s + jobs",
+     "the walk (886 words, 19 min) \u00b7 eager: 45 responses, first at 10 s",
+     "the walk \u00b7 patient: 2 responses, first at 549 s \u2014 499 words held, nothing lost",
+     "the walk \u00b7 async: 10 chunks, first response 64 s, 9/9 jobs done while he talked"
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "chapter": "4 \u00b7 On the walk",
+   "title": "Eager's rudeness is positional",
+   "narration": "Eager has the same 0.8 s threshold everywhere. In flowing speech it talks over the speaker constantly; between thoughts it almost never does. The rudeness was never in the number \u2014 it's in where the pauses are.",
+   "chat": [
+    {
+     "speaker": "The builder",
+     "text": "\u2705 talked-over counts, by stream shape. Flowing monologue: eager starts talking into the next sentence 64 of 75 times \u2014 every sentence-final breath of 0.85 s or more reads as a full stop. Stop-and-think dictation: 4 of 50 \u2014 there it answers inside the pauses and the conversation feels snappy."
+    },
+    {
+     "speaker": "The builder",
+     "text": "The lesson the seed bought: eagerness is a property of where the pauses are, not of the threshold. A mode tuned on dictation will be rude in conversation \u2014 measurable before it ships, not after."
+    }
+   ],
+   "action": "measured",
+   "delta": {
+    "filesAdded": [],
+    "measurementsAdded": [
+     "eager talked over resumed speech 64/75 in monologue \u2014 but 4/50 between thoughts"
+    ],
+    "fourth": {
+     "value": "64/75",
+     "label": "eager talked over, in flowing speech"
+    }
+   },
+   "state": {
+    "files": 6,
+    "tree": [
+     "segmenter/segmenter.py",
+     "segmenter/fixtures.py",
+     "segmenter/demo.py",
+     "segmenter/test_segmenter.py",
+     "modes/simulate.py",
+     "modes/RESULTS.md"
+    ],
+    "tests": "16",
+    "modes": 3,
+    "measurements": [
+     "demo \u00b7 monologue: segmenter 0/21 mid-sentence ends \u2014 naive 9/11",
+     "mean pause at the chosen break: 0.87 s (segmenter) vs 0.21 s (naive)",
+     "16/16 tests pass \u2014 zero word loss on all five fixtures",
+     "one block, three configs \u2014 eager 0.8 s / 120 wds / 15 s \u00b7 patient \u221e / 500 wds / 20 min \u00b7 async 5 s / 500 wds / 60 s + jobs",
+     "the walk (886 words, 19 min) \u00b7 eager: 45 responses, first at 10 s",
+     "the walk \u00b7 patient: 2 responses, first at 549 s \u2014 499 words held, nothing lost",
+     "the walk \u00b7 async: 10 chunks, first response 64 s, 9/9 jobs done while he talked",
+     "eager talked over resumed speech 64/75 in monologue \u2014 but 4/50 between thoughts"
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "chapter": "5 \u00b7 What the numbers said",
+   "title": "The wall clock earns its keep",
+   "narration": "A segmenter that only learns about a silence when speech resumes answers one thought late, every time. The tick \u2014 one line of API from step 2 \u2014 turns out to be load-bearing.",
+   "chat": [
+    {
+     "speaker": "The brief",
+     "text": "Stream-driven endpointing has a systematic lag: the gap is discovered at the next word, so the response to a finished thought waits for the start of the next one. The wall-clock tick notices the silence while it is happening. Any real deployment of this block needs the tick, or an equivalent watchdog."
+    },
+    {
+     "speaker": "The builder",
+     "text": "\u2705 measured on the walk: async, stream-only, answered first at 169 s. With tick() checking the clock: 64 s. And the work didn't just come earlier \u2014 it moved into the silences themselves, which is where a walking speaker can actually use it."
+    }
+   ],
+   "action": "finding",
+   "delta": {
+    "filesAdded": [],
+    "measurementsAdded": [
+     "async first response on the walk: 169 s stream-only \u2192 64 s with tick()"
+    ],
+    "fourth": {
+     "value": "64 s",
+     "label": "async first response, with the tick (was 169 s)"
+    }
+   },
+   "state": {
+    "files": 6,
+    "tree": [
+     "segmenter/segmenter.py",
+     "segmenter/fixtures.py",
+     "segmenter/demo.py",
+     "segmenter/test_segmenter.py",
+     "modes/simulate.py",
+     "modes/RESULTS.md"
+    ],
+    "tests": "16",
+    "modes": 3,
+    "measurements": [
+     "demo \u00b7 monologue: segmenter 0/21 mid-sentence ends \u2014 naive 9/11",
+     "mean pause at the chosen break: 0.87 s (segmenter) vs 0.21 s (naive)",
+     "16/16 tests pass \u2014 zero word loss on all five fixtures",
+     "one block, three configs \u2014 eager 0.8 s / 120 wds / 15 s \u00b7 patient \u221e / 500 wds / 20 min \u00b7 async 5 s / 500 wds / 60 s + jobs",
+     "the walk (886 words, 19 min) \u00b7 eager: 45 responses, first at 10 s",
+     "the walk \u00b7 patient: 2 responses, first at 549 s \u2014 499 words held, nothing lost",
+     "the walk \u00b7 async: 10 chunks, first response 64 s, 9/9 jobs done while he talked",
+     "eager talked over resumed speech 64/75 in monologue \u2014 but 4/50 between thoughts",
+     "async first response on the walk: 169 s stream-only \u2192 64 s with tick()"
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "chapter": "5 \u00b7 What the numbers said",
+   "title": "The clock beats the page",
+   "narration": "The \u00be-page rule was the headline of the sketch. The arithmetic disagrees \u2014 politely, and with receipts: at speaking speed, the minute always arrives before the page does.",
+   "chat": [
+    {
+     "speaker": "The builder",
+     "text": "\u2705 the count: 500 words takes about two and a half minutes to say out loud. So under the full cadence, continuous speech trips the 60-second TIME trigger at roughly 180 words \u2014 about a quarter page \u2014 long before SIZE can fire. The \u00be-page rule binds only when word events arrive faster than real time: batch and file transcription."
+    },
+    {
+     "speaker": "Casey",
+     "text": "so is the three-quarter page a batch rule? or does the live cap shrink to meet the clock?",
+     "note": "His open question \u2014 recorded, not resolved."
+    }
+   ],
+   "action": "finding",
+   "delta": {
+    "filesAdded": [
+     "README.md"
+    ],
+    "measurementsAdded": [
+     "at speech rate the 60 s clock fires at ~180 words \u2014 the \u00be-page rule binds only faster-than-real-time feeds"
+    ],
+    "fourth": {
+     "value": "~180",
+     "label": "words when the 60 s clock fires live"
+    }
+   },
+   "state": {
+    "files": 7,
+    "tree": [
+     "segmenter/segmenter.py",
+     "segmenter/fixtures.py",
+     "segmenter/demo.py",
+     "segmenter/test_segmenter.py",
+     "modes/simulate.py",
+     "modes/RESULTS.md",
+     "README.md"
+    ],
+    "tests": "16",
+    "modes": 3,
+    "measurements": [
+     "demo \u00b7 monologue: segmenter 0/21 mid-sentence ends \u2014 naive 9/11",
+     "mean pause at the chosen break: 0.87 s (segmenter) vs 0.21 s (naive)",
+     "16/16 tests pass \u2014 zero word loss on all five fixtures",
+     "one block, three configs \u2014 eager 0.8 s / 120 wds / 15 s \u00b7 patient \u221e / 500 wds / 20 min \u00b7 async 5 s / 500 wds / 60 s + jobs",
+     "the walk (886 words, 19 min) \u00b7 eager: 45 responses, first at 10 s",
+     "the walk \u00b7 patient: 2 responses, first at 549 s \u2014 499 words held, nothing lost",
+     "the walk \u00b7 async: 10 chunks, first response 64 s, 9/9 jobs done while he talked",
+     "eager talked over resumed speech 64/75 in monologue \u2014 but 4/50 between thoughts",
+     "async first response on the walk: 169 s stream-only \u2192 64 s with tick()",
+     "at speech rate the 60 s clock fires at ~180 words \u2014 the \u00be-page rule binds only faster-than-real-time feeds"
+    ]
+   }
+  },
+  {
+   "id": 9,
+   "chapter": "6 \u00b7 Working state",
+   "title": "Working state \u2014 it's yours, and it's listening",
+   "narration": "The same segmenter, a second runtime, and then the handoff: the pad below runs the JavaScript port of this exact block, verified test-for-test against the Python above. Patient is the default. It will hold its tongue through your pauses \u2014 flip it to Eager and feel the difference.",
+   "chat": [
+    {
+     "speaker": "The brief",
+     "text": "Same rules, second runtime: the segmenter in TypeScript on Cloudflare Workers \u2014 triggers and scoring identical, markup left to the renderer. State in an in-memory map; the Durable Object production path sketched, not bound. Nothing deploys without a word."
+    },
+    {
+     "speaker": "The builder",
+     "text": "\u2705 worker variant: 8/8 tests pass, type check clean, dry-run bundle 6.04 KiB \u2014 not deployed; no account was touched. The prior-art research is filed with its receipts corrected: the synthesis pass invented some figures, and every load-bearing one was re-sourced before use."
+    }
+   ],
+   "action": "handoff",
+   "delta": {
+    "filesAdded": [
+     "research.md",
+     "worker/README.md",
+     "worker/package.json",
+     "worker/src/index.ts",
+     "worker/src/segmenter.ts",
+     "worker/src/session-do.ts",
+     "worker/test/segmenter.test.ts",
+     "worker/test/worker.test.ts",
+     "worker/tsconfig.json",
+     "worker/wrangler.toml"
+    ],
+    "measurementsAdded": [
+     "worker variant: 8/8 tests, tsc clean, 6.04 KiB dry-run bundle \u2014 not deployed"
+    ],
+    "fourth": {
+     "value": "8/8",
+     "label": "worker tests (not deployed)"
+    }
+   },
+   "state": {
+    "files": 17,
+    "tree": [
+     "segmenter/segmenter.py",
+     "segmenter/fixtures.py",
+     "segmenter/demo.py",
+     "segmenter/test_segmenter.py",
+     "modes/simulate.py",
+     "modes/RESULTS.md",
+     "README.md",
+     "research.md",
+     "worker/README.md",
+     "worker/package.json",
+     "worker/src/index.ts",
+     "worker/src/segmenter.ts",
+     "worker/src/session-do.ts",
+     "worker/test/segmenter.test.ts",
+     "worker/test/worker.test.ts",
+     "worker/tsconfig.json",
+     "worker/wrangler.toml"
+    ],
+    "tests": "16 + 8",
+    "modes": 3,
+    "measurements": [
+     "demo \u00b7 monologue: segmenter 0/21 mid-sentence ends \u2014 naive 9/11",
+     "mean pause at the chosen break: 0.87 s (segmenter) vs 0.21 s (naive)",
+     "16/16 tests pass \u2014 zero word loss on all five fixtures",
+     "one block, three configs \u2014 eager 0.8 s / 120 wds / 15 s \u00b7 patient \u221e / 500 wds / 20 min \u00b7 async 5 s / 500 wds / 60 s + jobs",
+     "the walk (886 words, 19 min) \u00b7 eager: 45 responses, first at 10 s",
+     "the walk \u00b7 patient: 2 responses, first at 549 s \u2014 499 words held, nothing lost",
+     "the walk \u00b7 async: 10 chunks, first response 64 s, 9/9 jobs done while he talked",
+     "eager talked over resumed speech 64/75 in monologue \u2014 but 4/50 between thoughts",
+     "async first response on the walk: 169 s stream-only \u2192 64 s with tick()",
+     "at speech rate the 60 s clock fires at ~180 words \u2014 the \u00be-page rule binds only faster-than-real-time feeds",
+     "worker variant: 8/8 tests, tsc clean, 6.04 KiB dry-run bundle \u2014 not deployed"
+    ]
+   }
+  }
+ ]
+}
