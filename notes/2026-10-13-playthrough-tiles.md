@@ -60,6 +60,21 @@ its correctness is checkable — the in-browser cascade must
 reproduce the Python prototype's verified behavior on the same
 fixture (35/35, idempotent) before the tile earns its place.
 
+## Casey's critique — the chat is the subject (2026-10-13 19:43)
+
+After playing Tile #1: *"In the playthrough all I see is files
+being created. I need to see the prompt engineering developing —
+it's the chat that's so impressive. The other stuff is what's
+happening because of the chat."*
+
+Doctrine for every tile from here: **the playthrough's subject is
+the conversation** — the human's fragments, the brief they become,
+the builder's receipts — and how the prompt engineering *develops*
+(rough sketch → coined verbs → numbered brief → receipts). State
+changes (files, counts, ledger) are the consequence rail, labeled
+as effects. A tile that shows only effects has hidden the product:
+you build the thing by talking to it, so the talking is the build.
+
 ## Open questions
 
 - Record granularity: steps as commits? as deposits? as chapters

@@ -6,6 +6,13 @@ Titles and narrations are curated here; every number, file list, and
 ledger line is sliced mechanically from ground-truth.json (the trace of
 the real Python prototype run), so the record cannot drift from the
 receipts. Re-run trace.py, then this, to regenerate.
+
+The per-step "chat" arrays are curated here too, and sourced — see the
+record's honesty note: Casey's turns render his recorded 2026-10-10
+sketch (plus one verbatim 2026-10-13 line); the brief and builder
+turns condense the actual dispatch spec and verification receipts.
+"coined" marks the turn where a piece of the vocabulary (deposit,
+cascade, gate, refine, ledger) is first named in the chat.
 """
 import json
 import os
@@ -72,6 +79,133 @@ STEPS = [
 ]
 
 
+# The conversation that caused each step — turns in order, mapped to the
+# step they caused. Speakers: "Casey" (the design turns), "The brief"
+# (the engineering instruction), "The builder" (actions + receipts).
+CHAT = [
+    # 0 · The blank page — no words yet; the chat comes first, so it
+    # starts empty.
+    [],
+    # 1 · Init — the store appears
+    [
+        {"speaker": "The brief",
+         "text": "Init: create the store — one folder, in git, with a "
+                 "README. One commit. From here, nothing moves without "
+                 "being written down."},
+        {"speaker": "The builder",
+         "text": "✅ init: store ready — README.md, 1 commit "
+                 "(“init: filing-loop store”)."},
+    ],
+    # 2 · Day one — talk lands in the inbox
+    [
+        {"speaker": "Casey",
+         "text": "now that we can chat out of git — the chat should "
+                 "just deposit what I say into a folder. automatically.",
+         "coined": ["deposit"],
+         "note": "The sketch — 2026-10-10, rendered from the record "
+                 "made at the time."},
+        {"speaker": "The brief",
+         "text": "Deposit: every utterance lands as an entry — text + "
+                 "timestamp + source — appended to the chat's inbox "
+                 "file. One commit per deposit."},
+        {"speaker": "The builder",
+         "text": "✅ 10 deposits filed — five per chat, one an hour "
+                 "through day one. 10 commits. Everything waits in "
+                 "the inbox."},
+    ],
+    # 3 · Day two — the size gate fires
+    [
+        {"speaker": "Casey",
+         "text": "the folder splits in ways that make sense for "
+                 "itself. split when it's over ~20 pages — then daily — "
+                 "then so on. a cascade of split rules.",
+         "coined": ["cascade"]},
+        {"speaker": "The brief",
+         "text": "Cascade, made exact: a size gate of 60,000 bytes "
+                 "(≈20 pages). Cross it and L1 fires — the inbox rolls "
+                 "into daily archive files. In this replay the gate "
+                 "is tightened to 1,000 bytes, the demo's own "
+                 "setting, so it fires on a 35-deposit fixture.",
+         "coined": ["gate"]},
+        {"speaker": "The builder",
+         "text": "✅ 10 more deposits in; mid-day, both inboxes "
+                 "crossed the gate — split L1: 2 daily files per "
+                 "chat. Inboxes drained, nothing lost."},
+    ],
+    # 4 · Day three — the burst splits by topic
+    [
+        {"speaker": "The brief",
+         "text": "L2: a daily file still over the gate splits a "
+                 "second time — by topic, one file per topic."},
+        {"speaker": "The builder",
+         "text": "✅ the burst filed: 10 deposits, one day, one "
+                 "chat. L1 rolled the day out of the inbox; L2 split "
+                 "it into 5 topic files — autopilot, compass, "
+                 "deadband, telegram, xero."},
+    ],
+    # 5 · Day three — the quiet channel waits (no new words; the
+    # instructions already given keep executing)
+    [
+        {"speaker": "The builder",
+         "text": "✅ 5 deposits filed to zero-lab. No gate crossed, "
+                 "nothing split — the cascade only moves what "
+                 "crosses a gate."},
+    ],
+    # 6 · Refine — telegram-main gets topic views
+    [
+        {"speaker": "Casey",
+         "text": "and then later, when the conversation's quiet and "
+                 "there's churn time — parse the splits into topics."},
+        {"speaker": "The brief",
+         "text": "Refine — the idle pass:\n"
+                 "1. Read every source entry (inbox + archive; "
+                 "never the views).\n"
+                 "2. Build the chat's topic views + an index, "
+                 "wholesale.\n"
+                 "3. Idempotent: a second run changes nothing.\n"
+                 "Topic assignment: a keyword heuristic — the "
+                 "marked seam where an LLM pass slots in later.",
+         "coined": ["refine"]},
+        {"speaker": "The builder",
+         "text": "✅ refine: telegram-main topics built — 8 views + "
+                 "index (compass, autopilot, seas, deadband, rams, "
+                 "xero, telegram, heavy)."},
+    ],
+    # 7 · Refine — zero-lab completes the build
+    [
+        {"speaker": "The builder",
+         "text": "✅ refine: zero-lab topics built — 8 views + "
+                 "index (agent, compass, files, heavy, seas, rams, "
+                 "invoice, brandons). Build complete: 30 files, 35 "
+                 "entries, 42 commits."},
+    ],
+    # 8 · Refine again — nothing moves (the proof)
+    [
+        {"speaker": "The brief",
+         "text": "Proof, before we call it built: run refine again. "
+                 "No commit, clean tree — or it isn't idempotent. "
+                 "The git log is the ledger; the ledger doesn't move.",
+         "coined": ["ledger"]},
+        {"speaker": "The builder",
+         "text": "✅ second refine: no commit, clean tree — every "
+                 "view regenerated byte-identical. 35/35 entries "
+                 "survive the full cascade (20 + 15). And deposits "
+                 "still land after refine — the inbox keeps taking "
+                 "talk."},
+    ],
+    # 9 · Working state — the closing turn is Casey's, verbatim.
+    [
+        {"speaker": "Casey",
+         "text": "In the playthrough all I see is files being "
+                 "created. It's the chat that's so impressive — the "
+                 "other stuff is what's happening because of the chat.",
+         "note": "2026-10-13, verbatim — said after playing the "
+                 "first version of this tile. The turn that rebuilt "
+                 "it chat-first."},
+    ],
+]
+
+
 def state_of(snap):
     if snap is None:
         return {"files": 0, "tree": [], "entriesTotal": 0,
@@ -102,6 +236,7 @@ for i, (chapter, title, narration, action, snap_i, (a, b)) in enumerate(STEPS):
         "chapter": chapter,
         "title": title,
         "narration": narration,
+        "chat": CHAT[i],
         "action": action,
         "delta": {
             "deposits": sum(1 for m in step_ledger if m.startswith("deposit:")),
@@ -151,7 +286,17 @@ record = {
                "the narration says so where it happens. Every count, "
                "file list, and ledger line in this record is sliced "
                "from the trace of the real run — none is invented. "
-               "The end state is the working cascade.",
+               "The end state is the working cascade. The chat is "
+               "sourced, not scripted: Casey's turns render his "
+               "recorded 2026-10-10 sketch — the chat-to-git idea as "
+               "decomposed at the time under his ramble protocol, "
+               "kept short and fragmentary in its shape — plus one "
+               "verbatim line from 2026-10-13, the critique that "
+               "rebuilt this tile. The brief and builder turns "
+               "condense the actual dispatch spec and the "
+               "verification receipts. The state data is unchanged "
+               "by the chat: still trace-sliced, still verified "
+               "byte-for-byte.",
     "finalState": steps[-1]["state"],
     "steps": steps,
 }

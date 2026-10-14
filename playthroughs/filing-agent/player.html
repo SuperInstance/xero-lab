@@ -80,15 +80,109 @@
     max-width:88ch;min-height:3.1em;
   }
 
-  /* ---------- counts strip ---------- */
+  /* ---------- stage grid: chat main stage + consequence rail ---------- */
+  .stage-grid{
+    display:grid;grid-template-columns:1.55fr 1fr;gap:14px;
+    margin-top:14px;align-items:start;
+  }
+  .pane{
+    border:1px solid var(--line-soft);border-radius:8px;background:rgba(5,10,18,.6);
+    display:flex;flex-direction:column;overflow:hidden;
+  }
+  .pane h3{
+    margin:0;padding:9px 12px;font-family:var(--mono);font-size:11px;font-weight:600;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--brass);
+    border-bottom:1px solid var(--line-soft);background:rgba(217,164,65,.05);
+  }
+  .pane .body{padding:10px 12px;overflow:auto}
+  .empty-note{color:var(--dim);font-style:italic}
+
+  /* the chat — main stage */
+  .chat-pane .body{
+    min-height:470px;max-height:620px;
+    font-family:var(--sans);font-size:14.5px;
+    padding:14px 14px 6px;
+  }
+  .chat-step-divider{
+    display:flex;align-items:center;gap:10px;margin:16px 2px 12px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--dim);
+  }
+  .chat-step-divider:first-child{margin-top:2px}
+  .chat-step-divider::before,.chat-step-divider::after{
+    content:"";flex:1;height:1px;background:var(--line-soft);
+  }
+  .turn{max-width:92%;margin:0 0 12px;animation:none}
+  .turn.fresh{animation:turnIn .55s ease-out 1}
+  @keyframes turnIn{
+    0%{opacity:0;transform:translateY(7px)}
+    100%{opacity:1;transform:translateY(0)}
+  }
+  .turn-lab{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;
+    text-transform:uppercase;margin-bottom:4px;
+  }
+  .turn-body{white-space:pre-wrap;word-break:break-word}
+  /* Casey — the human's turns: brass bubbles, right side */
+  .turn.casey{
+    margin-left:auto;max-width:86%;
+    background:linear-gradient(180deg,rgba(217,164,65,.16),rgba(217,164,65,.07));
+    border:1px solid var(--brass);border-radius:12px 12px 3px 12px;
+    padding:10px 13px 9px;color:#f7efdb;font-size:15px;
+  }
+  .turn.casey .turn-lab{color:var(--amber);text-align:right}
+  /* The brief — the instruction: a document block */
+  .turn.brief{
+    background:rgba(233,227,211,.05);
+    border:1px solid var(--line);border-left:3px solid var(--brass);
+    border-radius:3px 8px 8px 3px;
+    padding:10px 13px 9px;color:var(--paper);
+  }
+  .turn.brief .turn-lab{color:var(--brass)}
+  .turn.brief .turn-body{font-size:14px}
+  /* The builder — what came back: a receipt */
+  .turn.builder{
+    background:rgba(111,214,138,.05);
+    border:1px dashed rgba(111,214,138,.45);
+    border-radius:8px;
+    padding:9px 13px 8px;
+    font-family:var(--mono);font-size:12.8px;color:#d7ecd9;
+  }
+  .turn.builder .turn-lab{color:var(--live)}
+  /* coined vocabulary */
+  .coined{
+    background:rgba(238,194,94,.28);color:#ffe9a8;border-radius:3px;
+    padding:0 4px;font-weight:650;
+  }
+  .coined-note{
+    margin-top:6px;font-family:var(--mono);font-size:10.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--brass);
+  }
+  .turn-note{
+    margin-top:6px;font-size:12px;font-style:italic;color:var(--dim);
+  }
+  .turn.casey .turn-note{text-align:right}
+
+  /* the rail — what the chat caused */
+  .rail{display:flex;flex-direction:column;gap:12px;min-width:0}
+  .rail-head{
+    font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--mut);
+    border-bottom:1px solid var(--line-soft);padding-bottom:7px;
+  }
+  .rail-head b{color:var(--brass);font-weight:600}
+  .rail .pane .body{font-family:var(--mono);font-size:12.5px;max-height:235px}
+  .rail .pane.reader-pane .body{max-height:200px}
+
+  /* counts strip (in the rail) */
   .counts{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 18px;
+    display:grid;grid-template-columns:repeat(2,1fr);gap:10px;
   }
   .stat{
     border:1px solid var(--line-soft);border-radius:8px;background:rgba(6,13,22,.55);
     padding:10px 12px 8px;
   }
-  .stat .num{font-family:var(--mono);font-size:clamp(20px,3.4vw,28px);color:var(--amber);line-height:1.1}
+  .stat .num{font-family:var(--mono);font-size:clamp(20px,3.4vw,26px);color:var(--amber);line-height:1.1}
   .stat .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-top:3px}
   .stat .num.live-num{color:var(--live)}
   .live-badge{
@@ -97,20 +191,6 @@
     vertical-align:middle;margin-left:8px;font-style:normal;
   }
   body.is-live .live-badge{display:inline-block}
-
-  /* ---------- panes ---------- */
-  .panes{display:grid;grid-template-columns:1.15fr 1fr 1.15fr;gap:12px}
-  .pane{
-    border:1px solid var(--line-soft);border-radius:8px;background:rgba(5,10,18,.6);
-    min-height:300px;max-height:430px;display:flex;flex-direction:column;overflow:hidden;
-  }
-  .pane h3{
-    margin:0;padding:9px 12px;font-family:var(--mono);font-size:11px;font-weight:600;
-    letter-spacing:.2em;text-transform:uppercase;color:var(--brass);
-    border-bottom:1px solid var(--line-soft);background:rgba(217,164,65,.05);
-  }
-  .pane .body{padding:10px 12px;overflow:auto;font-family:var(--mono);font-size:12.5px}
-  .empty-note{color:var(--dim);font-style:italic}
 
   /* tree */
   #tree ul{list-style:none;margin:0;padding-left:15px}
@@ -198,10 +278,10 @@
     border-radius:8px;padding:12px 14px;font-family:var(--mono);font-size:13px;display:none;
   }
 
-  @media (max-width:900px){
-    .panes{grid-template-columns:1fr}
-    .pane{min-height:0;max-height:340px}
-    .counts{grid-template-columns:repeat(2,1fr)}
+  @media (max-width:1000px){
+    .stage-grid{grid-template-columns:1fr}
+    .chat-pane .body{min-height:0;max-height:480px}
+    .rail .pane .body{max-height:300px}
     .narration{min-height:0}
     .progress-wrap{flex:1 1 100%}
     .progress-label{text-align:left}
@@ -236,28 +316,37 @@
 
       <p class="narration" id="narration"></p>
 
-      <div class="counts">
-        <div class="stat"><div class="num" id="c-files">0</div><div class="lab">Files</div></div>
-        <div class="stat"><div class="num" id="c-entries">0</div><div class="lab">Entries filed</div></div>
-        <div class="stat"><div class="num" id="c-commits">0</div><div class="lab">Ledger commits</div></div>
-        <div class="stat"><div class="num" id="c-fourth">0</div><div class="lab" id="c-fourth-lab">Deposits this step</div></div>
-      </div>
+      <div class="stage-grid">
+        <div class="pane chat-pane">
+          <h3>The chat — where it was built</h3>
+          <div class="body" id="chat"></div>
+        </div>
 
-      <div class="panes">
-        <div class="pane">
-          <h3>Store — file tree</h3>
-          <div class="body" id="tree"></div>
-        </div>
-        <div class="pane">
-          <h3>Ledger — the memory</h3>
-          <div class="body" id="ledger"></div>
-        </div>
-        <div class="pane">
-          <h3>Reading pane</h3>
-          <div class="body">
-            <div id="reader-meta"></div>
-            <pre id="reader">Reach the final step — the store boots live, on the same
+        <div class="rail" aria-label="What the chat caused">
+          <div class="rail-head">Effects — <b>what the chat caused</b></div>
+
+          <div class="counts">
+            <div class="stat"><div class="num" id="c-files">0</div><div class="lab">Files</div></div>
+            <div class="stat"><div class="num" id="c-entries">0</div><div class="lab">Entries filed</div></div>
+            <div class="stat"><div class="num" id="c-commits">0</div><div class="lab">Ledger commits</div></div>
+            <div class="stat"><div class="num" id="c-fourth">0</div><div class="lab" id="c-fourth-lab">Deposits this step</div></div>
+          </div>
+
+          <div class="pane">
+            <h3>Store — file tree</h3>
+            <div class="body" id="tree"></div>
+          </div>
+          <div class="pane">
+            <h3>Ledger — the memory</h3>
+            <div class="body" id="ledger"></div>
+          </div>
+          <div class="pane reader-pane">
+            <h3>Reading pane</h3>
+            <div class="body">
+              <div id="reader-meta"></div>
+              <pre id="reader">Reach the final step — the store boots live, on the same
 engine that built it, and every file becomes readable here.</pre>
+            </div>
           </div>
         </div>
       </div>
@@ -325,6 +414,7 @@ engine that built it, and every file becomes readable here.</pre>
     chapter: el("chapter"), stepTitle: el("step-title"),
     progressLabel: el("progress-label"), progressFill: el("progress-fill"),
     narration: el("narration"),
+    chat: el("chat"),
     cFiles: el("c-files"), cEntries: el("c-entries"), cCommits: el("c-commits"),
     cFourth: el("c-fourth"), cFourthLab: el("c-fourth-lab"),
     tree: el("tree"), ledger: el("ledger"),
@@ -338,6 +428,86 @@ engine that built it, and every file becomes readable here.</pre>
     liveNote: el("live-note"),
     configNote: el("config-note"), honesty: el("honesty")
   };
+
+  /* ---------------- the chat (main stage; renders the record) ---------------- */
+
+  function appendTurnText(body, turn) {
+    // Text nodes only; the term a turn coined is wrapped in a span.
+    var text = turn.text, marks = [];
+    (turn.coined || []).forEach(function (term) {
+      var i = text.toLowerCase().indexOf(term.toLowerCase());
+      if (i >= 0) marks.push({ i: i, len: term.length });
+    });
+    marks.sort(function (a, b) { return a.i - b.i; });
+    var pos = 0;
+    marks.forEach(function (m) {
+      if (m.i < pos) return;
+      body.appendChild(document.createTextNode(text.slice(pos, m.i)));
+      var sp = document.createElement("span");
+      sp.className = "coined";
+      sp.textContent = text.slice(m.i, m.i + m.len);
+      body.appendChild(sp);
+      pos = m.i + m.len;
+    });
+    body.appendChild(document.createTextNode(text.slice(pos)));
+  }
+
+  function renderTurn(turn, fresh) {
+    var kind = turn.speaker === "Casey" ? "casey"
+             : turn.speaker === "The brief" ? "brief" : "builder";
+    var wrap = document.createElement("div");
+    wrap.className = "turn " + kind + (fresh ? " fresh" : "");
+    var lab = document.createElement("div");
+    lab.className = "turn-lab";
+    lab.textContent = turn.speaker;
+    wrap.appendChild(lab);
+    var body = document.createElement("div");
+    body.className = "turn-body";
+    appendTurnText(body, turn);
+    wrap.appendChild(body);
+    if (turn.coined && turn.coined.length) {
+      var cn = document.createElement("div");
+      cn.className = "coined-note";
+      cn.textContent = "◆ coined here — " + turn.coined.join(", ");
+      wrap.appendChild(cn);
+    }
+    if (turn.note) {
+      var nt = document.createElement("div");
+      nt.className = "turn-note";
+      nt.textContent = turn.note;
+      wrap.appendChild(nt);
+    }
+    return wrap;
+  }
+
+  function renderChat() {
+    // The conversation develops across the whole playthrough:
+    // turns for steps 0..idx, cumulative, earlier turns stay visible.
+    els.chat.textContent = "";
+    var any = false;
+    for (var s = 0; s <= idx; s++) {
+      var step = record.steps[s];
+      var turns = step.chat || [];
+      if (!turns.length) continue;
+      any = true;
+      var div = document.createElement("div");
+      div.className = "chat-step-divider";
+      div.textContent = "Step " + (s + 1) + " · " + step.title;
+      els.chat.appendChild(div);
+      (function (stepTurns, isCurrent) {
+        stepTurns.forEach(function (t) {
+          els.chat.appendChild(renderTurn(t, isCurrent));
+        });
+      })(turns, s === idx);
+    }
+    if (!any) {
+      var n = document.createElement("div");
+      n.className = "empty-note";
+      n.textContent = "(no words yet — the blank page. The chat comes first; the files follow.)";
+      els.chat.appendChild(n);
+    }
+    els.chat.scrollTop = els.chat.scrollHeight;
+  }
 
   /* ---------------- record rendering (never computes state) ---------------- */
 
@@ -468,6 +638,7 @@ engine that built it, and every file becomes readable here.</pre>
   }
 
   function render() {
+    renderChat();
     var atEnd = idx === record.steps.length - 1;
     document.body.classList.toggle("is-live", atEnd && booted);
     els.livePanel.hidden = !(atEnd && booted);

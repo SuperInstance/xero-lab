@@ -18,8 +18,15 @@ implementable: two assets, no build step, no server.
 ```
 record.title / .promise / .agent      header copy
 record.config                          gate sizes (replay 1000 B, production 60000 B), topicK
+record.honesty                         sourcing note (state data AND chat)
 record.steps[]                         10 steps, in order:
   .id, .chapter, .title, .narration    display copy (narration is one line)
+  .chat[]                              the conversation that caused the step:
+    .speaker                           "Casey" | "The brief" | "The builder"
+    .text                              the turn (briefs may be multi-line)
+    .coined[]                          vocabulary first named in this turn
+                                       (deposit, cascade, gate, refine, ledger)
+    .note                              optional sourcing caption
   .action                              none | init | deposits | deposits+cascade | refine | handoff
   .delta.deposits                      deposits ticked in this step
   .delta.filesAdded / .filesRemoved    paths, for tree highlighting
@@ -27,6 +34,27 @@ record.steps[]                         10 steps, in order:
   .state.tree[]                        full sorted file list at end of step
   .state.{files, entriesTotal, entriesByChat, archiveFiles, topicViews, commits}
 ```
+
+## Layout — chat first
+
+The chat is the main stage; the state is its consequence rail. The
+conversation that built the agent is what's impressive — the files
+are what's happening *because* of the chat.
+
+- **Main stage**: the chat thread. For step `i`, render the turns of
+  steps 0..i **cumulatively** (earlier turns stay visible, scrolled
+  to the newest; stepping back re-renders the shorter thread). Turn
+  kinds: **Casey** — brass, right-aligned bubbles; **The brief** —
+  a document-style block; **The builder** — a receipt-style block
+  (mono, the ✅/counts). Group turns under a small divider naming
+  the step they caused. Where a turn's `coined[]` names a term,
+  highlight the term's first occurrence in that turn's text and
+  tag the turn "coined here" — the vocabulary visibly develops:
+  sketch → named verbs → numbered brief → receipts.
+- **Consequence rail** (side on desktop, below on mobile), headed
+  as the effects of the chat: the **counts strip**, the **file
+  tree**, the **ledger ticker**, and the **reading pane**, rendered
+  from the record exactly as below — visually demoted, same data.
 
 During replay the player **renders record state; it never computes
 state**. `state` is cumulative and complete at every step, so any
