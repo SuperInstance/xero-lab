@@ -1,0 +1,5 @@
+I take a quick scan of the scene, feeling the wind's bite and the boat's restless roll beneath me. Marta's got the winch, her hands steady and strong — she'll handle it. The Loon's unmanned, drifting on her lines, and I know she's my responsibility. I shout to Tobin, "Get to the quarter line! I'll take the Loon!" He nods, moving fast, and I scramble over the rail, dropping onto the Loon's deck with a thud.
+
+The boat feels familiar under my feet, even with the storm raging. I grab the wheel, steadying her, and glance back at the Wren. The kedge's holding, but I can see the strain on the line, the way the water's churning around the stern. "Hold on!" I shout, though I know they can't hear me over the wind. I ease the throttle forward, positioning the Loon at the Wren's quarter, ready to guide her once she floats.
+
+The flood's rising fast, and I can feel the moment building, the tension in the air. I keep my eyes on the Wren, waiting for the heave, ready to steer her clear of the bar. The sea's wild, but we've come this far — we just need one good push. I brace myself, hand on the throttle, and wait for the signal.

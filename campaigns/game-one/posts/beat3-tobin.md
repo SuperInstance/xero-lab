@@ -1,0 +1,5 @@
+The Loon's bow rises and falls with the chop, and I can feel the kedge anchor's weight in my hands, the rough metal cold even through my gloves. Pell's keeping her steady, but I can see the strain in the way he grips the wheel. The water's dark and churning, and I know we've got to get this right the first time.
+
+I glance back at Marta on the Wren's deck, her face set with determination. June's beside her, looking nervous but ready. I shout over the wind, "Keep her steady, Pell! We're almost there!" I pay out the line slowly, feeling the tension as the anchor dips below the surface. The swells are getting bigger, and my knee's throbbing like a drumbeat, warning me the weather's closing in.
+
+I call out to Marta, "We're setting the anchor now! Get June ready on the windlass!" I take a deep breath, steady myself against the bow, and let the anchor go. It sinks fast, the line running out through my fingers. I hold my breath, hoping we've found the right spot. The Loon shifts beneath me, and I shout, "Anchor's set! Let's haul her off!"

@@ -1,0 +1,5 @@
+The wind's screaming, and the sou'wester's full on us now, driving the swells into a frenzy. I can barely feel my fingers, still numb from the cold water, but I force them to grip the quarter line as I take my place at the Wren's side. The Loon's unmanned, rolling with the swells, and I know Pell's got to get her steady for when the Wren moves.
+
+Marta's at the winch, her face set with determination, and I shout over the wind, "Marta, you got the winch?" She nods, her hands ready. I glance at the Loon, then back at Marta. "I'll mind the quarter line and the stern. We need to keep her straight when she floats."
+
+I brace myself against the rail, the line taut in my hands, feeling the strain of the Wren against the kedge. The moment she floats, we'll need to haul hard and fast. I shout to Pell, "Get the Loon in position! We move on my word!" The sea's roaring, but I focus on the Wren, waiting for the shift, the moment we can pull her free. My heart's pounding, but I take a deep breath and wait for the heave.

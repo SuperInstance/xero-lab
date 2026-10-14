@@ -1,0 +1,5 @@
+I see June at the rail, her hands wrapped in a rag, eyes wide and urgent. "June, gimme that line!" I shout, reaching for it. The wind's howling, and the boats are bucking like wild things. I can hear Reedy's cries from the water, and Tobin's grunts as he fights to keep them both afloat.
+
+"Alright, listen up!" I yell, making sure Marta hears me over the storm. "Marta, grab the line and brace yourself on the winch. We need your strength to haul them up." I loop the line around the rail, making sure it's secure. "June, you keep tension on the line — don't let it slip!"
+
+I glance at the water, judging the distance and the timing. "On my count, we pull!" I shout, my voice cutting through the wind. "One, two, HEAVE!" I lean back, pulling with all I've got, feeling the line bite into my hands. The boats lurch, and I can see Tobin and Reedy rising with the swell. "Again!" I shout, and we pull together, muscles straining, hearts pounding. The storm's against us, but we've got one shot to get this right.

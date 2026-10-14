@@ -1,0 +1,5 @@
+The water's cold, biting through my oilskins as I struggle to keep Reedy's head above the churning waves. His weight drags us both down, but I’ve got a grip on the sling and I’m not letting go. The swells lift us, then drop us hard, the hulls of the Wren and the Loon looming on either side, threatening to crush us. I can hear the roar of the wind and the slap of the water, but I focus on keeping us afloat.
+
+I shout to Pell, "Get that line over here! We need to get him up, now!" My voice is hoarse, barely carrying over the storm. I can see June at the rail, the line in her hands, but she's hesitating. I shout again, "June, throw it! We’re running out of time!" I kick hard, trying to push us away from the hulls, but the current's strong and I'm losing ground.
+
+I glance at the Loon, unmanned and rolling with the swells. If we can get to her, we might have a chance. "Pell, get us a line to the Loon!" I shout, my voice cracking with the effort. I can feel the fatigue setting in, my arms burning, but I hold on, waiting for the line that will be our lifeline.

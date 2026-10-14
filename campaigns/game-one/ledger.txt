@@ -1,0 +1,45 @@
+9535393 Game Master 04:37 GM: after.md for all three — what the game changed, proposed sheet diffs (not applied)
+16d4981 Game Master 04:36 GM: game one closed
+7884500 Pell Sutter 04:36 Pell, beat 9: she'll hold — the run for the dock
+82a0582 Marta Venn 04:36 Marta, beat 9: almost there — the words stick
+8c097e7 Tobin Marlow 04:36 Tobin, beat 9: we did it — quiet on the Loon
+1e1c24a Game Master 04:35 GM adjudication, beat 8: the rudder folds — the Wren is saved the long way
+2e8fa65 Tobin Marlow 04:35 Tobin, beat 8: the tow line's watch
+4206bcf Marta Venn 04:35 Marta, beat 8: the Wren's helm, June on the gauges
+ff3d15c Pell Sutter 04:35 Pell, beat 8: the Loon's helm, the tow astern
+0f4af86 Game Master 04:33 GM adjudication, beat 7: she floats
+038d4ee Pell Sutter 04:33 Pell, beat 7: taking the Loon to the quarter
+d4b8947 Marta Venn 04:33 Marta, beat 7: the winch, on my word
+368eba6 Tobin Marlow 04:33 Tobin, beat 7: quarter line and stern watch
+d940f34 Game Master 04:32 GM adjudication, beat 6: both men out of the water
+7c4e6e3 Marta Venn 04:32 Marta, beat 6: the line, the rail, the haul
+ccea3cb Pell Sutter 04:32 Pell, beat 6: on my count — heave
+905f6bc Tobin Marlow 04:32 Tobin, beat 6: in the water, holding Reedy
+5c8d519 Game Master 04:31 GM adjudication, beat 5: two men in the water
+2718752 Pell Sutter 04:31 Pell, beat 5: the block, the crates, the sling
+2fa6907 Marta Venn 04:31 Marta, beat 5: splint him, toss the crates, my call
+e863183 Tobin Marlow 04:31 Tobin, beat 5: re-lead it, lighten her, move Reedy
+581e589 Game Master 04:29 GM adjudication, beat 4: the fairlead tears out
+84b5203 Pell Sutter 04:29 Pell, beat 4: ready for the quarter line
+dd31e55 Marta Venn 04:29 Marta, beat 4: calling the heave, eyes on the line
+f2a0fb6 Tobin Marlow 04:29 Tobin, beat 4: at the Loon's stern for the heave
+cc14162 Game Master 04:28 GM adjudication, beat 3: the set holds — Pell's water covers Tobin's mark
+6e076f9 Marta Venn 04:28 Marta, beat 3: June's first run at the windlass
+660b42b Pell Sutter 04:28 Pell, beat 3: holding her on the line
+bbc5f0b Tobin Marlow 04:28 Tobin, beat 3: the kedge goes down
+d2bb21f Game Master 04:26 GM adjudication, beat 2: partial soundings, an unexamined fairlead
+cd42e0c Pell Sutter 04:26 Pell, beat 2: minding both boats, watching the sky
+98089c2 Marta Venn 04:26 Marta, beat 2: hands on the gear, then below to Reedy
+6f8226c Tobin Marlow 04:26 Tobin, beat 2: sounding — a dip, a potential channel
+bace82c Game Master 04:25 GM adjudication, beat 1: weather read lands — two workable hours
+d347b40 Pell Sutter 04:25 Pell, beat 1: get close, but not hung up too
+e5954e2 Marta Venn 04:25 Marta, beat 1: alongside, starboard side, gentle
+46bd3bb Tobin Marlow 04:25 Tobin, beat 1: the knee says the weather comes early
+fd81be0 Game Master 04:23 GM: opening — the call, the Loon runs for the bar
+9ef5be9 Pell Sutter 04:23 Pell Sutter: my life so far (generated from my sheet, before the game)
+8d057ec Marta Venn 04:23 Marta Venn: my life so far (generated from my sheet, before the game)
+da9cd5e Tobin Marlow 04:23 Tobin Marlow: my life so far (generated from my sheet, before the game)
+89c9a4d Pell Sutter 04:21 Pell Sutter: character sheet filed
+1c0747a Marta Venn 04:21 Marta Venn: character sheet filed
+36bdeb8 Tobin Marlow 04:21 Tobin Marlow: character sheet filed
+e7d64e7 Game Master 04:21 GM prep: the world, the scenario, the secrets, the gates (private)

@@ -1,0 +1,5 @@
+The swells are building, each one a little steeper than the last, and the wind's picking up, carrying the scent of rain and salt. I can feel the chill of it on my face as I stand on the Wren's deck, eyes fixed on the windlass and the line. June's there, hands steady on the lever, waiting for my word. I nod to her, "Alright, June, let's start slow. Feel the weight, and don't rush it."
+
+I glance back at the Loon, where Pell's got her positioned to take the quarter line. Tobin's aft, tending to the line, his body braced against the wind. The kedge's holding, but I can see the strain on the line, the way it's humming with tension. "Steady now," I call out, my voice carrying over the wind. "Let her come around gentle."
+
+I keep my eyes on the line, watching for any sign of slip or snag. The windlass groans, but it holds. I can feel the moment building, the Wren starting to shift, her stern inching toward deeper water. "Keep her coming," I shout, my hands ready to jump in if anything goes wrong. The line's taut, the windlass working, and the Wren's starting to move. I just hope we've got enough time before the storm hits.

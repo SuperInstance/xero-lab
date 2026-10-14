@@ -1,0 +1,5 @@
+I lean against the Loon's wheel, the rain drumming on the deck and running down my oilskins in rivulets. The engine hums beneath me, a steady, comforting sound after the chaos of the bar. Tobin's hunched by the quarter line, still shivering but keeping an eye on the tow. Marta's at the stern, her silhouette sharp against the dark sky, watching the Wren as we pull away.
+
+I glance back at the grounded boat, her stern light flickering weakly in the rain. "She'll hold," I mutter, more to myself than anyone else. The words feel like a promise I hope I can keep. The patrol boat's lights are visible now, cutting through the downpour, and I feel a small knot of tension ease in my chest.
+
+I ease the throttle forward, steering us toward the dock. The harbor's a familiar maze, even in the dark, and I focus on the feel of the water, the rhythm of the swells. "Almost there," I call out, my voice carrying over the wind. It's a small comfort, but it's all I've got right now. The dock's waiting, and I just need to get us there in one piece.

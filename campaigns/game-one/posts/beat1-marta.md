@@ -1,0 +1,5 @@
+The Wren's sitting there, stern down, like a duck with a broken leg. I can see Reedy's figure moving on deck, favoring one leg—yeah, that ankle's busted for sure. June's there too, waving an arm, probably trying to signal us. The tide's coming in, but it's sluggish, like it's still thinking about it. The swells are lazy, not much chop yet, but I know that sou'wester's gonna pick up by dusk.
+
+I ease the throttle back a touch, bringing the Loon in slow. "Tobin," I call out, "get ready with that boathook. We'll come alongside her starboard, gentle-like. Don't want to knock her worse." I squint at the Wren's hull, checking for damage. She looks like she's holding, but I won't trust it till I get my hands on her.
+
+I grab the radio mic, keeping one hand on the wheel. "Wren, this is the Loon. We're coming up on your starboard side. Sit tight, we'll get you off." I keep my voice steady, no use in them knowing I'm worried. My first move is to get us close enough to toss a line. After that, we'll see what she's made of.
