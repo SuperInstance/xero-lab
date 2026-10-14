@@ -1,0 +1,32 @@
+{
+ "kind": "choice",
+ "cell": "REP",
+ "target": "adoption form",
+ "context": "Decision-grid study (395 SuperInstance repos, 119 with strong-model reference labels). The DISP disposition formula, fed PERFECT upstream FAM/PILLAR cells, reproduces reference dispositions only 80.7% (the proven ceiling; a SUBSTANCE cell failed to move it). A new deterministic signal REP (representativeness) was tested: for a family member, REP = how family-typical its pillar marks are (share of family members carrying the same pillar, from keyword tags over the existing sample) plus description overlap with the family centroid. REP is computable by formula alone: zero model calls, ALGO tier, from data already in the sheet. Results vs reference (n=119): perfect-input chain 80.7% -> 86.6% (7 rule flips, 7 fixes, 0 breaks); production chain over the cheap ALGO cells 78.2% -> 84.0% (8 flips: 7 errors fixed, 1 error moved to a different wrong label, 0 correct calls broken). Split-half validation (thresholds tuned on one half, tested on the other) is positive in both directions (+3.4 and +6.7 points held out). Limits: REP is undefined for family-less repos (183/395) and pillar-less family members (101/395) \u2014 it speaks only where DISP's DEEP clause misfires on family members. The 16 residual errors are dominated by family-less repos the reference calls mere instances (6) \u2014 a boundary no cheap name/description feature separates from true pattern-bearers \u2014 plus 3 marginal family members and 7 family cases (e.g. the flux family) whose pillars are rare in-family yet still judged routine. Design tension on record: a representativeness question risks BEING the disposition decision rather than feeding it; but as measured, REP is purely relational (repo vs its family), never judges the instance's own merit, and only ever downgrades DEEP to COLLAPSE. REP has exactly one consumer: the DISP rule. The grid's own doctrine says a cell is only as checkable as its standard, and flags cells that are formulas wearing a decision's coat.",
+ "question": "How should REP be adopted into the decision grid?",
+ "options": {
+  "fifth_cell": "Adopt REP as a fifth cell upstream of DISP, staffed by the formula, with its own row in the sheet",
+  "clause_in_disp": "Fold REP into the DISP formula as an extra clause (downgrade DEEP to COLLAPSE for family-typical members); no new cell",
+  "fold_into_fam": "Fold representativeness into FAM: family cells output graded membership (flagship vs routine member) and DISP reads the grade",
+  "drop": "Drop REP; keep the formula and accept the 80.7% ceiling on perfect inputs"
+ },
+ "verdict": {
+  "type": "choice",
+  "choice": "fifth_cell",
+  "confidence": 0.51,
+  "probabilities": {
+   "fifth_cell": 0.63,
+   "clause_in_disp": 0.33,
+   "fold_into_fam": 0.02,
+   "drop": 0.02
+  }
+ },
+ "followup_noul": {
+  "context": "Follow-up with completed evidence. REP is a deterministic representativeness signal for a repo-survey decision grid (395 repos, 119 strong-model reference labels). Three components, all formula-computable at zero model cost from data already in the sheet: (1) pillar-typicality: share of the repo's family carrying the same pillar tag; (2) description overlap with the family centroid; (3) tongue: the repo is written in its family's modal (most common) language. REP=ROUTINE if any component fires; family-less repos get NO-SIGNAL by construction. Use: when the DISP formula says DEEP for a non-anchor family member and REP=ROUTINE, downgrade to COLLAPSE. Measured vs reference: perfect-input chain 80.7% (the old proven ceiling) -> 89.9% (107/119; 12 fixes, 1 break); production chain over cheap ALGO cells 78.2% -> 89.1%. Split-half validation positive in both directions (held-out 89.8% and 90.0%). The language component alone replicates per-family in 5 of 6 families it touches (9 fixes, 1 break: quilt-matrix, the family's flagship, wrongly downgraded). Residual 12 errors concentrate where REP cannot speak: 6 family-less instances vs pattern-bearers that no cheap feature separates, 3 marginal members. Caveat: the tongue component's mechanism is post hoc (pattern-bearers in this library are disproportionately written in a non-modal language or none); on a differently styled account it could weaken or invert, so components are recorded separately and can be re-cut independently. A previous Jev choice on the two-component version picked 'fifth cell' (0.63) over folding REP into the DISP formula (0.33).",
+  "question": "Should REP, in this final three-component form, be adopted as a fifth ALGO-staffed cell feeding DISP?",
+  "verdict": {
+   "type": "noul",
+   "noul": 0.76
+  }
+ }
+}
