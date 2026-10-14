@@ -114,6 +114,48 @@ Room v2 fixes dictated by the failure: provenance on facts,
 invention, and the Keeper quotes sources rather than
 paraphrasing them into canon.
 
+## The campaign — living agents by play (2026-10-13 20:18)
+
+Casey's extension of the room: zero agents in many folders,
+each its own character + sheet, playing a tabletop RPG — best
+form: **a bigger model is the GM** (prepares the world,
+adjudicates, is the oracle the room lacked); the zero agents
+procedurally generate their lives from their character files;
+after the game a character is carried whole into the next game
+or edited slightly and fine-tuned — *"a way to develop an actual
+living agent."* In file terms: the character IS the folder
+(sheet + life + log + scars); development = accumulated history
+from play; fine-tuning = editing the sheet the history justifies
+(Erised's scars mechanic is the same design, earlier). Dice =
+the Oct 10 doctrine: perception checks resolved by three-valued
+gates (success / partial-at-a-cost / failure), traits shifting
+the bands. Game One dispatched same turn: Greyhook salvage
+scenario, three characters who write their own life-so-far from
+their sheets, GM played by the bigger model with room-001's
+gate-keeping duty built in; the persistence record (after.md per
+character) is the deliverable that matters most.
+
+**Game One result (2026-10-13, pushed as campaigns/game-one):**
+the Wren saved the long way; all five people safe; price paid in
+rudder, fairlead, four crates, two men briefly in the water.
+14 dice-gate rolls (9 clear / 2 partial / 3 failure); traits
+shifted 7, changed a band outright once (Marta's strength hauling
+two people out of the gap in one motion). **GM gate-keeping: 0
+world-fact corrections needed** — with a real oracle in the room,
+room-001's counterfeiting demand never formed; the failure that
+nearly sank the job instead was an honest-but-unexamined report
+("all set, far as I know") — *reported isn't touched*, the trust
+ladder again. Voices provably distinct (the last beat's three
+different silences). Persistence works: each character's
+after.md holds scars + 3 proposed sheet diffs, written as diffs,
+not applied — Tobin owes a sentence he hasn't found; Marta's
+"unexamined is a finding too" is becoming doctrine; Pell's debt
+changed species (his creditor's crates, heaved overboard by his
+own hands, unexplained). **Game Two readiness note:** folders
+carry as-is, but start a fresh log.md and let after.md be the
+carried memory (prompt budget drowns by game three otherwise),
+and rule on the proposed diffs first.
+
 ## Open questions
 
 - Record granularity: steps as commits? as deposits? as chapters
