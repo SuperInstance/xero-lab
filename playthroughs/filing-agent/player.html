@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Filing Agent — Xero Bootcamp Gallery · SuperInstance</title>
+<style>
+  :root{
+    --ink:#060b13;
+    --navy:#0a141f;
+    --panel:#0d1a29;
+    --panel2:#0a1624;
+    --line:#1e3448;
+    --line-soft:#16283a;
+    --brass:#d9a441;
+    --amber:#eec25e;
+    --paper:#e9e3d3;
+    --mut:#8fa5ba;
+    --dim:#5d748c;
+    --live:#6fd68a;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(1200px 500px at 50% -120px, #12283e 0%, rgba(18,40,62,0) 60%),
+      var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
+
+  /* ---------- masthead ---------- */
+  .brand{
+    font-family:var(--mono);font-size:12px;letter-spacing:.28em;
+    color:var(--brass);text-transform:uppercase;
+  }
+  .brand .dot{color:var(--dim)}
+  h1{
+    margin:10px 0 2px;font-size:clamp(30px,5.4vw,52px);font-weight:700;
+    letter-spacing:.01em;color:#f4efe0;
+  }
+  .promise{
+    margin:0;font-size:clamp(16px,2.6vw,21px);color:var(--amber);
+    font-style:italic;
+  }
+  .agent{margin:12px 0 0;max-width:72ch;color:var(--mut);font-size:15px}
+  .rule{height:1px;background:linear-gradient(90deg,var(--brass),rgba(217,164,65,0) 70%);margin:22px 0}
+
+  /* ---------- panels ---------- */
+  .panel{
+    background:linear-gradient(180deg,var(--panel) 0%,var(--panel2) 100%);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 20px 16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  .panel + .panel{margin-top:18px}
+
+  /* ---------- stage head ---------- */
+  .stage-head{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:flex-end}
+  .chapter{
+    font-family:var(--mono);font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--brass);
+  }
+  .step-title{margin:4px 0 0;font-size:clamp(20px,3.4vw,28px);font-weight:650;color:#f4efe0}
+  .progress-wrap{min-width:210px;flex:0 1 260px}
+  .progress-label{
+    font-family:var(--mono);font-size:12px;color:var(--mut);
+    text-align:right;letter-spacing:.08em;margin-bottom:6px;
+  }
+  .progress-bar{height:6px;background:#081120;border:1px solid var(--line-soft);border-radius:3px;overflow:hidden}
+  .progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#8a6420,var(--brass),var(--amber));transition:width .45s ease}
+  .narration{
+    margin:16px 0 4px;font-size:clamp(15px,2.3vw,17.5px);color:var(--paper);
+    max-width:88ch;min-height:3.1em;
+  }
+
+  /* ---------- counts strip ---------- */
+  .counts{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 18px;
+  }
+  .stat{
+    border:1px solid var(--line-soft);border-radius:8px;background:rgba(6,13,22,.55);
+    padding:10px 12px 8px;
+  }
+  .stat .num{font-family:var(--mono);font-size:clamp(20px,3.4vw,28px);color:var(--amber);line-height:1.1}
+  .stat .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-top:3px}
+  .stat .num.live-num{color:var(--live)}
+  .live-badge{
+    display:none;font-family:var(--mono);font-size:10px;letter-spacing:.2em;
+    color:#08130b;background:var(--live);border-radius:3px;padding:1px 6px;
+    vertical-align:middle;margin-left:8px;font-style:normal;
+  }
+  body.is-live .live-badge{display:inline-block}
+
+  /* ---------- panes ---------- */
+  .panes{display:grid;grid-template-columns:1.15fr 1fr 1.15fr;gap:12px}
+  .pane{
+    border:1px solid var(--line-soft);border-radius:8px;background:rgba(5,10,18,.6);
+    min-height:300px;max-height:430px;display:flex;flex-direction:column;overflow:hidden;
+  }
+  .pane h3{
+    margin:0;padding:9px 12px;font-family:var(--mono);font-size:11px;font-weight:600;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--brass);
+    border-bottom:1px solid var(--line-soft);background:rgba(217,164,65,.05);
+  }
+  .pane .body{padding:10px 12px;overflow:auto;font-family:var(--mono);font-size:12.5px}
+  .empty-note{color:var(--dim);font-style:italic}
+
+  /* tree */
+  #tree ul{list-style:none;margin:0;padding-left:15px}
+  #tree > ul{padding-left:2px}
+  #tree li{margin:2px 0;white-space:nowrap}
+  #tree .dir-name{color:var(--mut)}
+  #tree .file{color:var(--paper);cursor:default;border-radius:3px;padding:0 3px}
+  body.is-live #tree .file{cursor:pointer}
+  body.is-live #tree .file:hover{background:rgba(217,164,65,.14);color:var(--amber)}
+  #tree .file.added{animation:pulse 1.6s ease-out 1;color:var(--amber)}
+  #tree .file.changed{color:var(--amber)}
+  @keyframes pulse{
+    0%{background:rgba(238,194,94,.55)}
+    100%{background:rgba(238,194,94,0)}
+  }
+
+  /* ledger */
+  #ledger .ledger-line{color:var(--mut);padding:1px 0;border-bottom:1px dotted rgba(30,52,72,.5)}
+  #ledger .ledger-line.fresh{color:var(--amber)}
+  #ledger .ledger-line:last-child{border-bottom:none}
+
+  /* reader */
+  #reader-meta{color:var(--dim);font-size:11.5px;margin-bottom:6px;word-break:break-all}
+  #reader{
+    margin:0;white-space:pre-wrap;word-break:break-word;color:var(--paper);
+    font-family:var(--mono);font-size:12.5px;line-height:1.55;
+  }
+
+  /* ---------- controls ---------- */
+  .controls{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px;
+    border-top:1px solid var(--line-soft);padding-top:16px;
+  }
+  .btn{
+    appearance:none;background:#0a1626;border:1px solid var(--brass);color:var(--amber);
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;
+    padding:9px 14px;border-radius:6px;cursor:pointer;min-height:40px;
+  }
+  .btn:hover{background:rgba(217,164,65,.14)}
+  .btn:active{transform:translateY(1px)}
+  .btn:focus-visible,.scrub:focus-visible,textarea:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+  .btn.wide{min-width:118px}
+  .scrub-wrap{flex:1 1 180px;display:flex;align-items:center;gap:10px}
+  .scrub{flex:1;accent-color:var(--brass);height:28px;cursor:pointer}
+  .speed-group{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .speed-group .btn{border:none;border-radius:0;min-height:40px}
+  .speed-group .btn + .btn{border-left:1px solid var(--line)}
+  .speed-group .btn[aria-pressed="true"]{background:var(--brass);color:#131003}
+  .speed-lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase}
+
+  /* ---------- live panel ---------- */
+  .live-panel h3{
+    margin:0 0 6px;font-size:19px;color:#f4efe0;font-weight:650;
+  }
+  .live-dot{
+    display:inline-block;width:9px;height:9px;border-radius:50%;
+    background:var(--live);margin-left:6px;vertical-align:middle;
+    box-shadow:0 0 8px var(--live);
+  }
+  #boot-status{font-family:var(--mono);font-size:12.5px;color:var(--live);margin:4px 0 12px}
+  .live-panel label{display:block;font-size:14.5px;color:var(--paper);margin-bottom:8px}
+  textarea{
+    width:100%;background:#060d17;border:1px solid var(--line);border-radius:8px;
+    color:var(--paper);font-family:var(--mono);font-size:13.5px;line-height:1.55;
+    padding:12px;resize:vertical;min-height:110px;
+  }
+  textarea::placeholder{color:var(--dim)}
+  .live-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .btn.primary{background:var(--brass);color:#131003;font-weight:700}
+  .btn.primary:hover{background:var(--amber)}
+  .btn.ghost{border-color:var(--line);color:var(--mut)}
+  .btn.ghost:hover{color:var(--paper);background:rgba(143,165,186,.08)}
+  .fine{font-size:12.5px;color:var(--dim);margin:12px 0 2px;max-width:88ch}
+
+  /* ---------- receipts / footer ---------- */
+  .receipts{margin-top:22px;border-top:1px solid var(--line-soft);padding-top:16px}
+  .receipts p{font-size:13px;color:var(--mut);max-width:92ch;margin:0 0 9px}
+  .receipts .k{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--brass);display:block;margin-bottom:2px;
+  }
+  .receipts a{color:var(--amber)}
+  .err{
+    border:1px solid #7a2e2e;background:rgba(122,46,46,.15);color:#f0b9b9;
+    border-radius:8px;padding:12px 14px;font-family:var(--mono);font-size:13px;display:none;
+  }
+
+  @media (max-width:900px){
+    .panes{grid-template-columns:1fr}
+    .pane{min-height:0;max-height:340px}
+    .counts{grid-template-columns:repeat(2,1fr)}
+    .narration{min-height:0}
+    .progress-wrap{flex:1 1 100%}
+    .progress-label{text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">SuperInstance <span class="dot">·</span> <span id="r-gallery">Xero Bootcamp Gallery</span></div>
+    <h1 id="r-title">The Filing Agent</h1>
+    <p class="promise" id="r-promise">Watch it build; then it&rsquo;s yours.</p>
+    <p class="agent" id="r-agent"></p>
+    <div class="rule"></div>
+  </header>
+
+  <div class="err" id="load-err"></div>
+
+  <main>
+    <section class="panel" aria-label="Playthrough player">
+      <div class="stage-head">
+        <div>
+          <div class="chapter" id="chapter">&nbsp;</div>
+          <h2 class="step-title" id="step-title">Loading the record&hellip;</h2>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label" id="progress-label">Step – of –</div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+
+      <p class="narration" id="narration"></p>
+
+      <div class="counts">
+        <div class="stat"><div class="num" id="c-files">0</div><div class="lab">Files</div></div>
+        <div class="stat"><div class="num" id="c-entries">0</div><div class="lab">Entries filed</div></div>
+        <div class="stat"><div class="num" id="c-commits">0</div><div class="lab">Ledger commits</div></div>
+        <div class="stat"><div class="num" id="c-fourth">0</div><div class="lab" id="c-fourth-lab">Deposits this step</div></div>
+      </div>
+
+      <div class="panes">
+        <div class="pane">
+          <h3>Store — file tree</h3>
+          <div class="body" id="tree"></div>
+        </div>
+        <div class="pane">
+          <h3>Ledger — the memory</h3>
+          <div class="body" id="ledger"></div>
+        </div>
+        <div class="pane">
+          <h3>Reading pane</h3>
+          <div class="body">
+            <div id="reader-meta"></div>
+            <pre id="reader">Reach the final step — the store boots live, on the same
+engine that built it, and every file becomes readable here.</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="btn-restart" title="Back to step 1" aria-label="Restart">&#9198; Restart</button>
+        <button class="btn" id="btn-back" title="Previous step" aria-label="Step back">&#9664; Back</button>
+        <button class="btn wide" id="btn-play" aria-label="Play or pause">&#9654; Play</button>
+        <button class="btn" id="btn-fwd" title="Next step" aria-label="Step forward">Step &#9654;</button>
+        <div class="scrub-wrap">
+          <input class="scrub" type="range" id="scrub" min="0" max="9" step="1" value="0" aria-label="Scrub through the steps">
+        </div>
+        <span class="speed-lab">Speed</span>
+        <div class="speed-group" role="group" aria-label="Playback speed">
+          <button class="btn" id="spd-slow" aria-pressed="true">Slow</button>
+          <button class="btn" id="spd-fast" aria-pressed="false">Fast</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel live-panel" id="live-panel" hidden>
+      <h3>The tool is live<span class="live-dot"></span></h3>
+      <p id="boot-status">Booting the store&hellip;</p>
+      <label for="paste">Paste your own notes — one thought per line. Each line deposits into a chat named <b>your-notes</b>; file them and the cascade runs in front of you.</label>
+      <textarea id="paste" placeholder="the bilge pump cycled twice last night&#10;compass deviation is two degrees on this heading&#10;order more zincs before the haul-out&#10;&hellip;paste enough lines and the size gate splits them into daily and topic files"></textarea>
+      <div class="live-actions">
+        <button class="btn primary" id="btn-file">File them</button>
+        <button class="btn ghost" id="btn-reset">Reset to the built state</button>
+      </div>
+      <p class="fine" id="live-note"></p>
+    </section>
+
+    <footer class="receipts">
+      <p><span class="k">Gate note</span><span id="config-note"></span></p>
+      <p><span class="k">Honesty</span><span id="honesty"></span></p>
+      <p><span class="k">Verification</span>
+        The engine on this page (<span style="font-family:var(--mono)">cascade.js</span>) is a port of the
+        Python prototype, verified byte-for-byte on this fixture: all 30 files identical,
+        35/35 entries survive the cascade, the ledger matches at 42 commits, and refine is
+        idempotent. Receipts: <a href="VERIFY.md">VERIFY.md</a> &middot;
+        record sliced from the real run by <span style="font-family:var(--mono)">trace.py</span>.</p>
+    </footer>
+  </main>
+</div>
+
+<script src="cascade.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var SPEEDS = { slow: 2400, fast: 600 };
+  var LS_KEY = "xero-filing-agent-store-v1";
+
+  var record = null, fixture = null;
+  var idx = 0, playing = false, timer = null, speed = "slow";
+
+  var store = null, booted = false, restored = false;
+  var liveFreshFrom = 0;              // ledger lines from this index are "fresh"
+  var liveAdded = new Set(), liveChanged = new Set();
+
+  function el(id) { return document.getElementById(id); }
+  var els = {
+    gallery: el("r-gallery"), title: el("r-title"), promise: el("r-promise"),
+    agent: el("r-agent"), err: el("load-err"),
+    chapter: el("chapter"), stepTitle: el("step-title"),
+    progressLabel: el("progress-label"), progressFill: el("progress-fill"),
+    narration: el("narration"),
+    cFiles: el("c-files"), cEntries: el("c-entries"), cCommits: el("c-commits"),
+    cFourth: el("c-fourth"), cFourthLab: el("c-fourth-lab"),
+    tree: el("tree"), ledger: el("ledger"),
+    readerMeta: el("reader-meta"), reader: el("reader"),
+    scrub: el("scrub"),
+    play: el("btn-play"), back: el("btn-back"), fwd: el("btn-fwd"),
+    restart: el("btn-restart"),
+    spdSlow: el("spd-slow"), spdFast: el("spd-fast"),
+    livePanel: el("live-panel"), bootStatus: el("boot-status"),
+    paste: el("paste"), fileBtn: el("btn-file"), resetBtn: el("btn-reset"),
+    liveNote: el("live-note"),
+    configNote: el("config-note"), honesty: el("honesty")
+  };
+
+  /* ---------------- record rendering (never computes state) ---------------- */
+
+  function buildTreeData(paths) {
+    var root = { dirs: {}, files: [] };
+    paths.forEach(function (p) {
+      var parts = p.split("/"), node = root;
+      for (var i = 0; i < parts.length - 1; i++) {
+        if (!node.dirs[parts[i]]) node.dirs[parts[i]] = { dirs: {}, files: [] };
+        node = node.dirs[parts[i]];
+      }
+      node.files.push(p);
+    });
+    return root;
+  }
+
+  function renderTreeInto(container, paths, added, changed) {
+    container.textContent = "";
+    if (!paths.length) {
+      var n = document.createElement("div");
+      n.className = "empty-note";
+      n.textContent = "(empty — the blank page)";
+      container.appendChild(n);
+      return;
+    }
+    var ul = document.createElement("ul");
+    renderTreeNode(buildTreeData(paths), ul, added, changed);
+    container.appendChild(ul);
+  }
+
+  function renderTreeNode(node, ul, added, changed) {
+    Object.keys(node.dirs).forEach(function (name) {
+      var li = document.createElement("li");
+      var lab = document.createElement("span");
+      lab.className = "dir-name";
+      lab.textContent = name + "/";
+      li.appendChild(lab);
+      var sub = document.createElement("ul");
+      renderTreeNode(node.dirs[name], sub, added, changed);
+      li.appendChild(sub);
+      ul.appendChild(li);
+    });
+    node.files.forEach(function (p) {
+      var li = document.createElement("li");
+      li.className = "file";
+      if (added && added.has(p)) li.classList.add("added");
+      if (changed && changed.has(p)) li.classList.add("changed");
+      li.setAttribute("data-path", p);
+      li.title = p;
+      li.textContent = p.split("/").pop();
+      ul.appendChild(li);
+    });
+  }
+
+  function renderLedger(lines) {
+    els.ledger.textContent = "";
+    if (!lines.length) {
+      var n = document.createElement("div");
+      n.className = "empty-note";
+      n.textContent = "(nothing written yet)";
+      els.ledger.appendChild(n);
+      return;
+    }
+    lines.forEach(function (L) {
+      var d = document.createElement("div");
+      d.className = "ledger-line" + (L.fresh ? " fresh" : "");
+      d.textContent = L.text;
+      els.ledger.appendChild(d);
+    });
+    els.ledger.scrollTop = els.ledger.scrollHeight;
+  }
+
+  function setCounts(files, entries, commits, fourthVal, fourthLab, live) {
+    els.cFiles.textContent = files;
+    els.cEntries.textContent = entries;
+    els.cCommits.textContent = commits;
+    els.cFourth.textContent = fourthVal;
+    els.cFourthLab.textContent = fourthLab;
+    els.cFourth.classList.toggle("live-num", !!live);
+  }
+
+  function renderHeader(step) {
+    els.chapter.textContent = step.chapter;
+    els.stepTitle.textContent = step.title;
+    els.narration.textContent = step.narration;
+    els.progressLabel.textContent =
+      "Step " + (idx + 1) + " of " + record.steps.length;
+    els.progressFill.style.width = ((idx + 1) / record.steps.length * 100) + "%";
+    els.scrub.value = idx;
+  }
+
+  function renderRecord() {
+    var step = record.steps[idx];
+    renderHeader(step);
+    setCounts(step.state.files, step.state.entriesTotal, step.state.commits,
+              step.delta.deposits, "Deposits this step", false);
+    renderTreeInto(els.tree, step.state.tree,
+                   new Set(step.delta.filesAdded), new Set());
+    var lines = [];
+    for (var s = 0; s <= idx; s++) {
+      record.steps[s].delta.ledgerAdded.forEach(function (t) {
+        lines.push({ text: t, fresh: s === idx });
+      });
+    }
+    renderLedger(lines);
+  }
+
+  /* ---------------- live store ---------------- */
+
+  function sumEntries(status) {
+    var n = 0;
+    Object.keys(status.chats).forEach(function (c) { n += status.chats[c].entries; });
+    return n;
+  }
+
+  function renderLive() {
+    var step = record.steps[idx];
+    renderHeader(step);
+    var st = store.status();
+    var mine = st.chats["your-notes"] ? st.chats["your-notes"].entries : 0;
+    setCounts(store.files.size, sumEntries(st), store.ledger.length,
+              mine, "Your entries (your-notes)", true);
+    var paths = Array.from(store.files.keys()).sort();
+    renderTreeInto(els.tree, paths, liveAdded, liveChanged);
+    renderLedger(store.ledger.map(function (t, i) {
+      return { text: t, fresh: i >= liveFreshFrom };
+    }));
+  }
+
+  function render() {
+    var atEnd = idx === record.steps.length - 1;
+    document.body.classList.toggle("is-live", atEnd && booted);
+    els.livePanel.hidden = !(atEnd && booted);
+    if (atEnd && booted) renderLive(); else renderRecord();
+  }
+
+  function saveLocal() {
+    try {
+      window.localStorage.setItem(LS_KEY, JSON.stringify(store.snapshot()));
+    } catch (e) { /* storage unavailable — session-only, no hiding it in UI copy */ }
+  }
+
+  function loadLocal() {
+    try {
+      var raw = window.localStorage.getItem(LS_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+
+  function boot() {
+    if (booted || !record || !fixture) return;
+    store = new window.FilingCascade.FilingStore({
+      splitBytes: record.config.splitBytesReplay,
+      topicK: record.config.topicK
+    });
+    store.init();
+    for (var i = 0; i < fixture.length; i++) {
+      var d = fixture[i];
+      store.deposit(d.chat, d.text, d.ts, d.source);
+    }
+    store.refine("telegram-main");
+    store.refine("zero-lab");
+
+    // Honest boot check: the booted state must equal the record's final state.
+    var snap = store.snapshot();
+    var keys = Object.keys(snap.files);
+    var treeSame = JSON.stringify(keys) === JSON.stringify(record.finalState.tree.slice().sort());
+    var entries = sumEntries(store.status());
+    var builtOk = treeSame &&
+      keys.length === record.finalState.files &&
+      snap.ledger.length === record.finalState.commits &&
+      entries === record.finalState.entriesTotal;
+    liveFreshFrom = snap.ledger.length;
+
+    // Restore the visitor's own earlier work in this browser, if any.
+    restored = false;
+    var saved = loadLocal();
+    if (saved && saved.files && saved.ledger &&
+        JSON.stringify(saved) !== JSON.stringify(snap)) {
+      store.files = new Map(Object.entries(saved.files));
+      store.ledger = saved.ledger.slice();
+      store._committed = store._fingerprint();
+      restored = true;
+      liveFreshFrom = store.ledger.length;
+    }
+
+    booted = true;
+    var note = "Live gate on this page: " + record.config.splitBytesReplay +
+      " bytes, so a paste visibly cascades — production default is " +
+      record.config.splitBytesProduction + " bytes ≈ 20 pages. " +
+      "Nothing leaves your browser; the store lives in this page.";
+    if (restored) {
+      note += " Your additions are kept in this browser (localStorage) between visits — " +
+              "Reset returns to the built state.";
+      els.bootStatus.textContent =
+        "Booted from the record's fixture" + (builtOk ? " — state matches the record exactly (" +
+        record.finalState.files + " files · " + record.finalState.entriesTotal +
+        " entries · ledger " + record.finalState.commits + ")" : "") +
+        ", then restored your earlier additions from this browser. Ledger is now at " +
+        store.ledger.length + ".";
+    } else {
+      els.bootStatus.textContent = builtOk
+        ? "Booted live from the record's fixture — state matches the record exactly (" +
+          record.finalState.files + " files · " + record.finalState.entriesTotal +
+          " entries · ledger " + record.finalState.commits + "). The ledger continues from here."
+        : "Booted live. Files: " + store.files.size + " · entries: " +
+          sumEntries(store.status()) + " · ledger: " + store.ledger.length + ".";
+    }
+    els.liveNote.textContent = note;
+    render();
+  }
+
+  /* ---------------- transport ---------------- */
+
+  function stopTimer() {
+    if (timer !== null) { window.clearInterval(timer); timer = null; }
+    playing = false;
+    els.play.innerHTML = "&#9654; Play";
+  }
+
+  function startTimer() {
+    stopTimer();
+    playing = true;
+    els.play.innerHTML = "&#10073;&#10073; Pause";
+    timer = window.setInterval(function () {
+      if (idx >= record.steps.length - 1) { stopTimer(); return; }
+      goTo(idx + 1);
+      if (idx >= record.steps.length - 1) stopTimer();
+    }, SPEEDS[speed]);
+  }
+
+  function goTo(i) {
+    idx = Math.max(0, Math.min(record.steps.length - 1, i));
+    if (idx === record.steps.length - 1) boot();
+    render();
+  }
+
+  els.play.addEventListener("click", function () {
+    if (!record) return;
+    if (playing) { stopTimer(); return; }
+    if (idx >= record.steps.length - 1) goTo(0);
+    startTimer();
+  });
+  els.back.addEventListener("click", function () { if (record) { stopTimer(); goTo(idx - 1); } });
+  els.fwd.addEventListener("click", function () { if (record) { stopTimer(); goTo(idx + 1); } });
+  els.restart.addEventListener("click", function () { if (record) { stopTimer(); goTo(0); } });
+  els.scrub.addEventListener("input", function () {
+    if (!record) return;
+    stopTimer();
+    goTo(parseInt(els.scrub.value, 10));
+  });
+
+  function setSpeed(s) {
+    speed = s;
+    els.spdSlow.setAttribute("aria-pressed", s === "slow" ? "true" : "false");
+    els.spdFast.setAttribute("aria-pressed", s === "fast" ? "true" : "false");
+    if (playing) startTimer();
+  }
+  els.spdSlow.addEventListener("click", function () { setSpeed("slow"); });
+  els.spdFast.addEventListener("click", function () { setSpeed("fast"); });
+
+  document.addEventListener("keydown", function (e) {
+    var t = e.target;
+    if (!record || !t || t.tagName === "TEXTAREA" || t.tagName === "INPUT") return;
+    if (e.key === "ArrowRight") { stopTimer(); goTo(idx + 1); }
+    else if (e.key === "ArrowLeft") { stopTimer(); goTo(idx - 1); }
+  });
+
+  /* ---------------- live interactions ---------------- */
+
+  els.tree.addEventListener("click", function (e) {
+    if (!(idx === record.steps.length - 1 && booted)) return;
+    var node = e.target;
+    while (node && node !== els.tree && !node.getAttribute("data-path")) node = node.parentNode;
+    if (!node || node === els.tree) return;
+    var path = node.getAttribute("data-path");
+    if (store.files.has(path)) {
+      els.readerMeta.textContent = path;
+      els.reader.textContent = store.files.get(path);   // textContent only — untrusted input
+    }
+  });
+
+  els.fileBtn.addEventListener("click", function () {
+    if (!booted) return;
+    var lines = els.paste.value.split(/\r\n|\r|\n/)
+      .map(function (s) { return s.trim(); })
+      .filter(function (s) { return s.length > 0; });
+    if (!lines.length) return;
+    var before = new Map(store.files);
+    liveFreshFrom = store.ledger.length;
+    lines.forEach(function (line) { store.deposit("your-notes", line, null, "you"); });
+    store.refine("your-notes");
+    liveAdded = new Set();
+    liveChanged = new Set();
+    store.files.forEach(function (text, path) {
+      if (!before.has(path)) liveAdded.add(path);
+      else if (before.get(path) !== text) liveChanged.add(path);
+    });
+    els.paste.value = "";
+    saveLocal();
+    render();
+  });
+
+  els.resetBtn.addEventListener("click", function () {
+    try { window.localStorage.removeItem(LS_KEY); } catch (e) { /* ignore */ }
+    booted = false; store = null; restored = false;
+    liveAdded = new Set(); liveChanged = new Set();
+    els.readerMeta.textContent = "";
+    els.reader.textContent = "Reset — the store is back to the state the playthrough built. Click any file to read it.";
+    boot();
+  });
+
+  /* ---------------- load ---------------- */
+
+  function fail(msg) {
+    els.err.style.display = "block";
+    els.err.textContent = msg;
+  }
+
+  function maybeInit() {
+    if (!record) return;
+    els.gallery.textContent = record.gallery || "Xero Bootcamp Gallery";
+    els.title.textContent = record.title;
+    els.promise.textContent = record.promise;
+    els.agent.textContent = record.agent;
+    els.configNote.textContent = record.config.note;
+    els.honesty.textContent = record.honesty;
+    els.scrub.max = record.steps.length - 1;
+    goTo(0);
+  }
+
+  fetch("playthrough.json")
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (rec) { record = rec; maybeInit(); })
+    .catch(function (e) { fail("Could not load playthrough.json (" + e.message + "). Serve this folder over HTTP — the player reads its record from the same folder."); });
+
+  fetch("fixture.json")
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (fx) {
+      fixture = fx;
+      if (record && idx === record.steps.length - 1) { boot(); render(); }
+    })
+    .catch(function (e) { fail("Could not load fixture.json (" + e.message + "). The replay works from the record, but the live boot needs the fixture."); });
+})();
+</script>
+</body>
+</html>
