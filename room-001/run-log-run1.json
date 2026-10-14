@@ -1,0 +1,26 @@
+[
+  {
+    "n": 1,
+    "who": "room:lookout:r1",
+    "started": "03:56:21",
+    "attempt": 1,
+    "ok": true,
+    "rate_limited": false
+  },
+  {
+    "n": 2,
+    "who": "room:skeptic:r1",
+    "started": "03:56:26",
+    "attempt": 1,
+    "ok": true,
+    "rate_limited": false
+  },
+  {
+    "n": 3,
+    "who": "room:keeper:r1",
+    "started": "03:56:32",
+    "attempt": 1,
+    "ok": true,
+    "rate_limited": false
+  }
+]

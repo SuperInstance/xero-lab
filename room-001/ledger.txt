@@ -1,0 +1,13 @@
+3f4169c Keeper 03:58 R4 · Keeper deposits
+9a0a3b0 Skeptic 03:58 R4 · Skeptic deposits
+5d4fa82 Lookout 03:58 R4 · Lookout deposits
+6dbf75d Keeper 03:58 R3 · Keeper deposits
+691bb95 Skeptic 03:58 R3 · Skeptic deposits
+bfcc122 Lookout 03:58 R3 · Lookout deposits
+9c15aea Keeper 03:57 R2 · Keeper deposits
+4de7581 Skeptic 03:57 R2 · Skeptic deposits
+01b2379 Lookout 03:57 R2 · Lookout deposits
+937200f Keeper 03:57 R1 · Keeper deposits
+6c010d7 Skeptic 03:57 R1 · Skeptic deposits
+0276aab Lookout 03:57 R1 · Lookout deposits
+7a5a81a Room 03:55 Room opens: task posted, three agents seated (sheets + empty private logs)
