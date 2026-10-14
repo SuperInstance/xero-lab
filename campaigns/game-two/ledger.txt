@@ -1,0 +1,46 @@
+2602097 The Game Master 07:23 Game Two after-files — what happened, scars, and the next round of proposed sheet diffs (NOT applied — the owner's rite)
+231a1c1 The Game Master 07:21 GM closing — noon: the record of the morning, closed
+df7fafb Pell Sutter 07:21 Beat 11 — Pell: closing
+5701355 Marta Venn 07:21 Beat 11 — Marta: closing
+ea64c3c Tobin Marlow 07:21 Beat 11 — Tobin: closing
+a8315c6 The Game Master 07:20 Beat 10 — GM adjudication: a hiring, not a thank-you
+64154f0 Pell Sutter 07:20 Beat 10 — Pell: spoken thanks, watched
+68c1fa3 Marta Venn 07:20 Beat 10 — Marta: the witness
+7406d5a Tobin Marlow 07:19 Beat 10 — Tobin: the answer
+9c1b29f The Game Master 07:19 Beat 9 — GM adjudication: the retainer signed; a phrase retired
+a49c0a0 Tobin Marlow 07:19 Beat 9 — Tobin: the paperwork
+d293811 Pell Sutter 07:19 Beat 9 — Pell: his name in the book
+b5169ec Marta Venn 07:18 Beat 9 — Marta: in the room
+1ee4cce The Game Master 07:18 Beat 8 — GM adjudication: three confessions; general average; no fault found
+ea27122 Pell Sutter 07:16 Beat 8 — Pell: the question
+aad15f6 Marta Venn 07:16 Beat 8 — Marta: the question
+696bbd2 Tobin Marlow 07:16 Beat 8 — Tobin: the question
+fd5771b The Game Master 07:15 Beat 8 — Halloway on the dock: who gave the order, and whose hands?
+3b22019 Pell Sutter 07:15 Beat 7 — Pell: the arrival
+865450c Marta Venn 07:15 Beat 7 — Marta: the arrival
+4887127 Tobin Marlow 07:15 Beat 7 — Tobin: the arrival
+31eb201 The Game Master 07:14 Beat 6 — GM adjudication: the elbow (channel run 2, +1 → 3, partial) — the kingpost takes the cleat's snatch
+7f42833 Marta Venn 07:14 Beat 6 — Marta: her stern at the elbow
+a225870 Pell Sutter 07:14 Beat 6 — Pell: leading the elbow
+cf84179 Tobin Marlow 07:14 Beat 6 — Tobin: the line's angle
+a2d7383 The Game Master 07:13 Beat 5 — GM adjudication: the quiet leg; the elbow ahead
+7868285 Marta Venn 07:13 Beat 5 — Marta: what the jury rig teaches
+24c9242 Pell Sutter 07:13 Beat 5 — Pell: the quiet leg
+fa2f0b4 Tobin Marlow 07:12 Beat 5 — Tobin: the quiet leg
+ae21167 The Game Master 07:12 Beat 4 — GM adjudication: she lifts, clean (refloat 4, +1 → 5)
+20dae20 Pell Sutter 07:12 Beat 4 — Pell: taking the strain
+2cef1a9 Marta Venn 07:12 Beat 4 — Marta: the helm at the heave
+fbdbf11 Tobin Marlow 07:11 Beat 4 — Tobin: tow watch at the heave
+b89e0c4 Pell Sutter 07:11 Beat 3 — Pell: stations
+8ece566 Marta Venn 07:11 Beat 3 — Marta: the rig goes on
+0fc4016 Tobin Marlow 07:10 Beat 3 — Tobin: the carry, in the calm
+36703a2 The Game Master 07:10 Beat 2 — GM adjudication: a line with its correction spoken; the cleat condemned by touch
+da1a114 Pell Sutter 07:10 Beat 2 — Pell: the rig, laid out
+8aeea4f Marta Venn 07:09 Beat 2 — Marta: hands before load
+53a6276 Tobin Marlow 07:09 Beat 2 — Tobin: sounding the exit
+253dcd1 The Game Master 07:09 Beat 1 — GM adjudication: alongside; the rudder in the light
+04cb570 Pell Sutter 07:08 Beat 1 — Pell: the day as he sees it
+67a8c1b Marta Venn 07:08 Beat 1 — Marta: the order of the work
+294e68e Tobin Marlow 07:08 Beat 1 — Tobin: first light
+ff2e778 The Game Master 07:08 Beat 1 — GM opening: the morning after
+95e504d The Game Master 07:07 Game Two setup — the carry: characters copied forward from Game One; all nine owner-approved sheet diffs applied (verified by diff); life carried as-is; Game One's after.md carried as memory-game-one.md; fresh logs; GM prep for 'The Morning After'
